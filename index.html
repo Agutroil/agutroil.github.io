@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Anton Deister | Developer · Linux · Open Source · Agutroil</title>
+
+  <meta
+    name="description"
+    content="Anton Deister – Developer, Linux Enthusiast, Open-Source Creator und Technology Enthusiast. Auf GitHub bekannt als Agutroil."
+  >
+
+  <meta
+    name="keywords"
+    content="Anton Deister, Agutroil, Developer, Linux, Debian, Open Source, Software Development, Game Development, Godot, GitHub"
+  >
+
+  <meta name="author" content="Anton Deister">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://agutroil.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Anton Deister | Agutroil">
+  <meta
+    property="og:description"
+    content="Developer · Linux Enthusiast · Open-Source Creator · Technology Enthusiast"
+  >
+  <meta property="og:url" content="https://agutroil.github.io/">
+  <meta property="og:image" content="https://agutroil.github.io/assets/banner.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Anton Deister",
+      "alternateName": "Agutroil",
+      "url": "https://agutroil.github.io/",
+      "image": "https://agutroil.github.io/assets/antondeister.png",
+      "description": "Developer, Linux Enthusiast, Open-Source Creator and Technology Enthusiast",
+      "sameAs": [
+        "https://github.com/Agutroil"
+      ],
+      "knowsAbout": [
+        "Linux",
+        "Debian",
+        "Software Development",
+        "Open Source",
+        "Game Development",
+        "Godot",
+        "Python",
+        "TypeScript",
+        "React",
+        "Git",
+        "GitHub"
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #060a14;
+      --bg-soft: #0d1527;
+      --panel: #111a30;
+      --panel-2: #141f38;
+
+      --text: #f8fafc;
+      --muted: #a8b3c7;
+
+      --cyan: #38bdf8;
+      --blue: #60a5fa;
+      --purple: #c084fc;
+      --pink: #f472b6;
+      --gold: #fbbf24;
+
+      --border: rgba(96, 165, 250, 0.22);
+      --shadow: rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      color: var(--text);
+
+      background:
+        radial-gradient(
+          circle at 20% 0%,
+          rgba(56, 189, 248, 0.12),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 80% 15%,
+          rgba(192, 132, 252, 0.11),
+          transparent 30%
+        ),
+        var(--bg);
+
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 32px 0 60px;
+      text-align: center;
+    }
+
+    .banner {
+      width: 100%;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 70px var(--shadow);
+      display: block;
+    }
+
+    .hero h1 {
+      margin: 34px 0 8px;
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(
+        90deg,
+        var(--cyan),
+        var(--purple),
+        var(--gold)
+      );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      margin: 0 auto;
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .button {
+      min-height: 46px;
+      padding: 11px 20px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition:
+        transform 0.18s ease,
+        border-color 0.18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      border-color: var(--cyan);
+    }
+
+    .button.primary {
+      color: #06111c;
+      background: linear-gradient(
+        135deg,
+        var(--cyan),
+        var(--blue)
+      );
+      border: none;
+    }
+
+    .section {
+      padding: 34px 0;
+    }
+
+    .section-title {
+      margin: 0 0 24px;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .divider {
+      width: min(420px, 80%);
+      height: 1px;
+      margin: 30px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--cyan),
+        var(--purple),
+        var(--gold),
+        transparent
+      );
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.55fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .card {
+      padding: 28px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(20, 31, 56, 0.92),
+          rgba(13, 21, 39, 0.92)
+        );
+
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+    }
+
+    .portrait-card {
+      text-align: center;
+    }
+
+    .portrait {
+      width: min(260px, 100%);
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 24px;
+
+      border:
+        2px solid rgba(56, 189, 248, 0.35);
+
+      box-shadow:
+        0 0 0 6px rgba(56, 189, 248, 0.05),
+        0 18px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .portrait-name {
+      margin: 20px 0 0;
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 20px;
+    }
+
+    .chip {
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: #dbeafe;
+      background: rgba(56, 189, 248, 0.05);
+      font-size: 0.9rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .feature h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .toolbox {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tool {
+      padding: 8px 13px;
+      border-radius: 10px;
+
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+
+      font-family:
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+
+      font-size: 0.88rem;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 3px;
+
+      background: linear-gradient(
+        90deg,
+        var(--cyan),
+        var(--purple),
+        var(--gold)
+      );
+    }
+
+    .project h3 {
+      margin-top: 4px;
+      font-size: 1.45rem;
+    }
+
+    .project-status {
+      color: var(--gold);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .quote {
+      text-align: center;
+      padding: 42px 24px;
+    }
+
+    .quote blockquote {
+      margin: 0;
+      font-size: clamp(1.3rem, 4vw, 2rem);
+      font-weight: 800;
+      font-style: italic;
+    }
+
+    .signature {
+      margin-top: 34px;
+      text-align: center;
+
+      padding: 32px 20px;
+
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .signature-main {
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-weight: 800;
+    }
+
+    .signature-main .linux {
+      color: var(--cyan);
+    }
+
+    .signature-main .agutroil {
+      color: var(--gold);
+    }
+
+    .signature-tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    footer {
+      padding: 42px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer strong {
+      color: var(--text);
+    }
+
+    @media (max-width: 760px) {
+      .about-grid,
+      .grid,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 18px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="container">
+
+      <img
+        class="banner"
+        src="./assets/banner.png"
+        alt="Anton Deister – Developer, Linux Enthusiast and Open-Source Creator"
+      >
+
+      <h1>
+        Anton <span>Deister</span>
+      </h1>
+
+      <p class="subtitle">
+        Developer · Linux Enthusiast · Open-Source Creator · Technology Enthusiast
+      </p>
+
+      <div class="actions">
+
+        <a
+          class="button primary"
+          href="https://github.com/Agutroil"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🐙 GitHub @Agutroil
+        </a>
+
+        <a
+          class="button"
+          href="#about"
+        >
+          👋 Über mich
+        </a>
+
+        <a
+          class="button"
+          href="#projects"
+        >
+          🎮 Projekte
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section
+      class="section"
+      id="about"
+    >
+      <div class="container">
+
+        <div class="about-grid">
+
+          <article class="card">
+
+            <h2>👋 Über mich</h2>
+
+            <p>
+              Hallo, ich bin
+              <strong>Anton Deister</strong> –
+              auf GitHub unterwegs als
+              <strong>Agutroil</strong>.
+            </p>
+
+            <p>
+              Ich beschäftige mich leidenschaftlich mit
+              <strong>
+                Softwareentwicklung, Linux, Open Source
+                und Game Development
+              </strong>.
+            </p>
+
+            <p>
+              Besonders spannend finde ich Projekte, bei denen aus
+              einer Idee Schritt für Schritt etwas Eigenes entsteht –
+              egal ob Anwendung, Spiel, Entwicklungswerkzeug oder
+              technisches Experiment.
+            </p>
+
+            <p>
+              Ich experimentiere gerne mit neuen Technologien,
+              Automatisierung und KI-gestützten Developer-Workflows.
+            </p>
+
+            <div class="chips">
+              <span class="chip">🐧 Linux</span>
+              <span class="chip">Debian</span>
+              <span class="chip">🎮 Game Development</span>
+              <span class="chip">Godot</span>
+              <span class="chip">🌍 Open Source</span>
+              <span class="chip">Python</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">React</span>
+              <span class="chip">Git</span>
+              <span class="chip">Automation</span>
+            </div>
+
+          </article>
+
+          <aside class="card portrait-card">
+
+            <img
+              class="portrait"
+              src="./assets/antondeister.png"
+              alt="Anton Deister"
+            >
+
+            <p class="portrait-name">
+              Anton Deister
+            </p>
+
+            <p class="muted">
+              Developer · Agutroil
+            </p>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+      <div class="container">
+
+        <h2 class="section-title">
+          🧙 Welcome to Agutroil's Realm
+        </h2>
+
+        <p class="subtitle" style="text-align:center;">
+          <strong>Code. Linux. Magic.</strong>
+        </p>
+
+        <p class="subtitle" style="text-align:center; margin-top:12px;">
+          I enjoy building software, experimenting with Linux
+          and turning ideas into real projects.
+        </p>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+      <div class="container">
+
+        <h2 class="section-title">
+          🚀 Was ich mache
+        </h2>
+
+        <div class="grid">
+
+          <article class="card feature">
+
+            <h3>🎮 Game Development</h3>
+
+            <p>
+              World Building, Gameplay-Systeme, Multiplayer,
+              Combat, Performance und Developer Tools mit Godot.
+            </p>
+
+          </article>
+
+          <article class="card feature">
+
+            <h3>🌐 Web Development</h3>
+
+            <p>
+              React, TypeScript, JavaScript, HTML und CSS
+              für moderne Webprojekte und Experimente.
+            </p>
+
+          </article>
+
+          <article class="card feature">
+
+            <h3>🐧 Linux</h3>
+
+            <p>
+              Debian, Terminal Workflows, Git, Shell,
+              Automatisierung und Linux-basierte Entwicklung.
+            </p>
+
+          </article>
+
+          <article class="card feature">
+
+            <h3>🤖 AI-assisted Development</h3>
+
+            <p>
+              Coding Agents, automatisierte Tests,
+              AI Tool Bridges, Asset Pipelines und
+              reproduzierbare Entwicklungsprozesse.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+      <div class="container">
+
+        <h2 class="section-title">
+          🧰 Meine Toolbox
+        </h2>
+
+        <div class="toolbox">
+          <span class="tool">Linux</span>
+          <span class="tool">Debian</span>
+          <span class="tool">Godot</span>
+          <span class="tool">GDScript</span>
+          <span class="tool">Python</span>
+          <span class="tool">TypeScript</span>
+          <span class="tool">JavaScript</span>
+          <span class="tool">React</span>
+          <span class="tool">HTML</span>
+          <span class="tool">CSS</span>
+          <span class="tool">Git</span>
+          <span class="tool">GitHub</span>
+          <span class="tool">Android</span>
+          <span class="tool">Shell</span>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section
+      class="section"
+      id="projects"
+    >
+      <div class="container">
+
+        <h2 class="section-title">
+          🛠️ Projekte
+        </h2>
+
+        <div class="project-grid">
+
+          <article class="card project">
+
+            <span class="project-status">
+              🚧 In Entwicklung
+            </span>
+
+            <h3>🌌 Nythara</h3>
+
+            <p class="muted">
+              Fantasy Game Development with Godot.
+            </p>
+
+            <p>
+              Ein Fantasy-Game-Projekt mit Fokus auf
+              große Spielwelten, Multiplayer, World Building,
+              Combat, Portale, Monster, Bosse, Items,
+              Equipment und Developer Tools.
+            </p>
+
+            <a
+              href="https://github.com/Agutroil/Nythara"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              🎮 Nythara auf GitHub →
+            </a>
+
+          </article>
+
+          <article class="card project">
+
+            <span class="project-status">
+              🎮 Game Project
+            </span>
+
+            <h3>🏰 Astra Kingdom</h3>
+
+            <p class="muted">
+              Game Systems · Progression · Experimentation
+            </p>
+
+            <p>
+              Ein eigenes Game-Projekt mit Fokus auf
+              Progression, Combat-Systeme, Items,
+              Ausrüstung und umfangreiche Spielmechaniken.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="card quote">
+
+          <h2>
+            📖 Philosophy
+          </h2>
+
+          <blockquote>
+            “Every bug is just an undocumented spell.”
+          </blockquote>
+
+          <p class="muted">
+            Nicht jede Idee muss sofort perfekt sein.
+            Wichtig ist für mich:
+          </p>
+
+          <p>
+            <strong>
+              bauen → testen → verstehen → verbessern → teilen
+            </strong>
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="signature">
+
+          <p class="signature-main">
+            🐧 Powered by
+            <span class="linux">Linux</span>
+
+            &nbsp; ✦ &nbsp;
+
+            🪶 Crafted by
+            <span class="agutroil">Agutroil</span>
+          </p>
+
+          <div class="signature-tags">
+            <span class="tool">💻 CODE</span>
+            <span class="tool">🐧 LINUX</span>
+            <span class="tool">🎮 GAMES</span>
+            <span class="tool">🌍 OPEN SOURCE</span>
+            <span class="tool">🪄 MAGIC</span>
+          </div>
+
+          <p>
+            <strong>
+              Code. Linux. Magic.
+            </strong>
+          </p>
+
+          <p class="muted">
+            Made with curiosity, code and a little bit of magic.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+
+      <p>
+        © 2026 <strong>Anton Deister</strong> · Agutroil
+      </p>
+
+      <p>
+        <a
+          href="https://github.com/Agutroil"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        &nbsp; · &nbsp;
+
+        <a
+          href="https://github.com/Agutroil/Nythara"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Nythara
+        </a>
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>
