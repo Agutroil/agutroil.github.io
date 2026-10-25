@@ -4,20 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Anton Deister | Developer · Linux · Open Source · Agutroil</title>
+  <title>Anton Deister | Agutroil · Developer · Linux · Open Source</title>
 
   <meta
     name="description"
-    content="Anton Deister – Developer, Linux Enthusiast, Open-Source Creator und Technology Enthusiast. Auf GitHub bekannt als Agutroil."
+    content="Anton Deister – Developer, Linux Enthusiast und Open-Source Creator. Projekte rund um Godot, React, Next.js, WordPress, MedCore, Blog Pulse und Nythara."
   >
 
   <meta
     name="keywords"
-    content="Anton Deister, Agutroil, Developer, Linux, Debian, Open Source, Software Development, Game Development, Godot, GitHub"
+    content="Anton Deister, Agutroil, Developer, Linux, Debian, Open Source, Software Development, Game Development, Godot, React, TypeScript, Next.js, WordPress, PHP, MedCore, Blog Pulse, Nythara"
   >
 
   <meta name="author" content="Anton Deister">
   <meta name="robots" content="index, follow">
+
+  <meta name="theme-color" content="#060a14">
 
   <link rel="canonical" href="https://agutroil.github.io/">
 
@@ -26,16 +28,32 @@
   <meta property="og:title" content="Anton Deister | Agutroil">
   <meta
     property="og:description"
-    content="Developer · Linux Enthusiast · Open-Source Creator · Technology Enthusiast"
+    content="Developer · Linux Enthusiast · Open-Source Creator · Game & Web Development"
   >
   <meta property="og:url" content="https://agutroil.github.io/">
-  <meta property="og:image" content="https://agutroil.github.io/assets/banner.png">
+  <meta
+    property="og:image"
+    content="https://agutroil.github.io/assets/banner.png"
+  >
+
+  <!-- Twitter / Social -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anton Deister | Agutroil">
+  <meta
+    name="twitter:description"
+    content="Code. Linux. Games. Open Source. Magic."
+  >
+  <meta
+    name="twitter:image"
+    content="https://agutroil.github.io/assets/banner.png"
+  >
 
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
+    "url": "https://agutroil.github.io/",
     "mainEntity": {
       "@type": "Person",
       "name": "Anton Deister",
@@ -53,11 +71,21 @@
         "Open Source",
         "Game Development",
         "Godot",
+        "GDScript",
         "Python",
         "TypeScript",
+        "JavaScript",
         "React",
+        "Next.js",
+        "WordPress",
+        "PHP",
+        "HTML",
+        "CSS",
         "Git",
-        "GitHub"
+        "GitHub",
+        "Android Development",
+        "Automation",
+        "AI-assisted Development"
       ]
     }
   }
@@ -65,8 +93,11 @@
 
   <style>
     :root {
+      color-scheme: dark;
+
       --bg: #060a14;
       --bg-soft: #0d1527;
+
       --panel: #111a30;
       --panel-2: #141f38;
 
@@ -78,9 +109,18 @@
       --purple: #c084fc;
       --pink: #f472b6;
       --gold: #fbbf24;
+      --green: #34d399;
 
       --border: rgba(96, 165, 250, 0.22);
+      --border-strong: rgba(56, 189, 248, 0.42);
+
       --shadow: rgba(0, 0, 0, 0.35);
+
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 22px;
+
+      --container: 1120px;
     }
 
     * {
@@ -89,10 +129,12 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 86px;
     }
 
     body {
       margin: 0;
+
       font-family:
         Inter,
         system-ui,
@@ -128,136 +170,349 @@
       color: var(--gold);
     }
 
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+      border-radius: 6px;
+    }
+
     img {
+      display: block;
       max-width: 100%;
     }
 
     .container {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
+      width: min(
+        var(--container),
+        calc(100% - 32px)
+      );
+
+      margin-inline: auto;
     }
 
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+
+      z-index: 999;
+
+      transform: translateY(-180%);
+
+      padding: 10px 16px;
+
+      color: #06111c;
+      background: var(--cyan);
+
+      border-radius: var(--radius-sm);
+
+      font-weight: 800;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    /* -------------------------
+       Navigation
+    ------------------------- */
+
+    .topbar {
+      position: sticky;
+      top: 0;
+
+      z-index: 100;
+
+      border-bottom:
+        1px solid rgba(96, 165, 250, 0.12);
+
+      background:
+        rgba(6, 10, 20, 0.88);
+
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      min-height: 64px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--text);
+
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .brand span {
+      color: var(--cyan);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+    }
+
+    .nav-links a {
+      min-height: 44px;
+
+      display: inline-flex;
+      align-items: center;
+
+      padding: 8px 12px;
+
+      color: var(--muted);
+
+      border-radius: var(--radius-sm);
+
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+
+      background:
+        rgba(56, 189, 248, 0.08);
+    }
+
+    /* -------------------------
+       Hero
+    ------------------------- */
+
     .hero {
-      padding: 32px 0 60px;
+      padding: 30px 0 64px;
       text-align: center;
     }
 
     .banner {
       width: 100%;
-      border-radius: 22px;
-      border: 1px solid var(--border);
-      box-shadow: 0 20px 70px var(--shadow);
-      display: block;
+
+      border-radius: var(--radius-lg);
+
+      border:
+        1px solid var(--border);
+
+      box-shadow:
+        0 20px 70px var(--shadow);
+
+      background: var(--panel);
     }
 
     .hero h1 {
-      margin: 34px 0 8px;
-      font-size: clamp(2.4rem, 7vw, 5rem);
+      margin: 38px 0 10px;
+
+      font-size:
+        clamp(2.5rem, 7vw, 5rem);
+
       line-height: 1;
-      letter-spacing: -0.04em;
+
+      letter-spacing: -0.045em;
     }
 
     .hero h1 span {
-      background: linear-gradient(
-        90deg,
-        var(--cyan),
-        var(--purple),
-        var(--gold)
-      );
+      background:
+        linear-gradient(
+          90deg,
+          var(--cyan),
+          var(--purple),
+          var(--gold)
+        );
 
       -webkit-background-clip: text;
       background-clip: text;
+
       color: transparent;
     }
 
+    .hero-kicker {
+      margin: 16px auto 0;
+
+      color: var(--cyan);
+
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
     .subtitle {
-      margin: 0 auto;
       max-width: 780px;
+
+      margin: 0 auto;
+
       color: var(--muted);
+
       font-size: 1.08rem;
+    }
+
+    .hero-description {
+      max-width: 720px;
+
+      margin: 20px auto 0;
+
+      color: var(--muted);
     }
 
     .actions {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
+
+      gap: 12px;
+
+      margin-top: 30px;
     }
 
     .button {
-      min-height: 46px;
+      min-height: 48px;
+
       padding: 11px 20px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      font-weight: 700;
+
       display: inline-flex;
       align-items: center;
       justify-content: center;
+
+      gap: 8px;
+
+      color: var(--text);
+
+      background:
+        rgba(255, 255, 255, 0.025);
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 14px;
+
+      font-weight: 800;
+
       transition:
         transform 0.18s ease,
-        border-color 0.18s ease;
+        border-color 0.18s ease,
+        background 0.18s ease;
     }
 
     .button:hover {
       transform: translateY(-2px);
+
+      color: var(--text);
+
       border-color: var(--cyan);
+
+      background:
+        rgba(56, 189, 248, 0.08);
     }
 
     .button.primary {
       color: #06111c;
-      background: linear-gradient(
-        135deg,
-        var(--cyan),
-        var(--blue)
-      );
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--cyan),
+          var(--blue)
+        );
+
       border: none;
     }
 
+    .button.primary:hover {
+      color: #06111c;
+    }
+
+    /* -------------------------
+       General sections
+    ------------------------- */
+
     .section {
-      padding: 34px 0;
+      padding: 40px 0;
     }
 
     .section-title {
-      margin: 0 0 24px;
+      margin: 0 0 10px;
+
       text-align: center;
-      font-size: 2rem;
+
+      font-size:
+        clamp(1.8rem, 5vw, 2.4rem);
+    }
+
+    .section-intro {
+      max-width: 760px;
+
+      margin: 0 auto 28px;
+
+      color: var(--muted);
+
+      text-align: center;
     }
 
     .divider {
-      width: min(420px, 80%);
-      height: 1px;
-      margin: 30px auto;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        var(--cyan),
-        var(--purple),
-        var(--gold),
-        transparent
-      );
-    }
+      width: min(440px, 80%);
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.55fr 0.8fr;
-      gap: 28px;
-      align-items: center;
+      height: 1px;
+
+      margin: 24px auto;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          var(--cyan),
+          var(--purple),
+          var(--gold),
+          transparent
+        );
     }
 
     .card {
       padding: 28px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
+
+      border-radius: var(--radius-lg);
+
+      border:
+        1px solid var(--border);
 
       background:
         linear-gradient(
           145deg,
-          rgba(20, 31, 56, 0.92),
-          rgba(13, 21, 39, 0.92)
+          rgba(20, 31, 56, 0.94),
+          rgba(13, 21, 39, 0.94)
         );
 
-      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+      box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.18);
+    }
+
+    /* -------------------------
+       About
+    ------------------------- */
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.55fr 0.8fr;
+
+      gap: 28px;
+
+      align-items: center;
+    }
+
+    .about-grid h2 {
+      margin-top: 0;
     }
 
     .portrait-card {
@@ -266,8 +521,13 @@
 
     .portrait {
       width: min(260px, 100%);
+
       aspect-ratio: 1;
+
+      margin-inline: auto;
+
       object-fit: cover;
+
       border-radius: 24px;
 
       border:
@@ -280,6 +540,7 @@
 
     .portrait-name {
       margin: 20px 0 0;
+
       font-size: 1.35rem;
       font-weight: 800;
     }
@@ -291,23 +552,38 @@
     .chips {
       display: flex;
       flex-wrap: wrap;
+
       gap: 9px;
+
       margin-top: 20px;
     }
 
     .chip {
       padding: 7px 11px;
+
+      border:
+        1px solid var(--border);
+
       border-radius: 999px;
-      border: 1px solid var(--border);
+
       color: #dbeafe;
-      background: rgba(56, 189, 248, 0.05);
+
+      background:
+        rgba(56, 189, 248, 0.05);
+
       font-size: 0.9rem;
     }
 
+    /* -------------------------
+       Skills
+    ------------------------- */
+
     .grid {
       display: grid;
+
       grid-template-columns:
         repeat(2, minmax(0, 1fr));
+
       gap: 18px;
     }
 
@@ -317,23 +593,33 @@
     }
 
     .feature p {
-      color: var(--muted);
       margin-bottom: 0;
+
+      color: var(--muted);
     }
+
+    /* -------------------------
+       Toolbox
+    ------------------------- */
 
     .toolbox {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+
       gap: 10px;
     }
 
     .tool {
       padding: 8px 13px;
+
       border-radius: 10px;
 
-      background: rgba(255, 255, 255, 0.045);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background:
+        rgba(255, 255, 255, 0.045);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.1);
 
       font-family:
         "SFMono-Regular",
@@ -343,67 +629,352 @@
       font-size: 0.88rem;
     }
 
+    /* -------------------------
+       Agutroil banner
+    ------------------------- */
+
+    .agutroil-banner {
+      margin-top: 28px;
+
+      border-radius: var(--radius-lg);
+
+      border:
+        1px solid var(--border);
+
+      box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.22);
+    }
+
+    .identity {
+      text-align: center;
+    }
+
+    .identity strong {
+      color: var(--cyan);
+    }
+
+    /* -------------------------
+       Projects
+    ------------------------- */
+
     .project-grid {
       display: grid;
+
       grid-template-columns:
         repeat(2, minmax(0, 1fr));
+
       gap: 18px;
     }
 
     .project {
       position: relative;
+
       overflow: hidden;
+
+      display: flex;
+      flex-direction: column;
     }
 
     .project::before {
       content: "";
+
       position: absolute;
+
       inset: 0 0 auto 0;
+
       height: 3px;
 
-      background: linear-gradient(
-        90deg,
-        var(--cyan),
-        var(--purple),
-        var(--gold)
-      );
+      background:
+        linear-gradient(
+          90deg,
+          var(--cyan),
+          var(--purple),
+          var(--gold)
+        );
     }
 
     .project h3 {
-      margin-top: 4px;
-      font-size: 1.45rem;
+      margin: 12px 0 6px;
+
+      font-size: 1.5rem;
+    }
+
+    .project p {
+      margin-top: 6px;
     }
 
     .project-status {
+      align-self: flex-start;
+
+      padding: 5px 9px;
+
+      border:
+        1px solid rgba(251, 191, 36, 0.3);
+
+      border-radius: 999px;
+
       color: var(--gold);
-      font-size: 0.9rem;
-      font-weight: 700;
+
+      background:
+        rgba(251, 191, 36, 0.06);
+
+      font-size: 0.8rem;
+      font-weight: 800;
     }
 
-    .quote {
+    .project-features {
+      margin: 12px 0 24px;
+
+      padding-left: 20px;
+
+      color: var(--muted);
+    }
+
+    .project-features li + li {
+      margin-top: 5px;
+    }
+
+    .project-actions {
+      margin-top: auto;
+
+      padding-top: 10px;
+    }
+
+    .project-link {
+      min-height: 44px;
+
+      padding: 9px 14px;
+
+      display: inline-flex;
+      align-items: center;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 12px;
+
+      font-weight: 800;
+    }
+
+    .project-link:hover {
+      color: var(--text);
+
+      border-color: var(--cyan);
+
+      background:
+        rgba(56, 189, 248, 0.08);
+    }
+
+    /* -------------------------
+       Open source
+    ------------------------- */
+
+    .open-source-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 18px;
+    }
+
+    .open-source-card {
       text-align: center;
-      padding: 42px 24px;
+    }
+
+    .open-source-card h3 {
+      margin-top: 0;
+    }
+
+    /* -------------------------
+       Current quest
+    ------------------------- */
+
+    .quest-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 18px;
+    }
+
+    .quest-card h3 {
+      margin-top: 0;
+    }
+
+    .quest-card ul {
+      margin-bottom: 0;
+    }
+
+    /* -------------------------
+       Philosophy
+    ------------------------- */
+
+    .quote {
+      padding: 44px 24px;
+
+      text-align: center;
+    }
+
+    .quote h2 {
+      margin-top: 0;
     }
 
     .quote blockquote {
-      margin: 0;
-      font-size: clamp(1.3rem, 4vw, 2rem);
+      margin: 16px 0;
+
+      font-size:
+        clamp(1.3rem, 4vw, 2rem);
+
       font-weight: 800;
       font-style: italic;
     }
 
+    .flow {
+      color: var(--cyan);
+
+      font-size:
+        clamp(1rem, 3vw, 1.2rem);
+
+      font-weight: 800;
+    }
+
+    /* -------------------------
+       Find me / projects
+    ------------------------- */
+
+    .social-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin: 26px 0;
+    }
+
+    .social-button {
+      min-height: 46px;
+
+      padding: 10px 16px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 12px;
+
+      color: var(--text);
+
+      background:
+        rgba(255, 255, 255, 0.035);
+
+      font-weight: 800;
+
+      transition:
+        transform 0.18s ease,
+        border-color 0.18s ease;
+    }
+
+    .social-button:hover {
+      transform: translateY(-2px);
+
+      color: var(--text);
+
+      border-color: var(--cyan);
+    }
+
+    .social-button.github {
+      border-color:
+        rgba(255, 255, 255, 0.22);
+    }
+
+    .social-button.website {
+      border-color:
+        rgba(96, 165, 250, 0.42);
+    }
+
+    .mini-project-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 16px;
+
+      margin-top: 26px;
+    }
+
+    .mini-project {
+      text-align: center;
+    }
+
+    .mini-project h3 {
+      margin-top: 0;
+    }
+
+    .all-repositories {
+      margin-top: 28px;
+
+      text-align: center;
+    }
+
+    /* -------------------------
+       Details
+    ------------------------- */
+
+    details {
+      max-width: 800px;
+
+      margin: 30px auto 0;
+
+      padding: 18px 20px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: var(--radius-md);
+
+      background:
+        rgba(255, 255, 255, 0.025);
+    }
+
+    summary {
+      cursor: pointer;
+
+      font-weight: 800;
+    }
+
+    details p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* -------------------------
+       Signature
+    ------------------------- */
+
     .signature {
-      margin-top: 34px;
+      margin-top: 28px;
+
+      padding: 34px 20px;
+
       text-align: center;
 
-      padding: 32px 20px;
+      border-top:
+        1px solid var(--border);
 
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      border-bottom:
+        1px solid var(--border);
     }
 
     .signature-main {
-      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-size:
+        clamp(1.1rem, 3vw, 1.5rem);
+
       font-weight: 800;
     }
 
@@ -419,14 +990,23 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+
       gap: 10px;
+
       margin: 20px 0;
     }
 
+    /* -------------------------
+       Footer
+    ------------------------- */
+
     footer {
-      padding: 42px 0;
-      text-align: center;
+      padding: 44px 0;
+
       color: var(--muted);
+
+      text-align: center;
+
       font-size: 0.9rem;
     }
 
@@ -434,25 +1014,147 @@
       color: var(--text);
     }
 
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      gap: 14px;
+
+      margin-top: 12px;
+    }
+
+    /* -------------------------
+       Responsive
+    ------------------------- */
+
+    @media (max-width: 860px) {
+      .nav {
+        align-items: flex-start;
+
+        padding: 12px 0;
+      }
+
+      .nav-links {
+        justify-content: flex-end;
+      }
+
+      .mini-project-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 760px) {
       .about-grid,
       .grid,
-      .project-grid {
+      .project-grid,
+      .open-source-grid,
+      .quest-grid {
         grid-template-columns: 1fr;
       }
 
       .hero {
-        padding-top: 18px;
+        padding-top: 20px;
       }
 
       .card {
         padding: 22px;
+      }
+
+      .nav {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+
+        padding-bottom: 4px;
+
+        scrollbar-width: thin;
+      }
+
+      .nav-links a {
+        flex: 0 0 auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width:
+          min(
+            var(--container),
+            calc(100% - 22px)
+          );
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .actions,
+      .social-actions {
+        flex-direction: column;
+      }
+
+      .button,
+      .social-button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
       }
     }
   </style>
 </head>
 
 <body>
+
+  <a class="skip-link" href="#main">
+    Zum Inhalt springen
+  </a>
+
+  <!-- Navigation -->
+
+  <div class="topbar">
+    <div class="container nav">
+
+      <a class="brand" href="#">
+        🧙 <span>Agutroil</span>
+      </a>
+
+      <nav
+        class="nav-links"
+        aria-label="Hauptnavigation"
+      >
+        <a href="#about">Über mich</a>
+        <a href="#work">Was ich mache</a>
+        <a href="#toolbox">Toolbox</a>
+        <a href="#projects">Projekte</a>
+        <a href="#opensource">Open Source</a>
+        <a href="#connect">Links</a>
+      </nav>
+
+    </div>
+  </div>
+
+  <!-- Hero -->
 
   <header class="hero">
     <div class="container">
@@ -463,12 +1165,22 @@
         alt="Anton Deister – Developer, Linux Enthusiast and Open-Source Creator"
       >
 
+      <p class="hero-kicker">
+        Code · Linux · Open Source · Games
+      </p>
+
       <h1>
         Anton <span>Deister</span>
       </h1>
 
       <p class="subtitle">
         Developer · Linux Enthusiast · Open-Source Creator · Technology Enthusiast
+      </p>
+
+      <p class="hero-description">
+        Ich entwickle Software, Spiele, Webanwendungen und Open-Source-Projekte
+        und experimentiere mit Linux, modernen Technologien,
+        Automatisierung und KI-gestützten Developer-Workflows.
       </p>
 
       <div class="actions">
@@ -484,16 +1196,18 @@
 
         <a
           class="button"
-          href="#about"
+          href="#projects"
         >
-          👋 Über mich
+          🚀 Projekte entdecken
         </a>
 
         <a
           class="button"
-          href="#projects"
+          href="https://github.com/Agutroil?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          🎮 Projekte
+          🌍 Alle Repositories
         </a>
 
       </div>
@@ -501,7 +1215,9 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
+
+    <!-- About -->
 
     <section
       class="section"
@@ -525,32 +1241,39 @@
             <p>
               Ich beschäftige mich leidenschaftlich mit
               <strong>
-                Softwareentwicklung, Linux, Open Source
-                und Game Development
+                Softwareentwicklung, Linux, Open Source,
+                Web Development und Game Development
               </strong>.
             </p>
 
             <p>
-              Besonders spannend finde ich Projekte, bei denen aus
-              einer Idee Schritt für Schritt etwas Eigenes entsteht –
-              egal ob Anwendung, Spiel, Entwicklungswerkzeug oder
-              technisches Experiment.
+              Besonders spannend finde ich Projekte,
+              bei denen aus einer Idee Schritt für Schritt
+              etwas Eigenes entsteht – egal ob Anwendung,
+              Spiel, WordPress-Theme, Entwicklungswerkzeug
+              oder technisches Experiment.
             </p>
 
             <p>
-              Ich experimentiere gerne mit neuen Technologien,
-              Automatisierung und KI-gestützten Developer-Workflows.
+              Ich arbeite gerne mit neuen Technologien,
+              automatisiere Entwicklungsabläufe und
+              beschäftige mich zunehmend mit
+              <strong>
+                KI-gestützten Developer-Workflows
+              </strong>.
             </p>
 
             <div class="chips">
               <span class="chip">🐧 Linux</span>
               <span class="chip">Debian</span>
-              <span class="chip">🎮 Game Development</span>
-              <span class="chip">Godot</span>
+              <span class="chip">🎮 Godot</span>
               <span class="chip">🌍 Open Source</span>
               <span class="chip">Python</span>
               <span class="chip">TypeScript</span>
               <span class="chip">React</span>
+              <span class="chip">Next.js</span>
+              <span class="chip">WordPress</span>
+              <span class="chip">PHP</span>
               <span class="chip">Git</span>
               <span class="chip">Automation</span>
             </div>
@@ -573,6 +1296,13 @@
               Developer · Agutroil
             </p>
 
+            <div class="chips">
+              <span class="chip">Linux</span>
+              <span class="chip">Open Source</span>
+              <span class="chip">Godot</span>
+              <span class="chip">Development</span>
+            </div>
+
           </aside>
 
         </div>
@@ -582,33 +1312,65 @@
 
     <div class="divider"></div>
 
+    <!-- Agutroil -->
+
     <section class="section">
-      <div class="container">
+
+      <div class="container identity">
 
         <h2 class="section-title">
           🧙 Welcome to Agutroil's Realm
         </h2>
 
-        <p class="subtitle" style="text-align:center;">
+        <p class="subtitle">
           <strong>Code. Linux. Magic.</strong>
         </p>
 
-        <p class="subtitle" style="text-align:center; margin-top:12px;">
+        <p class="section-intro">
           I enjoy building software, experimenting with Linux
           and turning ideas into real projects.
         </p>
 
+        <p>
+          💻 Code
+          &nbsp;·&nbsp;
+          🐧 Linux
+          &nbsp;·&nbsp;
+          🎮 Games
+          &nbsp;·&nbsp;
+          🌍 Open Source
+          &nbsp;·&nbsp;
+          💡 Ideas
+        </p>
+
+        <img
+          class="agutroil-banner"
+          src="./assets/agutroil-banner.png"
+          alt="Agutroil – Code Linux Magic"
+        >
+
       </div>
+
     </section>
 
     <div class="divider"></div>
 
-    <section class="section">
+    <!-- What I do -->
+
+    <section
+      class="section"
+      id="work"
+    >
       <div class="container">
 
         <h2 class="section-title">
           🚀 Was ich mache
         </h2>
+
+        <p class="section-intro">
+          Von Game Development über Web-Technologien bis zu Linux,
+          Open Source und KI-gestützter Entwicklung.
+        </p>
 
         <div class="grid">
 
@@ -628,8 +1390,9 @@
             <h3>🌐 Web Development</h3>
 
             <p>
-              React, TypeScript, JavaScript, HTML und CSS
-              für moderne Webprojekte und Experimente.
+              React, TypeScript, Next.js, JavaScript,
+              WordPress, PHP, HTML und CSS für moderne
+              Webanwendungen und Content-Projekte.
             </p>
 
           </article>
@@ -664,34 +1427,60 @@
 
     <div class="divider"></div>
 
-    <section class="section">
+    <!-- Toolbox -->
+
+    <section
+      class="section"
+      id="toolbox"
+    >
       <div class="container">
 
         <h2 class="section-title">
           🧰 Meine Toolbox
         </h2>
 
+        <p class="section-intro">
+          Technologien und Werkzeuge, mit denen ich aktuell
+          entwickle und experimentiere.
+        </p>
+
         <div class="toolbox">
-          <span class="tool">Linux</span>
+          <span class="tool">🐧 Linux</span>
           <span class="tool">Debian</span>
+
           <span class="tool">Godot</span>
           <span class="tool">GDScript</span>
+
           <span class="tool">Python</span>
+
           <span class="tool">TypeScript</span>
           <span class="tool">JavaScript</span>
+
           <span class="tool">React</span>
+          <span class="tool">Next.js</span>
+
+          <span class="tool">WordPress</span>
+          <span class="tool">PHP</span>
+
           <span class="tool">HTML</span>
           <span class="tool">CSS</span>
+
           <span class="tool">Git</span>
           <span class="tool">GitHub</span>
+
           <span class="tool">Android</span>
           <span class="tool">Shell</span>
+
+          <span class="tool">Automation</span>
+          <span class="tool">AI Workflows</span>
         </div>
 
       </div>
     </section>
 
     <div class="divider"></div>
+
+    <!-- Projects -->
 
     <section
       class="section"
@@ -703,41 +1492,63 @@
           🛠️ Projekte
         </h2>
 
+        <p class="section-intro">
+          Eine Auswahl meiner aktuellen und öffentlichen Projekte.
+        </p>
+
         <div class="project-grid">
+
+          <!-- Nythara -->
 
           <article class="card project">
 
             <span class="project-status">
-              🚧 In Entwicklung
+              🚧 Aktive Entwicklung
             </span>
 
             <h3>🌌 Nythara</h3>
 
             <p class="muted">
-              Fantasy Game Development with Godot.
+              Fantasy Game Development with Godot
             </p>
 
             <p>
-              Ein Fantasy-Game-Projekt mit Fokus auf
-              große Spielwelten, Multiplayer, World Building,
-              Combat, Portale, Monster, Bosse, Items,
-              Equipment und Developer Tools.
+              Nythara ist ein Fantasy-Game-Projekt auf Basis von
+              Godot mit Fokus auf große Spielwelten,
+              Multiplayer und umfangreiche Gameplay-Systeme.
             </p>
 
-            <a
-              href="https://github.com/Agutroil/Nythara"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              🎮 Nythara auf GitHub →
-            </a>
+            <ul class="project-features">
+              <li>🌍 Große Spielwelten</li>
+              <li>🌐 Multiplayer</li>
+              <li>🏗️ World Building</li>
+              <li>⚔️ Combat</li>
+              <li>🌀 Portale & Regionen</li>
+              <li>👹 Monster & Bosse</li>
+              <li>🗡️ Items & Equipment</li>
+            </ul>
+
+            <div class="project-actions">
+
+              <a
+                class="project-link"
+                href="https://github.com/Agutroil/Nythara"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                🎮 Nythara auf GitHub →
+              </a>
+
+            </div>
 
           </article>
+
+          <!-- Astra Kingdom -->
 
           <article class="card project">
 
             <span class="project-status">
-              🎮 Game Project
+              🌍 Open-Source Game
             </span>
 
             <h3>🏰 Astra Kingdom</h3>
@@ -747,10 +1558,110 @@
             </p>
 
             <p>
-              Ein eigenes Game-Projekt mit Fokus auf
-              Progression, Combat-Systeme, Items,
-              Ausrüstung und umfangreiche Spielmechaniken.
+              Astra Kingdom ist ein eigenes Game-Projekt
+              mit Fokus auf umfangreiche Gameplay-,
+              Combat- und Progressionssysteme.
             </p>
+
+            <ul class="project-features">
+              <li>⚔️ Combat-Systeme</li>
+              <li>📈 Progression</li>
+              <li>🛡️ Items & Ausrüstung</li>
+              <li>🏆 Langzeit-Fortschritt</li>
+              <li>🧩 Game Mechanics</li>
+              <li>🌍 Open Source</li>
+            </ul>
+
+          </article>
+
+          <!-- MedCore -->
+
+          <article class="card project">
+
+            <span class="project-status">
+              🚧 Open Source · Active Development
+            </span>
+
+            <h3>🩺 MedCore</h3>
+
+            <p class="muted">
+              Open-Source Healthcare Platform
+            </p>
+
+            <p>
+              MedCore ist eine moderne Open-Source-Anwendung
+              für medizinische und gesundheitsbezogene
+              Workflows und befindet sich aktuell
+              in aktiver Entwicklung.
+            </p>
+
+            <ul class="project-features">
+              <li>🩺 Healthcare Software</li>
+              <li>⚛️ React</li>
+              <li>▲ Next.js</li>
+              <li>🔷 TypeScript</li>
+              <li>🔐 Security & Privacy</li>
+              <li>🧩 Modulare Architektur</li>
+              <li>📱 Moderne Benutzeroberfläche</li>
+            </ul>
+
+            <div class="project-actions">
+
+              <a
+                class="project-link"
+                href="https://github.com/Agutroil/medcore"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                🩺 MedCore auf GitHub →
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- Blog Pulse -->
+
+          <article class="card project">
+
+            <span class="project-status">
+              🌍 Open-Source WordPress Theme
+            </span>
+
+            <h3>📰 Blog Pulse</h3>
+
+            <p class="muted">
+              Modern Open-Source WordPress Theme
+            </p>
+
+            <p>
+              Blog Pulse ist ein modernes,
+              responsives WordPress-Theme für Blogs,
+              Magazine und contentorientierte Webseiten.
+            </p>
+
+            <ul class="project-features">
+              <li>📰 Blogs & Magazine</li>
+              <li>🧱 Full Site Editing</li>
+              <li>📱 Responsive Design</li>
+              <li>🌙 Dark Mode</li>
+              <li>🧩 Block Patterns</li>
+              <li>🎨 Design Tokens</li>
+              <li>⚡ Lightweight Frontend</li>
+            </ul>
+
+            <div class="project-actions">
+
+              <a
+                class="project-link"
+                href="https://github.com/Agutroil/blog-pulse"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📰 Blog Pulse auf GitHub →
+              </a>
+
+            </div>
 
           </article>
 
@@ -760,6 +1671,123 @@
     </section>
 
     <div class="divider"></div>
+
+    <!-- Open Source -->
+
+    <section
+      class="section"
+      id="opensource"
+    >
+      <div class="container">
+
+        <h2 class="section-title">
+          🌍 Open Source
+        </h2>
+
+        <p class="section-intro">
+          Ich möchte Projekte nicht nur entwickeln,
+          sondern sie auch dokumentieren,
+          veröffentlichen und für andere Entwickler
+          nachvollziehbar machen.
+        </p>
+
+        <div class="open-source-grid">
+
+          <article class="card open-source-card">
+
+            <h3>🩺 MedCore</h3>
+
+            <p class="muted">
+              Open-source healthcare software
+              in active development.
+            </p>
+
+            <a
+              class="project-link"
+              href="https://github.com/Agutroil/medcore"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Repository öffnen →
+            </a>
+
+          </article>
+
+          <article class="card open-source-card">
+
+            <h3>📰 Blog Pulse</h3>
+
+            <p class="muted">
+              Open-source WordPress theme
+              for modern blogs and magazines.
+            </p>
+
+            <a
+              class="project-link"
+              href="https://github.com/Agutroil/blog-pulse"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Repository öffnen →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Current Quest -->
+
+    <section class="section">
+      <div class="container">
+
+        <h2 class="section-title">
+          🔬 Current Quest
+        </h2>
+
+        <div class="quest-grid">
+
+          <article class="card quest-card">
+
+            <h3>🎮 Game Development</h3>
+
+            <ul>
+              <li>Größere Godot-Spielwelten</li>
+              <li>World Building</li>
+              <li>Multiplayer-Architektur</li>
+              <li>Game-System-Design</li>
+              <li>Performance-Optimierung</li>
+            </ul>
+
+          </article>
+
+          <article class="card quest-card">
+
+            <h3>⚙️ Development & Open Source</h3>
+
+            <ul>
+              <li>Open-Source-Projekte ausbauen</li>
+              <li>MedCore weiterentwickeln</li>
+              <li>WordPress-Themes entwickeln</li>
+              <li>Automatisierte Asset-Pipelines</li>
+              <li>Coding Agents</li>
+              <li>KI-gestützte Developer Tools</li>
+            </ul>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Philosophy -->
 
     <section class="section">
       <div class="container">
@@ -775,14 +1803,16 @@
           </blockquote>
 
           <p class="muted">
-            Nicht jede Idee muss sofort perfekt sein.
-            Wichtig ist für mich:
+            Ich mag Projekte, bei denen Experimentieren
+            ausdrücklich dazugehört.
           </p>
 
-          <p>
-            <strong>
-              bauen → testen → verstehen → verbessern → teilen
-            </strong>
+          <p class="muted">
+            Nicht jede Idee muss sofort perfekt sein.
+          </p>
+
+          <p class="flow">
+            ✨ bauen → testen → verstehen → verbessern → teilen ✨
           </p>
 
         </div>
@@ -790,27 +1820,205 @@
       </div>
     </section>
 
+    <div class="divider"></div>
+
+    <!-- Find me -->
+
+    <section
+      class="section"
+      id="connect"
+    >
+      <div class="container">
+
+        <h2 class="section-title">
+          🔗 Find me & my Projects
+        </h2>
+
+        <p class="section-intro">
+          Follow my work, explore my open-source projects
+          and discover what I'm currently building.
+        </p>
+
+        <div class="social-actions">
+
+          <a
+            class="social-button github"
+            href="https://github.com/Agutroil"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🐙 GitHub · Agutroil
+          </a>
+
+          <a
+            class="social-button website"
+            href="https://agutroil.github.io/"
+          >
+            🌐 Agutroil Website
+          </a>
+
+        </div>
+
+        <div class="mini-project-grid">
+
+          <article class="card mini-project">
+
+            <h3>🎮 Nythara</h3>
+
+            <p class="muted">
+              Fantasy game development
+              with Godot.
+            </p>
+
+            <a
+              href="https://github.com/Agutroil/Nythara"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Explore Nythara →</strong>
+            </a>
+
+          </article>
+
+          <article class="card mini-project">
+
+            <h3>🩺 MedCore</h3>
+
+            <p class="muted">
+              Open-source healthcare
+              platform.
+            </p>
+
+            <a
+              href="https://github.com/Agutroil/medcore"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Explore MedCore →</strong>
+            </a>
+
+          </article>
+
+          <article class="card mini-project">
+
+            <h3>📰 Blog Pulse</h3>
+
+            <p class="muted">
+              Modern open-source
+              WordPress theme.
+            </p>
+
+            <a
+              href="https://github.com/Agutroil/blog-pulse"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Explore Blog Pulse →</strong>
+            </a>
+
+          </article>
+
+        </div>
+
+        <p class="all-repositories">
+
+          <a
+            class="button"
+            href="https://github.com/Agutroil?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🚀 View all repositories →
+          </a>
+
+        </p>
+
+        <details>
+
+          <summary>
+            🧙 Mehr über Agutroil
+          </summary>
+
+          <p>
+            <strong>Agutroil</strong> ist meine
+            Entwickleridentität für Projekte rund um
+            Linux, Softwareentwicklung, Games,
+            Web Development, Open Source und
+            technische Experimente.
+          </p>
+
+          <p>
+            Ich möchte Technologien nicht nur benutzen,
+            sondern verstehen, verändern und selbst
+            etwas damit erschaffen.
+          </p>
+
+          <p>
+            Dabei kombiniere ich klassische
+            Softwareentwicklung mit modernen
+            Automatisierungs- und KI-Werkzeugen.
+          </p>
+
+          <p>
+            Mit Projekten wie
+            <strong>Nythara</strong>,
+            <strong>MedCore</strong> und
+            <strong>Blog Pulse</strong>
+            veröffentliche ich zunehmend eigene Projekte
+            als Open Source und dokumentiere ihre
+            Entwicklung auf GitHub.
+          </p>
+
+        </details>
+
+      </div>
+    </section>
+
+    <!-- Signature -->
+
     <section class="section">
       <div class="container">
 
         <div class="signature">
 
           <p class="signature-main">
+
             🐧 Powered by
-            <span class="linux">Linux</span>
+            <span class="linux">
+              Linux
+            </span>
 
             &nbsp; ✦ &nbsp;
 
             🪶 Crafted by
-            <span class="agutroil">Agutroil</span>
+            <span class="agutroil">
+              Agutroil
+            </span>
+
           </p>
 
           <div class="signature-tags">
-            <span class="tool">💻 CODE</span>
-            <span class="tool">🐧 LINUX</span>
-            <span class="tool">🎮 GAMES</span>
-            <span class="tool">🌍 OPEN SOURCE</span>
-            <span class="tool">🪄 MAGIC</span>
+
+            <span class="tool">
+              💻 CODE
+            </span>
+
+            <span class="tool">
+              🐧 LINUX
+            </span>
+
+            <span class="tool">
+              🎮 GAMES
+            </span>
+
+            <span class="tool">
+              🌍 OPEN SOURCE
+            </span>
+
+            <span class="tool">
+              🪄 MAGIC
+            </span>
+
           </div>
 
           <p>
@@ -820,7 +2028,8 @@
           </p>
 
           <p class="muted">
-            Made with curiosity, code and a little bit of magic.
+            Made with curiosity, code
+            and a little bit of magic.
           </p>
 
         </div>
@@ -830,14 +2039,19 @@
 
   </main>
 
+  <!-- Footer -->
+
   <footer>
     <div class="container">
 
       <p>
-        © 2026 <strong>Anton Deister</strong> · Agutroil
+        © 2026
+        <strong>Anton Deister</strong>
+        · Agutroil
       </p>
 
-      <p>
+      <div class="footer-links">
+
         <a
           href="https://github.com/Agutroil"
           target="_blank"
@@ -846,8 +2060,6 @@
           GitHub
         </a>
 
-        &nbsp; · &nbsp;
-
         <a
           href="https://github.com/Agutroil/Nythara"
           target="_blank"
@@ -855,6 +2067,29 @@
         >
           Nythara
         </a>
+
+        <a
+          href="https://github.com/Agutroil/medcore"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          MedCore
+        </a>
+
+        <a
+          href="https://github.com/Agutroil/blog-pulse"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Blog Pulse
+        </a>
+
+      </div>
+
+      <p>
+        <strong>
+          Code. Linux. Magic.
+        </strong>
       </p>
 
     </div>
