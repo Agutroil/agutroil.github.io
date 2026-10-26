@@ -283,16 +283,6 @@
        BACKGROUND
        ========================================================= */
 
-    /*
-      WICHTIG:
-
-      Das Hintergrundbild liegt hier:
-
-      assets/background.png
-
-      Die Ebene ist FIXED und liegt hinter der gesamten Website.
-    */
-
     .site-background {
       position: fixed;
 
@@ -316,12 +306,6 @@
         cover;
     }
 
-    /*
-      Dunkle Ebene über dem Bild.
-      Dadurch bleiben Texte lesbar,
-      während Wolken und Blitze sichtbar bleiben.
-    */
-
     .site-background-overlay {
       position: fixed;
 
@@ -340,10 +324,6 @@
           rgba(4, 7, 15, 0.82) 100%
         );
     }
-
-    /*
-      Sehr dezentes Grid darüber.
-    */
 
     .site-grid {
       position: fixed;
@@ -613,44 +593,62 @@
         -0.02em;
     }
 
+    /*
+      PROFILBILD STATT "A"
+    */
+
     .brand-mark {
       width:
-        32px;
+        38px;
 
       height:
-        32px;
+        38px;
 
       display:
-        grid;
+        block;
 
-      place-items:
+      flex:
+        0 0 38px;
+
+      object-fit:
+        cover;
+
+      object-position:
         center;
 
-      color:
-        var(--cyan);
+      overflow:
+        hidden;
 
       border:
         1px solid
         var(--border-strong);
 
       border-radius:
-        9px;
+        11px;
 
       background:
-        rgba(98, 209, 255, 0.08);
+        #050a12;
 
       box-shadow:
         0 0 24px
-        rgba(98, 209, 255, 0.08);
+        rgba(98, 209, 255, 0.14);
 
-      font-family:
-        var(--mono);
+      transition:
+        transform 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+    }
 
-      font-size:
-        0.85rem;
+    .brand:hover .brand-mark {
+      transform:
+        scale(1.06);
 
-      font-weight:
-        900;
+      border-color:
+        rgba(98, 209, 255, 0.60);
+
+      box-shadow:
+        0 0 28px
+        rgba(98, 209, 255, 0.22);
     }
 
     .brand-star {
@@ -1541,7 +1539,7 @@
     }
 
     /* =========================================================
-       NYTHARA FEATURED
+       FEATURED PROJECTS
        ========================================================= */
 
     .featured-project {
@@ -2711,11 +2709,6 @@
           flex-start;
       }
 
-      /*
-        Auf Mobilgeräten vermeiden wir background-attachment.
-        Die feste .site-background-Ebene funktioniert trotzdem.
-      */
-
       .site-background {
         background-position:
           center top;
@@ -2821,9 +2814,11 @@
         aria-label="Agutroil Startseite"
       >
 
-        <span class="brand-mark">
-          A
-        </span>
+        <img
+          class="brand-mark"
+          src="./assets/Profil.png"
+          alt="Agutroil Profilbild"
+        >
 
         <span>
           Agutroil
@@ -3020,25 +3015,11 @@
             aria-label="Technologien"
           >
 
-            <span>
-              Godot
-            </span>
-
-            <span>
-              Debian
-            </span>
-
-            <span>
-              TypeScript
-            </span>
-
-            <span>
-              Python
-            </span>
-
-            <span>
-              React
-            </span>
+            <span>Godot</span>
+            <span>Debian</span>
+            <span>TypeScript</span>
+            <span>Python</span>
+            <span>React</span>
 
           </div>
 
@@ -3058,15 +3039,8 @@
           <div class="portrait-meta">
 
             <div>
-
-              <strong>
-                Anton Deister
-              </strong>
-
-              <small>
-                Developer · Agutroil
-              </small>
-
+              <strong>Anton Deister</strong>
+              <small>Developer · Agutroil</small>
             </div>
 
             <span class="portrait-badge">
@@ -3139,13 +3113,9 @@
 
               <p>
                 Ich bin
-                <strong>
-                  Anton Deister
-                </strong>,
+                <strong>Anton Deister</strong>,
                 auf GitHub unterwegs als
-                <strong>
-                  Agutroil
-                </strong>.
+                <strong>Agutroil</strong>.
               </p>
 
               <p>
@@ -3170,9 +3140,7 @@
 
                 <article class="focus-card">
 
-                  <small>
-                    01
-                  </small>
+                  <small>01</small>
 
                   <h3>
                     Game Development
@@ -3188,9 +3156,7 @@
 
                 <article class="focus-card">
 
-                  <small>
-                    02
-                  </small>
+                  <small>02</small>
 
                   <h3>
                     Web Development
@@ -3206,9 +3172,7 @@
 
                 <article class="focus-card">
 
-                  <small>
-                    03
-                  </small>
+                  <small>03</small>
 
                   <h3>
                     Linux & Open Source
@@ -3224,9 +3188,7 @@
 
                 <article class="focus-card">
 
-                  <small>
-                    04
-                  </small>
+                  <small>04</small>
 
                   <h3>
                     AI Workflows
@@ -3247,63 +3209,28 @@
             <aside data-reveal>
 
               <div class="info-row">
-
-                <span>
-                  Identity
-                </span>
-
-                <strong>
-                  Anton Deister · @Agutroil
-                </strong>
-
+                <span>Identity</span>
+                <strong>Anton Deister · @Agutroil</strong>
               </div>
 
               <div class="info-row">
-
-                <span>
-                  System
-                </span>
-
-                <strong>
-                  Linux · Debian
-                </strong>
-
+                <span>System</span>
+                <strong>Linux · Debian</strong>
               </div>
 
               <div class="info-row">
-
-                <span>
-                  Game Engine
-                </span>
-
-                <strong>
-                  Godot · GDScript
-                </strong>
-
+                <span>Game Engine</span>
+                <strong>Godot · GDScript</strong>
               </div>
 
               <div class="info-row">
-
-                <span>
-                  Web
-                </span>
-
-                <strong>
-                  TypeScript · React · Next.js
-                </strong>
-
+                <span>Web</span>
+                <strong>TypeScript · React · Next.js</strong>
               </div>
 
               <div class="info-row">
-
-                <span>
-                  Philosophy
-                </span>
-
-                <strong>
-                  Build · Test · Understand · Improve · Share
-                </strong>
-
+                <span>Philosophy</span>
+                <strong>Build · Test · Understand · Improve · Share</strong>
               </div>
 
             </aside>
@@ -3365,9 +3292,7 @@
 
             <div class="nythara-title">
 
-              <strong>
-                NYTHARA
-              </strong>
+              <strong>NYTHARA</strong>
 
               <span>
                 A world still being forged
@@ -3385,9 +3310,7 @@
                 ● Active Development
               </span>
 
-              <h3>
-                Nythara
-              </h3>
+              <h3>Nythara</h3>
 
               <p>
                 Ein Open-Source-Fantasy-MMORPG
@@ -3400,27 +3323,11 @@
               </p>
 
               <div class="tags">
-
-                <span class="tag">
-                  Godot 4
-                </span>
-
-                <span class="tag">
-                  GDScript
-                </span>
-
-                <span class="tag">
-                  Multiplayer
-                </span>
-
-                <span class="tag">
-                  Open Source
-                </span>
-
-                <span class="tag">
-                  MMORPG
-                </span>
-
+                <span class="tag">Godot 4</span>
+                <span class="tag">GDScript</span>
+                <span class="tag">Multiplayer</span>
+                <span class="tag">Open Source</span>
+                <span class="tag">MMORPG</span>
               </div>
 
             </div>
@@ -3428,51 +3335,23 @@
             <div class="facts">
 
               <div class="fact">
-
-                <strong>
-                  17
-                </strong>
-
-                <span>
-                  Worlds
-                </span>
-
+                <strong>17</strong>
+                <span>Worlds</span>
               </div>
 
               <div class="fact">
-
-                <strong>
-                  ENet
-                </strong>
-
-                <span>
-                  Multiplayer
-                </span>
-
+                <strong>ENet</strong>
+                <span>Multiplayer</span>
               </div>
 
               <div class="fact">
-
-                <strong>
-                  Server
-                </strong>
-
-                <span>
-                  Authoritative
-                </span>
-
+                <strong>Server</strong>
+                <span>Authoritative</span>
               </div>
 
               <div class="fact">
-
-                <strong>
-                  Open
-                </strong>
-
-                <span>
-                  Source
-                </span>
-
+                <strong>Open</strong>
+                <span>Source</span>
               </div>
 
             </div>
@@ -3486,10 +3365,7 @@
                 rel="noopener noreferrer"
               >
                 Nythara auf GitHub
-
-                <span class="arrow">
-                  ↗
-                </span>
+                <span class="arrow">↗</span>
               </a>
 
             </div>
@@ -3523,9 +3399,7 @@
                 ● Active Development · Open Source
               </span>
 
-              <h3>
-                Aura
-              </h3>
+              <h3>Aura</h3>
 
               <p>
                 Ein Open-Source-Projekt für sichere
@@ -3537,27 +3411,11 @@
               </p>
 
               <div class="tags">
-
-                <span class="tag">
-                  E2EE
-                </span>
-
-                <span class="tag">
-                  Next.js
-                </span>
-
-                <span class="tag">
-                  TypeScript
-                </span>
-
-                <span class="tag">
-                  WebSockets
-                </span>
-
-                <span class="tag">
-                  Open Source
-                </span>
-
+                <span class="tag">E2EE</span>
+                <span class="tag">Next.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">Open Source</span>
               </div>
 
             </div>
@@ -3565,51 +3423,23 @@
             <div class="facts">
 
               <div class="fact">
-
-                <strong>
-                  E2EE
-                </strong>
-
-                <span>
-                  Messaging
-                </span>
-
+                <strong>E2EE</strong>
+                <span>Messaging</span>
               </div>
 
               <div class="fact">
-
-                <strong>
-                  WORM
-                </strong>
-
-                <span>
-                  History
-                </span>
-
+                <strong>WORM</strong>
+                <span>History</span>
               </div>
 
               <div class="fact">
-
-                <strong>
-                  Realtime
-                </strong>
-
-                <span>
-                  WebSockets
-                </span>
-
+                <strong>Realtime</strong>
+                <span>WebSockets</span>
               </div>
 
               <div class="fact">
-
-                <strong>
-                  MIT
-                </strong>
-
-                <span>
-                  Open Source
-                </span>
-
+                <strong>MIT</strong>
+                <span>Open Source</span>
               </div>
 
             </div>
@@ -3623,10 +3453,7 @@
                 rel="noopener noreferrer"
               >
                 Aura auf GitHub
-
-                <span class="arrow">
-                  ↗
-                </span>
+                <span class="arrow">↗</span>
               </a>
 
             </div>
@@ -3670,19 +3497,9 @@
               </p>
 
               <div class="tags">
-
-                <span class="tag">
-                  Game Systems
-                </span>
-
-                <span class="tag">
-                  Progression
-                </span>
-
-                <span class="tag">
-                  Open Source
-                </span>
-
+                <span class="tag">Game Systems</span>
+                <span class="tag">Progression</span>
+                <span class="tag">Open Source</span>
               </div>
 
             </div>
@@ -3715,19 +3532,9 @@
               </p>
 
               <div class="tags">
-
-                <span class="tag">
-                  React
-                </span>
-
-                <span class="tag">
-                  Next.js
-                </span>
-
-                <span class="tag">
-                  TypeScript
-                </span>
-
+                <span class="tag">React</span>
+                <span class="tag">Next.js</span>
+                <span class="tag">TypeScript</span>
               </div>
 
               <a
@@ -3737,10 +3544,7 @@
                 rel="noopener noreferrer"
               >
                 Explore MedCore
-
-                <span class="arrow">
-                  ↗
-                </span>
+                <span class="arrow">↗</span>
               </a>
 
             </div>
@@ -3774,19 +3578,9 @@
               </p>
 
               <div class="tags">
-
-                <span class="tag">
-                  WordPress
-                </span>
-
-                <span class="tag">
-                  PHP
-                </span>
-
-                <span class="tag">
-                  FSE
-                </span>
-
+                <span class="tag">WordPress</span>
+                <span class="tag">PHP</span>
+                <span class="tag">FSE</span>
               </div>
 
               <a
@@ -3796,10 +3590,7 @@
                 rel="noopener noreferrer"
               >
                 Explore Blog Pulse
-
-                <span class="arrow">
-                  ↗
-                </span>
+                <span class="arrow">↗</span>
               </a>
 
             </div>
@@ -3856,23 +3647,10 @@
                 </div>
 
                 <div class="stack-items">
-
-                  <span>
-                    Godot
-                  </span>
-
-                  <span>
-                    GDScript
-                  </span>
-
-                  <span>
-                    Python
-                  </span>
-
-                  <span>
-                    Android
-                  </span>
-
+                  <span>Godot</span>
+                  <span>GDScript</span>
+                  <span>Python</span>
+                  <span>Android</span>
                 </div>
 
               </div>
@@ -3884,39 +3662,14 @@
                 </div>
 
                 <div class="stack-items">
-
-                  <span>
-                    TypeScript
-                  </span>
-
-                  <span>
-                    JavaScript
-                  </span>
-
-                  <span>
-                    React
-                  </span>
-
-                  <span>
-                    Next.js
-                  </span>
-
-                  <span>
-                    WordPress
-                  </span>
-
-                  <span>
-                    PHP
-                  </span>
-
-                  <span>
-                    HTML
-                  </span>
-
-                  <span>
-                    CSS
-                  </span>
-
+                  <span>TypeScript</span>
+                  <span>JavaScript</span>
+                  <span>React</span>
+                  <span>Next.js</span>
+                  <span>WordPress</span>
+                  <span>PHP</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
                 </div>
 
               </div>
@@ -3928,23 +3681,10 @@
                 </div>
 
                 <div class="stack-items">
-
-                  <span>
-                    Linux
-                  </span>
-
-                  <span>
-                    Debian
-                  </span>
-
-                  <span>
-                    Shell
-                  </span>
-
-                  <span>
-                    Terminal
-                  </span>
-
+                  <span>Linux</span>
+                  <span>Debian</span>
+                  <span>Shell</span>
+                  <span>Terminal</span>
                 </div>
 
               </div>
@@ -3956,23 +3696,10 @@
                 </div>
 
                 <div class="stack-items">
-
-                  <span>
-                    Git
-                  </span>
-
-                  <span>
-                    GitHub
-                  </span>
-
-                  <span>
-                    CI
-                  </span>
-
-                  <span>
-                    Testing
-                  </span>
-
+                  <span>Git</span>
+                  <span>GitHub</span>
+                  <span>CI</span>
+                  <span>Testing</span>
                 </div>
 
               </div>
@@ -3984,23 +3711,10 @@
                 </div>
 
                 <div class="stack-items">
-
-                  <span>
-                    Coding Agents
-                  </span>
-
-                  <span>
-                    Automation
-                  </span>
-
-                  <span>
-                    AI Bridges
-                  </span>
-
-                  <span>
-                    Asset Pipelines
-                  </span>
-
+                  <span>Coding Agents</span>
+                  <span>Automation</span>
+                  <span>AI Bridges</span>
+                  <span>Asset Pipelines</span>
                 </div>
 
               </div>
@@ -4066,10 +3780,7 @@
                   rel="noopener noreferrer"
                 >
                   GitHub Profil öffnen
-
-                  <span class="arrow">
-                    ↗
-                  </span>
+                  <span class="arrow">↗</span>
                 </a>
 
                 <a
@@ -4079,10 +3790,7 @@
                   rel="noopener noreferrer"
                 >
                   Alle Repositories
-
-                  <span class="arrow">
-                    →
-                  </span>
+                  <span class="arrow">→</span>
                 </a>
 
               </div>
