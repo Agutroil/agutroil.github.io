@@ -1,10 +1,6 @@
 <p align="center">
   <a href="https://agutroil.github.io/">
-    <img
-      src="./assets/banner.png"
-      alt="Anton Deister · Agutroil — Developer, Linux and Open Source"
-      width="100%"
-    >
+    <img src="./assets/banner.png" alt="Anton Deister · Agutroil — Developer, Linux and Open Source" width="100%">
   </a>
 </p>
 
@@ -27,43 +23,15 @@
 </p>
 
 <p align="center">
-  <a href="https://agutroil.github.io/">
-    <img
-      src="https://img.shields.io/badge/Website-Live-22c55e?style=for-the-badge&logo=githubpages&logoColor=white"
-      alt="Website"
-    >
-  </a>
-
-  <a href="https://github.com/Agutroil">
-    <img
-      src="https://img.shields.io/badge/GitHub-Agutroil-181717?style=for-the-badge&logo=github&logoColor=white"
-      alt="GitHub Agutroil"
-    >
-  </a>
-
-  <a href="https://github.com/Agutroil/Aura">
-    <img
-      src="https://img.shields.io/badge/Aura-Secure_Messaging-14B8A6?style=for-the-badge&logo=github&logoColor=white"
-      alt="Aura"
-    >
-  </a>
+  <a href="https://agutroil.github.io/"><img src="https://img.shields.io/badge/Website-Live-22c55e?style=for-the-badge&logo=githubpages&logoColor=white" alt="Website"></a>
+  <a href="https://github.com/Agutroil"><img src="https://img.shields.io/badge/GitHub-Agutroil-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Agutroil"></a>
+  <a href="https://github.com/Agutroil/Aura"><img src="https://img.shields.io/badge/Aura-Secure_Messaging-14B8A6?style=for-the-badge&logo=github&logoColor=white" alt="Aura"></a>
 </p>
 
 <p align="center">
-  <img
-    src="https://img.shields.io/github/last-commit/Agutroil/agutroil.github.io?style=flat-square"
-    alt="Last commit"
-  >
-
-  <img
-    src="https://img.shields.io/github/repo-size/Agutroil/agutroil.github.io?style=flat-square"
-    alt="Repository size"
-  >
-
-  <img
-    src="https://img.shields.io/badge/Hosted%20with-GitHub%20Pages-222222?style=flat-square&logo=github"
-    alt="GitHub Pages"
-  >
+  <img src="https://img.shields.io/github/last-commit/Agutroil/agutroil.github.io?style=flat-square" alt="Last commit">
+  <img src="https://img.shields.io/github/repo-size/Agutroil/agutroil.github.io?style=flat-square" alt="Repository size">
+  <img src="https://img.shields.io/badge/Hosted%20with-GitHub%20Pages-222222?style=flat-square&logo=github" alt="GitHub Pages">
 </p>
 
 ---
@@ -120,9 +88,7 @@ The site includes:
 ## 🚀 Live website
 
 <p align="center">
-  <a href="https://agutroil.github.io/">
-    <strong>🌐 Visit agutroil.github.io →</strong>
-  </a>
+  <a href="https://agutroil.github.io/"><strong>🌐 Visit agutroil.github.io →</strong></a>
 </p>
 
 No installation is required to view the website.
@@ -258,13 +224,7 @@ A game-development project focused on large fantasy worlds, multiplayer systems 
 ### 🔐 Aura
 
 <p align="center">
-  <a href="https://github.com/Agutroil/Aura">
-    <img
-      src="./assets/aura-banner.svg"
-      alt="Aura — Open-Source Secure Messaging"
-      width="100%"
-    >
-  </a>
+  <a href="https://github.com/Agutroil/Aura"><img src="./assets/aura-banner.svg" alt="Aura — Open-Source Secure Messaging" width="100%"></a>
 </p>
 
 **Open-source secure messaging project focused on privacy, verifiable identities and tamper-evident communication.**
@@ -298,29 +258,13 @@ Aura is a security-focused realtime messaging application built around a clear s
 - GitHub Actions
 
 <p align="center">
-  <a href="https://github.com/Agutroil/Aura">
-    <img
-      src="https://img.shields.io/badge/Explore_Aura-GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
-      alt="Explore Aura on GitHub"
-    >
-  </a>
+  <a href="https://github.com/Agutroil/Aura"><img src="https://img.shields.io/badge/Explore_Aura-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Explore Aura on GitHub"></a>
 </p>
 
 <p align="center">
-  <img
-    src="https://img.shields.io/badge/Status-Active_Development-14B8A6?style=flat-square"
-    alt="Active Development"
-  >
-
-  <img
-    src="https://img.shields.io/badge/License-MIT-blue?style=flat-square"
-    alt="MIT License"
-  >
-
-  <img
-    src="https://img.shields.io/badge/Security-Focused-16A34A?style=flat-square"
-    alt="Security Focused"
-  >
+  <img src="https://img.shields.io/badge/Status-Active_Development-14B8A6?style=flat-square" alt="Active Development">
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="MIT License">
+  <img src="https://img.shields.io/badge/Security-Focused-16A34A?style=flat-square" alt="Security Focused">
 </p>
 
 > [!IMPORTANT]
@@ -430,49 +374,23 @@ Build → Test → Understand → Improve → Share
 ## 🔗 Connect
 
 <p align="center">
-  <a href="https://github.com/Agutroil">
-    <img
-      src="https://img.shields.io/badge/GitHub-@Agutroil-181717?style=for-the-badge&logo=github&logoColor=white"
-      alt="GitHub @Agutroil"
-    >
-  </a>
-
-  <a href="https://agutroil.github.io/">
-    <img
-      src="https://img.shields.io/badge/Website-agutroil.github.io-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white"
-      alt="Agutroil Website"
-    >
-  </a>
+  <a href="https://github.com/Agutroil"><img src="https://img.shields.io/badge/GitHub-@Agutroil-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub @Agutroil"></a>
+  <a href="https://agutroil.github.io/"><img src="https://img.shields.io/badge/Website-agutroil.github.io-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Agutroil Website"></a>
+  <a href="https://github.com/Agutroil/Aura"><img src="https://img.shields.io/badge/Aura-Secure_Messaging-14B8A6?style=for-the-badge&logo=github&logoColor=white" alt="Aura Secure Messaging"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Agutroil/Nythara">
-    <strong>🎮 Nythara</strong>
-  </a>
-
+  <a href="https://github.com/Agutroil/Nythara"><strong>🎮 Nythara</strong></a>
   &nbsp; • &nbsp;
-
-  <a href="https://github.com/Agutroil/Aura">
-    <strong>🔐 Aura</strong>
-  </a>
-
+  <a href="https://github.com/Agutroil/Aura"><strong>🔐 Aura</strong></a>
   &nbsp; • &nbsp;
-
-  <a href="https://github.com/Agutroil/medcore">
-    <strong>🩺 MedCore</strong>
-  </a>
-
+  <a href="https://github.com/Agutroil/medcore"><strong>🩺 MedCore</strong></a>
   &nbsp; • &nbsp;
-
-  <a href="https://github.com/Agutroil/blog-pulse">
-    <strong>📰 Blog Pulse</strong>
-  </a>
+  <a href="https://github.com/Agutroil/blog-pulse"><strong>📰 Blog Pulse</strong></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Agutroil?tab=repositories">
-    <strong>🚀 View all repositories →</strong>
-  </a>
+  <a href="https://github.com/Agutroil?tab=repositories"><strong>🚀 View all repositories →</strong></a>
 </p>
 
 ---
@@ -493,7 +411,6 @@ Developer · Linux Enthusiast · Open-Source Creator
 
 - GitHub: [@Agutroil](https://github.com/Agutroil)
 - Website: [agutroil.github.io](https://agutroil.github.io/)
-- Aura: [github.com/Agutroil/Aura](https://github.com/Agutroil/Aura)
 
 ---
 
