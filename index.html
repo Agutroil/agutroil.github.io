@@ -1571,12 +1571,14 @@
     }
 
     .aura-art {
-      min-height:
-        clamp(
-          300px,
-          45vw,
-          540px
-        );
+      position:
+        relative;
+
+      width:
+        100%;
+
+      aspect-ratio:
+        16 / 5;
 
       display:
         grid;
@@ -1599,7 +1601,10 @@
         100%;
 
       object-fit:
-        cover;
+        contain;
+
+      object-position:
+        center;
     }
 
     .nythara-art {
