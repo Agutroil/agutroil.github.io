@@ -142,7 +142,29 @@
   </script>
 
   <style>
+body {
+  margin: 0;
+  min-width: 320px;
 
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(7, 9, 15, 0.55),
+      rgba(7, 9, 15, 0.82)
+    ),
+    url("assets/background.png");
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  overflow-x: hidden;
+}
     /* ======================================================
        01 / DESIGN TOKENS
        ====================================================== */
