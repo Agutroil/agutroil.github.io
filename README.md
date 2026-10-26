@@ -18,6 +18,7 @@
   🐧 Linux &nbsp;·&nbsp;
   💻 Software &nbsp;·&nbsp;
   🎮 Games &nbsp;·&nbsp;
+  🔐 Security &nbsp;·&nbsp;
   🌍 Open Source
 </p>
 
@@ -32,10 +33,18 @@
       alt="Website"
     >
   </a>
+
   <a href="https://github.com/Agutroil">
     <img
       src="https://img.shields.io/badge/GitHub-Agutroil-181717?style=for-the-badge&logo=github&logoColor=white"
       alt="GitHub Agutroil"
+    >
+  </a>
+
+  <a href="https://github.com/Agutroil/Aura">
+    <img
+      src="https://img.shields.io/badge/Aura-Secure_Messaging-14B8A6?style=for-the-badge&logo=github&logoColor=white"
+      alt="Aura"
     >
   </a>
 </p>
@@ -45,10 +54,12 @@
     src="https://img.shields.io/github/last-commit/Agutroil/agutroil.github.io?style=flat-square"
     alt="Last commit"
   >
+
   <img
     src="https://img.shields.io/github/repo-size/Agutroil/agutroil.github.io?style=flat-square"
     alt="Repository size"
   >
+
   <img
     src="https://img.shields.io/badge/Hosted%20with-GitHub%20Pages-222222?style=flat-square&logo=github"
     alt="GitHub Pages"
@@ -71,6 +82,8 @@ The website is my central place for presenting my work around:
 - 💻 Software Development
 - 🎮 Game Development
 - 🌐 Web Development
+- 🔐 Security-focused Development
+- 💬 Secure & Realtime Messaging
 - 🌍 Open Source
 - ⚙️ Automation
 - 🤖 AI-assisted Developer Workflows
@@ -87,10 +100,13 @@ The site includes:
 
 - 👤 Developer profile and introduction
 - 🛠️ Selected projects
+- 🔐 Aura secure-messaging project
 - 🧰 Technology stack
 - 🌍 Open-source work
 - 🎮 Game development
 - 🌐 Web development
+- 🔒 Security-focused development
+- 💬 Realtime communication
 - 🐧 Linux-focused workflows
 - 🤖 AI-assisted development
 - 🔗 Direct links to GitHub projects
@@ -128,6 +144,13 @@ No installation is required to view the website.
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
 
+### Security & Realtime
+
+![E2EE](https://img.shields.io/badge/E2EE-Secure_Messaging-14B8A6?style=flat-square)
+![WebSockets](https://img.shields.io/badge/WebSockets-Realtime-0891B2?style=flat-square)
+![Security](https://img.shields.io/badge/Security-Focused-16A34A?style=flat-square)
+![Privacy](https://img.shields.io/badge/Privacy-Aware-7C3AED?style=flat-square)
+
 ### Hosting
 
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=flat-square&logo=github&logoColor=white)
@@ -143,6 +166,7 @@ agutroil.github.io/
 ├── assets/
 │   ├── banner.png
 │   ├── antondeister.png
+│   ├── aura-banner.svg
 │   └── ...
 │
 ├── index.html
@@ -150,6 +174,14 @@ agutroil.github.io/
 ```
 
 `index.html` contains the website structure and presentation, while `assets/` contains the visual resources used by the site.
+
+The Aura section uses:
+
+```text
+assets/aura-banner.svg
+```
+
+for the featured project presentation.
 
 ---
 
@@ -223,6 +255,81 @@ A game-development project focused on large fantasy worlds, multiplayer systems 
 
 ---
 
+### 🔐 Aura
+
+<p align="center">
+  <a href="https://github.com/Agutroil/Aura">
+    <img
+      src="./assets/aura-banner.svg"
+      alt="Aura — Open-Source Secure Messaging"
+      width="100%"
+    >
+  </a>
+</p>
+
+**Open-source secure messaging project focused on privacy, verifiable identities and tamper-evident communication.**
+
+Aura is a security-focused realtime messaging application built around a clear separation between encrypted message content, authenticated identities and verifiable message history.
+
+**Focus**
+
+- 🔒 End-to-End Encryption
+- 🛡️ Identity Verification
+- 🔗 Tamper-Evident History
+- ✍️ Signed Message History
+- 💬 Realtime Messaging
+- 👥 Group Conversations
+- 🔎 Message Search
+- 📱 Responsive Mobile UI
+- 🔐 Safety Numbers
+- 🧪 Automated Security Testing
+- 🌍 Open Source
+
+**Technology**
+
+- Next.js
+- React
+- TypeScript
+- WebSockets
+- MySQL / MariaDB
+- Redis
+- Vitest
+- Playwright
+- GitHub Actions
+
+<p align="center">
+  <a href="https://github.com/Agutroil/Aura">
+    <img
+      src="https://img.shields.io/badge/Explore_Aura-GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+      alt="Explore Aura on GitHub"
+    >
+  </a>
+</p>
+
+<p align="center">
+  <img
+    src="https://img.shields.io/badge/Status-Active_Development-14B8A6?style=flat-square"
+    alt="Active Development"
+  >
+
+  <img
+    src="https://img.shields.io/badge/License-MIT-blue?style=flat-square"
+    alt="MIT License"
+  >
+
+  <img
+    src="https://img.shields.io/badge/Security-Focused-16A34A?style=flat-square"
+    alt="Security Focused"
+  >
+</p>
+
+> [!IMPORTANT]
+> Aura is an actively developed security-focused project. While the project includes extensive automated security, integration and end-to-end testing, it has not yet undergone an independent professional security audit.
+
+[**Explore Aura →**](https://github.com/Agutroil/Aura)
+
+---
+
 ### 🏰 Astra Kingdom
 
 **Open-source game development project.**
@@ -279,6 +386,9 @@ Features include:
 
 ```text
 🎮 Game Development
+🔐 Secure Messaging
+🔒 Security-focused Development
+💬 Realtime Communication
 🌍 Open Source
 🐧 Linux & Debian
 🌐 Web Technologies
@@ -288,13 +398,22 @@ Features include:
 🧰 Developer Tools
 ```
 
+Current projects include:
+
+- 🌌 **Nythara** — fantasy game development with Godot
+- 🔐 **Aura** — secure realtime messaging
+- 🩺 **MedCore** — healthcare-oriented web software
+- 📰 **Blog Pulse** — open-source WordPress development
+
 ---
 
 ## 🧙 About Agutroil
 
-**Agutroil** is my developer identity for projects around software, Linux, games, web development and open source.
+**Agutroil** is my developer identity for projects around software, Linux, games, web development, security and open source.
 
 I enjoy building systems from the ground up, experimenting with technology and turning ideas into functional projects.
+
+Projects such as **Nythara**, **Aura**, **MedCore** and **Blog Pulse** explore different areas of software development — from game architecture and multiplayer systems to secure communication and modern web development.
 
 My development philosophy:
 
@@ -317,6 +436,7 @@ Build → Test → Understand → Improve → Share
       alt="GitHub @Agutroil"
     >
   </a>
+
   <a href="https://agutroil.github.io/">
     <img
       src="https://img.shields.io/badge/Website-agutroil.github.io-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white"
@@ -326,11 +446,27 @@ Build → Test → Understand → Improve → Share
 </p>
 
 <p align="center">
-  <a href="https://github.com/Agutroil/Nythara"><strong>🎮 Nythara</strong></a>
+  <a href="https://github.com/Agutroil/Nythara">
+    <strong>🎮 Nythara</strong>
+  </a>
+
   &nbsp; • &nbsp;
-  <a href="https://github.com/Agutroil/medcore"><strong>🩺 MedCore</strong></a>
+
+  <a href="https://github.com/Agutroil/Aura">
+    <strong>🔐 Aura</strong>
+  </a>
+
   &nbsp; • &nbsp;
-  <a href="https://github.com/Agutroil/blog-pulse"><strong>📰 Blog Pulse</strong></a>
+
+  <a href="https://github.com/Agutroil/medcore">
+    <strong>🩺 MedCore</strong>
+  </a>
+
+  &nbsp; • &nbsp;
+
+  <a href="https://github.com/Agutroil/blog-pulse">
+    <strong>📰 Blog Pulse</strong>
+  </a>
 </p>
 
 <p align="center">
@@ -357,6 +493,7 @@ Developer · Linux Enthusiast · Open-Source Creator
 
 - GitHub: [@Agutroil](https://github.com/Agutroil)
 - Website: [agutroil.github.io](https://agutroil.github.io/)
+- Aura: [github.com/Agutroil/Aura](https://github.com/Agutroil/Aura)
 
 ---
 
@@ -369,7 +506,7 @@ Developer · Linux Enthusiast · Open-Source Creator
 </p>
 
 <p align="center">
-  <strong>💻 Code · 🐧 Linux · 🎮 Games · 🌍 Open Source · 🪄 Magic</strong>
+  <strong>💻 Code · 🐧 Linux · 🎮 Games · 🔐 Security · 🌍 Open Source · 🪄 Magic</strong>
 </p>
 
 <p align="center">
