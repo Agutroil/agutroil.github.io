@@ -8,34 +8,21 @@
     content="width=device-width, initial-scale=1"
   >
 
-  <title>
-    Anton Deister | Agutroil · Developer · Linux · Open Source
-  </title>
+  <title>Anton Deister | Agutroil · Developer · Linux · Open Source</title>
 
   <meta
     name="description"
-    content="Anton Deister – Agutroil. Developer, Linux Enthusiast und Open-Source Creator. Projekte rund um Godot, Game Development, React, Next.js, WordPress, MedCore, Blog Pulse und Nythara."
+    content="Anton Deister – Agutroil. Developer, Linux Enthusiast und Open-Source Creator. Projekte rund um Godot, Game Development, React, Next.js, Security, E2EE, Aura, Nythara, MedCore und Blog Pulse."
   >
 
   <meta
     name="keywords"
-    content="Anton Deister, Agutroil, Developer, Linux, Debian, Open Source, Software Development, Game Development, Godot, GDScript, React, TypeScript, Next.js, WordPress, PHP, MedCore, Blog Pulse, Nythara"
+    content="Anton Deister, Agutroil, Developer, Linux, Debian, Open Source, Software Development, Game Development, Godot, GDScript, React, TypeScript, Next.js, Security, E2EE, Secure Messaging, WebSockets, Aura, Nythara, MedCore, Blog Pulse"
   >
 
-  <meta
-    name="author"
-    content="Anton Deister"
-  >
-
-  <meta
-    name="robots"
-    content="index, follow"
-  >
-
-  <meta
-    name="theme-color"
-    content="#060810"
-  >
+  <meta name="author" content="Anton Deister">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#060810">
 
   <link
     rel="canonical"
@@ -44,19 +31,12 @@
 
   <!-- Open Graph -->
 
-  <meta
-    property="og:type"
-    content="profile"
-  >
-
-  <meta
-    property="og:title"
-    content="Anton Deister | Agutroil"
-  >
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Anton Deister | Agutroil">
 
   <meta
     property="og:description"
-    content="Developer · Linux · Open Source · Game Development · Code. Linux. Magic."
+    content="Developer · Linux · Open Source · Game Development · Security · Aura · Code. Linux. Magic."
   >
 
   <meta
@@ -83,7 +63,7 @@
 
   <meta
     name="twitter:description"
-    content="Code. Linux. Games. Open Source. Magic."
+    content="Code. Linux. Games. Security. Open Source. Magic."
   >
 
   <meta
@@ -121,10 +101,10 @@
         "JavaScript",
         "React",
         "Next.js",
-        "WordPress",
-        "PHP",
-        "HTML",
-        "CSS",
+        "Security",
+        "End-to-End Encryption",
+        "WebSockets",
+        "Secure Messaging",
         "Git",
         "GitHub",
         "Automation",
@@ -135,71 +115,37 @@
   </script>
 
   <style>
-    /* =========================================================
-       DESIGN TOKENS
-       ========================================================= */
-
     :root {
       color-scheme: dark;
 
       --bg: #060810;
+      --panel: rgba(8, 13, 22, 0.76);
+      --panel-strong: rgba(9, 15, 27, 0.92);
+      --panel-soft: rgba(18, 28, 45, 0.64);
 
-      --panel:
-        rgba(8, 13, 22, 0.76);
+      --text: #f4f8fc;
+      --text-soft: #dce6f0;
+      --muted: #9aa8b9;
 
-      --panel-strong:
-        rgba(9, 15, 27, 0.90);
+      --cyan: #62d1ff;
+      --blue: #6aa9ff;
+      --violet: #a38cff;
+      --gold: #e6bc69;
+      --green: #65d6a4;
+      --aura: #43e0c5;
 
-      --panel-soft:
-        rgba(18, 28, 45, 0.64);
-
-      --text:
-        #f4f8fc;
-
-      --text-soft:
-        #dce6f0;
-
-      --muted:
-        #9aa8b9;
-
-      --cyan:
-        #62d1ff;
-
-      --blue:
-        #6aa9ff;
-
-      --violet:
-        #a38cff;
-
-      --gold:
-        #e6bc69;
-
-      --green:
-        #65d6a4;
-
-      --border:
-        rgba(148, 190, 220, 0.16);
-
-      --border-strong:
-        rgba(98, 209, 255, 0.32);
+      --border: rgba(148, 190, 220, 0.16);
+      --border-strong: rgba(98, 209, 255, 0.34);
 
       --shadow:
         0 24px 80px rgba(0, 0, 0, 0.42);
 
-      --radius-sm:
-        10px;
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 22px;
+      --radius-xl: 30px;
 
-      --radius-md:
-        16px;
-
-      --radius-lg:
-        22px;
-
-      --radius-xl:
-        30px;
-
-      --container:
-        1180px;
+      --container: 1180px;
 
       --sans:
         Inter,
@@ -217,10 +163,6 @@
         monospace;
     }
 
-    /* =========================================================
-       RESET
-       ========================================================= */
-
     *,
     *::before,
     *::after {
@@ -234,45 +176,31 @@
 
     body {
       margin: 0;
-
       min-width: 320px;
-
       color: var(--text);
-
       background: var(--bg);
-
       font-family: var(--sans);
-
       line-height: 1.7;
-
       overflow-x: hidden;
     }
 
     img {
       display: block;
-
       max-width: 100%;
     }
 
     a {
       color: inherit;
-
       text-decoration: none;
     }
 
     button {
       font: inherit;
-
       cursor: pointer;
-    }
-
-    strong {
-      color: var(--text);
     }
 
     ::selection {
       color: #041019;
-
       background: var(--cyan);
     }
 
@@ -280,99 +208,54 @@
        BACKGROUND
        ========================================================= */
 
-    /*
-      WICHTIG:
-
-      Das Hintergrundbild liegt hier:
-
-      assets/background.png
-
-      Die Ebene ist FIXED und liegt hinter der gesamten Website.
-    */
-
     .site-background {
       position: fixed;
-
       inset: 0;
-
       z-index: -3;
-
       pointer-events: none;
 
-      background-color: #060810;
-
-      background-image:
-        url("./assets/background.png");
-
-      background-repeat: no-repeat;
-
-      background-position:
-        center top;
-
-      background-size:
-        cover;
+      background:
+        #060810
+        url("./assets/background.png")
+        center top / cover
+        no-repeat;
     }
-
-    /*
-      Dunkle Ebene über dem Bild.
-      Dadurch bleiben Texte lesbar,
-      während Wolken und Blitze sichtbar bleiben.
-    */
 
     .site-background-overlay {
       position: fixed;
-
       inset: 0;
-
       z-index: -2;
-
       pointer-events: none;
 
       background:
         linear-gradient(
           to bottom,
-          rgba(4, 7, 15, 0.24) 0%,
-          rgba(4, 7, 15, 0.46) 35%,
-          rgba(4, 7, 15, 0.68) 72%,
-          rgba(4, 7, 15, 0.82) 100%
+          rgba(4, 7, 15, 0.26) 0%,
+          rgba(4, 7, 15, 0.48) 35%,
+          rgba(4, 7, 15, 0.70) 72%,
+          rgba(4, 7, 15, 0.87) 100%
         );
     }
 
-    /*
-      Sehr dezentes Grid darüber.
-    */
-
     .site-grid {
       position: fixed;
-
       inset: 0;
-
       z-index: -1;
-
       pointer-events: none;
-
-      opacity: 0.34;
+      opacity: 0.32;
 
       background-image:
         linear-gradient(
-          rgba(255, 255, 255, 0.025) 1px,
+          rgba(255,255,255,.025) 1px,
           transparent 1px
         ),
         linear-gradient(
           90deg,
-          rgba(255, 255, 255, 0.025) 1px,
+          rgba(255,255,255,.025) 1px,
           transparent 1px
         );
 
-      background-size:
-        52px 52px;
-
-      mask-image:
-        linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.45),
-          transparent 86%
-        );
+      background-size: 52px 52px;
     }
 
     /* =========================================================
@@ -381,51 +264,33 @@
 
     a:focus-visible,
     button:focus-visible {
-      outline:
-        3px solid
-        var(--gold);
-
+      outline: 3px solid var(--gold);
       outline-offset: 4px;
-
       border-radius: 8px;
     }
 
     .skip-link {
       position: fixed;
-
       top: 12px;
       left: 12px;
-
       z-index: 9999;
 
-      padding:
-        10px
-        15px;
-
+      padding: 10px 15px;
       color: #041019;
-
-      background:
-        var(--cyan);
-
-      border-radius:
-        var(--radius-sm);
-
+      background: var(--cyan);
+      border-radius: var(--radius-sm);
       font-weight: 900;
 
-      transform:
-        translateY(-180%);
-
-      transition:
-        transform 0.18s ease;
+      transform: translateY(-180%);
+      transition: transform .18s ease;
     }
 
     .skip-link:focus {
-      transform:
-        translateY(0);
+      transform: translateY(0);
     }
 
     /* =========================================================
-       LAYOUT
+       GENERAL
        ========================================================= */
 
     .container {
@@ -435,27 +300,12 @@
           calc(100% - 40px)
         );
 
-      margin-inline:
-        auto;
+      margin-inline: auto;
     }
 
     .section {
       padding:
-        clamp(
-          76px,
-          9vw,
-          120px
-        )
-        0;
-    }
-
-    .section-small {
-      padding:
-        clamp(
-          44px,
-          6vw,
-          72px
-        )
+        clamp(76px, 9vw, 120px)
         0;
     }
 
@@ -467,53 +317,31 @@
         );
 
       height: 1px;
-
-      margin-inline:
-        auto;
+      margin-inline: auto;
 
       background:
         linear-gradient(
           90deg,
           transparent,
-          rgba(98, 209, 255, 0.20),
-          rgba(163, 140, 255, 0.36),
-          rgba(98, 209, 255, 0.20),
+          rgba(98,209,255,.20),
+          rgba(163,140,255,.36),
+          rgba(98,209,255,.20),
           transparent
         );
     }
 
-    /* =========================================================
-       TYPOGRAPHY
-       ========================================================= */
-
     .section-label {
-      color:
-        var(--cyan);
-
-      font-family:
-        var(--mono);
-
-      font-size:
-        0.78rem;
-
-      font-weight:
-        800;
-
-      letter-spacing:
-        0.13em;
-
-      text-transform:
-        uppercase;
+      color: var(--cyan);
+      font-family: var(--mono);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
     }
 
     .section-title {
-      max-width:
-        820px;
-
-      margin:
-        12px
-        0
-        20px;
+      max-width: 850px;
+      margin: 12px 0 20px;
 
       font-size:
         clamp(
@@ -522,28 +350,15 @@
           4.1rem
         );
 
-      line-height:
-        1.04;
-
-      letter-spacing:
-        -0.045em;
+      line-height: 1.04;
+      letter-spacing: -.045em;
     }
 
     .section-lead {
-      max-width:
-        720px;
-
+      max-width: 760px;
       margin: 0;
-
-      color:
-        var(--muted);
-
-      font-size:
-        clamp(
-          1rem,
-          1.5vw,
-          1.15rem
-        );
+      color: var(--muted);
+      font-size: 1.08rem;
     }
 
     /* =========================================================
@@ -551,21 +366,16 @@
        ========================================================= */
 
     .topbar {
-      position:
-        sticky;
-
-      top:
-        0;
-
-      z-index:
-        100;
+      position: sticky;
+      top: 0;
+      z-index: 100;
 
       border-bottom:
         1px solid
-        rgba(148, 190, 220, 0.12);
+        rgba(148,190,220,.12);
 
       background:
-        rgba(5, 9, 17, 0.72);
+        rgba(5,9,17,.76);
 
       backdrop-filter:
         blur(22px)
@@ -577,229 +387,135 @@
     }
 
     .nav {
-      min-height:
-        72px;
+      min-height: 72px;
 
-      display:
-        flex;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-      align-items:
-        center;
-
-      justify-content:
-        space-between;
-
-      gap:
-        24px;
+      gap: 24px;
     }
 
     .brand {
-      display:
-        inline-flex;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
 
-      align-items:
-        center;
-
-      gap:
-        10px;
-
-      font-weight:
-        950;
-
-      letter-spacing:
-        -0.02em;
+      font-weight: 950;
+      letter-spacing: -.02em;
     }
 
     .brand-mark {
-      width:
-        32px;
+      width: 32px;
+      height: 32px;
 
-      height:
-        32px;
+      display: grid;
+      place-items: center;
 
-      display:
-        grid;
-
-      place-items:
-        center;
-
-      color:
-        var(--cyan);
+      color: var(--cyan);
 
       border:
         1px solid
         var(--border-strong);
 
-      border-radius:
-        9px;
+      border-radius: 9px;
 
       background:
-        rgba(98, 209, 255, 0.08);
+        rgba(98,209,255,.08);
 
-      box-shadow:
-        0 0 24px
-        rgba(98, 209, 255, 0.08);
-
-      font-family:
-        var(--mono);
-
-      font-size:
-        0.85rem;
-
-      font-weight:
-        900;
+      font-family: var(--mono);
+      font-weight: 900;
     }
 
     .brand-star {
-      color:
-        var(--gold);
+      color: var(--gold);
+    }
+
+    .nav-right,
+    .nav-links {
+      display: flex;
+      align-items: center;
     }
 
     .nav-right {
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      gap:
-        12px;
+      gap: 12px;
     }
 
     .nav-links {
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      gap:
-        2px;
+      gap: 2px;
     }
 
     .nav-links a {
-      min-height:
-        44px;
+      min-height: 44px;
 
-      display:
-        inline-flex;
+      display: inline-flex;
+      align-items: center;
 
-      align-items:
-        center;
+      padding: 8px 12px;
 
-      padding:
-        8px
-        12px;
+      color: var(--muted);
+      border-radius: 10px;
 
-      color:
-        var(--muted);
-
-      border-radius:
-        10px;
-
-      font-size:
-        0.9rem;
-
-      font-weight:
-        760;
+      font-size: .9rem;
+      font-weight: 760;
 
       transition:
-        color 0.18s ease,
-        background 0.18s ease;
+        color .18s ease,
+        background .18s ease;
     }
 
     .nav-links a:hover,
     .nav-links a.active {
-      color:
-        var(--cyan);
-
+      color: var(--cyan);
       background:
-        rgba(98, 209, 255, 0.07);
+        rgba(98,209,255,.07);
     }
 
     .github-button {
-      min-height:
-        42px;
+      min-height: 42px;
 
-      display:
-        inline-flex;
+      display: inline-flex;
+      align-items: center;
 
-      align-items:
-        center;
-
-      gap:
-        6px;
-
-      padding:
-        8px
-        13px;
+      padding: 8px 13px;
 
       border:
         1px solid
         var(--border);
 
-      border-radius:
-        11px;
+      border-radius: 11px;
 
       background:
-        rgba(5, 10, 20, 0.44);
+        rgba(5,10,20,.44);
 
-      font-weight:
-        850;
-
-      transition:
-        transform 0.18s ease,
-        background 0.18s ease,
-        border-color 0.18s ease;
+      font-weight: 850;
     }
 
     .github-button:hover {
-      transform:
-        translateY(-1px);
-
       border-color:
         var(--border-strong);
 
       background:
-        rgba(98, 209, 255, 0.08);
+        rgba(98,209,255,.08);
     }
 
     .menu-toggle {
-      width:
-        46px;
+      width: 46px;
+      height: 46px;
 
-      height:
-        46px;
+      display: none;
+      place-items: center;
 
-      display:
-        none;
-
-      place-items:
-        center;
-
-      color:
-        var(--text);
+      color: var(--text);
 
       border:
         1px solid
         var(--border);
 
-      border-radius:
-        11px;
+      border-radius: 11px;
 
       background:
-        rgba(5, 10, 20, 0.44);
-    }
-
-    .menu-toggle svg {
-      width:
-        22px;
-
-      height:
-        22px;
-
-      stroke:
-        currentColor;
+        rgba(5,10,20,.44);
     }
 
     /* =========================================================
@@ -807,59 +523,36 @@
        ========================================================= */
 
     .actions {
-      display:
-        flex;
-
-      flex-wrap:
-        wrap;
-
-      gap:
-        12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .button {
-      min-height:
-        50px;
+      min-height: 50px;
 
-      display:
-        inline-flex;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
 
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      gap:
-        8px;
-
-      padding:
-        11px
-        18px;
-
-      color:
-        var(--text);
+      padding: 11px 18px;
 
       border:
         1px solid
         var(--border);
 
-      border-radius:
-        13px;
+      border-radius: 13px;
 
       background:
-        rgba(6, 12, 22, 0.62);
+        rgba(6,12,22,.62);
 
-      backdrop-filter:
-        blur(14px);
-
-      font-weight:
-        850;
+      font-weight: 850;
 
       transition:
-        transform 0.18s ease,
-        border-color 0.18s ease,
-        background 0.18s ease;
+        transform .18s ease,
+        border-color .18s ease,
+        background .18s ease;
     }
 
     .button:hover {
@@ -870,15 +563,12 @@
         var(--border-strong);
 
       background:
-        rgba(98, 209, 255, 0.10);
+        rgba(98,209,255,.10);
     }
 
     .button.primary {
-      color:
-        #041019;
-
-      border-color:
-        transparent;
+      color: #041019;
+      border-color: transparent;
 
       background:
         linear-gradient(
@@ -889,20 +579,24 @@
 
       box-shadow:
         0 16px 44px
-        rgba(98, 209, 255, 0.20);
+        rgba(98,209,255,.20);
     }
 
-    .arrow {
-      display:
-        inline-block;
+    .button.aura {
+      color: #021511;
 
-      transition:
-        transform 0.18s ease;
-    }
+      background:
+        linear-gradient(
+          135deg,
+          #79ffe4,
+          #39d5be
+        );
 
-    a:hover .arrow {
-      transform:
-        translateX(4px);
+      border-color: transparent;
+
+      box-shadow:
+        0 16px 44px
+        rgba(67,224,197,.18);
     }
 
     /* =========================================================
@@ -913,34 +607,24 @@
       min-height:
         calc(100vh - 72px);
 
-      display:
-        flex;
-
-      align-items:
-        center;
+      display: flex;
+      align-items: center;
 
       padding:
-        clamp(
-          72px,
-          9vw,
-          124px
-        )
+        clamp(72px,9vw,124px)
         0;
     }
 
     .hero-grid {
-      width:
-        100%;
+      width: 100%;
 
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
-        minmax(0, 1.3fr)
-        minmax(260px, 0.7fr);
+        minmax(0,1.3fr)
+        minmax(260px,.7fr);
 
-      align-items:
-        center;
+      align-items: center;
 
       gap:
         clamp(
@@ -951,9 +635,6 @@
     }
 
     .hero-content {
-      position:
-        relative;
-
       padding:
         clamp(
           26px,
@@ -963,7 +644,7 @@
 
       border:
         1px solid
-        rgba(148, 190, 220, 0.12);
+        rgba(148,190,220,.12);
 
       border-radius:
         var(--radius-xl);
@@ -971,82 +652,55 @@
       background:
         linear-gradient(
           145deg,
-          rgba(5, 10, 18, 0.68),
-          rgba(8, 13, 24, 0.52)
+          rgba(5,10,18,.70),
+          rgba(8,13,24,.54)
         );
 
       backdrop-filter:
-        blur(20px)
-        saturate(120%);
+        blur(20px);
 
       box-shadow:
         0 32px 100px
-        rgba(0, 0, 0, 0.26);
+        rgba(0,0,0,.26);
     }
 
     .hero-status {
-      display:
-        inline-flex;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
 
-      align-items:
-        center;
-
-      gap:
-        9px;
-
-      margin-bottom:
-        24px;
-
-      padding:
-        7px
-        10px;
-
-      color:
-        var(--text-soft);
+      margin-bottom: 24px;
+      padding: 7px 10px;
 
       border:
         1px solid
         var(--border);
 
-      border-radius:
-        999px;
+      border-radius: 999px;
 
       background:
-        rgba(3, 8, 16, 0.48);
+        rgba(3,8,16,.48);
 
-      font-family:
-        var(--mono);
-
-      font-size:
-        0.75rem;
-
-      font-weight:
-        760;
+      font-family: var(--mono);
+      font-size: .75rem;
     }
 
     .status-dot {
-      width:
-        8px;
+      width: 8px;
+      height: 8px;
 
-      height:
-        8px;
-
-      border-radius:
-        50%;
+      border-radius: 50%;
 
       background:
         var(--green);
 
       box-shadow:
         0 0 0 4px
-        rgba(101, 214, 164, 0.10);
+        rgba(101,214,164,.10);
     }
 
     .hero h1 {
-      margin:
-        0
-        0
-        10px;
+      margin: 0 0 10px;
 
       font-size:
         clamp(
@@ -1055,48 +709,24 @@
           7rem
         );
 
-      line-height:
-        0.92;
-
-      letter-spacing:
-        -0.062em;
-
-      text-shadow:
-        0 12px 36px
-        rgba(0, 0, 0, 0.30);
+      line-height: .92;
+      letter-spacing: -.062em;
     }
 
     .hero-handle {
-      margin:
-        0
-        0
-        24px;
+      margin: 0 0 24px;
+      color: var(--gold);
 
-      color:
-        var(--gold);
-
-      font-family:
-        var(--mono);
-
-      font-size:
-        clamp(
-          1rem,
-          2vw,
-          1.3rem
-        );
-
-      font-weight:
-        850;
+      font-family: var(--mono);
+      font-size: 1.2rem;
+      font-weight: 850;
     }
 
     .hero-copy {
-      max-width:
-        760px;
+      max-width: 760px;
 
       margin:
-        0
-        0
-        16px;
+        0 0 16px;
 
       color:
         var(--text-soft);
@@ -1108,91 +738,33 @@
           1.95rem
         );
 
-      line-height:
-        1.3;
-
-      letter-spacing:
-        -0.02em;
+      line-height: 1.3;
     }
 
     .hero-description {
-      max-width:
-        700px;
+      max-width: 700px;
 
       margin:
-        0
-        0
-        28px;
+        0 0 28px;
 
       color:
         var(--muted);
-
-      font-size:
-        1.04rem;
     }
 
     .hero-tags {
-      display:
-        flex;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
 
-      flex-wrap:
-        wrap;
+      margin-top: 30px;
 
-      gap:
-        8px
-        18px;
+      color: #93a5b9;
 
-      margin-top:
-        30px;
-
-      color:
-        #93a5b9;
-
-      font-family:
-        var(--mono);
-
-      font-size:
-        0.74rem;
-
-      font-weight:
-        700;
-
-      letter-spacing:
-        0.06em;
-
-      text-transform:
-        uppercase;
+      font-family: var(--mono);
+      font-size: .74rem;
+      font-weight: 700;
+      text-transform: uppercase;
     }
-
-    .hero-tags span::before {
-      content:
-        "";
-
-      display:
-        inline-block;
-
-      width:
-        4px;
-
-      height:
-        4px;
-
-      margin-right:
-        7px;
-
-      vertical-align:
-        middle;
-
-      border-radius:
-        50%;
-
-      background:
-        var(--cyan);
-    }
-
-    /* =========================================================
-       PORTRAIT
-       ========================================================= */
 
     .portrait-wrap {
       width:
@@ -1201,102 +773,66 @@
           390px
         );
 
-      justify-self:
-        end;
+      justify-self: end;
 
-      padding:
-        12px;
+      padding: 12px;
 
       border:
         1px solid
-        rgba(98, 209, 255, 0.22);
+        rgba(98,209,255,.22);
 
-      border-radius:
-        30px;
+      border-radius: 30px;
 
       background:
-        rgba(6, 12, 23, 0.62);
+        rgba(6,12,23,.62);
 
       backdrop-filter:
         blur(18px);
 
       box-shadow:
         0 30px 90px
-        rgba(0, 0, 0, 0.38),
-        0 0 60px
-        rgba(98, 209, 255, 0.08);
+        rgba(0,0,0,.38);
     }
 
     .portrait {
-      width:
-        100%;
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
 
-      aspect-ratio:
-        1;
-
-      object-fit:
-        cover;
-
-      border-radius:
-        22px;
-
-      background:
-        #09101c;
+      border-radius: 22px;
     }
 
     .portrait-meta {
-      display:
-        flex;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
 
-      align-items:
-        center;
-
-      justify-content:
-        space-between;
-
-      gap:
-        16px;
-
-      padding:
-        15px
-        8px
-        4px;
+      padding: 15px 8px 4px;
     }
 
     .portrait-meta small {
-      display:
-        block;
-
-      color:
-        var(--muted);
+      display: block;
+      color: var(--muted);
     }
 
     .portrait-badge {
-      padding:
-        6px
-        9px;
+      padding: 6px 9px;
 
-      color:
-        var(--cyan);
+      color: var(--cyan);
 
       border:
         1px solid
         var(--border-strong);
 
-      border-radius:
-        999px;
+      border-radius: 999px;
 
       background:
-        rgba(98, 209, 255, 0.08);
+        rgba(98,209,255,.08);
 
-      font-family:
-        var(--mono);
-
-      font-size:
-        0.7rem;
-
-      font-weight:
-        800;
+      font-family: var(--mono);
+      font-size: .7rem;
+      font-weight: 800;
     }
 
     /* =========================================================
@@ -1304,11 +840,7 @@
        ========================================================= */
 
     .banner {
-      position:
-        relative;
-
-      overflow:
-        hidden;
+      overflow: hidden;
 
       border:
         1px solid
@@ -1318,28 +850,20 @@
         var(--radius-xl);
 
       background:
-        rgba(5, 10, 20, 0.50);
-
-      backdrop-filter:
-        blur(14px);
+        rgba(5,10,20,.5);
 
       box-shadow:
         var(--shadow);
     }
 
     .banner img {
-      width:
-        100%;
-
-      aspect-ratio:
-        21 / 7;
-
-      object-fit:
-        cover;
+      width: 100%;
+      aspect-ratio: 21 / 7;
+      object-fit: cover;
     }
 
     /* =========================================================
-       GLASS SECTION
+       ABOUT
        ========================================================= */
 
     .glass-panel {
@@ -1352,7 +876,7 @@
 
       border:
         1px solid
-        rgba(148, 190, 220, 0.13);
+        rgba(148,190,220,.13);
 
       border-radius:
         var(--radius-xl);
@@ -1360,30 +884,24 @@
       background:
         linear-gradient(
           145deg,
-          rgba(5, 10, 19, 0.72),
-          rgba(8, 14, 25, 0.58)
+          rgba(5,10,19,.74),
+          rgba(8,14,25,.60)
         );
 
       backdrop-filter:
-        blur(20px)
-        saturate(120%);
+        blur(20px);
 
       box-shadow:
         0 28px 80px
-        rgba(0, 0, 0, 0.24);
+        rgba(0,0,0,.24);
     }
 
-    /* =========================================================
-       ABOUT
-       ========================================================= */
-
     .about-grid {
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
-        minmax(0, 1.15fr)
-        minmax(290px, 0.85fr);
+        minmax(0,1.15fr)
+        minmax(290px,.85fr);
 
       gap:
         clamp(
@@ -1391,42 +909,28 @@
           8vw,
           100px
         );
-
-      align-items:
-        start;
     }
 
     .about-copy p {
-      max-width:
-        740px;
-
-      color:
-        var(--muted);
-
-      font-size:
-        1.05rem;
+      color: var(--muted);
+      font-size: 1.05rem;
     }
 
     .focus-grid {
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
         repeat(
           2,
-          minmax(0, 1fr)
+          minmax(0,1fr)
         );
 
-      gap:
-        14px;
-
-      margin-top:
-        32px;
+      gap: 14px;
+      margin-top: 32px;
     }
 
     .focus-card {
-      padding:
-        20px;
+      padding: 20px;
 
       border:
         1px solid
@@ -1436,61 +940,29 @@
         var(--radius-md);
 
       background:
-        rgba(3, 8, 16, 0.40);
-
-      transition:
-        transform 0.18s ease,
-        border-color 0.18s ease,
-        background 0.18s ease;
-    }
-
-    .focus-card:hover {
-      transform:
-        translateY(-3px);
-
-      border-color:
-        var(--border-strong);
-
-      background:
-        rgba(98, 209, 255, 0.06);
+        rgba(3,8,16,.40);
     }
 
     .focus-card small {
-      color:
-        var(--cyan);
-
-      font-family:
-        var(--mono);
-
-      font-size:
-        0.7rem;
-
-      font-weight:
-        800;
+      color: var(--cyan);
+      font-family: var(--mono);
+      font-weight: 800;
     }
 
     .focus-card h3 {
       margin:
-        8px
-        0
-        5px;
+        8px 0 5px;
     }
 
     .focus-card p {
-      margin:
-        0;
-
-      color:
-        var(--muted);
-
-      font-size:
-        0.9rem;
+      margin: 0;
+      color: var(--muted);
+      font-size: .9rem;
     }
 
     .info-row {
       padding:
-        17px
-        0;
+        17px 0;
 
       border-top:
         1px solid
@@ -1504,56 +976,37 @@
     }
 
     .info-row span {
-      display:
-        block;
+      display: block;
 
-      color:
-        var(--cyan);
+      color: var(--cyan);
 
-      font-family:
-        var(--mono);
-
-      font-size:
-        0.7rem;
-
-      font-weight:
-        800;
-
-      letter-spacing:
-        0.08em;
-
-      text-transform:
-        uppercase;
+      font-family: var(--mono);
+      font-size: .7rem;
+      font-weight: 800;
+      text-transform: uppercase;
     }
 
     .info-row strong {
-      display:
-        block;
-
-      margin-top:
-        5px;
-
-      color:
-        var(--text-soft);
+      display: block;
+      margin-top: 5px;
     }
 
     /* =========================================================
-       NYTHARA FEATURED
+       FEATURED PROJECTS
        ========================================================= */
 
     .featured-project {
-      overflow:
-        hidden;
+      overflow: hidden;
 
       border:
         1px solid
-        rgba(98, 209, 255, 0.18);
+        rgba(98,209,255,.18);
 
       border-radius:
         var(--radius-xl);
 
       background:
-        rgba(5, 10, 20, 0.68);
+        rgba(5,10,20,.68);
 
       backdrop-filter:
         blur(22px);
@@ -1562,136 +1015,50 @@
         var(--shadow);
     }
 
-    .nythara-art {
+    .featured-project + .featured-project {
+      margin-top: 34px;
+    }
+
+    .project-hero {
       min-height:
         clamp(
-          300px,
-          45vw,
-          540px
+          290px,
+          43vw,
+          520px
         );
 
-      display:
-        grid;
+      display: grid;
+      place-items: center;
 
-      place-items:
-        center;
+      overflow: hidden;
+      position: relative;
+    }
 
-      position:
-        relative;
-
-      overflow:
-        hidden;
-
+    .nythara-art {
       background:
         radial-gradient(
           circle at 20% 20%,
-          rgba(98, 209, 255, 0.24),
+          rgba(98,209,255,.24),
           transparent 30%
         ),
         radial-gradient(
           circle at 80% 18%,
-          rgba(163, 140, 255, 0.28),
+          rgba(163,140,255,.28),
           transparent 28%
         ),
         linear-gradient(
           150deg,
-          rgba(8, 17, 34, 0.94),
-          rgba(16, 25, 46, 0.90)
-        );
-    }
-
-    .nythara-art::before {
-      content:
-        "";
-
-      position:
-        absolute;
-
-      width:
-        clamp(
-          140px,
-          20vw,
-          230px
-        );
-
-      aspect-ratio:
-        1;
-
-      top:
-        9%;
-
-      right:
-        12%;
-
-      border-radius:
-        50%;
-
-      background:
-        radial-gradient(
-          circle at 35% 34%,
-          #e5f8ff,
-          #8edfff 45%,
-          rgba(98, 209, 255, 0.24) 68%,
-          transparent 70%
-        );
-
-      filter:
-        drop-shadow(
-          0 0 50px
-          rgba(98, 209, 255, 0.30)
-        );
-    }
-
-    .nythara-art::after {
-      content:
-        "";
-
-      position:
-        absolute;
-
-      left:
-        0;
-
-      right:
-        0;
-
-      bottom:
-        0;
-
-      height:
-        50%;
-
-      background:
-        linear-gradient(
-          135deg,
-          transparent 26%,
-          #17243c 27%,
-          #080f1b 58%,
-          transparent 59%
-        ),
-        linear-gradient(
-          45deg,
-          transparent 18%,
-          #0c1626 19%,
-          #16233a 48%,
-          transparent 49%
+          rgba(8,17,34,.94),
+          rgba(16,25,46,.90)
         );
     }
 
     .nythara-title {
-      position:
-        relative;
-
-      z-index:
-        2;
-
-      text-align:
-        center;
+      text-align: center;
     }
 
     .nythara-title strong {
-      display:
-        block;
+      display: block;
 
       font-size:
         clamp(
@@ -1700,47 +1067,39 @@
           7rem
         );
 
-      line-height:
-        0.9;
-
-      letter-spacing:
-        -0.06em;
-
-      text-shadow:
-        0 18px 60px
-        rgba(0, 0, 0, 0.72);
+      line-height: .9;
+      letter-spacing: -.06em;
     }
 
     .nythara-title span {
-      display:
-        block;
-
-      margin-top:
-        14px;
+      display: block;
+      margin-top: 14px;
 
       color:
-        rgba(255, 255, 255, 0.62);
+        rgba(255,255,255,.62);
 
-      font-family:
-        var(--mono);
+      font-family: var(--mono);
+      font-size: .8rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
 
-      font-size:
-        0.8rem;
+    .aura-art {
+      min-height: auto;
+      background: #031b1f;
+    }
 
-      letter-spacing:
-        0.18em;
-
-      text-transform:
-        uppercase;
+    .aura-art img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
     }
 
     .featured-body {
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
-        1.25fr
-        0.75fr;
+        1.25fr .75fr;
 
       gap:
         clamp(
@@ -1758,43 +1117,40 @@
     }
 
     .status-badge {
-      display:
-        inline-flex;
-
-      align-items:
-        center;
+      display: inline-flex;
+      align-items: center;
 
       padding:
-        6px
-        9px;
+        6px 9px;
 
-      color:
-        var(--gold);
+      color: var(--gold);
 
       border:
         1px solid
-        rgba(230, 188, 105, 0.34);
+        rgba(230,188,105,.34);
 
-      border-radius:
-        999px;
+      border-radius: 999px;
 
       background:
-        rgba(230, 188, 105, 0.08);
+        rgba(230,188,105,.08);
 
-      font-family:
-        var(--mono);
+      font-family: var(--mono);
+      font-size: .7rem;
+      font-weight: 800;
+    }
 
-      font-size:
-        0.7rem;
+    .status-badge.aura {
+      color: var(--aura);
 
-      font-weight:
-        800;
+      border-color:
+        rgba(67,224,197,.34);
+
+      background:
+        rgba(67,224,197,.08);
     }
 
     .featured-project h3 {
-      margin:
-        12px
-        0;
+      margin: 12px 0;
 
       font-size:
         clamp(
@@ -1803,108 +1159,97 @@
           3.4rem
         );
 
-      line-height:
-        1;
-
-      letter-spacing:
-        -0.04em;
+      line-height: 1;
+      letter-spacing: -.04em;
     }
 
     .featured-project p {
-      color:
-        var(--muted);
+      color: var(--muted);
     }
 
     .tags {
-      display:
-        flex;
-
-      flex-wrap:
-        wrap;
-
-      gap:
-        8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
     .tag {
       padding:
-        7px
-        10px;
+        7px 10px;
 
-      color:
-        var(--text-soft);
+      color: var(--text-soft);
 
       border:
         1px solid
         var(--border);
 
-      border-radius:
-        999px;
+      border-radius: 999px;
 
       background:
-        rgba(4, 9, 17, 0.48);
+        rgba(4,9,17,.48);
 
-      font-family:
-        var(--mono);
-
-      font-size:
-        0.7rem;
+      font-family: var(--mono);
+      font-size: .7rem;
     }
 
     .facts {
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
         repeat(
           2,
-          minmax(0, 1fr)
+          minmax(0,1fr)
         );
 
-      gap:
-        12px;
-
-      align-content:
-        start;
+      gap: 12px;
+      align-content: start;
     }
 
     .fact {
-      padding:
-        16px;
+      padding: 16px;
 
       border:
         1px solid
         var(--border);
+
+      border-radius: 14px;
+
+      background:
+        rgba(3,8,16,.42);
+    }
+
+    .fact strong {
+      display: block;
+    }
+
+    .fact span {
+      color: var(--muted);
+
+      font-family: var(--mono);
+      font-size: .68rem;
+      text-transform: uppercase;
+    }
+
+    .featured-actions {
+      grid-column: 1 / -1;
+    }
+
+    .security-note {
+      padding: 15px 17px;
+
+      border:
+        1px solid
+        rgba(67,224,197,.18);
 
       border-radius:
         14px;
 
       background:
-        rgba(3, 8, 16, 0.42);
-    }
+        rgba(67,224,197,.055);
 
-    .fact strong {
-      display:
-        block;
-    }
+      color: var(--muted);
 
-    .fact span {
-      color:
-        var(--muted);
-
-      font-family:
-        var(--mono);
-
-      font-size:
-        0.68rem;
-
-      text-transform:
-        uppercase;
-    }
-
-    .featured-actions {
-      grid-column:
-        1 / -1;
+      font-size: .9rem;
     }
 
     /* =========================================================
@@ -1913,52 +1258,33 @@
 
     .other-label {
       margin:
-        44px
-        0
-        18px;
+        44px 0 18px;
 
-      color:
-        var(--muted);
+      color: var(--muted);
 
-      font-family:
-        var(--mono);
-
-      font-size:
-        0.75rem;
-
-      font-weight:
-        800;
-
-      letter-spacing:
-        0.11em;
-
-      text-transform:
-        uppercase;
+      font-family: var(--mono);
+      font-size: .75rem;
+      font-weight: 800;
+      text-transform: uppercase;
     }
 
     .project-grid {
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
         repeat(
           3,
-          minmax(0, 1fr)
+          minmax(0,1fr)
         );
 
-      gap:
-        16px;
+      gap: 16px;
     }
 
     .project-card {
-      overflow:
-        hidden;
+      display: flex;
+      flex-direction: column;
 
-      display:
-        flex;
-
-      flex-direction:
-        column;
+      overflow: hidden;
 
       border:
         1px solid
@@ -1968,15 +1294,11 @@
         var(--radius-lg);
 
       background:
-        rgba(5, 11, 21, 0.66);
-
-      backdrop-filter:
-        blur(18px);
+        rgba(5,11,21,.66);
 
       transition:
-        transform 0.18s ease,
-        border-color 0.18s ease,
-        background 0.18s ease;
+        transform .18s ease,
+        border-color .18s ease;
     }
 
     .project-card:hover {
@@ -1985,30 +1307,21 @@
 
       border-color:
         var(--border-strong);
-
-      background:
-        rgba(9, 17, 30, 0.78);
     }
 
     .project-visual {
-      min-height:
-        185px;
+      min-height: 185px;
 
-      display:
-        flex;
+      display: flex;
+      align-items: flex-end;
 
-      align-items:
-        flex-end;
-
-      padding:
-        22px;
+      padding: 22px;
 
       border-bottom:
         1px solid
         var(--border);
 
-      font-family:
-        var(--mono);
+      font-family: var(--mono);
 
       font-size:
         clamp(
@@ -2017,102 +1330,77 @@
           3.5rem
         );
 
-      font-weight:
-        950;
+      font-weight: 950;
     }
 
     .project-visual.astra {
       background:
         radial-gradient(
           circle at 75% 20%,
-          rgba(230, 188, 105, 0.22),
+          rgba(230,188,105,.22),
           transparent 32%
         ),
-        rgba(15, 12, 10, 0.78);
+        rgba(15,12,10,.78);
     }
 
     .project-visual.medcore {
       background:
         radial-gradient(
           circle at 78% 22%,
-          rgba(98, 209, 255, 0.22),
+          rgba(98,209,255,.22),
           transparent 30%
         ),
-        rgba(7, 20, 30, 0.82);
+        rgba(7,20,30,.82);
     }
 
     .project-visual.blog {
       background:
         radial-gradient(
           circle at 75% 20%,
-          rgba(163, 140, 255, 0.24),
+          rgba(163,140,255,.24),
           transparent 32%
         ),
-        rgba(15, 11, 27, 0.80);
+        rgba(15,11,27,.80);
     }
 
     .project-body {
-      flex:
-        1;
+      flex: 1;
 
-      display:
-        flex;
+      display: flex;
+      flex-direction: column;
 
-      flex-direction:
-        column;
-
-      padding:
-        24px;
+      padding: 24px;
     }
 
     .project-type {
-      color:
-        var(--cyan);
+      color: var(--cyan);
 
-      font-family:
-        var(--mono);
-
-      font-size:
-        0.7rem;
-
-      font-weight:
-        800;
-
-      letter-spacing:
-        0.08em;
-
-      text-transform:
-        uppercase;
+      font-family: var(--mono);
+      font-size: .7rem;
+      font-weight: 800;
+      text-transform: uppercase;
     }
 
     .project-card h3 {
       margin:
-        10px
-        0
-        8px;
+        10px 0 8px;
     }
 
     .project-card p {
-      color:
-        var(--muted);
+      color: var(--muted);
     }
 
     .project-card .tags {
-      margin-top:
-        auto;
+      margin-top: auto;
     }
 
     .project-link {
-      margin-top:
-        20px;
-
-      font-weight:
-        850;
+      margin-top: 20px;
+      font-weight: 850;
     }
 
     .project-link:hover {
-      color:
-        var(--cyan);
+      color: var(--cyan);
     }
 
     /* =========================================================
@@ -2120,12 +1408,10 @@
        ========================================================= */
 
     .stack-grid {
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
-        0.8fr
-        1.2fr;
+        .8fr 1.2fr;
 
       gap:
         clamp(
@@ -2136,19 +1422,15 @@
     }
 
     .stack-row {
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
-        120px
-        1fr;
+        150px 1fr;
 
-      gap:
-        24px;
+      gap: 24px;
 
       padding:
-        24px
-        0;
+        24px 0;
 
       border-top:
         1px solid
@@ -2162,43 +1444,23 @@
     }
 
     .stack-name {
-      color:
-        var(--cyan);
+      color: var(--cyan);
 
-      font-family:
-        var(--mono);
-
-      font-size:
-        0.72rem;
-
-      font-weight:
-        800;
-
-      letter-spacing:
-        0.09em;
-
-      text-transform:
-        uppercase;
+      font-family: var(--mono);
+      font-size: .72rem;
+      font-weight: 800;
+      text-transform: uppercase;
     }
 
     .stack-items {
-      display:
-        flex;
-
-      flex-wrap:
-        wrap;
-
-      gap:
-        10px
-        20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
     }
 
     .stack-items span {
-      color:
-        var(--text-soft);
-
-      font-weight:
-        750;
+      color: var(--text-soft);
+      font-weight: 750;
     }
 
     /* =========================================================
@@ -2206,12 +1468,10 @@
        ========================================================= */
 
     .opensource-grid {
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
-        1.1fr
-        0.9fr;
+        1.1fr .9fr;
 
       gap:
         clamp(
@@ -2222,60 +1482,34 @@
     }
 
     .opensource-handle {
-      color:
-        var(--gold);
+      color: var(--gold);
 
-      font-family:
-        var(--mono);
-
-      font-size:
-        clamp(
-          1.4rem,
-          3vw,
-          2rem
-        );
-
-      font-weight:
-        900;
+      font-family: var(--mono);
+      font-size: 1.7rem;
+      font-weight: 900;
     }
 
     .now-label {
-      margin-bottom:
-        8px;
+      margin-bottom: 8px;
 
-      color:
-        var(--muted);
+      color: var(--muted);
 
-      font-family:
-        var(--mono);
-
-      font-size:
-        0.7rem;
-
-      font-weight:
-        800;
-
-      letter-spacing:
-        0.09em;
-
-      text-transform:
-        uppercase;
+      font-family: var(--mono);
+      font-size: .7rem;
+      font-weight: 800;
+      text-transform: uppercase;
     }
 
     .now-item {
       padding:
-        14px
-        0;
+        14px 0;
 
       border-top:
         1px solid
         var(--border);
 
-      color:
-        var(--text-soft);
-
-      font-weight:
-        760;
+      color: var(--text-soft);
+      font-weight: 760;
     }
 
     .now-item:last-child {
@@ -2285,17 +1519,9 @@
     }
 
     .now-item::before {
-      content:
-        "→";
-
-      margin-right:
-        12px;
-
-      color:
-        var(--cyan);
-
-      font-family:
-        var(--mono);
+      content: "→";
+      margin-right: 12px;
+      color: var(--cyan);
     }
 
     /* =========================================================
@@ -2303,23 +1529,14 @@
        ========================================================= */
 
     .quote-section {
-      text-align:
-        center;
+      text-align: center;
     }
 
     .quote-section blockquote {
-      max-width:
-        900px;
+      max-width: 900px;
+      margin: 0 auto;
 
-      margin:
-        0 auto;
-
-      color:
-        var(--text-soft);
-
-      text-shadow:
-        0 4px 30px
-        rgba(0, 0, 0, 0.60);
+      color: var(--text-soft);
 
       font-size:
         clamp(
@@ -2328,25 +1545,14 @@
           3rem
         );
 
-      font-weight:
-        780;
-
-      line-height:
-        1.25;
-
-      letter-spacing:
-        -0.03em;
+      font-weight: 780;
+      line-height: 1.25;
+      letter-spacing: -.03em;
     }
 
     .quote-section p {
-      color:
-        var(--gold);
-
-      font-family:
-        var(--mono);
-
-      font-size:
-        0.78rem;
+      color: var(--gold);
+      font-family: var(--mono);
     }
 
     /* =========================================================
@@ -2355,106 +1561,68 @@
 
     footer {
       padding:
-        42px
-        0
-        48px;
+        42px 0 48px;
 
       border-top:
         1px solid
         var(--border);
 
       background:
-        rgba(3, 7, 14, 0.66);
+        rgba(3,7,14,.66);
 
       backdrop-filter:
         blur(18px);
     }
 
     .footer-grid {
-      display:
-        flex;
-
-      justify-content:
-        space-between;
-
-      align-items:
-        center;
-
-      gap:
-        28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
     }
 
     .footer-text span {
-      display:
-        block;
-
-      color:
-        var(--muted);
-
-      font-size:
-        0.88rem;
+      display: block;
+      color: var(--muted);
+      font-size: .88rem;
     }
 
     .footer-links {
-      display:
-        flex;
-
-      flex-wrap:
-        wrap;
-
-      gap:
-        8px
-        16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
     }
 
     .footer-links a {
-      color:
-        var(--muted);
-
-      font-size:
-        0.88rem;
-
-      font-weight:
-        720;
+      color: var(--muted);
+      font-weight: 720;
     }
 
     .footer-links a:hover {
-      color:
-        var(--cyan);
+      color: var(--cyan);
     }
 
     .signature {
-      margin-top:
-        24px;
-
-      padding-top:
-        22px;
+      margin-top: 24px;
+      padding-top: 22px;
 
       border-top:
         1px solid
-        rgba(148, 190, 220, 0.08);
+        rgba(148,190,220,.08);
 
-      color:
-        #748297;
+      color: #748297;
 
-      text-align:
-        center;
-
-      font-family:
-        var(--mono);
-
-      font-size:
-        0.74rem;
+      text-align: center;
+      font-family: var(--mono);
+      font-size: .74rem;
     }
 
     .signature .linux {
-      color:
-        var(--cyan);
+      color: var(--cyan);
     }
 
     .signature .agutroil {
-      color:
-        var(--gold);
+      color: var(--gold);
     }
 
     /* =========================================================
@@ -2462,23 +1630,18 @@
        ========================================================= */
 
     [data-reveal] {
-      opacity:
-        0;
-
+      opacity: 0;
       transform:
         translateY(14px);
 
       transition:
-        opacity 0.55s ease,
-        transform 0.55s ease;
+        opacity .55s ease,
+        transform .55s ease;
     }
 
     [data-reveal].visible {
-      opacity:
-        1;
-
-      transform:
-        none;
+      opacity: 1;
+      transform: none;
     }
 
     /* =========================================================
@@ -2486,38 +1649,29 @@
        ========================================================= */
 
     @media (max-width: 1000px) {
-
       .project-grid {
         grid-template-columns:
           repeat(
             2,
-            minmax(0, 1fr)
+            minmax(0,1fr)
           );
       }
 
-      .featured-body {
-        grid-template-columns:
-          1fr;
-      }
-
+      .featured-body,
       .stack-grid {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 900px) {
-
       .hero {
-        min-height:
-          auto;
+        min-height: auto;
       }
 
       .hero-grid,
       .about-grid,
       .opensource-grid {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
 
       .portrait-wrap {
@@ -2527,92 +1681,66 @@
             84vw
           );
 
-        justify-self:
-          start;
+        justify-self: start;
       }
     }
 
     @media (max-width: 820px) {
-
       .menu-toggle {
-        display:
-          grid;
+        display: grid;
       }
 
       .github-button {
-        display:
-          none;
+        display: none;
       }
 
       .nav-links {
-        position:
-          absolute;
+        position: absolute;
 
-        top:
-          72px;
+        top: 72px;
+        left: 0;
+        right: 0;
 
-        left:
-          0;
-
-        right:
-          0;
-
-        display:
-          none;
-
-        flex-direction:
-          column;
-
-        align-items:
-          stretch;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
 
         padding:
-          14px
-          20px
-          18px;
+          14px 20px 18px;
 
         border-bottom:
           1px solid
           var(--border);
 
         background:
-          rgba(4, 8, 16, 0.96);
-
-        backdrop-filter:
-          blur(20px);
+          rgba(4,8,16,.97);
       }
 
       .nav-links.open {
-        display:
-          flex;
+        display: flex;
       }
 
       .nav-links a {
-        width:
-          100%;
-
-        min-height:
-          48px;
+        width: 100%;
+        min-height: 48px;
       }
     }
 
     @media (min-width: 821px) {
-
       .mobile-only {
-        display:
-          none !important;
+        display: none !important;
       }
     }
 
     @media (max-width: 720px) {
-
       .container,
       .divider {
         width:
-          min(
-            var(--container),
-            calc(100% - 26px)
-          );
+          calc(100% - 26px);
+      }
+
+      .hero-content {
+        padding: 22px;
       }
 
       .hero h1 {
@@ -2624,117 +1752,72 @@
           );
       }
 
-      .hero-content {
-        padding:
-          22px;
-      }
-
       .banner img {
-        aspect-ratio:
-          16 / 8;
+        aspect-ratio: 16 / 8;
       }
 
-      .focus-grid {
-        grid-template-columns:
-          1fr;
-      }
-
+      .focus-grid,
       .project-grid {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
 
       .facts {
         grid-template-columns:
-          1fr
-          1fr;
+          1fr 1fr;
       }
 
       .stack-row {
-        grid-template-columns:
-          1fr;
-
-        gap:
-          10px;
+        grid-template-columns: 1fr;
+        gap: 10px;
       }
 
       .footer-grid {
-        flex-direction:
-          column;
-
-        align-items:
-          flex-start;
-      }
-
-      /*
-        Auf Mobilgeräten vermeiden wir background-attachment.
-        Die feste .site-background-Ebene funktioniert trotzdem.
-      */
-
-      .site-background {
-        background-position:
-          center top;
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
 
     @media (max-width: 520px) {
-
       .actions {
-        flex-direction:
-          column;
+        flex-direction: column;
       }
 
       .button {
-        width:
-          100%;
+        width: 100%;
       }
 
       .facts {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
     }
 
-    /* =========================================================
-       REDUCED MOTION
-       ========================================================= */
-
     @media (prefers-reduced-motion: reduce) {
-
       html {
-        scroll-behavior:
-          auto;
+        scroll-behavior: auto;
       }
 
       *,
       *::before,
       *::after {
         transition-duration:
-          0.01ms !important;
+          .01ms !important;
 
         animation-duration:
-          0.01ms !important;
+          .01ms !important;
 
         animation-iteration-count:
           1 !important;
       }
 
       [data-reveal] {
-        opacity:
-          1;
-
-        transform:
-          none;
+        opacity: 1;
+        transform: none;
       }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- =======================================================
-       BACKGROUND
-       ======================================================= -->
 
   <div
     class="site-background"
@@ -2750,10 +1833,6 @@
     class="site-grid"
     aria-hidden="true"
   ></div>
-
-  <!-- =======================================================
-       SKIP LINK
-       ======================================================= -->
 
   <a
     class="skip-link"
@@ -2775,19 +1854,9 @@
         href="#top"
         aria-label="Agutroil Startseite"
       >
-
-        <span class="brand-mark">
-          A
-        </span>
-
-        <span>
-          Agutroil
-        </span>
-
-        <span class="brand-star">
-          ✦
-        </span>
-
+        <span class="brand-mark">A</span>
+        <span>Agutroil</span>
+        <span class="brand-star">✦</span>
       </a>
 
       <div class="nav-right">
@@ -2798,31 +1867,23 @@
           aria-label="Hauptnavigation"
         >
 
-          <a
-            href="#about"
-            data-nav
-          >
+          <a href="#about" data-nav>
             About
           </a>
 
-          <a
-            href="#projects"
-            data-nav
-          >
+          <a href="#projects" data-nav>
             Work
           </a>
 
-          <a
-            href="#stack"
-            data-nav
-          >
+          <a href="#aura" data-nav>
+            Aura
+          </a>
+
+          <a href="#stack" data-nav>
             Stack
           </a>
 
-          <a
-            href="#opensource"
-            data-nav
-          >
+          <a href="#opensource" data-nav>
             Open Source
           </a>
 
@@ -2854,32 +1915,13 @@
           aria-expanded="false"
           aria-controls="nav-links"
         >
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-          >
-
-            <path
-              d="M4 7h16M4 12h16M4 17h16"
-              stroke-width="2"
-              stroke-linecap="round"
-            ></path>
-
-          </svg>
-
+          ☰
         </button>
 
       </div>
-
     </div>
 
   </header>
-
-  <!-- =======================================================
-       MAIN
-       ======================================================= -->
 
   <main id="main">
 
@@ -2900,19 +1942,9 @@
         >
 
           <div class="hero-status">
-
-            <span
-              class="status-dot"
-              aria-hidden="true"
-            ></span>
-
-            OPEN SOURCE · BUILDING THINGS ON LINUX
-
+            <span class="status-dot"></span>
+            Open Source · Building in Public
           </div>
-
-          <p class="section-label">
-            Developer · Creator · Builder
-          </p>
 
           <h1>
             Anton<br>
@@ -2920,20 +1952,19 @@
           </h1>
 
           <p class="hero-handle">
-            @Agutroil ✦
+            @Agutroil
           </p>
 
           <p class="hero-copy">
-            I build software, games and
-            open-source projects on Linux.
+            Developer · Linux Enthusiast · Game Developer ·
+            Security-focused Builder · Open-Source Creator.
           </p>
 
           <p class="hero-description">
-            Softwareentwicklung, Game Development,
-            Web-Technologien, Linux, Automatisierung
-            und KI-gestützte Developer-Workflows –
-            mit dem Ziel, aus Ideen echte,
-            funktionierende Projekte zu bauen.
+            Ich entwickle Spiele, Webanwendungen, sichere
+            Kommunikationssysteme, Developer Tools und
+            automatisierte Workflows – bevorzugt offen,
+            nachvollziehbar und reproduzierbar.
           </p>
 
           <div class="actions">
@@ -2942,11 +1973,7 @@
               class="button primary"
               href="#projects"
             >
-              Projekte entdecken
-
-              <span class="arrow">
-                →
-              </span>
+              Projekte ansehen →
             </a>
 
             <a
@@ -2955,45 +1982,23 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub @Agutroil
-
-              <span class="arrow">
-                ↗
-              </span>
+              GitHub ↗
             </a>
 
           </div>
 
-          <div
-            class="hero-tags"
-            aria-label="Technologien"
-          >
-
-            <span>
-              Godot
-            </span>
-
-            <span>
-              Debian
-            </span>
-
-            <span>
-              TypeScript
-            </span>
-
-            <span>
-              Python
-            </span>
-
-            <span>
-              React
-            </span>
-
+          <div class="hero-tags">
+            <span>Linux</span>
+            <span>Godot</span>
+            <span>TypeScript</span>
+            <span>Security</span>
+            <span>Open Source</span>
+            <span>AI Workflows</span>
           </div>
 
         </div>
 
-        <aside
+        <div
           class="portrait-wrap"
           data-reveal
         >
@@ -3007,24 +2012,17 @@
           <div class="portrait-meta">
 
             <div>
-
-              <strong>
-                Anton Deister
-              </strong>
-
-              <small>
-                Developer · Agutroil
-              </small>
-
+              <strong>Anton Deister</strong>
+              <small>Developer · Agutroil</small>
             </div>
 
             <span class="portrait-badge">
-              Linux
+              Debian
             </span>
 
           </div>
 
-        </aside>
+        </div>
 
       </div>
 
@@ -3034,22 +2032,16 @@
          MAIN BANNER
          ===================================================== -->
 
-    <section class="section-small">
+    <section class="container">
 
       <div
-        class="container"
+        class="banner"
         data-reveal
       >
-
-        <div class="banner">
-
-          <img
-            src="./assets/banner.png"
-            alt="Anton Deister – Agutroil"
-          >
-
-        </div>
-
+        <img
+          src="./assets/banner.png"
+          alt="Agutroil Developer Banner"
+        >
       </div>
 
     </section>
@@ -3067,197 +2059,109 @@
 
       <div class="container">
 
-        <div class="glass-panel">
+        <div
+          class="glass-panel about-grid"
+          data-reveal
+        >
 
-          <div class="about-grid">
+          <div class="about-copy">
 
-            <div
-              class="about-copy"
-              data-reveal
-            >
+            <span class="section-label">
+              About
+            </span>
 
-              <span class="section-label">
-                01 / ABOUT
-              </span>
+            <h2 class="section-title">
+              Code bauen, verstehen,
+              testen und teilen.
+            </h2>
 
-              <h2 class="section-title">
-                Building things because
-                I want to understand
-                how they work.
-              </h2>
+            <p>
+              Hallo! Ich bin <strong>Anton Deister</strong>,
+              auf GitHub als <strong>Agutroil</strong>.
+            </p>
 
-              <p>
-                Ich bin
-                <strong>
-                  Anton Deister
-                </strong>,
-                auf GitHub unterwegs als
-                <strong>
-                  Agutroil
-                </strong>.
-              </p>
+            <p>
+              Ich beschäftige mich mit Linux, Softwareentwicklung,
+              Game Development, Web Development, Open Source,
+              Security, Automatisierung und Coding Agents.
+            </p>
 
-              <p>
-                Ich entwickle Software,
-                Spiele, Webanwendungen und
-                Open-Source-Projekte.
-                Besonders spannend finde ich Systeme,
-                bei denen aus einer kleinen Idee
-                nach und nach etwas Eigenständiges entsteht.
-              </p>
+            <p>
+              Besonders interessant finde ich Projekte, bei denen
+              aus einer Idee Schritt für Schritt ein eigenständiges
+              System entsteht.
+            </p>
 
-              <p>
-                Dabei arbeite ich hauptsächlich
-                unter Linux, experimentiere mit
-                neuen Technologien, automatisiere
-                Entwicklungsabläufe und kombiniere
-                klassische Softwareentwicklung zunehmend
-                mit Coding Agents und KI-gestützten Workflows.
-              </p>
+            <div class="focus-grid">
 
-              <div class="focus-grid">
+              <article class="focus-card">
+                <small>01</small>
+                <h3>🎮 Game Development</h3>
+                <p>
+                  Godot, GDScript, Multiplayer, Combat,
+                  World Building und Game Architecture.
+                </p>
+              </article>
 
-                <article class="focus-card">
+              <article class="focus-card">
+                <small>02</small>
+                <h3>🔐 Security</h3>
+                <p>
+                  E2EE, Secure Messaging, Identity Verification
+                  und automatisierte Security Tests.
+                </p>
+              </article>
 
-                  <small>
-                    01
-                  </small>
+              <article class="focus-card">
+                <small>03</small>
+                <h3>🌐 Web</h3>
+                <p>
+                  React, Next.js, TypeScript, WordPress
+                  und moderne Webanwendungen.
+                </p>
+              </article>
 
-                  <h3>
-                    Game Development
-                  </h3>
-
-                  <p>
-                    Godot, Multiplayer,
-                    World Building, Combat und
-                    Game-System-Architektur.
-                  </p>
-
-                </article>
-
-                <article class="focus-card">
-
-                  <small>
-                    02
-                  </small>
-
-                  <h3>
-                    Web Development
-                  </h3>
-
-                  <p>
-                    React, TypeScript,
-                    Next.js, WordPress,
-                    PHP, HTML und CSS.
-                  </p>
-
-                </article>
-
-                <article class="focus-card">
-
-                  <small>
-                    03
-                  </small>
-
-                  <h3>
-                    Linux & Open Source
-                  </h3>
-
-                  <p>
-                    Debian, Git, Shell,
-                    Automatisierung und
-                    öffentlich nachvollziehbare Projekte.
-                  </p>
-
-                </article>
-
-                <article class="focus-card">
-
-                  <small>
-                    04
-                  </small>
-
-                  <h3>
-                    AI Workflows
-                  </h3>
-
-                  <p>
-                    Coding Agents, AI Bridges,
-                    Tests, Asset Pipelines und
-                    Developer-Automatisierung.
-                  </p>
-
-                </article>
-
-              </div>
+              <article class="focus-card">
+                <small>04</small>
+                <h3>🤖 AI Workflows</h3>
+                <p>
+                  Coding Agents, Tool Bridges, Asset Pipelines,
+                  CI und Developer Automation.
+                </p>
+              </article>
 
             </div>
 
-            <aside data-reveal>
-
-              <div class="info-row">
-
-                <span>
-                  Identity
-                </span>
-
-                <strong>
-                  Anton Deister · @Agutroil
-                </strong>
-
-              </div>
-
-              <div class="info-row">
-
-                <span>
-                  System
-                </span>
-
-                <strong>
-                  Linux · Debian
-                </strong>
-
-              </div>
-
-              <div class="info-row">
-
-                <span>
-                  Game Engine
-                </span>
-
-                <strong>
-                  Godot · GDScript
-                </strong>
-
-              </div>
-
-              <div class="info-row">
-
-                <span>
-                  Web
-                </span>
-
-                <strong>
-                  TypeScript · React · Next.js
-                </strong>
-
-              </div>
-
-              <div class="info-row">
-
-                <span>
-                  Philosophy
-                </span>
-
-                <strong>
-                  Build · Test · Understand · Improve · Share
-                </strong>
-
-              </div>
-
-            </aside>
-
           </div>
+
+          <aside>
+
+            <div class="info-row">
+              <span>System</span>
+              <strong>Debian Linux</strong>
+            </div>
+
+            <div class="info-row">
+              <span>Game Engine</span>
+              <strong>Godot</strong>
+            </div>
+
+            <div class="info-row">
+              <span>Web</span>
+              <strong>React · Next.js · TypeScript</strong>
+            </div>
+
+            <div class="info-row">
+              <span>Security</span>
+              <strong>E2EE · Realtime · Privacy</strong>
+            </div>
+
+            <div class="info-row">
+              <span>Focus</span>
+              <strong>Open Source & Automation</strong>
+            </div>
+
+          </aside>
 
         </div>
 
@@ -3278,47 +2182,38 @@
 
       <div class="container">
 
-        <header
-          class="glass-panel"
-          data-reveal
-          style="margin-bottom: 28px;"
-        >
+        <span class="section-label">
+          Projects
+        </span>
 
-          <span class="section-label">
-            02 / SELECTED WORK
-          </span>
+        <h2 class="section-title">
+          Dinge, die ich baue.
+        </h2>
 
-          <h2 class="section-title">
-            Projects that turned ideas
-            into real systems.
-          </h2>
-
-          <p class="section-lead">
-            Games, Open-Source-Software,
-            Web-Projekte und technische Experimente.
-            Nythara ist aktuell mein größtes
-            Game-Development-Projekt.
-          </p>
-
-        </header>
+        <p class="section-lead">
+          Von Fantasy-Game-Systemen über sichere
+          Echtzeitkommunikation bis zu Web- und
+          Open-Source-Projekten.
+        </p>
 
         <!-- NYTHARA -->
 
         <article
           class="featured-project"
           data-reveal
+          style="margin-top:40px"
         >
 
-          <div class="nythara-art">
+          <div class="project-hero nythara-art">
 
             <div class="nythara-title">
 
               <strong>
-                NYTHARA
+                Nythara
               </strong>
 
               <span>
-                A world still being forged
+                Fantasy Game Development
               </span>
 
             </div>
@@ -3330,45 +2225,28 @@
             <div>
 
               <span class="status-badge">
-                ● Active Development
+                Active Development
               </span>
 
-              <h3>
-                Nythara
-              </h3>
+              <h3>Nythara</h3>
 
               <p>
-                Ein Open-Source-Fantasy-MMORPG
-                auf Basis von Godot.
-                2D-Charakter- und Creature-Ästhetik
-                trifft auf eine immersive 3D-Fantasywelt
-                mit Multiplayer, persistenten Charakteren,
-                Regionen, Dungeons, Combat und
-                umfangreichen Gameplay-Systemen.
+                Mein großes Fantasy-Game-Projekt auf Basis von
+                Godot. Der Fokus liegt auf einer wachsenden
+                Spielwelt, Multiplayer, Combat, Progression,
+                Charakter-Systemen, Städten und einer
+                automatisierten Asset-Pipeline.
               </p>
 
               <div class="tags">
-
-                <span class="tag">
-                  Godot 4
-                </span>
-
-                <span class="tag">
-                  GDScript
-                </span>
-
-                <span class="tag">
-                  Multiplayer
-                </span>
-
-                <span class="tag">
-                  Open Source
-                </span>
-
-                <span class="tag">
-                  MMORPG
-                </span>
-
+                <span class="tag">Godot</span>
+                <span class="tag">GDScript</span>
+                <span class="tag">Multiplayer</span>
+                <span class="tag">ENet</span>
+                <span class="tag">World Building</span>
+                <span class="tag">Combat</span>
+                <span class="tag">AI Bridge</span>
+                <span class="tag">Asset Pipeline</span>
               </div>
 
             </div>
@@ -3376,56 +2254,28 @@
             <div class="facts">
 
               <div class="fact">
-
-                <strong>
-                  17
-                </strong>
-
-                <span>
-                  Worlds
-                </span>
-
+                <strong>Godot</strong>
+                <span>Engine</span>
               </div>
 
               <div class="fact">
-
-                <strong>
-                  ENet
-                </strong>
-
-                <span>
-                  Multiplayer
-                </span>
-
+                <strong>GDScript</strong>
+                <span>Language</span>
               </div>
 
               <div class="fact">
-
-                <strong>
-                  Server
-                </strong>
-
-                <span>
-                  Authoritative
-                </span>
-
+                <strong>ENet</strong>
+                <span>Multiplayer</span>
               </div>
 
               <div class="fact">
-
-                <strong>
-                  Open
-                </strong>
-
-                <span>
-                  Source
-                </span>
-
+                <strong>Open Source</strong>
+                <span>Project</span>
               </div>
 
             </div>
 
-            <div class="featured-actions">
+            <div class="actions featured-actions">
 
               <a
                 class="button primary"
@@ -3433,11 +2283,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Nythara auf GitHub
-
-                <span class="arrow">
-                  ↗
-                </span>
+                Nythara auf GitHub ↗
               </a>
 
             </div>
@@ -3446,11 +2292,116 @@
 
         </article>
 
-        <!-- OTHER WORK -->
+        <!-- AURA -->
 
-        <p class="other-label">
-          Other work
-        </p>
+        <article
+          class="featured-project"
+          id="aura"
+          data-reveal
+        >
+
+          <div class="project-hero aura-art">
+
+            <img
+              src="./assets/aura-banner.svg"
+              alt="Aura – Sealed Conversations"
+            >
+
+          </div>
+
+          <div class="featured-body">
+
+            <div>
+
+              <span class="status-badge aura">
+                🔐 Security Focused · Open Source
+              </span>
+
+              <h3>Aura</h3>
+
+              <p>
+                <strong>Aura</strong> ist mein Open-Source-Projekt
+                für sichere Echtzeitkommunikation.
+              </p>
+
+              <p>
+                Das Projekt kombiniert Ende-zu-Ende-Verschlüsselung,
+                verifizierbare Identitäten, signierte und
+                manipulationserschwerende Nachrichtenhistorien
+                mit moderner Realtime-Kommunikation.
+              </p>
+
+              <div class="tags">
+                <span class="tag">E2EE</span>
+                <span class="tag">Next.js</span>
+                <span class="tag">React</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Redis</span>
+                <span class="tag">Playwright</span>
+                <span class="tag">Security Testing</span>
+              </div>
+
+            </div>
+
+            <div class="facts">
+
+              <div class="fact">
+                <strong>E2EE</strong>
+                <span>Messaging</span>
+              </div>
+
+              <div class="fact">
+                <strong>Realtime</strong>
+                <span>WebSockets</span>
+              </div>
+
+              <div class="fact">
+                <strong>WORM</strong>
+                <span>History</span>
+              </div>
+
+              <div class="fact">
+                <strong>MIT</strong>
+                <span>Open Source</span>
+              </div>
+
+            </div>
+
+            <div
+              class="security-note"
+              style="grid-column:1/-1"
+            >
+              <strong>Security Hinweis:</strong>
+              Aura wird aktiv entwickelt und besitzt automatisierte
+              Security-, Integrations- und End-to-End-Tests.
+              Das Projekt hat bisher jedoch kein unabhängiges
+              professionelles Security Audit durchlaufen.
+            </div>
+
+            <div class="actions featured-actions">
+
+              <a
+                class="button aura"
+                href="https://github.com/Agutroil/Aura"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Aura auf GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- OTHER PROJECTS -->
+
+        <div class="other-label">
+          Weitere Projekte
+        </div>
 
         <div class="project-grid">
 
@@ -3460,7 +2411,7 @@
           >
 
             <div class="project-visual astra">
-              AK
+              🏰
             </div>
 
             <div class="project-body">
@@ -3474,26 +2425,16 @@
               </h3>
 
               <p>
-                Open-Source-Game-Projekt
-                mit Fokus auf Combat,
-                Progression, Equipment und
-                langfristige Systeme.
+                Game-Projekt mit umfangreichen
+                Progressions-, Combat-, Equipment-
+                und Langzeit-Systemen.
               </p>
 
               <div class="tags">
-
-                <span class="tag">
-                  Game Systems
-                </span>
-
-                <span class="tag">
-                  Progression
-                </span>
-
-                <span class="tag">
-                  Open Source
-                </span>
-
+                <span class="tag">React</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Capacitor</span>
+                <span class="tag">Android</span>
               </div>
 
             </div>
@@ -3506,13 +2447,13 @@
           >
 
             <div class="project-visual medcore">
-              MC
+              🩺
             </div>
 
             <div class="project-body">
 
               <span class="project-type">
-                Open Source Software
+                Web Application
               </span>
 
               <h3>
@@ -3520,25 +2461,15 @@
               </h3>
 
               <p>
-                Moderne Open-Source-Plattform
-                für medizinische und gesundheitsbezogene
-                Workflows mit modularer Architektur.
+                Open-Source-Plattform für medizinische
+                und gesundheitsbezogene Workflows.
               </p>
 
               <div class="tags">
-
-                <span class="tag">
-                  React
-                </span>
-
-                <span class="tag">
-                  Next.js
-                </span>
-
-                <span class="tag">
-                  TypeScript
-                </span>
-
+                <span class="tag">Next.js</span>
+                <span class="tag">React</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Security</span>
               </div>
 
               <a
@@ -3547,11 +2478,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Explore MedCore
-
-                <span class="arrow">
-                  ↗
-                </span>
+                MedCore ansehen →
               </a>
 
             </div>
@@ -3564,7 +2491,7 @@
           >
 
             <div class="project-visual blog">
-              BP
+              📰
             </div>
 
             <div class="project-body">
@@ -3578,26 +2505,15 @@
               </h3>
 
               <p>
-                Modernes Open-Source-WordPress-Theme
-                für Blogs und Magazine mit
-                Responsive Design, Dark Mode,
-                Patterns und Design Tokens.
+                Modernes responsives Open-Source
+                WordPress-Theme für Blogs und Magazine.
               </p>
 
               <div class="tags">
-
-                <span class="tag">
-                  WordPress
-                </span>
-
-                <span class="tag">
-                  PHP
-                </span>
-
-                <span class="tag">
-                  FSE
-                </span>
-
+                <span class="tag">WordPress</span>
+                <span class="tag">PHP</span>
+                <span class="tag">FSE</span>
+                <span class="tag">Responsive</span>
               </div>
 
               <a
@@ -3606,11 +2522,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Explore Blog Pulse
-
-                <span class="arrow">
-                  ↗
-                </span>
+                Blog Pulse ansehen →
               </a>
 
             </div>
@@ -3634,188 +2546,150 @@
       id="stack"
     >
 
-      <div class="container">
+      <div class="container stack-grid">
 
-        <div class="glass-panel">
+        <div>
 
-          <div class="stack-grid">
+          <span class="section-label">
+            Technology Stack
+          </span>
 
-            <header data-reveal>
+          <h2 class="section-title">
+            Werkzeuge, mit denen ich baue.
+          </h2>
 
-              <span class="section-label">
-                03 / STACK
-              </span>
+          <p class="section-lead">
+            Linux, Game Development, Web,
+            Security, Automatisierung und
+            Open-Source-Workflows.
+          </p>
 
-              <h2 class="section-title">
-                Tools I use
-                to build things.
-              </h2>
+        </div>
 
-              <p class="section-lead">
-                Die Technologien und Werkzeuge,
-                mit denen ich aktuell arbeite.
-              </p>
+        <div>
 
-            </header>
+          <div class="stack-row">
 
-            <div data-reveal>
+            <div class="stack-name">
+              System
+            </div>
 
-              <div class="stack-row">
+            <div class="stack-items">
+              <span>Linux</span>
+              <span>Debian</span>
+              <span>Shell</span>
+              <span>Git</span>
+              <span>GitHub</span>
+            </div>
 
-                <div class="stack-name">
-                  Build
-                </div>
+          </div>
 
-                <div class="stack-items">
+          <div class="stack-row">
 
-                  <span>
-                    Godot
-                  </span>
+            <div class="stack-name">
+              Games
+            </div>
 
-                  <span>
-                    GDScript
-                  </span>
+            <div class="stack-items">
+              <span>Godot</span>
+              <span>GDScript</span>
+              <span>ENet</span>
+              <span>Game Architecture</span>
+              <span>Asset Pipelines</span>
+            </div>
 
-                  <span>
-                    Python
-                  </span>
+          </div>
 
-                  <span>
-                    Android
-                  </span>
+          <div class="stack-row">
 
-                </div>
+            <div class="stack-name">
+              Programming
+            </div>
 
-              </div>
+            <div class="stack-items">
+              <span>Python</span>
+              <span>TypeScript</span>
+              <span>JavaScript</span>
+              <span>PHP</span>
+            </div>
 
-              <div class="stack-row">
+          </div>
 
-                <div class="stack-name">
-                  Web
-                </div>
+          <div class="stack-row">
 
-                <div class="stack-items">
+            <div class="stack-name">
+              Web
+            </div>
 
-                  <span>
-                    TypeScript
-                  </span>
+            <div class="stack-items">
+              <span>React</span>
+              <span>Next.js</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>WordPress</span>
+            </div>
 
-                  <span>
-                    JavaScript
-                  </span>
+          </div>
 
-                  <span>
-                    React
-                  </span>
+          <div class="stack-row">
 
-                  <span>
-                    Next.js
-                  </span>
+            <div class="stack-name">
+              Security
+            </div>
 
-                  <span>
-                    WordPress
-                  </span>
+            <div class="stack-items">
+              <span>E2EE</span>
+              <span>WebSockets</span>
+              <span>Identity Verification</span>
+              <span>Security Tests</span>
+              <span>Privacy</span>
+            </div>
 
-                  <span>
-                    PHP
-                  </span>
+          </div>
 
-                  <span>
-                    HTML
-                  </span>
+          <div class="stack-row">
 
-                  <span>
-                    CSS
-                  </span>
+            <div class="stack-name">
+              Backend
+            </div>
 
-                </div>
+            <div class="stack-items">
+              <span>MySQL</span>
+              <span>MariaDB</span>
+              <span>Redis</span>
+              <span>Node.js</span>
+            </div>
 
-              </div>
+          </div>
 
-              <div class="stack-row">
+          <div class="stack-row">
 
-                <div class="stack-name">
-                  System
-                </div>
+            <div class="stack-name">
+              Testing
+            </div>
 
-                <div class="stack-items">
+            <div class="stack-items">
+              <span>Vitest</span>
+              <span>Playwright</span>
+              <span>Integration Tests</span>
+              <span>E2E</span>
+              <span>GitHub Actions</span>
+            </div>
 
-                  <span>
-                    Linux
-                  </span>
+          </div>
 
-                  <span>
-                    Debian
-                  </span>
+          <div class="stack-row">
 
-                  <span>
-                    Shell
-                  </span>
+            <div class="stack-name">
+              AI
+            </div>
 
-                  <span>
-                    Terminal
-                  </span>
-
-                </div>
-
-              </div>
-
-              <div class="stack-row">
-
-                <div class="stack-name">
-                  Ship
-                </div>
-
-                <div class="stack-items">
-
-                  <span>
-                    Git
-                  </span>
-
-                  <span>
-                    GitHub
-                  </span>
-
-                  <span>
-                    CI
-                  </span>
-
-                  <span>
-                    Testing
-                  </span>
-
-                </div>
-
-              </div>
-
-              <div class="stack-row">
-
-                <div class="stack-name">
-                  Workflow
-                </div>
-
-                <div class="stack-items">
-
-                  <span>
-                    Coding Agents
-                  </span>
-
-                  <span>
-                    Automation
-                  </span>
-
-                  <span>
-                    AI Bridges
-                  </span>
-
-                  <span>
-                    Asset Pipelines
-                  </span>
-
-                </div>
-
-              </div>
-
+            <div class="stack-items">
+              <span>Coding Agents</span>
+              <span>AI Bridges</span>
+              <span>Automation</span>
+              <span>Asset Management</span>
+              <span>Validation</span>
             </div>
 
           </div>
@@ -3839,116 +2713,84 @@
 
       <div class="container">
 
-        <div class="glass-panel">
+        <div
+          class="glass-panel opensource-grid"
+          data-reveal
+        >
 
-          <div class="opensource-grid">
+          <div>
 
-            <div data-reveal>
+            <span class="section-label">
+              Open Source
+            </span>
 
-              <span class="section-label">
-                04 / OPEN SOURCE
-              </span>
+            <h2 class="section-title">
+              Entwicklung soll nachvollziehbar sein.
+            </h2>
 
-              <p class="opensource-handle">
-                @Agutroil ✦
-              </p>
+            <p class="section-lead">
+              Open Source bedeutet für mich nicht nur,
+              Quellcode öffentlich zu machen.
+              Architektur, Tests, Dokumentation,
+              Sicherheitsgrenzen und Entscheidungen
+              sollten ebenfalls nachvollziehbar sein.
+            </p>
 
-              <h2 class="section-title">
-                Building in public.
-              </h2>
+            <p class="opensource-handle">
+              @Agutroil
+            </p>
 
-              <p class="section-lead">
-                Ich möchte Projekte nicht nur
-                entwickeln, sondern sie auch
-                veröffentlichen, dokumentieren
-                und für andere Entwickler
-                nachvollziehbar machen.
-              </p>
+            <div class="actions">
 
-              <div
-                class="actions"
-                style="margin-top: 26px;"
+              <a
+                class="button primary"
+                href="https://github.com/Agutroil"
+                target="_blank"
+                rel="noopener noreferrer"
               >
+                GitHub Profil ↗
+              </a>
 
-                <a
-                  class="button primary"
-                  href="https://github.com/Agutroil"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub Profil öffnen
-
-                  <span class="arrow">
-                    ↗
-                  </span>
-                </a>
-
-                <a
-                  class="button"
-                  href="https://github.com/Agutroil?tab=repositories"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Alle Repositories
-
-                  <span class="arrow">
-                    →
-                  </span>
-                </a>
-
-              </div>
-
-            </div>
-
-            <div data-reveal>
-
-              <div class="now-label">
-                Currently building
-              </div>
-
-              <div class="now-item">
-                Nythara
-              </div>
-
-              <div class="now-item">
-                Open-Source Software
-              </div>
-
-              <div class="now-item">
-                AI-assisted Developer Workflows
-              </div>
-
-              <div class="now-item">
-                Linux Automation
-              </div>
+              <a
+                class="button"
+                href="https://github.com/Agutroil?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Alle Repositories ↗
+              </a>
 
             </div>
 
           </div>
 
-        </div>
+          <div>
 
-      </div>
+            <div class="now-label">
+              Currently Building
+            </div>
 
-    </section>
+            <div class="now-item">
+              Nythara · Fantasy Game Development
+            </div>
 
-    <!-- =====================================================
-         SECOND BANNER
-         ===================================================== -->
+            <div class="now-item">
+              Aura · Secure Messaging
+            </div>
 
-    <section class="section-small">
+            <div class="now-item">
+              AI-assisted Development Workflows
+            </div>
 
-      <div
-        class="container"
-        data-reveal
-      >
+            <div class="now-item">
+              Automated Asset Pipelines
+            </div>
 
-        <div class="banner">
+            <div class="now-item">
+              Open-Source Web Projects
+            </div>
 
-          <img
-            src="./assets/agutroil-banner.png"
-            alt="Agutroil – Code Linux Magic"
-          >
+          </div>
 
         </div>
 
@@ -3968,13 +2810,35 @@
       >
 
         <blockquote>
-          “Every bug is just
-          an undocumented spell.”
+          “Every bug is just an undocumented spell.”
         </blockquote>
 
         <p>
-          — Agutroil
+          Code · Linux · Magic
         </p>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         END BANNER
+         ===================================================== -->
+
+    <section
+      class="container"
+      style="padding-bottom:70px"
+    >
+
+      <div
+        class="banner"
+        data-reveal
+      >
+
+        <img
+          src="./assets/agutroil-banner.png"
+          alt="Agutroil – Code Linux Magic"
+        >
 
       </div>
 
@@ -3999,34 +2863,19 @@
           </strong>
 
           <span>
-            Developer · Linux · Open Source · Games
+            Developer · Linux · Games · Security · Open Source
           </span>
 
         </div>
 
-        <nav
-          class="footer-links"
-          aria-label="Footer Navigation"
-        >
-
-          <a href="#about">
-            About
-          </a>
-
-          <a href="#projects">
-            Work
-          </a>
-
-          <a href="#stack">
-            Stack
-          </a>
+        <div class="footer-links">
 
           <a
             href="https://github.com/Agutroil"
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub ↗
+            GitHub
           </a>
 
           <a
@@ -4034,29 +2883,43 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Nythara ↗
+            Nythara
           </a>
 
-        </nav>
+          <a
+            href="https://github.com/Agutroil/Aura"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Aura
+          </a>
+
+          <a
+            href="https://agutroil.github.io/"
+          >
+            Website
+          </a>
+
+        </div>
 
       </div>
 
       <div class="signature">
-
+        🐧
         <span class="linux">
-          🐧 Powered by Linux
+          Powered by Linux
         </span>
 
-        ·
+        &nbsp; ✦ &nbsp;
 
+        Crafted by
         <span class="agutroil">
-          ✦ Crafted by Agutroil
+          Agutroil
         </span>
 
-        · Code. Linux. Magic.
+        &nbsp; ✦ &nbsp;
 
-        · © 2026 Anton Deister
-
+        Code. Linux. Magic.
       </div>
 
     </div>
@@ -4068,287 +2931,198 @@
        ======================================================= -->
 
   <script>
-    (() => {
-      "use strict";
+    const menuToggle =
+      document.getElementById("menu-toggle");
 
-      /* =====================================================
-         MOBILE MENU
-         ===================================================== */
+    const navLinks =
+      document.getElementById("nav-links");
 
-      const menuToggle =
-        document.getElementById("menu-toggle");
+    if (menuToggle && navLinks) {
 
-      const navigation =
-        document.getElementById("nav-links");
-
-      if (
-        menuToggle &&
-        navigation
-      ) {
-
-        menuToggle.addEventListener(
-          "click",
-          () => {
-
-            const isOpen =
-              navigation.classList.toggle(
-                "open"
-              );
-
-            menuToggle.setAttribute(
-              "aria-expanded",
-              String(isOpen)
-            );
-
-            menuToggle.setAttribute(
-              "aria-label",
-              isOpen
-                ? "Navigation schließen"
-                : "Navigation öffnen"
-            );
-          }
-        );
-
-        navigation
-          .querySelectorAll("a")
-          .forEach(
-            (link) => {
-
-              link.addEventListener(
-                "click",
-                () => {
-
-                  navigation.classList.remove(
-                    "open"
-                  );
-
-                  menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                  );
-
-                  menuToggle.setAttribute(
-                    "aria-label",
-                    "Navigation öffnen"
-                  );
-                }
-              );
-            }
-          );
-      }
-
-      /* =====================================================
-         REVEAL
-         ===================================================== */
-
-      const revealElements =
-        Array.from(
-          document.querySelectorAll(
-            "[data-reveal]"
-          )
-        );
-
-      const reduceMotion =
-        window.matchMedia(
-          "(prefers-reduced-motion: reduce)"
-        ).matches;
-
-      if (
-        reduceMotion ||
-        !("IntersectionObserver" in window)
-      ) {
-
-        revealElements.forEach(
-          (element) => {
-
-            element.classList.add(
-              "visible"
-            );
-          }
-        );
-
-      } else {
-
-        const revealObserver =
-          new IntersectionObserver(
-            (entries, observer) => {
-
-              entries.forEach(
-                (entry) => {
-
-                  if (
-                    !entry.isIntersecting
-                  ) {
-                    return;
-                  }
-
-                  entry.target.classList.add(
-                    "visible"
-                  );
-
-                  observer.unobserve(
-                    entry.target
-                  );
-                }
-              );
-            },
-            {
-              threshold:
-                0.12,
-
-              rootMargin:
-                "0px 0px -40px 0px"
-            }
-          );
-
-        revealElements.forEach(
-          (element) => {
-
-            revealObserver.observe(
-              element
-            );
-          }
-        );
-      }
-
-      /* =====================================================
-         ACTIVE NAV
-         ===================================================== */
-
-      const navLinks =
-        Array.from(
-          document.querySelectorAll(
-            "[data-nav]"
-          )
-        );
-
-      const sections =
-        navLinks
-          .map(
-            (link) => {
-
-              const href =
-                link.getAttribute(
-                  "href"
-                );
-
-              if (
-                !href ||
-                !href.startsWith("#")
-              ) {
-                return null;
-              }
-
-              const section =
-                document.getElementById(
-                  href.slice(1)
-                );
-
-              if (!section) {
-                return null;
-              }
-
-              return {
-                link,
-                section
-              };
-            }
-          )
-          .filter(Boolean);
-
-      if (
-        "IntersectionObserver" in window &&
-        sections.length > 0
-      ) {
-
-        const navObserver =
-          new IntersectionObserver(
-            (entries) => {
-
-              const visible =
-                entries
-                  .filter(
-                    (entry) =>
-                      entry.isIntersecting
-                  )
-                  .sort(
-                    (a, b) =>
-                      b.intersectionRatio -
-                      a.intersectionRatio
-                  );
-
-              if (
-                visible.length === 0
-              ) {
-                return;
-              }
-
-              const id =
-                visible[0]
-                  .target
-                  .id;
-
-              sections.forEach(
-                ({ link, section }) => {
-
-                  const active =
-                    section.id === id;
-
-                  link.classList.toggle(
-                    "active",
-                    active
-                  );
-                }
-              );
-            },
-            {
-              rootMargin:
-                "-35% 0px -50% 0px",
-
-              threshold: [
-                0,
-                0.2,
-                0.5
-              ]
-            }
-          );
-
-        sections.forEach(
-          ({ section }) => {
-
-            navObserver.observe(
-              section
-            );
-          }
-        );
-      }
-
-      /* =====================================================
-         RESIZE MENU CLEANUP
-         ===================================================== */
-
-      window.addEventListener(
-        "resize",
+      menuToggle.addEventListener(
+        "click",
         () => {
 
-          if (
-            window.innerWidth > 820 &&
-            navigation &&
-            menuToggle
-          ) {
+          const isOpen =
+            navLinks.classList.toggle("open");
 
-            navigation.classList.remove(
-              "open"
-            );
+          menuToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+          );
 
-            menuToggle.setAttribute(
-              "aria-expanded",
-              "false"
-            );
-          }
+          menuToggle.setAttribute(
+            "aria-label",
+            isOpen
+              ? "Navigation schließen"
+              : "Navigation öffnen"
+          );
+
         }
       );
-    })();
+
+      navLinks
+        .querySelectorAll("a")
+        .forEach(
+          link => {
+
+            link.addEventListener(
+              "click",
+              () => {
+
+                navLinks.classList.remove("open");
+
+                menuToggle.setAttribute(
+                  "aria-expanded",
+                  "false"
+                );
+
+                menuToggle.setAttribute(
+                  "aria-label",
+                  "Navigation öffnen"
+                );
+
+              }
+            );
+
+          }
+        );
+    }
+
+    /* Reveal */
+
+    const revealElements =
+      document.querySelectorAll(
+        "[data-reveal]"
+      );
+
+    if (
+      "IntersectionObserver"
+      in window
+    ) {
+
+      const revealObserver =
+        new IntersectionObserver(
+          entries => {
+
+            entries.forEach(
+              entry => {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  entry.target
+                    .classList
+                    .add("visible");
+
+                  revealObserver
+                    .unobserve(
+                      entry.target
+                    );
+
+                }
+
+              }
+            );
+
+          },
+          {
+            threshold: 0.08
+          }
+        );
+
+      revealElements
+        .forEach(
+          element =>
+            revealObserver.observe(
+              element
+            )
+        );
+
+    } else {
+
+      revealElements
+        .forEach(
+          element =>
+            element.classList.add(
+              "visible"
+            )
+        );
+
+    }
+
+    /* Active navigation */
+
+    const sections =
+      document.querySelectorAll(
+        "main section[id]"
+      );
+
+    const navItems =
+      document.querySelectorAll(
+        "[data-nav]"
+      );
+
+    if (
+      "IntersectionObserver"
+      in window
+    ) {
+
+      const navObserver =
+        new IntersectionObserver(
+          entries => {
+
+            entries.forEach(
+              entry => {
+
+                if (
+                  !entry.isIntersecting
+                ) {
+                  return;
+                }
+
+                const id =
+                  entry.target.id;
+
+                navItems
+                  .forEach(
+                    item => {
+
+                      const matches =
+                        item.getAttribute(
+                          "href"
+                        ) ===
+                        `#${id}`;
+
+                      item.classList
+                        .toggle(
+                          "active",
+                          matches
+                        );
+
+                    }
+                  );
+
+              }
+            );
+
+          },
+          {
+            rootMargin:
+              "-30% 0px -60% 0px"
+          }
+        );
+
+      sections
+        .forEach(
+          section =>
+            navObserver.observe(
+              section
+            )
+        );
+
+    }
   </script>
 
 </body>
