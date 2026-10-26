@@ -1,54 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
 
-  <title>Anton Deister | Agutroil · Developer · Linux · Open Source</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Anton Deister | Agutroil · Developer · Linux · Open Source
+  </title>
 
   <meta
     name="description"
-    content="Anton Deister – Developer, Linux Enthusiast und Open-Source Creator. Projekte rund um Godot, React, Next.js, WordPress, MedCore, Blog Pulse und Nythara."
+    content="Anton Deister – Agutroil. Developer, Linux Enthusiast und Open-Source Creator. Projekte rund um Godot, Game Development, React, Next.js, WordPress, MedCore, Blog Pulse und Nythara."
   >
 
   <meta
     name="keywords"
-    content="Anton Deister, Agutroil, Developer, Linux, Debian, Open Source, Software Development, Game Development, Godot, React, TypeScript, Next.js, WordPress, PHP, MedCore, Blog Pulse, Nythara"
+    content="Anton Deister, Agutroil, Developer, Linux, Debian, Open Source, Software Development, Game Development, Godot, GDScript, React, TypeScript, Next.js, WordPress, PHP, MedCore, Blog Pulse, Nythara"
   >
 
-  <meta name="author" content="Anton Deister">
-  <meta name="robots" content="index, follow">
+  <meta
+    name="author"
+    content="Anton Deister"
+  >
 
-  <meta name="theme-color" content="#060a14">
+  <meta
+    name="robots"
+    content="index, follow"
+  >
 
-  <link rel="canonical" href="https://agutroil.github.io/">
+  <meta
+    name="theme-color"
+    content="#07090f"
+  >
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="profile">
-  <meta property="og:title" content="Anton Deister | Agutroil">
+  <link
+    rel="canonical"
+    href="https://agutroil.github.io/"
+  >
+
+  <!-- ======================================================
+       Open Graph
+       ====================================================== -->
+
+  <meta
+    property="og:type"
+    content="profile"
+  >
+
+  <meta
+    property="og:title"
+    content="Anton Deister | Agutroil"
+  >
+
   <meta
     property="og:description"
-    content="Developer · Linux Enthusiast · Open-Source Creator · Game & Web Development"
+    content="Developer · Linux · Open Source · Game Development · Code. Linux. Magic."
   >
-  <meta property="og:url" content="https://agutroil.github.io/">
+
+  <meta
+    property="og:url"
+    content="https://agutroil.github.io/"
+  >
+
   <meta
     property="og:image"
     content="https://agutroil.github.io/assets/banner.png"
   >
 
-  <!-- Twitter / Social -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Anton Deister | Agutroil">
+  <!-- ======================================================
+       Twitter / Social
+       ====================================================== -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Anton Deister | Agutroil"
+  >
+
   <meta
     name="twitter:description"
     content="Code. Linux. Games. Open Source. Magic."
   >
+
   <meta
     name="twitter:image"
     content="https://agutroil.github.io/assets/banner.png"
   >
 
-  <!-- Structured Data -->
+  <!-- ======================================================
+       Structured Data
+       ====================================================== -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -60,7 +110,7 @@
       "alternateName": "Agutroil",
       "url": "https://agutroil.github.io/",
       "image": "https://agutroil.github.io/assets/antondeister.png",
-      "description": "Developer, Linux Enthusiast, Open-Source Creator and Technology Enthusiast",
+      "description": "Developer, Linux Enthusiast, Open-Source Creator and Game Developer",
       "sameAs": [
         "https://github.com/Agutroil"
       ],
@@ -92,311 +142,661 @@
   </script>
 
   <style>
+
+    /* ======================================================
+       01 / DESIGN TOKENS
+       ====================================================== */
+
     :root {
       color-scheme: dark;
 
-      --bg: #060a14;
-      --bg-soft: #0d1527;
+      --bg:
+        #07090f;
 
-      --panel: #111a30;
-      --panel-2: #141f38;
+      --surface:
+        #0c1119;
 
-      --text: #f8fafc;
-      --muted: #a8b3c7;
+      --surface-2:
+        #111824;
 
-      --cyan: #38bdf8;
-      --blue: #60a5fa;
-      --purple: #c084fc;
-      --pink: #f472b6;
-      --gold: #fbbf24;
-      --green: #34d399;
+      --surface-3:
+        #172231;
 
-      --border: rgba(96, 165, 250, 0.22);
-      --border-strong: rgba(56, 189, 248, 0.42);
+      --text:
+        #f4f7fb;
 
-      --shadow: rgba(0, 0, 0, 0.35);
+      --text-soft:
+        #dce4ee;
 
-      --radius-sm: 10px;
-      --radius-md: 16px;
-      --radius-lg: 22px;
+      --muted:
+        #8f9bad;
 
-      --container: 1120px;
-    }
+      --muted-2:
+        #aab5c4;
 
-    * {
-      box-sizing: border-box;
-    }
+      --cyan:
+        #53c7f0;
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 86px;
-    }
+      --violet:
+        #9587f7;
 
-    body {
-      margin: 0;
+      --gold:
+        #dfb866;
 
-      font-family:
+      --green:
+        #69d6a5;
+
+      --border:
+        rgba(148, 163, 184, 0.14);
+
+      --border-strong:
+        rgba(148, 163, 184, 0.23);
+
+      --border-cyan:
+        rgba(83, 199, 240, 0.34);
+
+      --cyan-soft:
+        rgba(83, 199, 240, 0.08);
+
+      --gold-soft:
+        rgba(223, 184, 102, 0.08);
+
+      --shadow:
+        0 24px 70px rgba(0, 0, 0, 0.32);
+
+      --radius-sm:
+        10px;
+
+      --radius-md:
+        16px;
+
+      --radius-lg:
+        22px;
+
+      --radius-xl:
+        30px;
+
+      --container:
+        1180px;
+
+      --font-sans:
         Inter,
+        ui-sans-serif,
         system-ui,
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
         sans-serif;
 
+      --font-mono:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        Menlo,
+        monospace;
+    }
+
+    /* ======================================================
+       02 / RESET
+       ====================================================== */
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+
+      min-width: 320px;
+
       color: var(--text);
+
+      font-family: var(--font-sans);
+
+      line-height: 1.7;
 
       background:
         radial-gradient(
-          circle at 20% 0%,
-          rgba(56, 189, 248, 0.12),
-          transparent 32%
+          circle at 12% -8%,
+          rgba(83, 199, 240, 0.11),
+          transparent 32rem
         ),
         radial-gradient(
-          circle at 80% 15%,
-          rgba(192, 132, 252, 0.11),
-          transparent 30%
+          circle at 88% 18%,
+          rgba(149, 135, 247, 0.08),
+          transparent 30rem
+        ),
+        radial-gradient(
+          circle at 50% 95%,
+          rgba(83, 199, 240, 0.04),
+          transparent 35rem
         ),
         var(--bg);
 
-      line-height: 1.7;
+      overflow-x: hidden;
     }
 
-    a {
-      color: var(--cyan);
-      text-decoration: none;
-    }
+    body::before {
+      content: "";
 
-    a:hover {
-      color: var(--gold);
-    }
+      position: fixed;
 
-    a:focus-visible,
-    button:focus-visible {
-      outline: 3px solid var(--gold);
-      outline-offset: 4px;
-      border-radius: 6px;
+      inset: 0;
+
+      z-index: -1;
+
+      pointer-events: none;
+
+      background-image:
+        linear-gradient(
+          rgba(255, 255, 255, 0.017) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.017) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        48px 48px;
     }
 
     img {
       display: block;
+
       max-width: 100%;
     }
 
-    .container {
-      width: min(
-        var(--container),
-        calc(100% - 32px)
-      );
+    a {
+      color: inherit;
 
-      margin-inline: auto;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+
+      cursor: pointer;
+    }
+
+    strong {
+      color: var(--text);
+    }
+
+    ::selection {
+      color: #061018;
+
+      background: var(--cyan);
+    }
+
+    /* ======================================================
+       03 / ACCESSIBILITY
+       ====================================================== */
+
+    a:focus-visible,
+    button:focus-visible {
+      outline:
+        3px solid
+        var(--gold);
+
+      outline-offset: 4px;
+
+      border-radius: 8px;
     }
 
     .skip-link {
       position: fixed;
-      top: 12px;
+
       left: 12px;
+      top: 12px;
 
-      z-index: 999;
+      z-index: 9999;
 
-      transform: translateY(-180%);
+      padding:
+        10px
+        14px;
 
-      padding: 10px 16px;
+      color: #071018;
 
-      color: #06111c;
-      background: var(--cyan);
+      background:
+        var(--cyan);
 
-      border-radius: var(--radius-sm);
+      border-radius:
+        var(--radius-sm);
 
-      font-weight: 800;
+      font-weight: 900;
+
+      transform:
+        translateY(-180%);
+
+      transition:
+        transform 0.18s ease;
     }
 
     .skip-link:focus {
-      transform: translateY(0);
+      transform:
+        translateY(0);
     }
 
-    /* -------------------------
-       Navigation
-    ------------------------- */
+    /* ======================================================
+       04 / GLOBAL LAYOUT
+       ====================================================== */
+
+    .container {
+      width:
+        min(
+          var(--container),
+          calc(100% - 40px)
+        );
+
+      margin-inline: auto;
+    }
+
+    .section {
+      padding:
+        clamp(
+          72px,
+          9vw,
+          118px
+        )
+        0;
+    }
+
+    .section-small {
+      padding:
+        clamp(
+          44px,
+          6vw,
+          72px
+        )
+        0;
+    }
+
+    .divider {
+      width:
+        min(
+          var(--container),
+          calc(100% - 40px)
+        );
+
+      height: 1px;
+
+      margin-inline: auto;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(148, 163, 184, 0.14),
+          rgba(83, 199, 240, 0.28),
+          rgba(148, 163, 184, 0.14),
+          transparent
+        );
+    }
+
+    /* ======================================================
+       05 / TYPOGRAPHY
+       ====================================================== */
+
+    .section-label {
+      color:
+        var(--cyan);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        0.78rem;
+
+      font-weight:
+        800;
+
+      line-height:
+        1.4;
+
+      letter-spacing:
+        0.13em;
+
+      text-transform:
+        uppercase;
+    }
+
+    .section-title {
+      max-width: 820px;
+
+      margin:
+        12px
+        0
+        20px;
+
+      font-size:
+        clamp(
+          2.1rem,
+          5vw,
+          4.1rem
+        );
+
+      line-height:
+        1.04;
+
+      letter-spacing:
+        -0.045em;
+    }
+
+    .section-lead {
+      max-width: 720px;
+
+      margin: 0;
+
+      color:
+        var(--muted-2);
+
+      font-size:
+        clamp(
+          1rem,
+          1.5vw,
+          1.15rem
+        );
+    }
+
+    /* ======================================================
+       06 / NAVIGATION
+       ====================================================== */
 
     .topbar {
       position: sticky;
+
       top: 0;
 
       z-index: 100;
 
       border-bottom:
-        1px solid rgba(96, 165, 250, 0.12);
+        1px solid
+        rgba(148, 163, 184, 0.10);
 
       background:
-        rgba(6, 10, 20, 0.88);
+        rgba(7, 9, 15, 0.80);
 
-      backdrop-filter: blur(16px);
+      backdrop-filter:
+        blur(18px);
+
+      -webkit-backdrop-filter:
+        blur(18px);
     }
 
     .nav {
-      min-height: 64px;
+      min-height: 70px;
 
       display: flex;
-      align-items: center;
-      justify-content: space-between;
 
-      gap: 20px;
+      align-items: center;
+
+      justify-content:
+        space-between;
+
+      gap: 24px;
     }
 
     .brand {
-      color: var(--text);
+      display:
+        inline-flex;
 
-      font-weight: 900;
-      letter-spacing: -0.02em;
+      align-items:
+        center;
+
+      gap:
+        10px;
+
+      font-weight:
+        950;
+
+      letter-spacing:
+        -0.02em;
     }
 
-    .brand span {
-      color: var(--cyan);
+    .brand-mark {
+      width:
+        31px;
+
+      height:
+        31px;
+
+      display:
+        grid;
+
+      place-items:
+        center;
+
+      color:
+        var(--cyan);
+
+      border:
+        1px solid
+        var(--border-cyan);
+
+      border-radius:
+        9px;
+
+      background:
+        rgba(83, 199, 240, 0.06);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        0.85rem;
+
+      font-weight:
+        800;
+    }
+
+    .brand-star {
+      color:
+        var(--gold);
+    }
+
+    .nav-right {
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        12px;
     }
 
     .nav-links {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
+      display:
+        flex;
 
-      flex-wrap: wrap;
+      align-items:
+        center;
 
-      gap: 8px;
+      gap:
+        2px;
     }
 
     .nav-links a {
-      min-height: 44px;
+      min-height:
+        44px;
 
-      display: inline-flex;
-      align-items: center;
+      display:
+        inline-flex;
 
-      padding: 8px 12px;
+      align-items:
+        center;
 
-      color: var(--muted);
+      padding:
+        8px
+        12px;
 
-      border-radius: var(--radius-sm);
+      color:
+        var(--muted);
 
-      font-size: 0.9rem;
-      font-weight: 700;
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-
-      background:
-        rgba(56, 189, 248, 0.08);
-    }
-
-    /* -------------------------
-       Hero
-    ------------------------- */
-
-    .hero {
-      padding: 30px 0 64px;
-      text-align: center;
-    }
-
-    .banner {
-      width: 100%;
-
-      border-radius: var(--radius-lg);
-
-      border:
-        1px solid var(--border);
-
-      box-shadow:
-        0 20px 70px var(--shadow);
-
-      background: var(--panel);
-    }
-
-    .hero h1 {
-      margin: 38px 0 10px;
+      border-radius:
+        10px;
 
       font-size:
-        clamp(2.5rem, 7vw, 5rem);
+        0.9rem;
 
-      line-height: 1;
+      font-weight:
+        750;
 
-      letter-spacing: -0.045em;
+      transition:
+        color 0.18s ease,
+        background 0.18s ease;
     }
 
-    .hero h1 span {
+    .nav-links a:hover,
+    .nav-links a.active {
+      color:
+        var(--cyan);
+
       background:
-        linear-gradient(
-          90deg,
-          var(--cyan),
-          var(--purple),
-          var(--gold)
-        );
-
-      -webkit-background-clip: text;
-      background-clip: text;
-
-      color: transparent;
+        rgba(255, 255, 255, 0.035);
     }
 
-    .hero-kicker {
-      margin: 16px auto 0;
+    .github-button {
+      min-height:
+        42px;
 
-      color: var(--cyan);
+      display:
+        inline-flex;
 
-      font-size: 0.95rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
+      align-items:
+        center;
 
-    .subtitle {
-      max-width: 780px;
+      gap:
+        6px;
 
-      margin: 0 auto;
+      padding:
+        8px
+        13px;
 
-      color: var(--muted);
+      border:
+        1px solid
+        var(--border-strong);
 
-      font-size: 1.08rem;
-    }
+      border-radius:
+        11px;
 
-    .hero-description {
-      max-width: 720px;
-
-      margin: 20px auto 0;
-
-      color: var(--muted);
-    }
-
-    .actions {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-
-      gap: 12px;
-
-      margin-top: 30px;
-    }
-
-    .button {
-      min-height: 48px;
-
-      padding: 11px 20px;
-
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      gap: 8px;
-
-      color: var(--text);
+      font-weight:
+        850;
 
       background:
         rgba(255, 255, 255, 0.025);
 
+      transition:
+        border-color 0.18s ease,
+        background 0.18s ease,
+        transform 0.18s ease;
+    }
+
+    .github-button:hover {
+      border-color:
+        var(--border-cyan);
+
+      background:
+        var(--cyan-soft);
+
+      transform:
+        translateY(-1px);
+    }
+
+    .menu-toggle {
+      width:
+        46px;
+
+      height:
+        46px;
+
+      display:
+        none;
+
+      place-items:
+        center;
+
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 14px;
+      border-radius:
+        11px;
 
-      font-weight: 800;
+      color:
+        var(--text);
+
+      background:
+        rgba(255, 255, 255, 0.025);
+    }
+
+    .menu-toggle svg {
+      width:
+        22px;
+
+      height:
+        22px;
+
+      stroke:
+        currentColor;
+    }
+
+    /* ======================================================
+       07 / BUTTONS
+       ====================================================== */
+
+    .actions {
+      display:
+        flex;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        12px;
+    }
+
+    .button {
+      min-height:
+        50px;
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      gap:
+        8px;
+
+      padding:
+        11px
+        18px;
+
+      border:
+        1px solid
+        var(--border-strong);
+
+      border-radius:
+        13px;
+
+      background:
+        rgba(255, 255, 255, 0.025);
+
+      font-weight:
+        850;
 
       transition:
         transform 0.18s ease,
@@ -405,1207 +805,2656 @@
     }
 
     .button:hover {
-      transform: translateY(-2px);
+      transform:
+        translateY(-2px);
 
-      color: var(--text);
-
-      border-color: var(--cyan);
+      border-color:
+        var(--border-cyan);
 
       background:
-        rgba(56, 189, 248, 0.08);
+        var(--cyan-soft);
     }
 
     .button.primary {
-      color: #06111c;
+      color:
+        #061018;
+
+      border-color:
+        transparent;
 
       background:
         linear-gradient(
           135deg,
-          var(--cyan),
-          var(--blue)
+          #68d3f7,
+          var(--cyan)
         );
 
-      border: none;
+      box-shadow:
+        0 14px 34px
+        rgba(83, 199, 240, 0.12);
     }
 
-    .button.primary:hover {
-      color: #06111c;
+    .arrow {
+      display:
+        inline-block;
+
+      transition:
+        transform 0.18s ease;
     }
 
-    /* -------------------------
-       General sections
-    ------------------------- */
-
-    .section {
-      padding: 40px 0;
+    a:hover .arrow {
+      transform:
+        translateX(3px);
     }
 
-    .section-title {
-      margin: 0 0 10px;
+    /* ======================================================
+       08 / HERO
+       ====================================================== */
 
-      text-align: center;
-
-      font-size:
-        clamp(1.8rem, 5vw, 2.4rem);
-    }
-
-    .section-intro {
-      max-width: 760px;
-
-      margin: 0 auto 28px;
-
-      color: var(--muted);
-
-      text-align: center;
-    }
-
-    .divider {
-      width: min(440px, 80%);
-
-      height: 1px;
-
-      margin: 24px auto;
-
-      background:
-        linear-gradient(
-          90deg,
-          transparent,
-          var(--cyan),
-          var(--purple),
-          var(--gold),
-          transparent
+    .hero {
+      padding:
+        clamp(
+          70px,
+          10vw,
+          126px
+        )
+        0
+        clamp(
+          68px,
+          8vw,
+          106px
         );
     }
 
-    .card {
-      padding: 28px;
+    .hero-grid {
+      display:
+        grid;
 
-      border-radius: var(--radius-lg);
+      grid-template-columns:
+        minmax(0, 1.3fr)
+        minmax(260px, 0.7fr);
+
+      align-items:
+        center;
+
+      gap:
+        clamp(
+          42px,
+          7vw,
+          90px
+        );
+    }
+
+    .hero-status {
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      gap:
+        9px;
+
+      margin-bottom:
+        24px;
+
+      padding:
+        7px
+        10px;
+
+      color:
+        var(--muted-2);
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
+
+      border-radius:
+        999px;
+
+      background:
+        rgba(255, 255, 255, 0.02);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        0.75rem;
+
+      font-weight:
+        760;
+    }
+
+    .status-dot {
+      width:
+        8px;
+
+      height:
+        8px;
+
+      border-radius:
+        50%;
+
+      background:
+        var(--green);
+
+      box-shadow:
+        0 0 0 4px
+        rgba(105, 214, 165, 0.10);
+    }
+
+    .hero h1 {
+      margin:
+        0
+        0
+        10px;
+
+      font-size:
+        clamp(
+          3.4rem,
+          8vw,
+          7.1rem
+        );
+
+      line-height:
+        0.92;
+
+      letter-spacing:
+        -0.062em;
+    }
+
+    .hero-handle {
+      margin:
+        0
+        0
+        24px;
+
+      color:
+        var(--gold);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        clamp(
+          1rem,
+          2vw,
+          1.3rem
+        );
+
+      font-weight:
+        850;
+    }
+
+    .hero-copy {
+      max-width:
+        760px;
+
+      color:
+        var(--text-soft);
+
+      font-size:
+        clamp(
+          1.25rem,
+          2.5vw,
+          1.9rem
+        );
+
+      line-height:
+        1.32;
+
+      letter-spacing:
+        -0.02em;
+    }
+
+    .hero-description {
+      max-width:
+        710px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        1.06rem;
+    }
+
+    .hero-tags {
+      display:
+        flex;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        8px
+        18px;
+
+      margin-top:
+        30px;
+
+      color:
+        #748196;
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        0.74rem;
+
+      font-weight:
+        700;
+
+      letter-spacing:
+        0.06em;
+
+      text-transform:
+        uppercase;
+    }
+
+    .hero-tags span::before {
+      content:
+        "";
+
+      display:
+        inline-block;
+
+      width:
+        4px;
+
+      height:
+        4px;
+
+      margin-right:
+        7px;
+
+      vertical-align:
+        middle;
+
+      border-radius:
+        50%;
+
+      background:
+        var(--cyan);
+    }
+
+    /* ======================================================
+       09 / PORTRAIT
+       ====================================================== */
+
+    .portrait-wrap {
+      width:
+        min(
+          100%,
+          390px
+        );
+
+      justify-self:
+        end;
+
+      padding:
+        12px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius:
+        30px;
 
       background:
         linear-gradient(
           145deg,
-          rgba(20, 31, 56, 0.94),
-          rgba(13, 21, 39, 0.94)
+          rgba(255, 255, 255, 0.055),
+          rgba(255, 255, 255, 0.015)
         );
 
       box-shadow:
-        0 18px 50px rgba(0, 0, 0, 0.18);
-    }
-
-    /* -------------------------
-       About
-    ------------------------- */
-
-    .about-grid {
-      display: grid;
-
-      grid-template-columns:
-        1.55fr 0.8fr;
-
-      gap: 28px;
-
-      align-items: center;
-    }
-
-    .about-grid h2 {
-      margin-top: 0;
-    }
-
-    .portrait-card {
-      text-align: center;
+        var(--shadow);
     }
 
     .portrait {
-      width: min(260px, 100%);
+      width:
+        100%;
 
-      aspect-ratio: 1;
+      aspect-ratio:
+        1;
 
-      margin-inline: auto;
+      object-fit:
+        cover;
 
-      object-fit: cover;
-
-      border-radius: 24px;
-
-      border:
-        2px solid rgba(56, 189, 248, 0.35);
-
-      box-shadow:
-        0 0 0 6px rgba(56, 189, 248, 0.05),
-        0 18px 50px rgba(0, 0, 0, 0.3);
-    }
-
-    .portrait-name {
-      margin: 20px 0 0;
-
-      font-size: 1.35rem;
-      font-weight: 800;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-
-      gap: 9px;
-
-      margin-top: 20px;
-    }
-
-    .chip {
-      padding: 7px 11px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 999px;
-
-      color: #dbeafe;
+      border-radius:
+        22px;
 
       background:
-        rgba(56, 189, 248, 0.05);
-
-      font-size: 0.9rem;
+        var(--surface);
     }
 
-    /* -------------------------
-       Skills
-    ------------------------- */
+    .portrait-meta {
+      display:
+        flex;
 
-    .grid {
-      display: grid;
+      align-items:
+        center;
 
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+      justify-content:
+        space-between;
 
-      gap: 18px;
+      gap:
+        16px;
+
+      padding:
+        15px
+        8px
+        4px;
     }
 
-    .feature h3 {
-      margin-top: 0;
-      margin-bottom: 8px;
+    .portrait-meta small {
+      display:
+        block;
+
+      color:
+        var(--muted);
     }
 
-    .feature p {
-      margin-bottom: 0;
+    .portrait-badge {
+      padding:
+        6px
+        9px;
 
-      color: var(--muted);
-    }
-
-    /* -------------------------
-       Toolbox
-    ------------------------- */
-
-    .toolbox {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-
-      gap: 10px;
-    }
-
-    .tool {
-      padding: 8px 13px;
-
-      border-radius: 10px;
-
-      background:
-        rgba(255, 255, 255, 0.045);
+      color:
+        var(--cyan);
 
       border:
-        1px solid rgba(255, 255, 255, 0.1);
+        1px solid
+        var(--border-cyan);
+
+      border-radius:
+        999px;
+
+      background:
+        var(--cyan-soft);
 
       font-family:
-        "SFMono-Regular",
-        Consolas,
-        monospace;
+        var(--font-mono);
 
-      font-size: 0.88rem;
+      font-size:
+        0.7rem;
+
+      font-weight:
+        800;
     }
 
-    /* -------------------------
-       Agutroil banner
-    ------------------------- */
+    /* ======================================================
+       10 / BANNERS
+       ====================================================== */
 
-    .agutroil-banner {
-      margin-top: 28px;
+    .banner {
+      position:
+        relative;
 
-      border-radius: var(--radius-lg);
+      overflow:
+        hidden;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
+
+      border-radius:
+        var(--radius-xl);
 
       box-shadow:
-        0 18px 50px rgba(0, 0, 0, 0.22);
+        var(--shadow);
+
+      background:
+        var(--surface);
     }
 
-    .identity {
-      text-align: center;
+    .banner img {
+      width:
+        100%;
+
+      aspect-ratio:
+        21 / 7;
+
+      object-fit:
+        cover;
     }
 
-    .identity strong {
-      color: var(--cyan);
-    }
+    .banner::after {
+      content:
+        "";
 
-    /* -------------------------
-       Projects
-    ------------------------- */
+      position:
+        absolute;
 
-    .project-grid {
-      display: grid;
+      inset:
+        0;
 
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-      gap: 18px;
-    }
-
-    .project {
-      position: relative;
-
-      overflow: hidden;
-
-      display: flex;
-      flex-direction: column;
-    }
-
-    .project::before {
-      content: "";
-
-      position: absolute;
-
-      inset: 0 0 auto 0;
-
-      height: 3px;
+      pointer-events:
+        none;
 
       background:
         linear-gradient(
-          90deg,
-          var(--cyan),
-          var(--purple),
-          var(--gold)
+          to top,
+          rgba(7, 9, 15, 0.25),
+          transparent 45%
         );
     }
 
-    .project h3 {
-      margin: 12px 0 6px;
+    /* ======================================================
+       11 / ABOUT
+       ====================================================== */
 
-      font-size: 1.5rem;
-    }
-
-    .project p {
-      margin-top: 6px;
-    }
-
-    .project-status {
-      align-self: flex-start;
-
-      padding: 5px 9px;
-
-      border:
-        1px solid rgba(251, 191, 36, 0.3);
-
-      border-radius: 999px;
-
-      color: var(--gold);
-
-      background:
-        rgba(251, 191, 36, 0.06);
-
-      font-size: 0.8rem;
-      font-weight: 800;
-    }
-
-    .project-features {
-      margin: 12px 0 24px;
-
-      padding-left: 20px;
-
-      color: var(--muted);
-    }
-
-    .project-features li + li {
-      margin-top: 5px;
-    }
-
-    .project-actions {
-      margin-top: auto;
-
-      padding-top: 10px;
-    }
-
-    .project-link {
-      min-height: 44px;
-
-      padding: 9px 14px;
-
-      display: inline-flex;
-      align-items: center;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 12px;
-
-      font-weight: 800;
-    }
-
-    .project-link:hover {
-      color: var(--text);
-
-      border-color: var(--cyan);
-
-      background:
-        rgba(56, 189, 248, 0.08);
-    }
-
-    /* -------------------------
-       Open source
-    ------------------------- */
-
-    .open-source-grid {
-      display: grid;
+    .about-grid {
+      display:
+        grid;
 
       grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        minmax(0, 1.15fr)
+        minmax(290px, 0.85fr);
 
-      gap: 18px;
+      gap:
+        clamp(
+          46px,
+          8vw,
+          100px
+        );
+
+      align-items:
+        start;
     }
 
-    .open-source-card {
-      text-align: center;
+    .about-copy p {
+      max-width:
+        740px;
+
+      color:
+        var(--muted-2);
+
+      font-size:
+        1.05rem;
     }
 
-    .open-source-card h3 {
-      margin-top: 0;
-    }
-
-    /* -------------------------
-       Current quest
-    ------------------------- */
-
-    .quest-grid {
-      display: grid;
+    .focus-grid {
+      display:
+        grid;
 
       grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
 
-      gap: 18px;
+      gap:
+        14px;
+
+      margin-top:
+        32px;
     }
 
-    .quest-card h3 {
-      margin-top: 0;
-    }
-
-    .quest-card ul {
-      margin-bottom: 0;
-    }
-
-    /* -------------------------
-       Philosophy
-    ------------------------- */
-
-    .quote {
-      padding: 44px 24px;
-
-      text-align: center;
-    }
-
-    .quote h2 {
-      margin-top: 0;
-    }
-
-    .quote blockquote {
-      margin: 16px 0;
-
-      font-size:
-        clamp(1.3rem, 4vw, 2rem);
-
-      font-weight: 800;
-      font-style: italic;
-    }
-
-    .flow {
-      color: var(--cyan);
-
-      font-size:
-        clamp(1rem, 3vw, 1.2rem);
-
-      font-weight: 800;
-    }
-
-    /* -------------------------
-       Find me / projects
-    ------------------------- */
-
-    .social-actions {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-
-      gap: 12px;
-
-      margin: 26px 0;
-    }
-
-    .social-button {
-      min-height: 46px;
-
-      padding: 10px 16px;
-
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    .focus-card {
+      padding:
+        20px;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 12px;
-
-      color: var(--text);
+      border-radius:
+        var(--radius-md);
 
       background:
-        rgba(255, 255, 255, 0.035);
-
-      font-weight: 800;
+        rgba(255, 255, 255, 0.018);
 
       transition:
+        border-color 0.18s ease,
         transform 0.18s ease,
+        background 0.18s ease;
+    }
+
+    .focus-card:hover {
+      border-color:
+        var(--border-cyan);
+
+      background:
+        rgba(83, 199, 240, 0.025);
+
+      transform:
+        translateY(-2px);
+    }
+
+    .focus-card small {
+      color:
+        var(--cyan);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        0.7rem;
+
+      font-weight:
+        800;
+    }
+
+    .focus-card h3 {
+      margin:
+        8px
+        0
+        5px;
+
+      font-size:
+        1rem;
+    }
+
+    .focus-card p {
+      margin:
+        0;
+
+      color:
+        var(--muted);
+
+      font-size:
+        0.9rem;
+    }
+
+    .info-row {
+      padding:
+        17px
+        0;
+
+      border-top:
+        1px solid
+        var(--border);
+    }
+
+    .info-row:last-child {
+      border-bottom:
+        1px solid
+        var(--border);
+    }
+
+    .info-row span {
+      display:
+        block;
+
+      color:
+        var(--cyan);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        0.7rem;
+
+      font-weight:
+        800;
+
+      letter-spacing:
+        0.08em;
+
+      text-transform:
+        uppercase;
+    }
+
+    .info-row strong {
+      display:
+        block;
+
+      margin-top:
+        5px;
+
+      color:
+        var(--text-soft);
+
+      font-size:
+        0.98rem;
+    }
+
+    /* ======================================================
+       12 / FEATURED NYTHARA PROJECT
+       ====================================================== */
+
+    .featured-project {
+      overflow:
+        hidden;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius:
+        var(--radius-xl);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(16, 23, 34, 0.97),
+          rgba(9, 13, 21, 0.97)
+        );
+
+      box-shadow:
+        var(--shadow);
+
+      transition:
         border-color 0.18s ease;
     }
 
-    .social-button:hover {
-      transform: translateY(-2px);
-
-      color: var(--text);
-
-      border-color: var(--cyan);
-    }
-
-    .social-button.github {
+    .featured-project:hover {
       border-color:
-        rgba(255, 255, 255, 0.22);
+        rgba(83, 199, 240, 0.28);
     }
 
-    .social-button.website {
-      border-color:
-        rgba(96, 165, 250, 0.42);
-    }
+    .nythara-art {
+      min-height:
+        clamp(
+          300px,
+          45vw,
+          540px
+        );
 
-    .mini-project-grid {
-      display: grid;
+      display:
+        grid;
 
-      grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+      place-items:
+        center;
 
-      gap: 16px;
+      position:
+        relative;
 
-      margin-top: 26px;
-    }
-
-    .mini-project {
-      text-align: center;
-    }
-
-    .mini-project h3 {
-      margin-top: 0;
-    }
-
-    .all-repositories {
-      margin-top: 28px;
-
-      text-align: center;
-    }
-
-    /* -------------------------
-       Details
-    ------------------------- */
-
-    details {
-      max-width: 800px;
-
-      margin: 30px auto 0;
-
-      padding: 18px 20px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: var(--radius-md);
+      overflow:
+        hidden;
 
       background:
-        rgba(255, 255, 255, 0.025);
+        radial-gradient(
+          circle at 22% 28%,
+          rgba(83, 199, 240, 0.18),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 76% 22%,
+          rgba(149, 135, 247, 0.20),
+          transparent 28%
+        ),
+        linear-gradient(
+          155deg,
+          #0a1020,
+          #12192a 45%,
+          #090d17
+        );
     }
 
-    summary {
-      cursor: pointer;
+    .nythara-art::before {
+      content:
+        "";
 
-      font-weight: 800;
+      position:
+        absolute;
+
+      width:
+        clamp(
+          130px,
+          20vw,
+          220px
+        );
+
+      aspect-ratio:
+        1;
+
+      top:
+        10%;
+
+      right:
+        12%;
+
+      border-radius:
+        50%;
+
+      background:
+        radial-gradient(
+          circle at 38% 34%,
+          #d9f4ff,
+          #8fdcf4 46%,
+          rgba(83, 199, 240, 0.28) 68%,
+          transparent 70%
+        );
+
+      filter:
+        drop-shadow(
+          0 0 40px
+          rgba(83, 199, 240, 0.22)
+        );
     }
 
-    details p:last-child {
-      margin-bottom: 0;
+    .nythara-art::after {
+      content:
+        "";
+
+      position:
+        absolute;
+
+      left:
+        0;
+
+      right:
+        0;
+
+      bottom:
+        0;
+
+      height:
+        48%;
+
+      background:
+        linear-gradient(
+          135deg,
+          transparent 26%,
+          #131d2d 27%,
+          #0a101a 58%,
+          transparent 59%
+        ),
+        linear-gradient(
+          45deg,
+          transparent 18%,
+          #0c1420 19%,
+          #121b28 48%,
+          transparent 49%
+        );
+
+      opacity:
+        0.95;
     }
 
-    /* -------------------------
-       Signature
-    ------------------------- */
+    .nythara-title {
+      position:
+        relative;
 
-    .signature {
-      margin-top: 28px;
+      z-index:
+        2;
 
-      padding: 34px 20px;
+      text-align:
+        center;
+    }
 
-      text-align: center;
+    .nythara-title strong {
+      display:
+        block;
 
-      border-top:
-        1px solid var(--border);
+      font-size:
+        clamp(
+          3rem,
+          8vw,
+          7rem
+        );
+
+      line-height:
+        0.9;
+
+      letter-spacing:
+        -0.06em;
+
+      text-shadow:
+        0 18px 60px
+        rgba(0, 0, 0, 0.70);
+    }
+
+    .nythara-title span {
+      display:
+        block;
+
+      margin-top:
+        14px;
+
+      color:
+        rgba(255, 255, 255, 0.57);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        clamp(
+          0.7rem,
+          1.2vw,
+          0.9rem
+        );
+
+      font-weight:
+        700;
+
+      letter-spacing:
+        0.18em;
+
+      text-transform:
+        uppercase;
+    }
+
+    .featured-body {
+      display:
+        grid;
+
+      grid-template-columns:
+        1.25fr
+        0.75fr;
+
+      gap:
+        clamp(
+          30px,
+          5vw,
+          70px
+        );
+
+      padding:
+        clamp(
+          28px,
+          5vw,
+          50px
+        );
+    }
+
+    .status-badge {
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      padding:
+        6px
+        9px;
+
+      color:
+        var(--gold);
+
+      border:
+        1px solid
+        rgba(223, 184, 102, 0.28);
+
+      border-radius:
+        999px;
+
+      background:
+        var(--gold-soft);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        0.7rem;
+
+      font-weight:
+        800;
+    }
+
+    .featured-project h3 {
+      margin:
+        12px
+        0
+        12px;
+
+      font-size:
+        clamp(
+          2rem,
+          4vw,
+          3.4rem
+        );
+
+      line-height:
+        1;
+
+      letter-spacing:
+        -0.04em;
+    }
+
+    .featured-project p {
+      color:
+        var(--muted-2);
+    }
+
+    .tags {
+      display:
+        flex;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        8px;
+    }
+
+    .tag {
+      padding:
+        7px
+        10px;
+
+      color:
+        var(--muted-2);
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius:
+        999px;
+
+      background:
+        rgba(255, 255, 255, 0.02);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        0.7rem;
+
+      font-weight:
+        700;
+    }
+
+    .facts {
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+
+      gap:
+        12px;
+
+      align-content:
+        start;
+    }
+
+    .fact {
+      padding:
+        16px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius:
+        14px;
+
+      background:
+        rgba(255, 255, 255, 0.018);
+    }
+
+    .fact strong {
+      display:
+        block;
+    }
+
+    .fact span {
+      color:
+        var(--muted);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        0.68rem;
+
+      font-weight:
+        700;
+
+      text-transform:
+        uppercase;
+    }
+
+    .featured-actions {
+      grid-column:
+        1 / -1;
+
+      margin-top:
+        4px;
+    }
+
+    /* ======================================================
+       13 / OTHER PROJECTS
+       ====================================================== */
+
+    .other-label {
+      margin:
+        44px
+        0
+        18px;
+
+      color:
+        var(--muted);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        0.75rem;
+
+      font-weight:
+        800;
+
+      letter-spacing:
+        0.11em;
+
+      text-transform:
+        uppercase;
+    }
+
+    .project-grid {
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(0, 1fr)
+        );
+
+      gap:
+        16px;
+    }
+
+    .project-card {
+      overflow:
+        hidden;
+
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius:
+        var(--radius-lg);
+
+      background:
+        rgba(12, 17, 25, 0.75);
+
+      transition:
+        transform 0.18s ease,
+        border-color 0.18s ease,
+        background 0.18s ease;
+    }
+
+    .project-card:hover {
+      transform:
+        translateY(-3px);
+
+      border-color:
+        var(--border-cyan);
+
+      background:
+        rgba(17, 24, 36, 0.90);
+    }
+
+    .project-visual {
+      min-height:
+        185px;
+
+      display:
+        flex;
+
+      align-items:
+        flex-end;
+
+      padding:
+        22px;
 
       border-bottom:
-        1px solid var(--border);
-    }
+        1px solid
+        var(--border);
 
-    .signature-main {
+      font-family:
+        var(--font-mono);
+
       font-size:
-        clamp(1.1rem, 3vw, 1.5rem);
+        clamp(
+          2.2rem,
+          5vw,
+          3.5rem
+        );
 
-      font-weight: 800;
+      font-weight:
+        950;
     }
 
-    .signature-main .linux {
-      color: var(--cyan);
+    .project-visual.astra {
+      background:
+        radial-gradient(
+          circle at 76% 26%,
+          rgba(223, 184, 102, 0.16),
+          transparent 30%
+        ),
+        linear-gradient(
+          145deg,
+          #15110c,
+          #1b1b21 48%,
+          #0d1016
+        );
     }
 
-    .signature-main .agutroil {
-      color: var(--gold);
+    .project-visual.medcore {
+      background:
+        radial-gradient(
+          circle at 78% 22%,
+          rgba(83, 199, 240, 0.18),
+          transparent 29%
+        ),
+        linear-gradient(
+          145deg,
+          #091722,
+          #0b1820 50%,
+          #0b1017
+        );
     }
 
-    .signature-tags {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-
-      gap: 10px;
-
-      margin: 20px 0;
+    .project-visual.blog {
+      background:
+        radial-gradient(
+          circle at 74% 20%,
+          rgba(149, 135, 247, 0.19),
+          transparent 30%
+        ),
+        linear-gradient(
+          145deg,
+          #151121,
+          #12131d 50%,
+          #0b0d13
+        );
     }
 
-    /* -------------------------
-       Footer
-    ------------------------- */
+    .project-body {
+      flex:
+        1;
+
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      padding:
+        24px;
+    }
+
+    .project-type {
+      color:
+        var(--cyan);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        0.7rem;
+
+      font-weight:
+        800;
+
+      letter-spacing:
+        0.08em;
+
+      text-transform:
+        uppercase;
+    }
+
+    .project-card h3 {
+      margin:
+        10px
+        0
+        8px;
+
+      font-size:
+        1.45rem;
+    }
+
+    .project-card p {
+      color:
+        var(--muted);
+    }
+
+    .project-card .tags {
+      margin-top:
+        auto;
+    }
+
+    .project-link {
+      margin-top:
+        20px;
+
+      font-weight:
+        850;
+    }
+
+    .project-link:hover {
+      color:
+        var(--cyan);
+    }
+
+    /* ======================================================
+       14 / STACK
+       ====================================================== */
+
+    .stack-grid {
+      display:
+        grid;
+
+      grid-template-columns:
+        0.8fr
+        1.2fr;
+
+      gap:
+        clamp(
+          48px,
+          8vw,
+          100px
+        );
+
+      align-items:
+        start;
+    }
+
+    .stack-groups {
+      display:
+        grid;
+    }
+
+    .stack-row {
+      display:
+        grid;
+
+      grid-template-columns:
+        120px
+        1fr;
+
+      gap:
+        24px;
+
+      padding:
+        24px
+        0;
+
+      border-top:
+        1px solid
+        var(--border);
+    }
+
+    .stack-row:last-child {
+      border-bottom:
+        1px solid
+        var(--border);
+    }
+
+    .stack-name {
+      color:
+        var(--cyan);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        0.72rem;
+
+      font-weight:
+        800;
+
+      letter-spacing:
+        0.09em;
+
+      text-transform:
+        uppercase;
+    }
+
+    .stack-items {
+      display:
+        flex;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        10px
+        20px;
+    }
+
+    .stack-items span {
+      color:
+        var(--text-soft);
+
+      font-weight:
+        750;
+    }
+
+    /* ======================================================
+       15 / OPEN SOURCE
+       ====================================================== */
+
+    .opensource-card {
+      overflow:
+        hidden;
+
+      padding:
+        clamp(
+          38px,
+          7vw,
+          76px
+        );
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius:
+        var(--radius-xl);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(14, 21, 32, 0.95),
+          rgba(7, 10, 16, 0.97)
+        );
+
+      box-shadow:
+        var(--shadow);
+    }
+
+    .opensource-grid {
+      display:
+        grid;
+
+      grid-template-columns:
+        1.1fr
+        0.9fr;
+
+      gap:
+        clamp(
+          40px,
+          7vw,
+          86px
+        );
+
+      align-items:
+        center;
+    }
+
+    .opensource-handle {
+      color:
+        var(--gold);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        clamp(
+          1.4rem,
+          3vw,
+          2rem
+        );
+
+      font-weight:
+        900;
+    }
+
+    .now-list {
+      display:
+        grid;
+
+      gap:
+        0;
+    }
+
+    .now-label {
+      margin-bottom:
+        8px;
+
+      color:
+        var(--muted);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        0.7rem;
+
+      font-weight:
+        800;
+
+      letter-spacing:
+        0.09em;
+
+      text-transform:
+        uppercase;
+    }
+
+    .now-item {
+      padding:
+        14px
+        0;
+
+      border-top:
+        1px solid
+        var(--border);
+
+      color:
+        var(--text-soft);
+
+      font-weight:
+        760;
+    }
+
+    .now-item:last-child {
+      border-bottom:
+        1px solid
+        var(--border);
+    }
+
+    .now-item::before {
+      content:
+        "→";
+
+      margin-right:
+        12px;
+
+      color:
+        var(--cyan);
+
+      font-family:
+        var(--font-mono);
+    }
+
+    /* ======================================================
+       16 / QUOTE
+       ====================================================== */
+
+    .quote-section {
+      text-align:
+        center;
+    }
+
+    .quote-section blockquote {
+      max-width:
+        900px;
+
+      margin:
+        0 auto;
+
+      color:
+        var(--text-soft);
+
+      font-size:
+        clamp(
+          1.6rem,
+          4vw,
+          3rem
+        );
+
+      font-weight:
+        780;
+
+      line-height:
+        1.25;
+
+      letter-spacing:
+        -0.03em;
+    }
+
+    .quote-section p {
+      color:
+        var(--gold);
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        0.78rem;
+
+      font-weight:
+        700;
+    }
+
+    /* ======================================================
+       17 / FOOTER
+       ====================================================== */
 
     footer {
-      padding: 44px 0;
+      padding:
+        42px
+        0
+        48px;
 
-      color: var(--muted);
-
-      text-align: center;
-
-      font-size: 0.9rem;
+      border-top:
+        1px solid
+        var(--border);
     }
 
-    footer strong {
-      color: var(--text);
+    .footer-grid {
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        center;
+
+      gap:
+        28px;
+    }
+
+    .footer-text span {
+      display:
+        block;
+
+      color:
+        var(--muted);
+
+      font-size:
+        0.88rem;
     }
 
     .footer-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      display:
+        flex;
 
-      gap: 14px;
+      flex-wrap:
+        wrap;
 
-      margin-top: 12px;
+      gap:
+        8px
+        16px;
     }
 
-    /* -------------------------
-       Responsive
-    ------------------------- */
+    .footer-links a {
+      color:
+        var(--muted);
 
-    @media (max-width: 860px) {
-      .nav {
-        align-items: flex-start;
+      font-size:
+        0.88rem;
 
-        padding: 12px 0;
+      font-weight:
+        720;
+    }
+
+    .footer-links a:hover {
+      color:
+        var(--cyan);
+    }
+
+    .signature {
+      margin-top:
+        24px;
+
+      padding-top:
+        22px;
+
+      border-top:
+        1px solid
+        rgba(148, 163, 184, 0.08);
+
+      color:
+        #697589;
+
+      text-align:
+        center;
+
+      font-family:
+        var(--font-mono);
+
+      font-size:
+        0.74rem;
+
+      font-weight:
+        700;
+    }
+
+    .signature .linux {
+      color:
+        var(--cyan);
+    }
+
+    .signature .agutroil {
+      color:
+        var(--gold);
+    }
+
+    /* ======================================================
+       18 / REVEAL
+       ====================================================== */
+
+    [data-reveal] {
+      opacity:
+        0;
+
+      transform:
+        translateY(12px);
+
+      transition:
+        opacity 0.55s ease,
+        transform 0.55s ease;
+    }
+
+    [data-reveal].visible {
+      opacity:
+        1;
+
+      transform:
+        none;
+    }
+
+    /* ======================================================
+       19 / RESPONSIVE
+       ====================================================== */
+
+    @media (max-width: 1000px) {
+
+      .project-grid {
+        grid-template-columns:
+          repeat(
+            2,
+            minmax(0, 1fr)
+          );
       }
 
-      .nav-links {
-        justify-content: flex-end;
+      .featured-body {
+        grid-template-columns:
+          1fr;
       }
 
-      .mini-project-grid {
-        grid-template-columns: 1fr;
+      .stack-grid {
+        grid-template-columns:
+          1fr;
       }
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 900px) {
+
+      .hero-grid,
       .about-grid,
-      .grid,
-      .project-grid,
-      .open-source-grid,
-      .quest-grid {
-        grid-template-columns: 1fr;
+      .opensource-grid {
+        grid-template-columns:
+          1fr;
       }
 
-      .hero {
-        padding-top: 20px;
+      .portrait-wrap {
+        width:
+          min(
+            360px,
+            84vw
+          );
+
+        justify-self:
+          start;
+      }
+    }
+
+    @media (max-width: 820px) {
+
+      .menu-toggle {
+        display:
+          grid;
       }
 
-      .card {
-        padding: 22px;
-      }
-
-      .nav {
-        flex-direction: column;
+      .github-button {
+        display:
+          none;
       }
 
       .nav-links {
-        width: 100%;
+        position:
+          absolute;
 
-        justify-content: flex-start;
+        top:
+          70px;
 
-        overflow-x: auto;
+        left:
+          0;
 
-        flex-wrap: nowrap;
+        right:
+          0;
 
-        padding-bottom: 4px;
+        display:
+          none;
 
-        scrollbar-width: thin;
+        flex-direction:
+          column;
+
+        align-items:
+          stretch;
+
+        gap:
+          2px;
+
+        padding:
+          14px
+          20px
+          18px;
+
+        border-bottom:
+          1px solid
+          var(--border);
+
+        background:
+          rgba(7, 9, 15, 0.98);
+      }
+
+      .nav-links.open {
+        display:
+          flex;
       }
 
       .nav-links a {
-        flex: 0 0 auto;
+        width:
+          100%;
+
+        min-height:
+          48px;
       }
     }
 
-    @media (max-width: 480px) {
-      .container {
+    @media (min-width: 821px) {
+
+      .mobile-only {
+        display:
+          none !important;
+      }
+    }
+
+    @media (max-width: 720px) {
+
+      .container,
+      .divider {
         width:
           min(
             var(--container),
-            calc(100% - 22px)
+            calc(100% - 26px)
           );
       }
 
       .hero h1 {
-        font-size: 2.5rem;
+        font-size:
+          clamp(
+            3.2rem,
+            16vw,
+            5rem
+          );
       }
 
-      .actions,
-      .social-actions {
-        flex-direction: column;
+      .banner img {
+        aspect-ratio:
+          16 / 8;
       }
 
-      .button,
-      .social-button {
-        width: 100%;
+      .focus-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+      .project-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+      .facts {
+        grid-template-columns:
+          1fr
+          1fr;
+      }
+
+      .stack-row {
+        grid-template-columns:
+          1fr;
+
+        gap:
+          10px;
+      }
+
+      .footer-grid {
+        flex-direction:
+          column;
+
+        align-items:
+          flex-start;
       }
     }
 
+    @media (max-width: 520px) {
+
+      .actions {
+        flex-direction:
+          column;
+      }
+
+      .button {
+        width:
+          100%;
+      }
+
+      .facts {
+        grid-template-columns:
+          1fr;
+      }
+    }
+
+    /* ======================================================
+       20 / REDUCED MOTION
+       ====================================================== */
+
     @media (prefers-reduced-motion: reduce) {
+
       html {
-        scroll-behavior: auto;
+        scroll-behavior:
+          auto;
       }
 
       *,
       *::before,
       *::after {
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
+        animation-duration:
+          0.01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          0.01ms !important;
+      }
+
+      [data-reveal] {
+        opacity:
+          1;
+
+        transform:
+          none;
       }
     }
+
   </style>
 </head>
 
 <body>
 
-  <a class="skip-link" href="#main">
+  <!-- ======================================================
+       SKIP LINK
+       ====================================================== -->
+
+  <a
+    class="skip-link"
+    href="#main"
+  >
     Zum Inhalt springen
   </a>
 
-  <!-- Navigation -->
+  <!-- ======================================================
+       NAVIGATION
+       ====================================================== -->
 
-  <div class="topbar">
+  <header class="topbar">
+
     <div class="container nav">
 
-      <a class="brand" href="#">
-        🧙 <span>Agutroil</span>
+      <a
+        class="brand"
+        href="#top"
+        aria-label="Agutroil Startseite"
+      >
+
+        <span class="brand-mark">
+          A
+        </span>
+
+        <span>
+          Agutroil
+        </span>
+
+        <span class="brand-star">
+          ✦
+        </span>
+
       </a>
 
-      <nav
-        class="nav-links"
-        aria-label="Hauptnavigation"
-      >
-        <a href="#about">Über mich</a>
-        <a href="#work">Was ich mache</a>
-        <a href="#toolbox">Toolbox</a>
-        <a href="#projects">Projekte</a>
-        <a href="#opensource">Open Source</a>
-        <a href="#connect">Links</a>
-      </nav>
+      <div class="nav-right">
 
-    </div>
-  </div>
+        <nav
+          class="nav-links"
+          id="nav-links"
+          aria-label="Hauptnavigation"
+        >
 
-  <!-- Hero -->
+          <a
+            href="#about"
+            data-nav
+          >
+            About
+          </a>
 
-  <header class="hero">
-    <div class="container">
+          <a
+            href="#projects"
+            data-nav
+          >
+            Work
+          </a>
 
-      <img
-        class="banner"
-        src="./assets/banner.png"
-        alt="Anton Deister – Developer, Linux Enthusiast and Open-Source Creator"
-      >
+          <a
+            href="#stack"
+            data-nav
+          >
+            Stack
+          </a>
 
-      <p class="hero-kicker">
-        Code · Linux · Open Source · Games
-      </p>
+          <a
+            href="#opensource"
+            data-nav
+          >
+            Open Source
+          </a>
 
-      <h1>
-        Anton <span>Deister</span>
-      </h1>
+          <a
+            class="mobile-only"
+            href="https://github.com/Agutroil"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub ↗
+          </a>
 
-      <p class="subtitle">
-        Developer · Linux Enthusiast · Open-Source Creator · Technology Enthusiast
-      </p>
-
-      <p class="hero-description">
-        Ich entwickle Software, Spiele, Webanwendungen und Open-Source-Projekte
-        und experimentiere mit Linux, modernen Technologien,
-        Automatisierung und KI-gestützten Developer-Workflows.
-      </p>
-
-      <div class="actions">
+        </nav>
 
         <a
-          class="button primary"
+          class="github-button"
           href="https://github.com/Agutroil"
           target="_blank"
           rel="noopener noreferrer"
         >
-          🐙 GitHub @Agutroil
+          GitHub ↗
         </a>
 
-        <a
-          class="button"
-          href="#projects"
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-label="Navigation öffnen"
+          aria-expanded="false"
+          aria-controls="nav-links"
         >
-          🚀 Projekte entdecken
-        </a>
 
-        <a
-          class="button"
-          href="https://github.com/Agutroil?tab=repositories"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          🌍 Alle Repositories
-        </a>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+
+            <path
+              d="M4 7h16M4 12h16M4 17h16"
+              stroke-width="2"
+              stroke-linecap="round"
+            ></path>
+
+          </svg>
+
+        </button>
 
       </div>
 
     </div>
+
   </header>
+
+  <!-- ======================================================
+       MAIN
+       ====================================================== -->
 
   <main id="main">
 
-    <!-- About -->
+    <!-- ====================================================
+         HERO
+         ==================================================== -->
+
+    <section
+      class="hero"
+      id="top"
+    >
+
+      <div class="container hero-grid">
+
+        <div data-reveal>
+
+          <div class="hero-status">
+
+            <span
+              class="status-dot"
+              aria-hidden="true"
+            ></span>
+
+            OPEN SOURCE · BUILDING THINGS ON LINUX
+
+          </div>
+
+          <p class="section-label">
+            Developer · Creator · Builder
+          </p>
+
+          <h1>
+            Anton<br>
+            Deister
+          </h1>
+
+          <p class="hero-handle">
+            @Agutroil ✦
+          </p>
+
+          <p class="hero-copy">
+            I build software, games and open-source
+            projects on Linux.
+          </p>
+
+          <p class="hero-description">
+            Softwareentwicklung, Game Development,
+            Web-Technologien, Linux, Automatisierung
+            und KI-gestützte Developer-Workflows –
+            mit dem Ziel, aus Ideen echte,
+            funktionierende Projekte zu bauen.
+          </p>
+
+          <div
+            class="actions"
+            style="margin-top: 28px;"
+          >
+
+            <a
+              class="button primary"
+              href="#projects"
+            >
+              Projekte entdecken
+
+              <span class="arrow">
+                →
+              </span>
+            </a>
+
+            <a
+              class="button"
+              href="https://github.com/Agutroil"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub @Agutroil
+
+              <span class="arrow">
+                ↗
+              </span>
+            </a>
+
+          </div>
+
+          <div
+            class="hero-tags"
+            aria-label="Technologien"
+          >
+
+            <span>
+              Godot
+            </span>
+
+            <span>
+              Debian
+            </span>
+
+            <span>
+              TypeScript
+            </span>
+
+            <span>
+              Python
+            </span>
+
+            <span>
+              React
+            </span>
+
+          </div>
+
+        </div>
+
+        <aside
+          class="portrait-wrap"
+          data-reveal
+        >
+
+          <img
+            class="portrait"
+            src="assets/antondeister.png"
+            alt="Anton Deister"
+          >
+
+          <div class="portrait-meta">
+
+            <div>
+
+              <strong>
+                Anton Deister
+              </strong>
+
+              <small>
+                Developer · Agutroil
+              </small>
+
+            </div>
+
+            <span class="portrait-badge">
+              Linux
+            </span>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+    <!-- ====================================================
+         MAIN BANNER
+         ==================================================== -->
+
+    <section
+      class="section-small"
+      aria-label="Agutroil Banner"
+    >
+
+      <div
+        class="container"
+        data-reveal
+      >
+
+        <div class="banner">
+
+          <img
+            src="assets/banner.png"
+            alt="Anton Deister – Agutroil, Developer, Linux und Open Source"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ====================================================
+         ABOUT
+         ==================================================== -->
 
     <section
       class="section"
       id="about"
     >
-      <div class="container">
 
-        <div class="about-grid">
+      <div class="container about-grid">
 
-          <article class="card">
-
-            <h2>👋 Über mich</h2>
-
-            <p>
-              Hallo, ich bin
-              <strong>Anton Deister</strong> –
-              auf GitHub unterwegs als
-              <strong>Agutroil</strong>.
-            </p>
-
-            <p>
-              Ich beschäftige mich leidenschaftlich mit
-              <strong>
-                Softwareentwicklung, Linux, Open Source,
-                Web Development und Game Development
-              </strong>.
-            </p>
-
-            <p>
-              Besonders spannend finde ich Projekte,
-              bei denen aus einer Idee Schritt für Schritt
-              etwas Eigenes entsteht – egal ob Anwendung,
-              Spiel, WordPress-Theme, Entwicklungswerkzeug
-              oder technisches Experiment.
-            </p>
-
-            <p>
-              Ich arbeite gerne mit neuen Technologien,
-              automatisiere Entwicklungsabläufe und
-              beschäftige mich zunehmend mit
-              <strong>
-                KI-gestützten Developer-Workflows
-              </strong>.
-            </p>
-
-            <div class="chips">
-              <span class="chip">🐧 Linux</span>
-              <span class="chip">Debian</span>
-              <span class="chip">🎮 Godot</span>
-              <span class="chip">🌍 Open Source</span>
-              <span class="chip">Python</span>
-              <span class="chip">TypeScript</span>
-              <span class="chip">React</span>
-              <span class="chip">Next.js</span>
-              <span class="chip">WordPress</span>
-              <span class="chip">PHP</span>
-              <span class="chip">Git</span>
-              <span class="chip">Automation</span>
-            </div>
-
-          </article>
-
-          <aside class="card portrait-card">
-
-            <img
-              class="portrait"
-              src="./assets/antondeister.png"
-              alt="Anton Deister"
-            >
-
-            <p class="portrait-name">
-              Anton Deister
-            </p>
-
-            <p class="muted">
-              Developer · Agutroil
-            </p>
-
-            <div class="chips">
-              <span class="chip">Linux</span>
-              <span class="chip">Open Source</span>
-              <span class="chip">Godot</span>
-              <span class="chip">Development</span>
-            </div>
-
-          </aside>
-
-        </div>
-
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Agutroil -->
-
-    <section class="section">
-
-      <div class="container identity">
-
-        <h2 class="section-title">
-          🧙 Welcome to Agutroil's Realm
-        </h2>
-
-        <p class="subtitle">
-          <strong>Code. Linux. Magic.</strong>
-        </p>
-
-        <p class="section-intro">
-          I enjoy building software, experimenting with Linux
-          and turning ideas into real projects.
-        </p>
-
-        <p>
-          💻 Code
-          &nbsp;·&nbsp;
-          🐧 Linux
-          &nbsp;·&nbsp;
-          🎮 Games
-          &nbsp;·&nbsp;
-          🌍 Open Source
-          &nbsp;·&nbsp;
-          💡 Ideas
-        </p>
-
-        <img
-          class="agutroil-banner"
-          src="./assets/agutroil-banner.png"
-          alt="Agutroil – Code Linux Magic"
+        <div
+          class="about-copy"
+          data-reveal
         >
 
-      </div>
+          <span class="section-label">
+            01 / ABOUT
+          </span>
 
-    </section>
+          <h2 class="section-title">
+            Building things because I want
+            to understand how they work.
+          </h2>
 
-    <div class="divider"></div>
+          <p>
+            Ich bin
+            <strong>Anton Deister</strong>,
+            auf GitHub unterwegs als
+            <strong>Agutroil</strong>.
+          </p>
 
-    <!-- What I do -->
+          <p>
+            Ich entwickle Software, Spiele,
+            Webanwendungen und Open-Source-Projekte.
+            Besonders spannend finde ich Systeme,
+            bei denen aus einer kleinen Idee nach und nach
+            etwas Eigenständiges entsteht.
+          </p>
 
-    <section
-      class="section"
-      id="work"
-    >
-      <div class="container">
+          <p>
+            Dabei arbeite ich hauptsächlich unter Linux,
+            experimentiere mit neuen Technologien,
+            automatisiere Entwicklungsabläufe und kombiniere
+            klassische Softwareentwicklung zunehmend mit
+            Coding Agents und KI-gestützten Workflows.
+          </p>
 
-        <h2 class="section-title">
-          🚀 Was ich mache
-        </h2>
+          <div class="focus-grid">
 
-        <p class="section-intro">
-          Von Game Development über Web-Technologien bis zu Linux,
-          Open Source und KI-gestützter Entwicklung.
-        </p>
+            <article class="focus-card">
 
-        <div class="grid">
+              <small>
+                01
+              </small>
 
-          <article class="card feature">
+              <h3>
+                Game Development
+              </h3>
 
-            <h3>🎮 Game Development</h3>
+              <p>
+                Godot, Multiplayer, World Building,
+                Combat und Game-System-Architektur.
+              </p>
 
-            <p>
-              World Building, Gameplay-Systeme, Multiplayer,
-              Combat, Performance und Developer Tools mit Godot.
-            </p>
+            </article>
 
-          </article>
+            <article class="focus-card">
 
-          <article class="card feature">
+              <small>
+                02
+              </small>
 
-            <h3>🌐 Web Development</h3>
+              <h3>
+                Web Development
+              </h3>
 
-            <p>
-              React, TypeScript, Next.js, JavaScript,
-              WordPress, PHP, HTML und CSS für moderne
-              Webanwendungen und Content-Projekte.
-            </p>
+              <p>
+                React, TypeScript, Next.js,
+                WordPress, PHP, HTML und CSS.
+              </p>
 
-          </article>
+            </article>
 
-          <article class="card feature">
+            <article class="focus-card">
 
-            <h3>🐧 Linux</h3>
+              <small>
+                03
+              </small>
 
-            <p>
-              Debian, Terminal Workflows, Git, Shell,
-              Automatisierung und Linux-basierte Entwicklung.
-            </p>
+              <h3>
+                Linux & Open Source
+              </h3>
 
-          </article>
+              <p>
+                Debian, Git, Shell,
+                Automatisierung und öffentlich
+                nachvollziehbare Projekte.
+              </p>
 
-          <article class="card feature">
+            </article>
 
-            <h3>🤖 AI-assisted Development</h3>
+            <article class="focus-card">
 
-            <p>
-              Coding Agents, automatisierte Tests,
-              AI Tool Bridges, Asset Pipelines und
-              reproduzierbare Entwicklungsprozesse.
-            </p>
+              <small>
+                04
+              </small>
 
-          </article>
+              <h3>
+                AI Workflows
+              </h3>
+
+              <p>
+                Coding Agents, AI Bridges,
+                Tests, Asset Pipelines und
+                Developer-Automatisierung.
+              </p>
+
+            </article>
+
+          </div>
 
         </div>
 
+        <aside data-reveal>
+
+          <div class="info-row">
+
+            <span>
+              Identity
+            </span>
+
+            <strong>
+              Anton Deister · @Agutroil
+            </strong>
+
+          </div>
+
+          <div class="info-row">
+
+            <span>
+              System
+            </span>
+
+            <strong>
+              Linux · Debian
+            </strong>
+
+          </div>
+
+          <div class="info-row">
+
+            <span>
+              Game Engine
+            </span>
+
+            <strong>
+              Godot · GDScript
+            </strong>
+
+          </div>
+
+          <div class="info-row">
+
+            <span>
+              Web
+            </span>
+
+            <strong>
+              TypeScript · React · Next.js
+            </strong>
+
+          </div>
+
+          <div class="info-row">
+
+            <span>
+              Philosophy
+            </span>
+
+            <strong>
+              Build · Test · Understand · Improve · Share
+            </strong>
+
+          </div>
+
+        </aside>
+
       </div>
+
     </section>
 
     <div class="divider"></div>
 
-    <!-- Toolbox -->
-
-    <section
-      class="section"
-      id="toolbox"
-    >
-      <div class="container">
-
-        <h2 class="section-title">
-          🧰 Meine Toolbox
-        </h2>
-
-        <p class="section-intro">
-          Technologien und Werkzeuge, mit denen ich aktuell
-          entwickle und experimentiere.
-        </p>
-
-        <div class="toolbox">
-          <span class="tool">🐧 Linux</span>
-          <span class="tool">Debian</span>
-
-          <span class="tool">Godot</span>
-          <span class="tool">GDScript</span>
-
-          <span class="tool">Python</span>
-
-          <span class="tool">TypeScript</span>
-          <span class="tool">JavaScript</span>
-
-          <span class="tool">React</span>
-          <span class="tool">Next.js</span>
-
-          <span class="tool">WordPress</span>
-          <span class="tool">PHP</span>
-
-          <span class="tool">HTML</span>
-          <span class="tool">CSS</span>
-
-          <span class="tool">Git</span>
-          <span class="tool">GitHub</span>
-
-          <span class="tool">Android</span>
-          <span class="tool">Shell</span>
-
-          <span class="tool">Automation</span>
-          <span class="tool">AI Workflows</span>
-        </div>
-
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Projects -->
+    <!-- ====================================================
+         PROJECTS
+         ==================================================== -->
 
     <section
       class="section"
       id="projects"
     >
+
       <div class="container">
 
-        <h2 class="section-title">
-          🛠️ Projekte
-        </h2>
+        <header
+          data-reveal
+          style="margin-bottom: 40px;"
+        >
 
-        <p class="section-intro">
-          Eine Auswahl meiner aktuellen und öffentlichen Projekte.
-        </p>
+          <span class="section-label">
+            02 / SELECTED WORK
+          </span>
 
-        <div class="project-grid">
+          <h2 class="section-title">
+            Projects that turned ideas
+            into real systems.
+          </h2>
 
-          <!-- Nythara -->
+          <p class="section-lead">
+            Games, Open-Source-Software,
+            Web-Projekte und technische Experimente.
+            Nythara ist aktuell mein größtes
+            Game-Development-Projekt.
+          </p>
 
-          <article class="card project">
+        </header>
 
-            <span class="project-status">
-              🚧 Aktive Entwicklung
-            </span>
+        <!-- ===============================================
+             NYTHARA
+             =============================================== -->
 
-            <h3>🌌 Nythara</h3>
+        <article
+          class="featured-project"
+          data-reveal
+        >
 
-            <p class="muted">
-              Fantasy Game Development with Godot
-            </p>
+          <div class="nythara-art">
 
-            <p>
-              Nythara ist ein Fantasy-Game-Projekt auf Basis von
-              Godot mit Fokus auf große Spielwelten,
-              Multiplayer und umfangreiche Gameplay-Systeme.
-            </p>
+            <div class="nythara-title">
 
-            <ul class="project-features">
-              <li>🌍 Große Spielwelten</li>
-              <li>🌐 Multiplayer</li>
-              <li>🏗️ World Building</li>
-              <li>⚔️ Combat</li>
-              <li>🌀 Portale & Regionen</li>
-              <li>👹 Monster & Bosse</li>
-              <li>🗡️ Items & Equipment</li>
-            </ul>
+              <strong>
+                NYTHARA
+              </strong>
 
-            <div class="project-actions">
+              <span>
+                A world still being forged
+              </span>
+
+            </div>
+
+          </div>
+
+          <div class="featured-body">
+
+            <div>
+
+              <span class="status-badge">
+                ● Active Development
+              </span>
+
+              <h3>
+                Nythara
+              </h3>
+
+              <p>
+                Ein Open-Source-Fantasy-MMORPG auf Basis von Godot.
+                2D-Charakter- und Creature-Ästhetik trifft auf eine
+                immersive 3D-Fantasywelt mit Multiplayer,
+                persistenten Charakteren, Regionen, Dungeons,
+                Combat und umfangreichen Gameplay-Systemen.
+              </p>
+
+              <div class="tags">
+
+                <span class="tag">
+                  Godot 4
+                </span>
+
+                <span class="tag">
+                  GDScript
+                </span>
+
+                <span class="tag">
+                  Multiplayer
+                </span>
+
+                <span class="tag">
+                  Open Source
+                </span>
+
+                <span class="tag">
+                  MMORPG
+                </span>
+
+              </div>
+
+            </div>
+
+            <div class="facts">
+
+              <div class="fact">
+
+                <strong>
+                  17
+                </strong>
+
+                <span>
+                  Worlds
+                </span>
+
+              </div>
+
+              <div class="fact">
+
+                <strong>
+                  ENet
+                </strong>
+
+                <span>
+                  Multiplayer
+                </span>
+
+              </div>
+
+              <div class="fact">
+
+                <strong>
+                  Server
+                </strong>
+
+                <span>
+                  Authoritative
+                </span>
+
+              </div>
+
+              <div class="fact">
+
+                <strong>
+                  Open
+                </strong>
+
+                <span>
+                  Source
+                </span>
+
+              </div>
+
+            </div>
+
+            <div class="featured-actions">
 
               <a
-                class="project-link"
+                class="button primary"
                 href="https://github.com/Agutroil/Nythara"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                🎮 Nythara auf GitHub →
+                Nythara auf GitHub
+
+                <span class="arrow">
+                  ↗
+                </span>
               </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- ===============================================
+             OTHER PROJECTS
+             =============================================== -->
+
+        <p class="other-label">
+          Other work
+        </p>
+
+        <div class="project-grid">
+
+          <!-- Astra Kingdom -->
+
+          <article
+            class="project-card"
+            data-reveal
+          >
+
+            <div class="project-visual astra">
+              AK
+            </div>
+
+            <div class="project-body">
+
+              <span class="project-type">
+                Game Development
+              </span>
+
+              <h3>
+                Astra Kingdom
+              </h3>
+
+              <p>
+                Open-Source-Game-Projekt mit Fokus auf
+                Combat, Progression, Equipment und
+                langfristige Systeme.
+              </p>
+
+              <div class="tags">
+
+                <span class="tag">
+                  Game Systems
+                </span>
+
+                <span class="tag">
+                  Progression
+                </span>
+
+                <span class="tag">
+                  Open Source
+                </span>
+
+              </div>
 
             </div>
 
           </article>
 
-          <!-- Astra Kingdom -->
-
-          <article class="card project">
-
-            <span class="project-status">
-              🌍 Open-Source Game
-            </span>
-
-            <h3>🏰 Astra Kingdom</h3>
-
-            <p class="muted">
-              Game Systems · Progression · Experimentation
-            </p>
-
-            <p>
-              Astra Kingdom ist ein eigenes Game-Projekt
-              mit Fokus auf umfangreiche Gameplay-,
-              Combat- und Progressionssysteme.
-            </p>
-
-            <ul class="project-features">
-              <li>⚔️ Combat-Systeme</li>
-              <li>📈 Progression</li>
-              <li>🛡️ Items & Ausrüstung</li>
-              <li>🏆 Langzeit-Fortschritt</li>
-              <li>🧩 Game Mechanics</li>
-              <li>🌍 Open Source</li>
-            </ul>
-
-          </article>
-
           <!-- MedCore -->
 
-          <article class="card project">
+          <article
+            class="project-card"
+            data-reveal
+          >
 
-            <span class="project-status">
-              🚧 Open Source · Active Development
-            </span>
+            <div class="project-visual medcore">
+              MC
+            </div>
 
-            <h3>🩺 MedCore</h3>
+            <div class="project-body">
 
-            <p class="muted">
-              Open-Source Healthcare Platform
-            </p>
+              <span class="project-type">
+                Open Source Software
+              </span>
 
-            <p>
-              MedCore ist eine moderne Open-Source-Anwendung
-              für medizinische und gesundheitsbezogene
-              Workflows und befindet sich aktuell
-              in aktiver Entwicklung.
-            </p>
+              <h3>
+                MedCore
+              </h3>
 
-            <ul class="project-features">
-              <li>🩺 Healthcare Software</li>
-              <li>⚛️ React</li>
-              <li>▲ Next.js</li>
-              <li>🔷 TypeScript</li>
-              <li>🔐 Security & Privacy</li>
-              <li>🧩 Modulare Architektur</li>
-              <li>📱 Moderne Benutzeroberfläche</li>
-            </ul>
+              <p>
+                Moderne Open-Source-Plattform
+                für medizinische und gesundheitsbezogene
+                Workflows mit modularer Architektur.
+              </p>
 
-            <div class="project-actions">
+              <div class="tags">
+
+                <span class="tag">
+                  React
+                </span>
+
+                <span class="tag">
+                  Next.js
+                </span>
+
+                <span class="tag">
+                  TypeScript
+                </span>
+
+              </div>
 
               <a
                 class="project-link"
@@ -1613,7 +3462,11 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                🩺 MedCore auf GitHub →
+                Explore MedCore
+
+                <span class="arrow">
+                  ↗
+                </span>
               </a>
 
             </div>
@@ -1622,35 +3475,46 @@
 
           <!-- Blog Pulse -->
 
-          <article class="card project">
+          <article
+            class="project-card"
+            data-reveal
+          >
 
-            <span class="project-status">
-              🌍 Open-Source WordPress Theme
-            </span>
+            <div class="project-visual blog">
+              BP
+            </div>
 
-            <h3>📰 Blog Pulse</h3>
+            <div class="project-body">
 
-            <p class="muted">
-              Modern Open-Source WordPress Theme
-            </p>
+              <span class="project-type">
+                WordPress
+              </span>
 
-            <p>
-              Blog Pulse ist ein modernes,
-              responsives WordPress-Theme für Blogs,
-              Magazine und contentorientierte Webseiten.
-            </p>
+              <h3>
+                Blog Pulse
+              </h3>
 
-            <ul class="project-features">
-              <li>📰 Blogs & Magazine</li>
-              <li>🧱 Full Site Editing</li>
-              <li>📱 Responsive Design</li>
-              <li>🌙 Dark Mode</li>
-              <li>🧩 Block Patterns</li>
-              <li>🎨 Design Tokens</li>
-              <li>⚡ Lightweight Frontend</li>
-            </ul>
+              <p>
+                Modernes Open-Source-WordPress-Theme
+                für Blogs und Magazine mit Responsive Design,
+                Dark Mode, Patterns und Design Tokens.
+              </p>
 
-            <div class="project-actions">
+              <div class="tags">
+
+                <span class="tag">
+                  WordPress
+                </span>
+
+                <span class="tag">
+                  PHP
+                </span>
+
+                <span class="tag">
+                  FSE
+                </span>
+
+              </div>
 
               <a
                 class="project-link"
@@ -1658,7 +3522,11 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                📰 Blog Pulse auf GitHub →
+                Explore Blog Pulse
+
+                <span class="arrow">
+                  ↗
+                </span>
               </a>
 
             </div>
@@ -1668,432 +3536,748 @@
         </div>
 
       </div>
+
     </section>
 
     <div class="divider"></div>
 
-    <!-- Open Source -->
+    <!-- ====================================================
+         STACK
+         ==================================================== -->
+
+    <section
+      class="section"
+      id="stack"
+    >
+
+      <div class="container stack-grid">
+
+        <header data-reveal>
+
+          <span class="section-label">
+            03 / STACK
+          </span>
+
+          <h2 class="section-title">
+            Tools I use to build things.
+          </h2>
+
+          <p class="section-lead">
+            Die Technologien und Werkzeuge,
+            mit denen ich aktuell arbeite.
+          </p>
+
+        </header>
+
+        <div
+          class="stack-groups"
+          data-reveal
+        >
+
+          <div class="stack-row">
+
+            <div class="stack-name">
+              Build
+            </div>
+
+            <div class="stack-items">
+
+              <span>
+                Godot
+              </span>
+
+              <span>
+                GDScript
+              </span>
+
+              <span>
+                Python
+              </span>
+
+              <span>
+                Android
+              </span>
+
+            </div>
+
+          </div>
+
+          <div class="stack-row">
+
+            <div class="stack-name">
+              Web
+            </div>
+
+            <div class="stack-items">
+
+              <span>
+                TypeScript
+              </span>
+
+              <span>
+                JavaScript
+              </span>
+
+              <span>
+                React
+              </span>
+
+              <span>
+                Next.js
+              </span>
+
+              <span>
+                WordPress
+              </span>
+
+              <span>
+                PHP
+              </span>
+
+              <span>
+                HTML
+              </span>
+
+              <span>
+                CSS
+              </span>
+
+            </div>
+
+          </div>
+
+          <div class="stack-row">
+
+            <div class="stack-name">
+              System
+            </div>
+
+            <div class="stack-items">
+
+              <span>
+                Linux
+              </span>
+
+              <span>
+                Debian
+              </span>
+
+              <span>
+                Shell
+              </span>
+
+              <span>
+                Terminal
+              </span>
+
+            </div>
+
+          </div>
+
+          <div class="stack-row">
+
+            <div class="stack-name">
+              Ship
+            </div>
+
+            <div class="stack-items">
+
+              <span>
+                Git
+              </span>
+
+              <span>
+                GitHub
+              </span>
+
+              <span>
+                CI
+              </span>
+
+              <span>
+                Testing
+              </span>
+
+            </div>
+
+          </div>
+
+          <div class="stack-row">
+
+            <div class="stack-name">
+              Workflow
+            </div>
+
+            <div class="stack-items">
+
+              <span>
+                Coding Agents
+              </span>
+
+              <span>
+                Automation
+              </span>
+
+              <span>
+                AI Bridges
+              </span>
+
+              <span>
+                Asset Pipelines
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ====================================================
+         OPEN SOURCE
+         ==================================================== -->
 
     <section
       class="section"
       id="opensource"
     >
+
       <div class="container">
 
-        <h2 class="section-title">
-          🌍 Open Source
-        </h2>
-
-        <p class="section-intro">
-          Ich möchte Projekte nicht nur entwickeln,
-          sondern sie auch dokumentieren,
-          veröffentlichen und für andere Entwickler
-          nachvollziehbar machen.
-        </p>
-
-        <div class="open-source-grid">
-
-          <article class="card open-source-card">
-
-            <h3>🩺 MedCore</h3>
-
-            <p class="muted">
-              Open-source healthcare software
-              in active development.
-            </p>
-
-            <a
-              class="project-link"
-              href="https://github.com/Agutroil/medcore"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Repository öffnen →
-            </a>
-
-          </article>
-
-          <article class="card open-source-card">
-
-            <h3>📰 Blog Pulse</h3>
-
-            <p class="muted">
-              Open-source WordPress theme
-              for modern blogs and magazines.
-            </p>
-
-            <a
-              class="project-link"
-              href="https://github.com/Agutroil/blog-pulse"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Repository öffnen →
-            </a>
-
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Current Quest -->
-
-    <section class="section">
-      <div class="container">
-
-        <h2 class="section-title">
-          🔬 Current Quest
-        </h2>
-
-        <div class="quest-grid">
-
-          <article class="card quest-card">
-
-            <h3>🎮 Game Development</h3>
-
-            <ul>
-              <li>Größere Godot-Spielwelten</li>
-              <li>World Building</li>
-              <li>Multiplayer-Architektur</li>
-              <li>Game-System-Design</li>
-              <li>Performance-Optimierung</li>
-            </ul>
-
-          </article>
-
-          <article class="card quest-card">
-
-            <h3>⚙️ Development & Open Source</h3>
-
-            <ul>
-              <li>Open-Source-Projekte ausbauen</li>
-              <li>MedCore weiterentwickeln</li>
-              <li>WordPress-Themes entwickeln</li>
-              <li>Automatisierte Asset-Pipelines</li>
-              <li>Coding Agents</li>
-              <li>KI-gestützte Developer Tools</li>
-            </ul>
-
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Philosophy -->
-
-    <section class="section">
-      <div class="container">
-
-        <div class="card quote">
-
-          <h2>
-            📖 Philosophy
-          </h2>
-
-          <blockquote>
-            “Every bug is just an undocumented spell.”
-          </blockquote>
-
-          <p class="muted">
-            Ich mag Projekte, bei denen Experimentieren
-            ausdrücklich dazugehört.
-          </p>
-
-          <p class="muted">
-            Nicht jede Idee muss sofort perfekt sein.
-          </p>
-
-          <p class="flow">
-            ✨ bauen → testen → verstehen → verbessern → teilen ✨
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Find me -->
-
-    <section
-      class="section"
-      id="connect"
-    >
-      <div class="container">
-
-        <h2 class="section-title">
-          🔗 Find me & my Projects
-        </h2>
-
-        <p class="section-intro">
-          Follow my work, explore my open-source projects
-          and discover what I'm currently building.
-        </p>
-
-        <div class="social-actions">
-
-          <a
-            class="social-button github"
-            href="https://github.com/Agutroil"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            🐙 GitHub · Agutroil
-          </a>
-
-          <a
-            class="social-button website"
-            href="https://agutroil.github.io/"
-          >
-            🌐 Agutroil Website
-          </a>
-
-        </div>
-
-        <div class="mini-project-grid">
-
-          <article class="card mini-project">
-
-            <h3>🎮 Nythara</h3>
-
-            <p class="muted">
-              Fantasy game development
-              with Godot.
-            </p>
-
-            <a
-              href="https://github.com/Agutroil/Nythara"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <strong>Explore Nythara →</strong>
-            </a>
-
-          </article>
-
-          <article class="card mini-project">
-
-            <h3>🩺 MedCore</h3>
-
-            <p class="muted">
-              Open-source healthcare
-              platform.
-            </p>
-
-            <a
-              href="https://github.com/Agutroil/medcore"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <strong>Explore MedCore →</strong>
-            </a>
-
-          </article>
-
-          <article class="card mini-project">
-
-            <h3>📰 Blog Pulse</h3>
-
-            <p class="muted">
-              Modern open-source
-              WordPress theme.
-            </p>
-
-            <a
-              href="https://github.com/Agutroil/blog-pulse"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <strong>Explore Blog Pulse →</strong>
-            </a>
-
-          </article>
-
-        </div>
-
-        <p class="all-repositories">
-
-          <a
-            class="button"
-            href="https://github.com/Agutroil?tab=repositories"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            🚀 View all repositories →
-          </a>
-
-        </p>
-
-        <details>
-
-          <summary>
-            🧙 Mehr über Agutroil
-          </summary>
-
-          <p>
-            <strong>Agutroil</strong> ist meine
-            Entwickleridentität für Projekte rund um
-            Linux, Softwareentwicklung, Games,
-            Web Development, Open Source und
-            technische Experimente.
-          </p>
-
-          <p>
-            Ich möchte Technologien nicht nur benutzen,
-            sondern verstehen, verändern und selbst
-            etwas damit erschaffen.
-          </p>
-
-          <p>
-            Dabei kombiniere ich klassische
-            Softwareentwicklung mit modernen
-            Automatisierungs- und KI-Werkzeugen.
-          </p>
-
-          <p>
-            Mit Projekten wie
-            <strong>Nythara</strong>,
-            <strong>MedCore</strong> und
-            <strong>Blog Pulse</strong>
-            veröffentliche ich zunehmend eigene Projekte
-            als Open Source und dokumentiere ihre
-            Entwicklung auf GitHub.
-          </p>
-
-        </details>
-
-      </div>
-    </section>
-
-    <!-- Signature -->
-
-    <section class="section">
-      <div class="container">
-
-        <div class="signature">
-
-          <p class="signature-main">
-
-            🐧 Powered by
-            <span class="linux">
-              Linux
-            </span>
-
-            &nbsp; ✦ &nbsp;
-
-            🪶 Crafted by
-            <span class="agutroil">
-              Agutroil
-            </span>
-
-          </p>
-
-          <div class="signature-tags">
-
-            <span class="tool">
-              💻 CODE
-            </span>
-
-            <span class="tool">
-              🐧 LINUX
-            </span>
-
-            <span class="tool">
-              🎮 GAMES
-            </span>
-
-            <span class="tool">
-              🌍 OPEN SOURCE
-            </span>
-
-            <span class="tool">
-              🪄 MAGIC
-            </span>
+        <div
+          class="opensource-card"
+          data-reveal
+        >
+
+          <div class="opensource-grid">
+
+            <div>
+
+              <span class="section-label">
+                04 / OPEN SOURCE
+              </span>
+
+              <p class="opensource-handle">
+                @Agutroil ✦
+              </p>
+
+              <h2 class="section-title">
+                Building in public.
+              </h2>
+
+              <p class="section-lead">
+                Ich möchte Projekte nicht nur entwickeln,
+                sondern sie auch veröffentlichen,
+                dokumentieren und für andere Entwickler
+                nachvollziehbar machen.
+              </p>
+
+              <div
+                class="actions"
+                style="margin-top: 26px;"
+              >
+
+                <a
+                  class="button primary"
+                  href="https://github.com/Agutroil"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub Profil öffnen
+
+                  <span class="arrow">
+                    ↗
+                  </span>
+                </a>
+
+                <a
+                  class="button"
+                  href="https://github.com/Agutroil?tab=repositories"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Alle Repositories
+
+                  <span class="arrow">
+                    →
+                  </span>
+                </a>
+
+              </div>
+
+            </div>
+
+            <div class="now-list">
+
+              <div class="now-label">
+                Currently building
+              </div>
+
+              <div class="now-item">
+                Nythara
+              </div>
+
+              <div class="now-item">
+                Open-Source Software
+              </div>
+
+              <div class="now-item">
+                AI-assisted Developer Workflows
+              </div>
+
+              <div class="now-item">
+                Linux Automation
+              </div>
+
+            </div>
 
           </div>
 
-          <p>
-            <strong>
-              Code. Linux. Magic.
-            </strong>
-          </p>
+        </div>
 
-          <p class="muted">
-            Made with curiosity, code
-            and a little bit of magic.
-          </p>
+      </div>
+
+    </section>
+
+    <!-- ====================================================
+         SECOND BANNER
+         ==================================================== -->
+
+    <section class="section-small">
+
+      <div
+        class="container"
+        data-reveal
+      >
+
+        <div class="banner">
+
+          <img
+            src="assets/agutroil-banner.png"
+            alt="Agutroil – Code Linux Magic"
+          >
 
         </div>
 
       </div>
+
+    </section>
+
+    <!-- ====================================================
+         PHILOSOPHY
+         ==================================================== -->
+
+    <section class="section quote-section">
+
+      <div
+        class="container"
+        data-reveal
+      >
+
+        <blockquote>
+          “Every bug is just an undocumented spell.”
+        </blockquote>
+
+        <p>
+          — Agutroil
+        </p>
+
+      </div>
+
     </section>
 
   </main>
 
-  <!-- Footer -->
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
 
   <footer>
+
     <div class="container">
 
-      <p>
-        © 2026
-        <strong>Anton Deister</strong>
-        · Agutroil
-      </p>
+      <div class="footer-grid">
 
-      <div class="footer-links">
+        <div class="footer-text">
 
-        <a
-          href="https://github.com/Agutroil"
-          target="_blank"
-          rel="noopener noreferrer"
+          <strong>
+            Anton Deister · Agutroil
+          </strong>
+
+          <span>
+            Developer · Linux · Open Source · Games
+          </span>
+
+        </div>
+
+        <nav
+          class="footer-links"
+          aria-label="Footer Navigation"
         >
-          GitHub
-        </a>
 
-        <a
-          href="https://github.com/Agutroil/Nythara"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Nythara
-        </a>
+          <a href="#about">
+            About
+          </a>
 
-        <a
-          href="https://github.com/Agutroil/medcore"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          MedCore
-        </a>
+          <a href="#projects">
+            Work
+          </a>
 
-        <a
-          href="https://github.com/Agutroil/blog-pulse"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Blog Pulse
-        </a>
+          <a href="#stack">
+            Stack
+          </a>
+
+          <a
+            href="https://github.com/Agutroil"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub ↗
+          </a>
+
+          <a
+            href="https://github.com/Agutroil/Nythara"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Nythara ↗
+          </a>
+
+        </nav>
 
       </div>
 
-      <p>
-        <strong>
-          Code. Linux. Magic.
-        </strong>
-      </p>
+      <div class="signature">
+
+        <span class="linux">
+          🐧 Powered by Linux
+        </span>
+
+        ·
+
+        <span class="agutroil">
+          ✦ Crafted by Agutroil
+        </span>
+
+        · Code. Linux. Magic.
+
+        · © 2026 Anton Deister
+
+      </div>
 
     </div>
+
   </footer>
+
+  <!-- ======================================================
+       JAVASCRIPT
+       ====================================================== -->
+
+  <script>
+    (() => {
+      "use strict";
+
+      /* ====================================================
+         MOBILE NAVIGATION
+         ==================================================== */
+
+      const menuToggle =
+        document.getElementById("menu-toggle");
+
+      const navigation =
+        document.getElementById("nav-links");
+
+      if (menuToggle && navigation) {
+
+        menuToggle.addEventListener(
+          "click",
+          () => {
+
+            const isOpen =
+              navigation.classList.toggle("open");
+
+            menuToggle.setAttribute(
+              "aria-expanded",
+              String(isOpen)
+            );
+
+            menuToggle.setAttribute(
+              "aria-label",
+              isOpen
+                ? "Navigation schließen"
+                : "Navigation öffnen"
+            );
+          }
+        );
+
+        navigation
+          .querySelectorAll("a")
+          .forEach((link) => {
+
+            link.addEventListener(
+              "click",
+              () => {
+
+                navigation.classList.remove(
+                  "open"
+                );
+
+                menuToggle.setAttribute(
+                  "aria-expanded",
+                  "false"
+                );
+
+                menuToggle.setAttribute(
+                  "aria-label",
+                  "Navigation öffnen"
+                );
+              }
+            );
+          });
+      }
+
+      /* ====================================================
+         REVEAL ANIMATION
+         ==================================================== */
+
+      const revealElements =
+        Array.from(
+          document.querySelectorAll(
+            "[data-reveal]"
+          )
+        );
+
+      const prefersReducedMotion =
+        window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+      if (
+        prefersReducedMotion ||
+        !("IntersectionObserver" in window)
+      ) {
+
+        revealElements.forEach(
+          (element) => {
+
+            element.classList.add(
+              "visible"
+            );
+          }
+        );
+
+      } else {
+
+        const revealObserver =
+          new IntersectionObserver(
+            (entries, observer) => {
+
+              entries.forEach(
+                (entry) => {
+
+                  if (!entry.isIntersecting) {
+                    return;
+                  }
+
+                  entry.target.classList.add(
+                    "visible"
+                  );
+
+                  observer.unobserve(
+                    entry.target
+                  );
+                }
+              );
+            },
+            {
+              threshold: 0.12,
+              rootMargin:
+                "0px 0px -40px 0px"
+            }
+          );
+
+        revealElements.forEach(
+          (element) => {
+
+            revealObserver.observe(
+              element
+            );
+          }
+        );
+      }
+
+      /* ====================================================
+         ACTIVE NAVIGATION
+         ==================================================== */
+
+      const navLinks =
+        Array.from(
+          document.querySelectorAll(
+            "[data-nav]"
+          )
+        );
+
+      const navigationSections =
+        navLinks
+          .map((link) => {
+
+            const href =
+              link.getAttribute("href");
+
+            if (
+              !href ||
+              !href.startsWith("#")
+            ) {
+              return null;
+            }
+
+            const section =
+              document.getElementById(
+                href.slice(1)
+              );
+
+            if (!section) {
+              return null;
+            }
+
+            return {
+              link,
+              section
+            };
+          })
+          .filter(Boolean);
+
+      if (
+        "IntersectionObserver" in window &&
+        navigationSections.length > 0
+      ) {
+
+        const navigationObserver =
+          new IntersectionObserver(
+            (entries) => {
+
+              const visibleEntries =
+                entries
+                  .filter(
+                    (entry) =>
+                      entry.isIntersecting
+                  )
+                  .sort(
+                    (a, b) =>
+                      b.intersectionRatio -
+                      a.intersectionRatio
+                  );
+
+              if (
+                visibleEntries.length === 0
+              ) {
+                return;
+              }
+
+              const currentId =
+                visibleEntries[0]
+                  .target
+                  .id;
+
+              navigationSections.forEach(
+                ({ link, section }) => {
+
+                  const isCurrent =
+                    section.id === currentId;
+
+                  link.classList.toggle(
+                    "active",
+                    isCurrent
+                  );
+
+                  if (isCurrent) {
+
+                    link.setAttribute(
+                      "aria-current",
+                      "page"
+                    );
+
+                  } else {
+
+                    link.removeAttribute(
+                      "aria-current"
+                    );
+                  }
+                }
+              );
+            },
+            {
+              rootMargin:
+                "-35% 0px -50% 0px",
+
+              threshold: [
+                0,
+                0.2,
+                0.5
+              ]
+            }
+          );
+
+        navigationSections.forEach(
+          ({ section }) => {
+
+            navigationObserver.observe(
+              section
+            );
+          }
+        );
+      }
+
+      /* ====================================================
+         RESIZE / MOBILE NAV CLEANUP
+         ==================================================== */
+
+      let resizeTimer = null;
+
+      window.addEventListener(
+        "resize",
+        () => {
+
+          window.clearTimeout(
+            resizeTimer
+          );
+
+          resizeTimer =
+            window.setTimeout(
+              () => {
+
+                if (
+                  window.innerWidth > 820 &&
+                  navigation &&
+                  menuToggle
+                ) {
+
+                  navigation.classList.remove(
+                    "open"
+                  );
+
+                  menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                  );
+
+                  menuToggle.setAttribute(
+                    "aria-label",
+                    "Navigation öffnen"
+                  );
+                }
+              },
+              100
+            );
+        }
+      );
+    })();
+  </script>
 
 </body>
 </html>
