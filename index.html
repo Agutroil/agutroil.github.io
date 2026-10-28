@@ -1778,6 +1778,25 @@
         uppercase;
     }
 
+    .nythara-art-link {
+      position: absolute;
+
+      inset: 0;
+
+      z-index: 3;
+
+      border-radius: inherit;
+    }
+
+    .nythara-art-link:focus-visible {
+      outline:
+        3px solid
+        var(--gold);
+
+      outline-offset:
+        -3px;
+    }
+
     .featured-body {
       display:
         grid;
@@ -3301,6 +3320,12 @@
 
             </div>
 
+            <a
+              class="nythara-art-link"
+              href="./Nythara/"
+              aria-label="Open the Nythara project website"
+            ></a>
+
           </div>
 
           <div class="featured-body">
@@ -3367,6 +3392,14 @@
               >
                 Nythara auf GitHub
                 <span class="arrow">↗</span>
+              </a>
+
+              <a
+                class="button"
+                href="./Nythara/"
+              >
+                Nythara entdecken
+                <span class="arrow">→</span>
               </a>
 
             </div>
@@ -3932,12 +3965,8 @@
             GitHub ↗
           </a>
 
-          <a
-            href="https://github.com/Agutroil/Nythara"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nythara ↗
+          <a href="./Nythara/">
+            Nythara
           </a>
 
           <a
