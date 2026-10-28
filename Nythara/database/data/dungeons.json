@@ -1,0 +1,301 @@
+{
+  "count": 2,
+  "entries": [
+    {
+      "id": "world_moonroot_sanctum",
+      "type": "dungeon",
+      "name": "Moonroot Sanctum",
+      "subtitle": "Authored dungeon · Ruins",
+      "badges": [
+        {
+          "label": "Dungeon",
+          "tone": "violet"
+        },
+        {
+          "label": "Levels 9–14",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "World ID",
+          "value": "world_moonroot_sanctum"
+        },
+        {
+          "label": "Region",
+          "value": "Silverwood"
+        },
+        {
+          "label": "Levels",
+          "value": "9–14"
+        },
+        {
+          "label": "Biome",
+          "value": "Ruins"
+        },
+        {
+          "label": "Entry",
+          "value": "Enter Moonroot Sanctum"
+        },
+        {
+          "label": "Requirement",
+          "value": "Beyond the Hollow · Level 9"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Encounter sequence",
+          "facts": [
+            {
+              "label": "Root Passage",
+              "value": "1 × Mossling · Lv 9 · 1 × Thornspitter · Lv 9"
+            },
+            {
+              "label": "Moonlit Gallery",
+              "value": "1 × Stoneback · Lv 10 · 1 × Thornspitter · Lv 10"
+            },
+            {
+              "label": "Collapsed Sanctuary",
+              "value": "1 × Stoneback · Lv 10 · 1 × Mossling · Lv 10"
+            },
+            {
+              "label": "Boss Arena",
+              "value": "1 × The Rootbound Seer · Lv 11"
+            }
+          ]
+        },
+        {
+          "title": "Boss",
+          "links": [
+            {
+              "type": "boss",
+              "id": "enemy_rootbound_seer",
+              "name": "The Rootbound Seer",
+              "meta": "Lv 10–14"
+            }
+          ]
+        },
+        {
+          "title": "Loot",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_moonroot_shard",
+              "name": "Moonroot Shard",
+              "meta": "Guaranteed · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "weapon_moonroot_edge",
+              "name": "Moonroot Edge",
+              "meta": "17% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "accessory_seers_talisman",
+              "name": "Seer's Talisman",
+              "meta": "20% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "40% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Related quests",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_heart_beneath_silverwood",
+              "name": "The Heart Beneath Silverwood"
+            }
+          ]
+        },
+        {
+          "title": "Region",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_silverwood",
+              "name": "Silverwood"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "region": "Silverwood",
+        "boss": "The Rootbound Seer",
+        "requirement": "Beyond the Hollow"
+      },
+      "sort": {
+        "name": "moonroot sanctum",
+        "level": 9,
+        "rarity": 0,
+        "category": "dungeon"
+      },
+      "description": "A sealed sanctuary beneath Silverwood, where the Rootbound Seer guards the moonroot heart.",
+      "image": "../assets/rootbound-seer.jpg",
+      "image_alt": "The Rootbound Seer in the Moonroot Sanctum"
+    },
+    {
+      "id": "world_hollow_ruins",
+      "type": "dungeon",
+      "name": "The Hollow Ruins",
+      "subtitle": "Authored dungeon · Ruins",
+      "badges": [
+        {
+          "label": "Dungeon",
+          "tone": "violet"
+        },
+        {
+          "label": "Levels 4–8",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "World ID",
+          "value": "world_hollow_ruins"
+        },
+        {
+          "label": "Region",
+          "value": "Whispering Grove"
+        },
+        {
+          "label": "Levels",
+          "value": "4–8"
+        },
+        {
+          "label": "Biome",
+          "value": "Ruins"
+        },
+        {
+          "label": "Entry",
+          "value": "Enter the Hollow Ruins"
+        },
+        {
+          "label": "Requirement",
+          "value": "None"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Encounter sequence",
+          "facts": [
+            {
+              "label": "Echo Hall",
+              "value": "3 × Mossling · Lv 4, 4, 5"
+            },
+            {
+              "label": "Root Gallery",
+              "value": "2 × Mossling · Lv 5, 5 · 2 × Thornspitter · Lv 6, 5"
+            },
+            {
+              "label": "Sundered Vault",
+              "value": "1 × Stoneback · Lv 7 · 2 × Mossling · Lv 5, 5"
+            },
+            {
+              "label": "Warden Arena",
+              "value": "1 × The Hollow Warden · Lv 7"
+            }
+          ]
+        },
+        {
+          "title": "Boss",
+          "links": [
+            {
+              "type": "boss",
+              "id": "enemy_hollow_warden",
+              "name": "The Hollow Warden",
+              "meta": "Lv 6–8"
+            }
+          ]
+        },
+        {
+          "title": "Loot",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_hollow_sigil",
+              "name": "Hollow Sigil",
+              "meta": "Guaranteed · 1×"
+            },
+            {
+              "type": "item",
+              "id": "material_stone_core",
+              "name": "Stone Core",
+              "meta": "Guaranteed · 2–3×"
+            },
+            {
+              "type": "item",
+              "id": "material_raw_iron",
+              "name": "Raw Iron",
+              "meta": "60% · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "50% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "weapon_warden_blade",
+              "name": "Warden Blade",
+              "meta": "22% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "armor_hollowguard_vest",
+              "name": "Hollowguard Vest",
+              "meta": "18% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "accessory_hollow_sigil_charm",
+              "name": "Hollow Sigil Charm",
+              "meta": "20% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Related quests",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_hollow_ruins_warden",
+              "name": "Echoes Beneath the Grove"
+            }
+          ]
+        },
+        {
+          "title": "Region",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_whispering_grove",
+              "name": "Whispering Grove"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "region": "Whispering Grove",
+        "boss": "The Hollow Warden",
+        "requirement": "None"
+      },
+      "sort": {
+        "name": "the hollow ruins",
+        "level": 4,
+        "rarity": 0,
+        "category": "dungeon"
+      },
+      "description": "A ruined listening place beneath the grove, where the Hollow Warden still keeps its oath.",
+      "image": "../assets/hollow-warden.jpg",
+      "image_alt": "The Hollow Warden in its arena beneath the ruins"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "title": "Nythara Database",
+  "source_commit": "cdfd27adfa721af0448af5070cb8d24a8d80c115",
+  "source_short_commit": "cdfd27a",
+  "source_ref": "main",
+  "generated_at": "2026-10-28T19:19:36Z",
+  "generator": "tools/export_nythara_database.py",
+  "counts": {
+    "items": 17,
+    "equipment": 9,
+    "monsters": 8,
+    "bosses": 2,
+    "dungeons": 2,
+    "regions": 10,
+    "cities": 1,
+    "npcs": 5,
+    "quests": 4,
+    "skills": 6,
+    "resources": 2,
+    "loot": 8
+  },
+  "total_primary_entries": 63,
+  "categories": [
+    {
+      "key": "items",
+      "type": "item",
+      "label": "Items",
+      "description": "Every item defined on public main, from moss materials to the Warden Blade.",
+      "count": 17
+    },
+    {
+      "key": "equipment",
+      "type": "equipment",
+      "label": "Equipment",
+      "description": "Wearable gear with slots, stats and visual support.",
+      "count": 9
+    },
+    {
+      "key": "monsters",
+      "type": "monster",
+      "label": "Monsters",
+      "description": "Creatures with authored stats, territories and loot.",
+      "count": 8
+    },
+    {
+      "key": "bosses",
+      "type": "boss",
+      "label": "Bosses",
+      "description": "The authored multi-phase encounters beneath the forest.",
+      "count": 2
+    },
+    {
+      "key": "dungeons",
+      "type": "dungeon",
+      "label": "Dungeons",
+      "description": "Authored cooperative dungeons with rooms, bosses and first clears.",
+      "count": 2
+    },
+    {
+      "key": "regions",
+      "type": "region",
+      "label": "Fields & Regions",
+      "description": "WorldGraph regions and the authored places inside them.",
+      "count": 10
+    },
+    {
+      "key": "cities",
+      "type": "city",
+      "label": "Cities & Settlements",
+      "description": "Settlements, districts and their world connections.",
+      "count": 1
+    },
+    {
+      "key": "npcs",
+      "type": "npc",
+      "label": "NPCs",
+      "description": "Quest givers, vendors and healers.",
+      "count": 5
+    },
+    {
+      "key": "quests",
+      "type": "quest",
+      "label": "Quests",
+      "description": "Objectives, rewards, turn-ins and prerequisites.",
+      "count": 4
+    },
+    {
+      "key": "skills",
+      "type": "skill",
+      "label": "Skills",
+      "description": "Active and passive skills with their rank tables.",
+      "count": 6
+    },
+    {
+      "key": "resources",
+      "type": "resource",
+      "label": "Resources",
+      "description": "Gatherable resource nodes and what they yield.",
+      "count": 2
+    },
+    {
+      "key": "loot",
+      "type": "loot",
+      "label": "Loot Tables",
+      "description": "Monster loot tables with chances, quantities and links.",
+      "count": 8
+    }
+  ],
+  "warnings": [],
+  "errors": []
+}

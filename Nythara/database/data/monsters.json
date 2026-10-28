@@ -1,0 +1,1398 @@
+{
+  "count": 8,
+  "entries": [
+    {
+      "id": "enemy_briarling",
+      "type": "monster",
+      "name": "Briarling",
+      "subtitle": "Normal · Melee",
+      "badges": [
+        {
+          "label": "Normal",
+          "tone": "muted"
+        },
+        {
+          "label": "Melee",
+          "tone": "forest"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "enemy_briarling"
+        },
+        {
+          "label": "Classification",
+          "value": "Normal"
+        },
+        {
+          "label": "Archetype",
+          "value": "Melee"
+        },
+        {
+          "label": "Levels",
+          "value": "2–4"
+        },
+        {
+          "label": "Health",
+          "value": "55"
+        },
+        {
+          "label": "Attack",
+          "value": "8"
+        },
+        {
+          "label": "Armor",
+          "value": "2"
+        },
+        {
+          "label": "XP reward",
+          "value": "28"
+        },
+        {
+          "label": "Attack cooldown",
+          "value": "1 s"
+        },
+        {
+          "label": "Move speed",
+          "value": "3.2 m/s"
+        },
+        {
+          "label": "Aggro range",
+          "value": "6.5 m"
+        },
+        {
+          "label": "Leash range",
+          "value": "16 m"
+        },
+        {
+          "label": "Respawn",
+          "value": "7 s"
+        },
+        {
+          "label": "Loot table",
+          "value": "Briarling Remains"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Found in",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_silverwood",
+              "name": "Silverwood"
+            }
+          ]
+        },
+        {
+          "title": "Loot table",
+          "links": [
+            {
+              "type": "loot",
+              "id": "briarling",
+              "name": "Briarling Remains"
+            }
+          ]
+        },
+        {
+          "title": "Loot",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_moss_fiber",
+              "name": "Moss Fiber",
+              "meta": "Guaranteed · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "armor_mosswoven_vest",
+              "name": "Mosswoven Vest",
+              "meta": "8% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "25% · 1×"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "classification": "Normal",
+        "archetype": "Melee",
+        "region": [
+          "Silverwood"
+        ]
+      },
+      "sort": {
+        "name": "briarling",
+        "level": 2,
+        "rarity": 0,
+        "category": "melee"
+      },
+      "image": "assets/creatures/briarling.png",
+      "image_alt": "Briarling idle sprite"
+    },
+    {
+      "id": "enemy_gloom_moth",
+      "type": "monster",
+      "name": "Gloom Moth",
+      "subtitle": "Normal · Ranged",
+      "badges": [
+        {
+          "label": "Normal",
+          "tone": "muted"
+        },
+        {
+          "label": "Ranged",
+          "tone": "forest"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "enemy_gloom_moth"
+        },
+        {
+          "label": "Classification",
+          "value": "Normal"
+        },
+        {
+          "label": "Archetype",
+          "value": "Ranged"
+        },
+        {
+          "label": "Levels",
+          "value": "3–5"
+        },
+        {
+          "label": "Health",
+          "value": "46"
+        },
+        {
+          "label": "Attack",
+          "value": "9"
+        },
+        {
+          "label": "Armor",
+          "value": "0"
+        },
+        {
+          "label": "XP reward",
+          "value": "40"
+        },
+        {
+          "label": "Attack cooldown",
+          "value": "1.7 s"
+        },
+        {
+          "label": "Move speed",
+          "value": "2.7 m/s"
+        },
+        {
+          "label": "Aggro range",
+          "value": "11 m"
+        },
+        {
+          "label": "Leash range",
+          "value": "22 m"
+        },
+        {
+          "label": "Respawn",
+          "value": "9 s"
+        },
+        {
+          "label": "Status effect",
+          "value": "Slow"
+        },
+        {
+          "label": "Loot table",
+          "value": "Gloom Moth Remains"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Found in",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_silverwood",
+              "name": "Silverwood"
+            }
+          ]
+        },
+        {
+          "title": "Loot table",
+          "links": [
+            {
+              "type": "loot",
+              "id": "gloom_moth",
+              "name": "Gloom Moth Remains"
+            }
+          ]
+        },
+        {
+          "title": "Loot",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_moss_core",
+              "name": "Moss Core",
+              "meta": "45% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "weapon_grove_blade",
+              "name": "Grove Blade",
+              "meta": "6% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "30% · 1×"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "classification": "Normal",
+        "archetype": "Ranged",
+        "region": [
+          "Silverwood"
+        ]
+      },
+      "sort": {
+        "name": "gloom moth",
+        "level": 3,
+        "rarity": 0,
+        "category": "ranged"
+      },
+      "image": "assets/creatures/gloom_moth.png",
+      "image_alt": "Gloom Moth idle sprite"
+    },
+    {
+      "id": "mossling",
+      "type": "monster",
+      "name": "Mossling",
+      "subtitle": "Normal · Melee",
+      "badges": [
+        {
+          "label": "Normal",
+          "tone": "muted"
+        },
+        {
+          "label": "Melee",
+          "tone": "forest"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "mossling"
+        },
+        {
+          "label": "Classification",
+          "value": "Normal"
+        },
+        {
+          "label": "Archetype",
+          "value": "Melee"
+        },
+        {
+          "label": "Levels",
+          "value": "1–3"
+        },
+        {
+          "label": "Health",
+          "value": "40"
+        },
+        {
+          "label": "Attack",
+          "value": "7"
+        },
+        {
+          "label": "Armor",
+          "value": "1"
+        },
+        {
+          "label": "XP reward",
+          "value": "20"
+        },
+        {
+          "label": "Attack cooldown",
+          "value": "1.2 s"
+        },
+        {
+          "label": "Move speed",
+          "value": "2.4 m/s"
+        },
+        {
+          "label": "Aggro range",
+          "value": "6.5 m"
+        },
+        {
+          "label": "Leash range",
+          "value": "16 m"
+        },
+        {
+          "label": "Respawn",
+          "value": "6 s"
+        },
+        {
+          "label": "Loot table",
+          "value": "Mossling Remains"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Found in",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_silverwood",
+              "name": "Silverwood"
+            },
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins"
+            },
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum"
+            },
+            {
+              "type": "region",
+              "id": "world_prototype_valley",
+              "name": "Prototype Valley"
+            },
+            {
+              "type": "region",
+              "id": "world_whispering_grove",
+              "name": "Whispering Grove"
+            }
+          ]
+        },
+        {
+          "title": "Loot table",
+          "links": [
+            {
+              "type": "loot",
+              "id": "mossling",
+              "name": "Mossling Remains"
+            }
+          ]
+        },
+        {
+          "title": "Loot",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_moss_fiber",
+              "name": "Moss Fiber",
+              "meta": "Guaranteed · 1–3×"
+            },
+            {
+              "type": "item",
+              "id": "material_moss_core",
+              "name": "Moss Core",
+              "meta": "25% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "weapon_traveler_sword",
+              "name": "Traveler Sword",
+              "meta": "20% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "armor_traveler_tunic",
+              "name": "Traveler Tunic",
+              "meta": "15% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "30% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Encounters",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins",
+              "meta": "Echo Hall · Lv 4"
+            },
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins",
+              "meta": "Echo Hall · Lv 5"
+            },
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins",
+              "meta": "Root Gallery · Lv 5"
+            },
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins",
+              "meta": "Sundered Vault · Lv 5"
+            },
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum",
+              "meta": "Moonlit Gallery · Lv 9"
+            },
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum",
+              "meta": "Collapsed Sanctuary · Lv 10"
+            },
+            {
+              "type": "region",
+              "id": "world_prototype_valley",
+              "name": "Prototype Valley",
+              "meta": "Old Path Mosslings · Lv 1"
+            },
+            {
+              "type": "region",
+              "id": "world_whispering_grove",
+              "name": "Whispering Grove",
+              "meta": "Thornwatch · Lv 2"
+            },
+            {
+              "type": "region",
+              "id": "world_whispering_grove",
+              "name": "Whispering Grove",
+              "meta": "Thornwatch · Lv 3"
+            },
+            {
+              "type": "region",
+              "id": "world_whispering_grove",
+              "name": "Whispering Grove",
+              "meta": "Stoneback Hollow · Lv 2"
+            }
+          ]
+        },
+        {
+          "title": "Quests",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_elara_mossling_problem",
+              "name": "A Restless Grove"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "classification": "Normal",
+        "archetype": "Melee",
+        "region": [
+          "Silverwood",
+          "The Hollow Ruins",
+          "Moonroot Sanctum",
+          "Prototype Valley",
+          "Whispering Grove"
+        ]
+      },
+      "sort": {
+        "name": "mossling",
+        "level": 1,
+        "rarity": 0,
+        "category": "melee"
+      }
+    },
+    {
+      "id": "enemy_root_sentinel",
+      "type": "monster",
+      "name": "Root Sentinel",
+      "subtitle": "Normal · Heavy",
+      "badges": [
+        {
+          "label": "Normal",
+          "tone": "muted"
+        },
+        {
+          "label": "Heavy",
+          "tone": "forest"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "enemy_root_sentinel"
+        },
+        {
+          "label": "Classification",
+          "value": "Normal"
+        },
+        {
+          "label": "Archetype",
+          "value": "Heavy"
+        },
+        {
+          "label": "Levels",
+          "value": "4–6"
+        },
+        {
+          "label": "Health",
+          "value": "260"
+        },
+        {
+          "label": "Attack",
+          "value": "19"
+        },
+        {
+          "label": "Armor",
+          "value": "6"
+        },
+        {
+          "label": "XP reward",
+          "value": "90"
+        },
+        {
+          "label": "Attack cooldown",
+          "value": "2.3 s"
+        },
+        {
+          "label": "Move speed",
+          "value": "1.6 m/s"
+        },
+        {
+          "label": "Aggro range",
+          "value": "7 m"
+        },
+        {
+          "label": "Leash range",
+          "value": "18 m"
+        },
+        {
+          "label": "Respawn",
+          "value": "14 s"
+        },
+        {
+          "label": "Loot table",
+          "value": "Root Sentinel Remains"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Found in",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_silverwood",
+              "name": "Silverwood"
+            }
+          ]
+        },
+        {
+          "title": "Loot table",
+          "links": [
+            {
+              "type": "loot",
+              "id": "root_sentinel",
+              "name": "Root Sentinel Remains"
+            }
+          ]
+        },
+        {
+          "title": "Loot",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_moss_core",
+              "name": "Moss Core",
+              "meta": "Guaranteed · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "weapon_grove_blade",
+              "name": "Grove Blade",
+              "meta": "18% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "armor_mosswoven_vest",
+              "name": "Mosswoven Vest",
+              "meta": "14% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "55% · 1–2×"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "classification": "Normal",
+        "archetype": "Heavy",
+        "region": [
+          "Silverwood"
+        ]
+      },
+      "sort": {
+        "name": "root sentinel",
+        "level": 4,
+        "rarity": 0,
+        "category": "heavy"
+      },
+      "image": "assets/creatures/root_sentinel.png",
+      "image_alt": "Root Sentinel idle sprite"
+    },
+    {
+      "id": "enemy_stoneback",
+      "type": "monster",
+      "name": "Stoneback",
+      "subtitle": "Normal · Heavy",
+      "badges": [
+        {
+          "label": "Normal",
+          "tone": "muted"
+        },
+        {
+          "label": "Heavy",
+          "tone": "forest"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "enemy_stoneback"
+        },
+        {
+          "label": "Classification",
+          "value": "Normal"
+        },
+        {
+          "label": "Archetype",
+          "value": "Heavy"
+        },
+        {
+          "label": "Levels",
+          "value": "3–5"
+        },
+        {
+          "label": "Health",
+          "value": "110"
+        },
+        {
+          "label": "Attack",
+          "value": "12"
+        },
+        {
+          "label": "Armor",
+          "value": "5"
+        },
+        {
+          "label": "XP reward",
+          "value": "70"
+        },
+        {
+          "label": "Attack cooldown",
+          "value": "3.2 s"
+        },
+        {
+          "label": "Move speed",
+          "value": "1.7 m/s"
+        },
+        {
+          "label": "Aggro range",
+          "value": "7 m"
+        },
+        {
+          "label": "Leash range",
+          "value": "18 m"
+        },
+        {
+          "label": "Respawn",
+          "value": "12 s"
+        },
+        {
+          "label": "Status effect",
+          "value": "Slow"
+        },
+        {
+          "label": "Loot table",
+          "value": "Stoneback Remains"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Found in",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins"
+            },
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum"
+            },
+            {
+              "type": "region",
+              "id": "world_whispering_grove",
+              "name": "Whispering Grove"
+            }
+          ]
+        },
+        {
+          "title": "Loot table",
+          "links": [
+            {
+              "type": "loot",
+              "id": "enemy_stoneback",
+              "name": "Stoneback Remains"
+            }
+          ]
+        },
+        {
+          "title": "Loot",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_stone_core",
+              "name": "Stone Core",
+              "meta": "Guaranteed · 1×"
+            },
+            {
+              "type": "item",
+              "id": "material_raw_iron",
+              "name": "Raw Iron",
+              "meta": "Guaranteed · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "material_moss_core",
+              "name": "Moss Core",
+              "meta": "35% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "25% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Encounters",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins",
+              "meta": "Sundered Vault · Lv 7"
+            },
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum",
+              "meta": "Collapsed Sanctuary · Lv 10"
+            },
+            {
+              "type": "region",
+              "id": "world_whispering_grove",
+              "name": "Whispering Grove",
+              "meta": "Stoneback Hollow · Lv 3"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "classification": "Normal",
+        "archetype": "Heavy",
+        "region": [
+          "The Hollow Ruins",
+          "Moonroot Sanctum",
+          "Whispering Grove"
+        ]
+      },
+      "sort": {
+        "name": "stoneback",
+        "level": 3,
+        "rarity": 0,
+        "category": "heavy"
+      }
+    },
+    {
+      "id": "enemy_hollow_warden",
+      "type": "monster",
+      "name": "The Hollow Warden",
+      "subtitle": "Boss · Heavy",
+      "badges": [
+        {
+          "label": "Boss",
+          "tone": "gold"
+        },
+        {
+          "label": "Heavy",
+          "tone": "forest"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "enemy_hollow_warden"
+        },
+        {
+          "label": "Classification",
+          "value": "Boss"
+        },
+        {
+          "label": "Archetype",
+          "value": "Heavy"
+        },
+        {
+          "label": "Levels",
+          "value": "6–8"
+        },
+        {
+          "label": "Health",
+          "value": "780"
+        },
+        {
+          "label": "Attack",
+          "value": "24"
+        },
+        {
+          "label": "Armor",
+          "value": "12"
+        },
+        {
+          "label": "XP reward",
+          "value": "420"
+        },
+        {
+          "label": "Attack cooldown",
+          "value": "2.4 s"
+        },
+        {
+          "label": "Move speed",
+          "value": "2.6 m/s"
+        },
+        {
+          "label": "Aggro range",
+          "value": "10 m"
+        },
+        {
+          "label": "Leash range",
+          "value": "26 m"
+        },
+        {
+          "label": "Respawn",
+          "value": "45 s"
+        },
+        {
+          "label": "Status effect",
+          "value": "Slow"
+        },
+        {
+          "label": "Loot table",
+          "value": "Remains of the Hollow Warden"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Found in",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins"
+            }
+          ]
+        },
+        {
+          "title": "Loot table",
+          "links": [
+            {
+              "type": "loot",
+              "id": "hollow_warden",
+              "name": "Remains of the Hollow Warden"
+            }
+          ]
+        },
+        {
+          "title": "Loot",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_hollow_sigil",
+              "name": "Hollow Sigil",
+              "meta": "Guaranteed · 1×"
+            },
+            {
+              "type": "item",
+              "id": "material_stone_core",
+              "name": "Stone Core",
+              "meta": "Guaranteed · 2–3×"
+            },
+            {
+              "type": "item",
+              "id": "material_raw_iron",
+              "name": "Raw Iron",
+              "meta": "60% · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "50% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "weapon_warden_blade",
+              "name": "Warden Blade",
+              "meta": "22% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "armor_hollowguard_vest",
+              "name": "Hollowguard Vest",
+              "meta": "18% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "accessory_hollow_sigil_charm",
+              "name": "Hollow Sigil Charm",
+              "meta": "20% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Encounters",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins",
+              "meta": "The Hollow Warden · Lv 7"
+            }
+          ]
+        },
+        {
+          "title": "Quests",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_hollow_ruins_warden",
+              "name": "Echoes Beneath the Grove"
+            }
+          ]
+        },
+        {
+          "title": "Phases",
+          "facts": [
+            {
+              "label": "Phase 1",
+              "value": "66–100% health · Abilities: Telegraph strike · Heavy attack cycle: Slam"
+            },
+            {
+              "label": "Phase 2",
+              "value": "33–66% health · Abilities: Telegraph AoE · Heavy attack cycle: Slam, Cleave"
+            },
+            {
+              "label": "Phase 3",
+              "value": "0–33% health · Abilities: Enrage · Heavy attack cycle: Cleave, Slam"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "classification": "Boss",
+        "archetype": "Heavy",
+        "region": [
+          "The Hollow Ruins"
+        ]
+      },
+      "sort": {
+        "name": "the hollow warden",
+        "level": 6,
+        "rarity": 0,
+        "category": "heavy"
+      },
+      "image": "../assets/hollow-warden.jpg",
+      "image_alt": "The Hollow Warden in its arena beneath the ruins"
+    },
+    {
+      "id": "enemy_rootbound_seer",
+      "type": "monster",
+      "name": "The Rootbound Seer",
+      "subtitle": "Boss · Heavy",
+      "badges": [
+        {
+          "label": "Boss",
+          "tone": "gold"
+        },
+        {
+          "label": "Heavy",
+          "tone": "forest"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "enemy_rootbound_seer"
+        },
+        {
+          "label": "Classification",
+          "value": "Boss"
+        },
+        {
+          "label": "Archetype",
+          "value": "Heavy"
+        },
+        {
+          "label": "Levels",
+          "value": "10–14"
+        },
+        {
+          "label": "Health",
+          "value": "1180"
+        },
+        {
+          "label": "Attack",
+          "value": "28"
+        },
+        {
+          "label": "Armor",
+          "value": "15"
+        },
+        {
+          "label": "XP reward",
+          "value": "680"
+        },
+        {
+          "label": "Attack cooldown",
+          "value": "2.35 s"
+        },
+        {
+          "label": "Move speed",
+          "value": "2.7 m/s"
+        },
+        {
+          "label": "Aggro range",
+          "value": "12 m"
+        },
+        {
+          "label": "Leash range",
+          "value": "30 m"
+        },
+        {
+          "label": "Respawn",
+          "value": "60 s"
+        },
+        {
+          "label": "Loot table",
+          "value": "Remains of the Rootbound Seer"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Found in",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum"
+            }
+          ]
+        },
+        {
+          "title": "Loot table",
+          "links": [
+            {
+              "type": "loot",
+              "id": "rootbound_seer",
+              "name": "Remains of the Rootbound Seer"
+            }
+          ]
+        },
+        {
+          "title": "Loot",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_moonroot_shard",
+              "name": "Moonroot Shard",
+              "meta": "Guaranteed · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "weapon_moonroot_edge",
+              "name": "Moonroot Edge",
+              "meta": "17% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "accessory_seers_talisman",
+              "name": "Seer's Talisman",
+              "meta": "20% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "40% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Encounters",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum",
+              "meta": "Moonroot Heart · Lv 11"
+            }
+          ]
+        },
+        {
+          "title": "Quests",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_heart_beneath_silverwood",
+              "name": "The Heart Beneath Silverwood"
+            }
+          ]
+        },
+        {
+          "title": "Phases",
+          "facts": [
+            {
+              "label": "Phase 1",
+              "value": "66–100% health · Abilities: Telegraph strike · Heavy attack cycle: Slam"
+            },
+            {
+              "label": "Phase 2",
+              "value": "33–66% health · Abilities: Telegraph AoE · Heavy attack cycle: Slam, Cleave"
+            },
+            {
+              "label": "Phase 3",
+              "value": "0–33% health · Abilities: Enrage · Heavy attack cycle: Cleave, Slam"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "classification": "Boss",
+        "archetype": "Heavy",
+        "region": [
+          "Moonroot Sanctum"
+        ]
+      },
+      "sort": {
+        "name": "the rootbound seer",
+        "level": 10,
+        "rarity": 0,
+        "category": "heavy"
+      },
+      "image": "../assets/rootbound-seer.jpg",
+      "image_alt": "The Rootbound Seer in the Moonroot Sanctum"
+    },
+    {
+      "id": "enemy_thornspitter",
+      "type": "monster",
+      "name": "Thornspitter",
+      "subtitle": "Normal · Ranged",
+      "badges": [
+        {
+          "label": "Normal",
+          "tone": "muted"
+        },
+        {
+          "label": "Ranged",
+          "tone": "forest"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "enemy_thornspitter"
+        },
+        {
+          "label": "Classification",
+          "value": "Normal"
+        },
+        {
+          "label": "Archetype",
+          "value": "Ranged"
+        },
+        {
+          "label": "Levels",
+          "value": "2–4"
+        },
+        {
+          "label": "Health",
+          "value": "34"
+        },
+        {
+          "label": "Attack",
+          "value": "6"
+        },
+        {
+          "label": "Armor",
+          "value": "0"
+        },
+        {
+          "label": "XP reward",
+          "value": "30"
+        },
+        {
+          "label": "Attack cooldown",
+          "value": "2.4 s"
+        },
+        {
+          "label": "Move speed",
+          "value": "2.2 m/s"
+        },
+        {
+          "label": "Aggro range",
+          "value": "10 m"
+        },
+        {
+          "label": "Leash range",
+          "value": "22 m"
+        },
+        {
+          "label": "Respawn",
+          "value": "8 s"
+        },
+        {
+          "label": "Status effect",
+          "value": "Poison"
+        },
+        {
+          "label": "Loot table",
+          "value": "Thornspitter Remains"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Found in",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins"
+            },
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum"
+            },
+            {
+              "type": "region",
+              "id": "world_whispering_grove",
+              "name": "Whispering Grove"
+            }
+          ]
+        },
+        {
+          "title": "Loot table",
+          "links": [
+            {
+              "type": "loot",
+              "id": "enemy_thornspitter",
+              "name": "Thornspitter Remains"
+            }
+          ]
+        },
+        {
+          "title": "Loot",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_thorn_fragment",
+              "name": "Thorn Fragment",
+              "meta": "Guaranteed · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "material_moss_fiber",
+              "name": "Moss Fiber",
+              "meta": "70% · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "18% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Encounters",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins",
+              "meta": "Root Gallery · Lv 6"
+            },
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins",
+              "meta": "Root Gallery · Lv 5"
+            },
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum",
+              "meta": "Moonlit Gallery · Lv 9"
+            },
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum",
+              "meta": "Collapsed Sanctuary · Lv 10"
+            },
+            {
+              "type": "region",
+              "id": "world_whispering_grove",
+              "name": "Whispering Grove",
+              "meta": "Thornwatch · Lv 3"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "classification": "Normal",
+        "archetype": "Ranged",
+        "region": [
+          "The Hollow Ruins",
+          "Moonroot Sanctum",
+          "Whispering Grove"
+        ]
+      },
+      "sort": {
+        "name": "thornspitter",
+        "level": 2,
+        "rarity": 0,
+        "category": "ranged"
+      }
+    }
+  ]
+}

@@ -1,0 +1,675 @@
+{
+  "count": 8,
+  "entries": [
+    {
+      "id": "briarling",
+      "type": "loot",
+      "name": "Briarling Remains",
+      "subtitle": "Loot table",
+      "badges": [
+        {
+          "label": "Loot",
+          "tone": "gold"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "briarling"
+        },
+        {
+          "label": "Entries",
+          "value": "3"
+        },
+        {
+          "label": "Guaranteed drops",
+          "value": "1"
+        },
+        {
+          "label": "Dropped by",
+          "value": "Briarling"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Drops",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_moss_fiber",
+              "name": "Moss Fiber",
+              "meta": "Guaranteed · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "armor_mosswoven_vest",
+              "name": "Mosswoven Vest",
+              "meta": "8% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "25% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "enemy_briarling",
+              "name": "Briarling",
+              "meta": "Lv 2–4"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "monster": "Briarling"
+      },
+      "sort": {
+        "name": "briarling remains",
+        "level": 0,
+        "rarity": 0,
+        "category": "loot"
+      },
+      "image": "assets/icons/treasure.svg",
+      "image_alt": "Loot chest icon"
+    },
+    {
+      "id": "gloom_moth",
+      "type": "loot",
+      "name": "Gloom Moth Remains",
+      "subtitle": "Loot table",
+      "badges": [
+        {
+          "label": "Loot",
+          "tone": "gold"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "gloom_moth"
+        },
+        {
+          "label": "Entries",
+          "value": "3"
+        },
+        {
+          "label": "Guaranteed drops",
+          "value": "0"
+        },
+        {
+          "label": "Dropped by",
+          "value": "Gloom Moth"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Drops",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_moss_core",
+              "name": "Moss Core",
+              "meta": "45% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "weapon_grove_blade",
+              "name": "Grove Blade",
+              "meta": "6% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "30% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "enemy_gloom_moth",
+              "name": "Gloom Moth",
+              "meta": "Lv 3–5"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "monster": "Gloom Moth"
+      },
+      "sort": {
+        "name": "gloom moth remains",
+        "level": 0,
+        "rarity": 0,
+        "category": "loot"
+      },
+      "image": "assets/icons/treasure.svg",
+      "image_alt": "Loot chest icon"
+    },
+    {
+      "id": "mossling",
+      "type": "loot",
+      "name": "Mossling Remains",
+      "subtitle": "Loot table",
+      "badges": [
+        {
+          "label": "Loot",
+          "tone": "gold"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "mossling"
+        },
+        {
+          "label": "Entries",
+          "value": "5"
+        },
+        {
+          "label": "Guaranteed drops",
+          "value": "1"
+        },
+        {
+          "label": "Dropped by",
+          "value": "Mossling"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Drops",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_moss_fiber",
+              "name": "Moss Fiber",
+              "meta": "Guaranteed · 1–3×"
+            },
+            {
+              "type": "item",
+              "id": "material_moss_core",
+              "name": "Moss Core",
+              "meta": "25% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "weapon_traveler_sword",
+              "name": "Traveler Sword",
+              "meta": "20% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "armor_traveler_tunic",
+              "name": "Traveler Tunic",
+              "meta": "15% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "30% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "mossling",
+              "name": "Mossling",
+              "meta": "Lv 1–3"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "monster": "Mossling"
+      },
+      "sort": {
+        "name": "mossling remains",
+        "level": 0,
+        "rarity": 0,
+        "category": "loot"
+      },
+      "image": "assets/icons/treasure.svg",
+      "image_alt": "Loot chest icon"
+    },
+    {
+      "id": "hollow_warden",
+      "type": "loot",
+      "name": "Remains of the Hollow Warden",
+      "subtitle": "Loot table",
+      "badges": [
+        {
+          "label": "Loot",
+          "tone": "gold"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "hollow_warden"
+        },
+        {
+          "label": "Entries",
+          "value": "7"
+        },
+        {
+          "label": "Guaranteed drops",
+          "value": "2"
+        },
+        {
+          "label": "Dropped by",
+          "value": "The Hollow Warden"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Drops",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_hollow_sigil",
+              "name": "Hollow Sigil",
+              "meta": "Guaranteed · 1×"
+            },
+            {
+              "type": "item",
+              "id": "material_stone_core",
+              "name": "Stone Core",
+              "meta": "Guaranteed · 2–3×"
+            },
+            {
+              "type": "item",
+              "id": "material_raw_iron",
+              "name": "Raw Iron",
+              "meta": "60% · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "50% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "weapon_warden_blade",
+              "name": "Warden Blade",
+              "meta": "22% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "armor_hollowguard_vest",
+              "name": "Hollowguard Vest",
+              "meta": "18% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "accessory_hollow_sigil_charm",
+              "name": "Hollow Sigil Charm",
+              "meta": "20% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "enemy_hollow_warden",
+              "name": "The Hollow Warden",
+              "meta": "Lv 6–8"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "monster": "The Hollow Warden"
+      },
+      "sort": {
+        "name": "remains of the hollow warden",
+        "level": 0,
+        "rarity": 0,
+        "category": "loot"
+      },
+      "image": "assets/icons/treasure.svg",
+      "image_alt": "Loot chest icon"
+    },
+    {
+      "id": "rootbound_seer",
+      "type": "loot",
+      "name": "Remains of the Rootbound Seer",
+      "subtitle": "Loot table",
+      "badges": [
+        {
+          "label": "Loot",
+          "tone": "gold"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "rootbound_seer"
+        },
+        {
+          "label": "Entries",
+          "value": "4"
+        },
+        {
+          "label": "Guaranteed drops",
+          "value": "1"
+        },
+        {
+          "label": "Dropped by",
+          "value": "The Rootbound Seer"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Drops",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_moonroot_shard",
+              "name": "Moonroot Shard",
+              "meta": "Guaranteed · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "weapon_moonroot_edge",
+              "name": "Moonroot Edge",
+              "meta": "17% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "accessory_seers_talisman",
+              "name": "Seer's Talisman",
+              "meta": "20% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "40% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "enemy_rootbound_seer",
+              "name": "The Rootbound Seer",
+              "meta": "Lv 10–14"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "monster": "The Rootbound Seer"
+      },
+      "sort": {
+        "name": "remains of the rootbound seer",
+        "level": 0,
+        "rarity": 0,
+        "category": "loot"
+      },
+      "image": "assets/icons/treasure.svg",
+      "image_alt": "Loot chest icon"
+    },
+    {
+      "id": "root_sentinel",
+      "type": "loot",
+      "name": "Root Sentinel Remains",
+      "subtitle": "Loot table",
+      "badges": [
+        {
+          "label": "Loot",
+          "tone": "gold"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "root_sentinel"
+        },
+        {
+          "label": "Entries",
+          "value": "4"
+        },
+        {
+          "label": "Guaranteed drops",
+          "value": "1"
+        },
+        {
+          "label": "Dropped by",
+          "value": "Root Sentinel"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Drops",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_moss_core",
+              "name": "Moss Core",
+              "meta": "Guaranteed · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "weapon_grove_blade",
+              "name": "Grove Blade",
+              "meta": "18% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "armor_mosswoven_vest",
+              "name": "Mosswoven Vest",
+              "meta": "14% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "55% · 1–2×"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "enemy_root_sentinel",
+              "name": "Root Sentinel",
+              "meta": "Lv 4–6"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "monster": "Root Sentinel"
+      },
+      "sort": {
+        "name": "root sentinel remains",
+        "level": 0,
+        "rarity": 0,
+        "category": "loot"
+      },
+      "image": "assets/icons/treasure.svg",
+      "image_alt": "Loot chest icon"
+    },
+    {
+      "id": "enemy_stoneback",
+      "type": "loot",
+      "name": "Stoneback Remains",
+      "subtitle": "Loot table",
+      "badges": [
+        {
+          "label": "Loot",
+          "tone": "gold"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "enemy_stoneback"
+        },
+        {
+          "label": "Entries",
+          "value": "4"
+        },
+        {
+          "label": "Guaranteed drops",
+          "value": "2"
+        },
+        {
+          "label": "Dropped by",
+          "value": "Stoneback"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Drops",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_stone_core",
+              "name": "Stone Core",
+              "meta": "Guaranteed · 1×"
+            },
+            {
+              "type": "item",
+              "id": "material_raw_iron",
+              "name": "Raw Iron",
+              "meta": "Guaranteed · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "material_moss_core",
+              "name": "Moss Core",
+              "meta": "35% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "25% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "enemy_stoneback",
+              "name": "Stoneback",
+              "meta": "Lv 3–5"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "monster": "Stoneback"
+      },
+      "sort": {
+        "name": "stoneback remains",
+        "level": 0,
+        "rarity": 0,
+        "category": "loot"
+      },
+      "image": "assets/icons/treasure.svg",
+      "image_alt": "Loot chest icon"
+    },
+    {
+      "id": "enemy_thornspitter",
+      "type": "loot",
+      "name": "Thornspitter Remains",
+      "subtitle": "Loot table",
+      "badges": [
+        {
+          "label": "Loot",
+          "tone": "gold"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "enemy_thornspitter"
+        },
+        {
+          "label": "Entries",
+          "value": "3"
+        },
+        {
+          "label": "Guaranteed drops",
+          "value": "1"
+        },
+        {
+          "label": "Dropped by",
+          "value": "Thornspitter"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Drops",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_thorn_fragment",
+              "name": "Thorn Fragment",
+              "meta": "Guaranteed · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "material_moss_fiber",
+              "name": "Moss Fiber",
+              "meta": "70% · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "18% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "enemy_thornspitter",
+              "name": "Thornspitter",
+              "meta": "Lv 2–4"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "monster": "Thornspitter"
+      },
+      "sort": {
+        "name": "thornspitter remains",
+        "level": 0,
+        "rarity": 0,
+        "category": "loot"
+      },
+      "image": "assets/icons/treasure.svg",
+      "image_alt": "Loot chest icon"
+    }
+  ]
+}

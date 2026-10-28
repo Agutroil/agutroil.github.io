@@ -1,0 +1,81 @@
+{
+  "count": 1,
+  "entries": [
+    {
+      "id": "world_start_city",
+      "type": "city",
+      "name": "Dawnwatch",
+      "subtitle": "City · Dawnlands",
+      "badges": [
+        {
+          "label": "City",
+          "tone": "gold"
+        },
+        {
+          "label": "Dawnlands",
+          "tone": "forest"
+        }
+      ],
+      "facts": [
+        {
+          "label": "World ID",
+          "value": "world_start_city"
+        },
+        {
+          "label": "Region",
+          "value": "Dawnlands"
+        },
+        {
+          "label": "Districts",
+          "value": "5"
+        },
+        {
+          "label": "City bounds",
+          "value": "±120 m"
+        },
+        {
+          "label": "District names",
+          "value": "Central Square · Market District · Residential District · Crafting District · Tavern District"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Region",
+          "links": [
+            {
+              "type": "region",
+              "id": "region_dawnlands",
+              "name": "Dawnlands"
+            }
+          ]
+        },
+        {
+          "title": "Connections",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_silverwood",
+              "name": "Silverwood",
+              "meta": "Travel to Silverwood"
+            },
+            {
+              "type": "region",
+              "id": "world_azure_coast",
+              "name": "Azure Coast",
+              "meta": "Travel to Azure Coast"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "region": "Dawnlands"
+      },
+      "sort": {
+        "name": "dawnwatch",
+        "level": 1,
+        "rarity": 0,
+        "category": "city"
+      }
+    }
+  ]
+}

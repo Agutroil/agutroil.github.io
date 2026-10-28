@@ -280,6 +280,52 @@
       gap: 18px;
     }
 
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .nav-database {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 38px;
+      padding: 6px 13px;
+      color: var(--gold);
+      border: 1px solid rgba(232, 194, 122, 0.38);
+      border-radius: 999px;
+      background:
+        radial-gradient(circle at 30% 10%, rgba(120, 221, 255, 0.16), transparent 70%),
+        rgba(9, 17, 26, 0.72);
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      box-shadow: 0 0 18px rgba(232, 194, 122, 0.1), inset 0 0 16px rgba(120, 221, 255, 0.06);
+      transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .nav-database:hover,
+    .nav-database:focus-visible {
+      color: var(--cyan);
+      border-color: rgba(120, 221, 255, 0.55);
+      background: rgba(120, 221, 255, 0.1);
+      box-shadow: 0 0 24px rgba(120, 221, 255, 0.2), inset 0 0 18px rgba(120, 221, 255, 0.08);
+    }
+
+    .nav-database-mark {
+      font-size: 0.88rem;
+      line-height: 1;
+    }
+
+    .nav-links a.nav-database-mobile {
+      display: none;
+    }
+
     .brand {
       display: inline-flex;
       align-items: center;
@@ -1472,8 +1518,13 @@
 
     @media (max-width: 1120px) {
       .nav-links a {
-        padding-inline: 7px;
-        font-size: 0.78rem;
+        padding-inline: 6px;
+        font-size: 0.76rem;
+      }
+
+      .nav-database {
+        padding-inline: 10px;
+        letter-spacing: 0.08em;
       }
 
       .brand-text small {
@@ -1486,7 +1537,13 @@
         display: grid;
       }
 
+      .nav-database {
+        display: none;
+      }
+
       .nav-links {
+        max-height: calc(100dvh - 72px);
+        overflow-y: auto;
         position: absolute;
         top: 100%;
         left: 0;
@@ -1514,6 +1571,27 @@
         min-height: 46px;
         padding: 10px 12px;
         font-size: 0.9rem;
+      }
+
+      .nav-links a.nav-database-mobile {
+        display: inline-flex;
+        justify-content: space-between;
+        margin-bottom: 6px;
+        padding-inline: 14px;
+        color: var(--gold);
+        border: 1px solid rgba(232, 194, 122, 0.38);
+        background: rgba(232, 194, 122, 0.08);
+        font-family: var(--mono);
+        font-size: 0.8rem;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      .nav-links a.nav-database-mobile:hover,
+      .nav-links a.nav-database-mobile:focus-visible {
+        color: var(--cyan);
+        border-color: rgba(120, 221, 255, 0.55);
+        background: rgba(120, 221, 255, 0.1);
       }
 
       .lead-grid,
@@ -1625,16 +1703,24 @@
 
   <header class="topbar">
     <div class="wrap nav">
-      <a class="brand" href="./" aria-label="Nythara home">
-        <span class="brand-mark" aria-hidden="true">✦</span>
-        <span class="brand-text">
-          <strong>NYTHARA</strong>
-          <small>by Agutroil</small>
-        </span>
-      </a>
+      <div class="nav-left">
+        <a class="nav-database" href="./database/">
+          <span class="nav-database-mark" aria-hidden="true">✦</span>
+          <span>Database</span>
+        </a>
+
+        <a class="brand" href="./" aria-label="Nythara home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span class="brand-text">
+            <strong>NYTHARA</strong>
+            <small>by Agutroil</small>
+          </span>
+        </a>
+      </div>
 
       <div class="nav-right">
         <nav class="nav-links" id="nav-links" aria-label="Nythara sections">
+          <a class="nav-database-mobile" href="./database/">✦ Database</a>
           <a href="#world" data-nav>World</a>
           <a href="#gameplay" data-nav>Gameplay</a>
           <a href="#creatures" data-nav>Creatures</a>

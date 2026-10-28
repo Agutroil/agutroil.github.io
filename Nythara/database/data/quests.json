@@ -1,0 +1,367 @@
+{
+  "count": 4,
+  "entries": [
+    {
+      "id": "quest_elara_mossling_problem",
+      "type": "quest",
+      "name": "A Restless Grove",
+      "subtitle": "Quest",
+      "badges": [
+        {
+          "label": "Quest",
+          "tone": "gold"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "quest_elara_mossling_problem"
+        },
+        {
+          "label": "Turn in",
+          "value": "Elara"
+        },
+        {
+          "label": "Objectives",
+          "value": "1"
+        },
+        {
+          "label": "Prerequisites",
+          "value": "None"
+        },
+        {
+          "label": "Rewards",
+          "value": "10 Crowns · Moss Core ×1 · Small Healing Potion ×2 · 100 XP"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Objectives",
+          "facts": [
+            {
+              "label": "Defeat ×3",
+              "value": "Defeat Mosslings beyond the old path"
+            }
+          ]
+        },
+        {
+          "title": "Item rewards",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_moss_core",
+              "name": "Moss Core",
+              "meta": "×1"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "×2"
+            }
+          ]
+        },
+        {
+          "title": "Turn in",
+          "links": [
+            {
+              "type": "npc",
+              "id": "npc_elara",
+              "name": "Elara"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "turn_in": "Elara",
+        "prerequisite": "None"
+      },
+      "sort": {
+        "name": "a restless grove",
+        "level": 0,
+        "rarity": 0,
+        "category": "quest"
+      },
+      "description": "Something has stirred the Mosslings beyond the old path. Thin their numbers so Elara can tend Whispering Grove again."
+    },
+    {
+      "id": "quest_beyond_the_hollow",
+      "type": "quest",
+      "name": "Beyond the Hollow",
+      "subtitle": "Quest",
+      "badges": [
+        {
+          "label": "Quest",
+          "tone": "gold"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "quest_beyond_the_hollow"
+        },
+        {
+          "label": "Turn in",
+          "value": "Silverwood Keeper"
+        },
+        {
+          "label": "Objectives",
+          "value": "1"
+        },
+        {
+          "label": "Prerequisites",
+          "value": "1"
+        },
+        {
+          "label": "Rewards",
+          "value": "35 Crowns · 180 XP"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Objectives",
+          "facts": [
+            {
+              "label": "Interact ×1",
+              "value": "Travel to Silverwood"
+            }
+          ]
+        },
+        {
+          "title": "Turn in",
+          "links": [
+            {
+              "type": "npc",
+              "id": "npc_silverwood_keeper",
+              "name": "Silverwood Keeper"
+            }
+          ]
+        },
+        {
+          "title": "Prerequisites",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_hollow_ruins_warden",
+              "name": "Echoes Beneath the Grove"
+            }
+          ]
+        },
+        {
+          "title": "Region",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_silverwood",
+              "name": "Silverwood"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "turn_in": "Silverwood Keeper",
+        "prerequisite": "Required"
+      },
+      "sort": {
+        "name": "beyond the hollow",
+        "level": 0,
+        "rarity": 0,
+        "category": "quest"
+      },
+      "description": "Rowan's news from the Hollow Ruins points toward Silverwood. Reach the old forest and return with what you learn."
+    },
+    {
+      "id": "quest_hollow_ruins_warden",
+      "type": "quest",
+      "name": "Echoes Beneath the Grove",
+      "subtitle": "Quest",
+      "badges": [
+        {
+          "label": "Quest",
+          "tone": "gold"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "quest_hollow_ruins_warden"
+        },
+        {
+          "label": "Turn in",
+          "value": "Rowan"
+        },
+        {
+          "label": "Objectives",
+          "value": "1"
+        },
+        {
+          "label": "Prerequisites",
+          "value": "None"
+        },
+        {
+          "label": "Rewards",
+          "value": "40 Crowns · Small Healing Potion ×1 · 150 XP"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Objectives",
+          "facts": [
+            {
+              "label": "Defeat ×1",
+              "value": "Defeat the Hollow Warden beneath the grove"
+            }
+          ]
+        },
+        {
+          "title": "Item rewards",
+          "links": [
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "×1"
+            }
+          ]
+        },
+        {
+          "title": "Turn in",
+          "links": [
+            {
+              "type": "npc",
+              "id": "npc_rowan",
+              "name": "Rowan"
+            }
+          ]
+        },
+        {
+          "title": "Dungeon",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins"
+            }
+          ]
+        },
+        {
+          "title": "Region",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_whispering_grove",
+              "name": "Whispering Grove"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "turn_in": "Rowan",
+        "prerequisite": "None"
+      },
+      "sort": {
+        "name": "echoes beneath the grove",
+        "level": 0,
+        "rarity": 0,
+        "category": "quest"
+      },
+      "description": "Rowan hears an old oath stirring under Whispering Grove. Enter the Hollow Ruins, silence the Hollow Warden and bring word back to the grove."
+    },
+    {
+      "id": "quest_heart_beneath_silverwood",
+      "type": "quest",
+      "name": "The Heart Beneath Silverwood",
+      "subtitle": "Quest",
+      "badges": [
+        {
+          "label": "Quest",
+          "tone": "gold"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "quest_heart_beneath_silverwood"
+        },
+        {
+          "label": "Turn in",
+          "value": "Silverwood Keeper"
+        },
+        {
+          "label": "Objectives",
+          "value": "1"
+        },
+        {
+          "label": "Prerequisites",
+          "value": "1"
+        },
+        {
+          "label": "Rewards",
+          "value": "65 Crowns · 260 XP"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Objectives",
+          "facts": [
+            {
+              "label": "Defeat ×1",
+              "value": "Defeat the Rootbound Seer in Moonroot Sanctum"
+            }
+          ]
+        },
+        {
+          "title": "Turn in",
+          "links": [
+            {
+              "type": "npc",
+              "id": "npc_silverwood_keeper",
+              "name": "Silverwood Keeper"
+            }
+          ]
+        },
+        {
+          "title": "Prerequisites",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_beyond_the_hollow",
+              "name": "Beyond the Hollow"
+            }
+          ]
+        },
+        {
+          "title": "Dungeon",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum"
+            }
+          ]
+        },
+        {
+          "title": "Region",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_silverwood",
+              "name": "Silverwood"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "turn_in": "Silverwood Keeper",
+        "prerequisite": "Required"
+      },
+      "sort": {
+        "name": "the heart beneath silverwood",
+        "level": 0,
+        "rarity": 0,
+        "category": "quest"
+      },
+      "description": "Follow the trail below the Moonroot canopy and defeat the Rootbound Seer. First-clear treasure is tracked independently from Rowan's quest."
+    }
+  ]
+}

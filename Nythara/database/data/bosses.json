@@ -1,0 +1,417 @@
+{
+  "count": 2,
+  "entries": [
+    {
+      "id": "enemy_hollow_warden",
+      "type": "boss",
+      "name": "The Hollow Warden",
+      "subtitle": "Boss · Heavy",
+      "badges": [
+        {
+          "label": "Boss",
+          "tone": "gold"
+        },
+        {
+          "label": "Heavy",
+          "tone": "forest"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "enemy_hollow_warden"
+        },
+        {
+          "label": "Classification",
+          "value": "Boss"
+        },
+        {
+          "label": "Archetype",
+          "value": "Heavy"
+        },
+        {
+          "label": "Levels",
+          "value": "6–8"
+        },
+        {
+          "label": "Health",
+          "value": "780"
+        },
+        {
+          "label": "Attack",
+          "value": "24"
+        },
+        {
+          "label": "Armor",
+          "value": "12"
+        },
+        {
+          "label": "XP reward",
+          "value": "420"
+        },
+        {
+          "label": "Attack cooldown",
+          "value": "2.4 s"
+        },
+        {
+          "label": "Move speed",
+          "value": "2.6 m/s"
+        },
+        {
+          "label": "Aggro range",
+          "value": "10 m"
+        },
+        {
+          "label": "Leash range",
+          "value": "26 m"
+        },
+        {
+          "label": "Respawn",
+          "value": "45 s"
+        },
+        {
+          "label": "Status effect",
+          "value": "Slow"
+        },
+        {
+          "label": "Loot table",
+          "value": "Remains of the Hollow Warden"
+        },
+        {
+          "label": "Dungeon",
+          "value": "The Hollow Ruins"
+        },
+        {
+          "label": "Phases",
+          "value": "3"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Dungeon",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins"
+            }
+          ]
+        },
+        {
+          "title": "Found in",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins"
+            }
+          ]
+        },
+        {
+          "title": "Loot table",
+          "links": [
+            {
+              "type": "loot",
+              "id": "hollow_warden",
+              "name": "Remains of the Hollow Warden"
+            }
+          ]
+        },
+        {
+          "title": "Loot",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_hollow_sigil",
+              "name": "Hollow Sigil",
+              "meta": "Guaranteed · 1×"
+            },
+            {
+              "type": "item",
+              "id": "material_stone_core",
+              "name": "Stone Core",
+              "meta": "Guaranteed · 2–3×"
+            },
+            {
+              "type": "item",
+              "id": "material_raw_iron",
+              "name": "Raw Iron",
+              "meta": "60% · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "50% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "weapon_warden_blade",
+              "name": "Warden Blade",
+              "meta": "22% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "armor_hollowguard_vest",
+              "name": "Hollowguard Vest",
+              "meta": "18% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "accessory_hollow_sigil_charm",
+              "name": "Hollow Sigil Charm",
+              "meta": "20% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Encounters",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins",
+              "meta": "The Hollow Warden · Lv 7"
+            }
+          ]
+        },
+        {
+          "title": "Quests",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_hollow_ruins_warden",
+              "name": "Echoes Beneath the Grove"
+            }
+          ]
+        },
+        {
+          "title": "Phases",
+          "facts": [
+            {
+              "label": "Phase 1",
+              "value": "66–100% health · Abilities: Telegraph strike · Heavy attack cycle: Slam"
+            },
+            {
+              "label": "Phase 2",
+              "value": "33–66% health · Abilities: Telegraph AoE · Heavy attack cycle: Slam, Cleave"
+            },
+            {
+              "label": "Phase 3",
+              "value": "0–33% health · Abilities: Enrage · Heavy attack cycle: Cleave, Slam"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "region": [
+          "Whispering Grove"
+        ],
+        "dungeon": "The Hollow Ruins"
+      },
+      "sort": {
+        "name": "the hollow warden",
+        "level": 6,
+        "rarity": 0,
+        "category": "heavy"
+      },
+      "image": "../assets/hollow-warden.jpg",
+      "image_alt": "The Hollow Warden in its arena beneath the ruins"
+    },
+    {
+      "id": "enemy_rootbound_seer",
+      "type": "boss",
+      "name": "The Rootbound Seer",
+      "subtitle": "Boss · Heavy",
+      "badges": [
+        {
+          "label": "Boss",
+          "tone": "gold"
+        },
+        {
+          "label": "Heavy",
+          "tone": "forest"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "enemy_rootbound_seer"
+        },
+        {
+          "label": "Classification",
+          "value": "Boss"
+        },
+        {
+          "label": "Archetype",
+          "value": "Heavy"
+        },
+        {
+          "label": "Levels",
+          "value": "10–14"
+        },
+        {
+          "label": "Health",
+          "value": "1180"
+        },
+        {
+          "label": "Attack",
+          "value": "28"
+        },
+        {
+          "label": "Armor",
+          "value": "15"
+        },
+        {
+          "label": "XP reward",
+          "value": "680"
+        },
+        {
+          "label": "Attack cooldown",
+          "value": "2.35 s"
+        },
+        {
+          "label": "Move speed",
+          "value": "2.7 m/s"
+        },
+        {
+          "label": "Aggro range",
+          "value": "12 m"
+        },
+        {
+          "label": "Leash range",
+          "value": "30 m"
+        },
+        {
+          "label": "Respawn",
+          "value": "60 s"
+        },
+        {
+          "label": "Loot table",
+          "value": "Remains of the Rootbound Seer"
+        },
+        {
+          "label": "Dungeon",
+          "value": "Moonroot Sanctum"
+        },
+        {
+          "label": "Phases",
+          "value": "3"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Dungeon",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum"
+            }
+          ]
+        },
+        {
+          "title": "Found in",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum"
+            }
+          ]
+        },
+        {
+          "title": "Loot table",
+          "links": [
+            {
+              "type": "loot",
+              "id": "rootbound_seer",
+              "name": "Remains of the Rootbound Seer"
+            }
+          ]
+        },
+        {
+          "title": "Loot",
+          "links": [
+            {
+              "type": "item",
+              "id": "material_moonroot_shard",
+              "name": "Moonroot Shard",
+              "meta": "Guaranteed · 1–2×"
+            },
+            {
+              "type": "item",
+              "id": "weapon_moonroot_edge",
+              "name": "Moonroot Edge",
+              "meta": "17% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "accessory_seers_talisman",
+              "name": "Seer's Talisman",
+              "meta": "20% · 1×"
+            },
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "40% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Encounters",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum",
+              "meta": "Moonroot Heart · Lv 11"
+            }
+          ]
+        },
+        {
+          "title": "Quests",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_heart_beneath_silverwood",
+              "name": "The Heart Beneath Silverwood"
+            }
+          ]
+        },
+        {
+          "title": "Phases",
+          "facts": [
+            {
+              "label": "Phase 1",
+              "value": "66–100% health · Abilities: Telegraph strike · Heavy attack cycle: Slam"
+            },
+            {
+              "label": "Phase 2",
+              "value": "33–66% health · Abilities: Telegraph AoE · Heavy attack cycle: Slam, Cleave"
+            },
+            {
+              "label": "Phase 3",
+              "value": "0–33% health · Abilities: Enrage · Heavy attack cycle: Cleave, Slam"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "region": [
+          "Silverwood"
+        ],
+        "dungeon": "Moonroot Sanctum"
+      },
+      "sort": {
+        "name": "the rootbound seer",
+        "level": 10,
+        "rarity": 0,
+        "category": "heavy"
+      },
+      "image": "../assets/rootbound-seer.jpg",
+      "image_alt": "The Rootbound Seer in the Moonroot Sanctum"
+    }
+  ]
+}

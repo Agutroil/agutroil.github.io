@@ -1,0 +1,515 @@
+{
+  "count": 6,
+  "entries": [
+    {
+      "id": "skill_cleave",
+      "type": "skill",
+      "name": "Cleave",
+      "subtitle": "Active · Damage",
+      "badges": [
+        {
+          "label": "Active",
+          "tone": "cyan"
+        },
+        {
+          "label": "Rank 3",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "skill_cleave"
+        },
+        {
+          "label": "Type",
+          "value": "Active"
+        },
+        {
+          "label": "Target",
+          "value": "Nearby enemies"
+        },
+        {
+          "label": "Effect",
+          "value": "Damage"
+        },
+        {
+          "label": "Required level",
+          "value": "2"
+        },
+        {
+          "label": "Skill point cost",
+          "value": "1"
+        },
+        {
+          "label": "Cooldown",
+          "value": "8 s"
+        },
+        {
+          "label": "Ranks",
+          "value": "3"
+        },
+        {
+          "label": "Current effect",
+          "value": "100% weapon damage"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Rank table",
+          "facts": [
+            {
+              "label": "Rank 1",
+              "value": "100% weapon damage"
+            },
+            {
+              "label": "Rank 2",
+              "value": "115% weapon damage"
+            },
+            {
+              "label": "Rank 3",
+              "value": "130% weapon damage"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "type": "Active",
+        "target": "Nearby enemies"
+      },
+      "sort": {
+        "name": "cleave",
+        "level": 2,
+        "rarity": 0,
+        "category": "active"
+      },
+      "description": "Sweep nearby enemies once each, using effective attack and normal armor.",
+      "image": "assets/icons/weapon.svg",
+      "image_alt": "Cleave skill icon"
+    },
+    {
+      "id": "skill_guard",
+      "type": "skill",
+      "name": "Guard",
+      "subtitle": "Active · Guard",
+      "badges": [
+        {
+          "label": "Active",
+          "tone": "cyan"
+        },
+        {
+          "label": "Rank 3",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "skill_guard"
+        },
+        {
+          "label": "Type",
+          "value": "Active"
+        },
+        {
+          "label": "Target",
+          "value": "Self"
+        },
+        {
+          "label": "Effect",
+          "value": "Guard"
+        },
+        {
+          "label": "Required level",
+          "value": "2"
+        },
+        {
+          "label": "Skill point cost",
+          "value": "1"
+        },
+        {
+          "label": "Cooldown",
+          "value": "12 s"
+        },
+        {
+          "label": "Ranks",
+          "value": "3"
+        },
+        {
+          "label": "Current effect",
+          "value": "+4 armor for 4 s"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Rank table",
+          "facts": [
+            {
+              "label": "Rank 1",
+              "value": "+4 armor for 4 s"
+            },
+            {
+              "label": "Rank 2",
+              "value": "+6 armor for 4 s"
+            },
+            {
+              "label": "Rank 3",
+              "value": "+8 armor for 4 s"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "type": "Active",
+        "target": "Self"
+      },
+      "sort": {
+        "name": "guard",
+        "level": 2,
+        "rarity": 0,
+        "category": "active"
+      },
+      "description": "Brace briefly. Temporary armor never changes your permanent equipment stats.",
+      "image": "assets/icons/armor.svg",
+      "image_alt": "Guard skill icon"
+    },
+    {
+      "id": "skill_iron_will",
+      "type": "skill",
+      "name": "Iron Will",
+      "subtitle": "Passive · Passive stat",
+      "badges": [
+        {
+          "label": "Passive",
+          "tone": "cyan"
+        },
+        {
+          "label": "Rank 1",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "skill_iron_will"
+        },
+        {
+          "label": "Type",
+          "value": "Passive"
+        },
+        {
+          "label": "Target",
+          "value": "Self"
+        },
+        {
+          "label": "Effect",
+          "value": "Passive stat"
+        },
+        {
+          "label": "Required level",
+          "value": "2"
+        },
+        {
+          "label": "Skill point cost",
+          "value": "1"
+        },
+        {
+          "label": "Cooldown",
+          "value": "Instant"
+        },
+        {
+          "label": "Ranks",
+          "value": "1"
+        },
+        {
+          "label": "Current effect",
+          "value": "+2 armor"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Rank table",
+          "facts": [
+            {
+              "label": "Rank 1",
+              "value": "+2 armor"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "type": "Passive",
+        "target": "Self"
+      },
+      "sort": {
+        "name": "iron will",
+        "level": 2,
+        "rarity": 0,
+        "category": "passive"
+      },
+      "description": "Set your stance and gain 2 armor while the skill remains unlocked."
+    },
+    {
+      "id": "skill_power_strike",
+      "type": "skill",
+      "name": "Power Strike",
+      "subtitle": "Active · Damage",
+      "badges": [
+        {
+          "label": "Active",
+          "tone": "cyan"
+        },
+        {
+          "label": "Rank 3",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "skill_power_strike"
+        },
+        {
+          "label": "Type",
+          "value": "Active"
+        },
+        {
+          "label": "Target",
+          "value": "Current target"
+        },
+        {
+          "label": "Effect",
+          "value": "Damage"
+        },
+        {
+          "label": "Required level",
+          "value": "2"
+        },
+        {
+          "label": "Skill point cost",
+          "value": "1"
+        },
+        {
+          "label": "Cooldown",
+          "value": "5 s"
+        },
+        {
+          "label": "Ranks",
+          "value": "3"
+        },
+        {
+          "label": "Current effect",
+          "value": "150% weapon damage"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Rank table",
+          "facts": [
+            {
+              "label": "Rank 1",
+              "value": "150% weapon damage"
+            },
+            {
+              "label": "Rank 2",
+              "value": "175% weapon damage"
+            },
+            {
+              "label": "Rank 3",
+              "value": "200% weapon damage"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "type": "Active",
+        "target": "Current target"
+      },
+      "sort": {
+        "name": "power strike",
+        "level": 2,
+        "rarity": 0,
+        "category": "active"
+      },
+      "description": "A committed single-target swing through the normal armor rule.",
+      "image": "assets/icons/weapon.svg",
+      "image_alt": "Power Strike skill icon"
+    },
+    {
+      "id": "skill_second_wind",
+      "type": "skill",
+      "name": "Second Wind",
+      "subtitle": "Active · Heal",
+      "badges": [
+        {
+          "label": "Active",
+          "tone": "cyan"
+        },
+        {
+          "label": "Rank 3",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "skill_second_wind"
+        },
+        {
+          "label": "Type",
+          "value": "Active"
+        },
+        {
+          "label": "Target",
+          "value": "Self"
+        },
+        {
+          "label": "Effect",
+          "value": "Heal"
+        },
+        {
+          "label": "Required level",
+          "value": "3"
+        },
+        {
+          "label": "Skill point cost",
+          "value": "1"
+        },
+        {
+          "label": "Cooldown",
+          "value": "20 s"
+        },
+        {
+          "label": "Ranks",
+          "value": "3"
+        },
+        {
+          "label": "Current effect",
+          "value": "Restores 25% max health"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Rank table",
+          "facts": [
+            {
+              "label": "Rank 1",
+              "value": "Restores 25% max health"
+            },
+            {
+              "label": "Rank 2",
+              "value": "Restores 30% max health"
+            },
+            {
+              "label": "Rank 3",
+              "value": "Restores 35% max health"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "type": "Active",
+        "target": "Self"
+      },
+      "sort": {
+        "name": "second wind",
+        "level": 3,
+        "rarity": 0,
+        "category": "active"
+      },
+      "description": "Draw a steady breath and recover a portion of maximum health.",
+      "image": "assets/icons/potion.svg",
+      "image_alt": "Second Wind skill icon"
+    },
+    {
+      "id": "skill_vital_spark",
+      "type": "skill",
+      "name": "Vital Spark",
+      "subtitle": "Passive · Passive stat",
+      "badges": [
+        {
+          "label": "Passive",
+          "tone": "cyan"
+        },
+        {
+          "label": "Rank 1",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "skill_vital_spark"
+        },
+        {
+          "label": "Type",
+          "value": "Passive"
+        },
+        {
+          "label": "Target",
+          "value": "Self"
+        },
+        {
+          "label": "Effect",
+          "value": "Passive stat"
+        },
+        {
+          "label": "Required level",
+          "value": "4"
+        },
+        {
+          "label": "Skill point cost",
+          "value": "1"
+        },
+        {
+          "label": "Cooldown",
+          "value": "Instant"
+        },
+        {
+          "label": "Ranks",
+          "value": "1"
+        },
+        {
+          "label": "Current effect",
+          "value": "+10 max health"
+        },
+        {
+          "label": "Prerequisite",
+          "value": "Iron Will"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Rank table",
+          "facts": [
+            {
+              "label": "Rank 1",
+              "value": "+10 max health"
+            }
+          ]
+        },
+        {
+          "title": "Requires",
+          "links": [
+            {
+              "type": "skill",
+              "id": "skill_iron_will",
+              "name": "Iron Will"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "type": "Passive",
+        "target": "Self"
+      },
+      "sort": {
+        "name": "vital spark",
+        "level": 4,
+        "rarity": 0,
+        "category": "passive"
+      },
+      "description": "The valley's moss-light settles in your chest, raising maximum health by 10."
+    }
+  ]
+}

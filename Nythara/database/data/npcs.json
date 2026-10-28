@@ -1,0 +1,368 @@
+{
+  "count": 5,
+  "entries": [
+    {
+      "id": "npc_elara",
+      "type": "npc",
+      "name": "Elara",
+      "subtitle": "Quest giver",
+      "badges": [
+        {
+          "label": "Quest giver",
+          "tone": "cyan"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "npc_elara"
+        },
+        {
+          "label": "Role",
+          "value": "Quest giver"
+        },
+        {
+          "label": "Location",
+          "value": "Prototype Valley"
+        },
+        {
+          "label": "Interaction",
+          "value": "Talk to"
+        },
+        {
+          "label": "Appearance ID",
+          "value": "npc.elara.questgiver"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Location",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_prototype_valley",
+              "name": "Prototype Valley"
+            }
+          ]
+        },
+        {
+          "title": "Quest",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_elara_mossling_problem",
+              "name": "A Restless Grove"
+            }
+          ]
+        },
+        {
+          "title": "Quest turn-in",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_elara_mossling_problem",
+              "name": "A Restless Grove"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "role": "Quest giver",
+        "location": "Prototype Valley"
+      },
+      "sort": {
+        "name": "elara",
+        "level": 0,
+        "rarity": 0,
+        "category": "quest giver"
+      }
+    },
+    {
+      "id": "npc_elyra",
+      "type": "npc",
+      "name": "Elyra",
+      "subtitle": "Healer",
+      "badges": [
+        {
+          "label": "Healer",
+          "tone": "cyan"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "npc_elyra"
+        },
+        {
+          "label": "Role",
+          "value": "Healer"
+        },
+        {
+          "label": "Location",
+          "value": "Not placed in a world scene"
+        },
+        {
+          "label": "Interaction",
+          "value": "Mit"
+        },
+        {
+          "label": "Appearance ID",
+          "value": "npc.elyra.healer"
+        }
+      ],
+      "sections": [],
+      "filters": {
+        "role": "Healer",
+        "location": "Not placed in a world scene"
+      },
+      "sort": {
+        "name": "elyra",
+        "level": 0,
+        "rarity": 0,
+        "category": "healer"
+      }
+    },
+    {
+      "id": "npc_mira",
+      "type": "npc",
+      "name": "Mira",
+      "subtitle": "Vendor",
+      "badges": [
+        {
+          "label": "Vendor",
+          "tone": "cyan"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "npc_mira"
+        },
+        {
+          "label": "Role",
+          "value": "Vendor"
+        },
+        {
+          "label": "Location",
+          "value": "Prototype Valley"
+        },
+        {
+          "label": "Interaction",
+          "value": "Talk to"
+        },
+        {
+          "label": "Appearance ID",
+          "value": "npc.mira.vendor"
+        },
+        {
+          "label": "Greeting",
+          "value": "Every road takes something from you. Better leave prepared."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Location",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_prototype_valley",
+              "name": "Prototype Valley"
+            }
+          ]
+        },
+        {
+          "title": "Vendor stock",
+          "links": [
+            {
+              "type": "item",
+              "id": "consumable_small_potion",
+              "name": "Small Healing Potion",
+              "meta": "8 Crowns"
+            },
+            {
+              "type": "item",
+              "id": "weapon_traveler_sword",
+              "name": "Traveler Sword",
+              "meta": "35 Crowns"
+            },
+            {
+              "type": "item",
+              "id": "armor_traveler_tunic",
+              "name": "Traveler Tunic",
+              "meta": "40 Crowns"
+            },
+            {
+              "type": "item",
+              "id": "material_raw_iron",
+              "name": "Raw Iron",
+              "meta": "4 Crowns"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "role": "Vendor",
+        "location": "Prototype Valley"
+      },
+      "sort": {
+        "name": "mira",
+        "level": 0,
+        "rarity": 0,
+        "category": "vendor"
+      }
+    },
+    {
+      "id": "npc_rowan",
+      "type": "npc",
+      "name": "Rowan",
+      "subtitle": "Quest giver",
+      "badges": [
+        {
+          "label": "Quest giver",
+          "tone": "cyan"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "npc_rowan"
+        },
+        {
+          "label": "Role",
+          "value": "Quest giver"
+        },
+        {
+          "label": "Location",
+          "value": "Whispering Grove"
+        },
+        {
+          "label": "Interaction",
+          "value": "Talk to"
+        },
+        {
+          "label": "Appearance ID",
+          "value": "npc.rowan.trainer"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Location",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_whispering_grove",
+              "name": "Whispering Grove"
+            }
+          ]
+        },
+        {
+          "title": "Quest",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_hollow_ruins_warden",
+              "name": "Echoes Beneath the Grove"
+            }
+          ]
+        },
+        {
+          "title": "Quest turn-in",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_hollow_ruins_warden",
+              "name": "Echoes Beneath the Grove"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "role": "Quest giver",
+        "location": "Whispering Grove"
+      },
+      "sort": {
+        "name": "rowan",
+        "level": 0,
+        "rarity": 0,
+        "category": "quest giver"
+      }
+    },
+    {
+      "id": "npc_silverwood_keeper",
+      "type": "npc",
+      "name": "Silverwood Keeper",
+      "subtitle": "Quest giver",
+      "badges": [
+        {
+          "label": "Quest giver",
+          "tone": "cyan"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "npc_silverwood_keeper"
+        },
+        {
+          "label": "Role",
+          "value": "Quest giver"
+        },
+        {
+          "label": "Location",
+          "value": "Silverwood"
+        },
+        {
+          "label": "Interaction",
+          "value": "Talk to"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Location",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_silverwood",
+              "name": "Silverwood"
+            }
+          ]
+        },
+        {
+          "title": "Quest",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_beyond_the_hollow",
+              "name": "Beyond the Hollow"
+            }
+          ]
+        },
+        {
+          "title": "Quest turn-in",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_beyond_the_hollow",
+              "name": "Beyond the Hollow"
+            },
+            {
+              "type": "quest",
+              "id": "quest_heart_beneath_silverwood",
+              "name": "The Heart Beneath Silverwood"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "role": "Quest giver",
+        "location": "Silverwood"
+      },
+      "sort": {
+        "name": "silverwood keeper",
+        "level": 0,
+        "rarity": 0,
+        "category": "quest giver"
+      }
+    }
+  ]
+}

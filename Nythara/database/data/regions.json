@@ -1,0 +1,894 @@
+{
+  "count": 10,
+  "entries": [
+    {
+      "id": "world_ashen_wastes",
+      "type": "region",
+      "name": "Ashen Wastes",
+      "subtitle": "Ash · Levels 30–38",
+      "badges": [
+        {
+          "label": "Region",
+          "tone": "forest"
+        },
+        {
+          "label": "WorldGraph map",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "World ID",
+          "value": "world_ashen_wastes"
+        },
+        {
+          "label": "Realm",
+          "value": "Mortal"
+        },
+        {
+          "label": "Biome",
+          "value": "Ash"
+        },
+        {
+          "label": "Levels",
+          "value": "30–38"
+        },
+        {
+          "label": "World type",
+          "value": "WorldGraph map"
+        },
+        {
+          "label": "Map ID",
+          "value": "map_ashen_wastes"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Connected areas",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_mirelands",
+              "name": "Mirelands",
+              "meta": "Return to Mirelands"
+            },
+            {
+              "type": "region",
+              "id": "world_astral_frontier",
+              "name": "Astral Frontier",
+              "meta": "Travel to Astral Frontier"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "biome": "Ash",
+        "type": "WorldGraph map",
+        "realm": "Mortal"
+      },
+      "sort": {
+        "name": "ashen wastes",
+        "level": 30,
+        "rarity": 0,
+        "category": "region"
+      },
+      "description": "ash region map generated from WorldGraph."
+    },
+    {
+      "id": "world_astral_frontier",
+      "type": "region",
+      "name": "Astral Frontier",
+      "subtitle": "Astral · Levels 40–48",
+      "badges": [
+        {
+          "label": "Region",
+          "tone": "forest"
+        },
+        {
+          "label": "WorldGraph map",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "World ID",
+          "value": "world_astral_frontier"
+        },
+        {
+          "label": "Realm",
+          "value": "Mortal"
+        },
+        {
+          "label": "Biome",
+          "value": "Astral"
+        },
+        {
+          "label": "Levels",
+          "value": "40–48"
+        },
+        {
+          "label": "World type",
+          "value": "WorldGraph map"
+        },
+        {
+          "label": "Map ID",
+          "value": "map_astral_frontier"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Connected areas",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_ashen_wastes",
+              "name": "Ashen Wastes",
+              "meta": "Return to Ashen Wastes"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "biome": "Astral",
+        "type": "WorldGraph map",
+        "realm": "Mortal"
+      },
+      "sort": {
+        "name": "astral frontier",
+        "level": 40,
+        "rarity": 0,
+        "category": "region"
+      },
+      "description": "astral region map generated from WorldGraph."
+    },
+    {
+      "id": "world_azure_coast",
+      "type": "region",
+      "name": "Azure Coast",
+      "subtitle": "Coast · Levels 10–18",
+      "badges": [
+        {
+          "label": "Region",
+          "tone": "forest"
+        },
+        {
+          "label": "WorldGraph map",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "World ID",
+          "value": "world_azure_coast"
+        },
+        {
+          "label": "Realm",
+          "value": "Mortal"
+        },
+        {
+          "label": "Biome",
+          "value": "Coast"
+        },
+        {
+          "label": "Levels",
+          "value": "10–18"
+        },
+        {
+          "label": "World type",
+          "value": "WorldGraph map"
+        },
+        {
+          "label": "Map ID",
+          "value": "map_azure_coast"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Connected areas",
+          "links": [
+            {
+              "type": "city",
+              "id": "world_start_city",
+              "name": "Dawnwatch",
+              "meta": "Return to Start City"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "biome": "Coast",
+        "type": "WorldGraph map",
+        "realm": "Mortal"
+      },
+      "sort": {
+        "name": "azure coast",
+        "level": 10,
+        "rarity": 0,
+        "category": "region"
+      },
+      "description": "coast region map generated from WorldGraph."
+    },
+    {
+      "id": "region_dawnlands",
+      "type": "region",
+      "name": "Dawnlands",
+      "subtitle": "Plains · Levels 1–9",
+      "badges": [
+        {
+          "label": "Region",
+          "tone": "forest"
+        },
+        {
+          "label": "Authored",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "World ID",
+          "value": "world_start_city"
+        },
+        {
+          "label": "Realm",
+          "value": "Mortal"
+        },
+        {
+          "label": "Biome",
+          "value": "Plains"
+        },
+        {
+          "label": "Levels",
+          "value": "1–9"
+        },
+        {
+          "label": "World type",
+          "value": "Authored region"
+        },
+        {
+          "label": "Map ID",
+          "value": "map_start_city"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Connected areas",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_silverwood",
+              "name": "Silverwood",
+              "meta": "Travel to Silverwood"
+            },
+            {
+              "type": "region",
+              "id": "world_azure_coast",
+              "name": "Azure Coast",
+              "meta": "Travel to Azure Coast"
+            }
+          ]
+        },
+        {
+          "title": "Settlement",
+          "links": [
+            {
+              "type": "city",
+              "id": "world_start_city",
+              "name": "Dawnwatch"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "biome": "Plains",
+        "type": "Authored region",
+        "realm": "Mortal"
+      },
+      "sort": {
+        "name": "dawnlands",
+        "level": 1,
+        "rarity": 0,
+        "category": "region"
+      }
+    },
+    {
+      "id": "world_frostreach",
+      "type": "region",
+      "name": "Frostreach",
+      "subtitle": "Tundra · Levels 24–32",
+      "badges": [
+        {
+          "label": "Region",
+          "tone": "forest"
+        },
+        {
+          "label": "WorldGraph map",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "World ID",
+          "value": "world_frostreach"
+        },
+        {
+          "label": "Realm",
+          "value": "Mortal"
+        },
+        {
+          "label": "Biome",
+          "value": "Tundra"
+        },
+        {
+          "label": "Levels",
+          "value": "24–32"
+        },
+        {
+          "label": "World type",
+          "value": "WorldGraph map"
+        },
+        {
+          "label": "Map ID",
+          "value": "map_frostreach"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Connected areas",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_iron_highlands",
+              "name": "Iron Highlands",
+              "meta": "Return to Iron Highlands"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "biome": "Tundra",
+        "type": "WorldGraph map",
+        "realm": "Mortal"
+      },
+      "sort": {
+        "name": "frostreach",
+        "level": 24,
+        "rarity": 0,
+        "category": "region"
+      },
+      "description": "tundra region map generated from WorldGraph."
+    },
+    {
+      "id": "world_iron_highlands",
+      "type": "region",
+      "name": "Iron Highlands",
+      "subtitle": "Mountain · Levels 14–22",
+      "badges": [
+        {
+          "label": "Region",
+          "tone": "forest"
+        },
+        {
+          "label": "WorldGraph map",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "World ID",
+          "value": "world_iron_highlands"
+        },
+        {
+          "label": "Realm",
+          "value": "Mortal"
+        },
+        {
+          "label": "Biome",
+          "value": "Mountain"
+        },
+        {
+          "label": "Levels",
+          "value": "14–22"
+        },
+        {
+          "label": "World type",
+          "value": "WorldGraph map"
+        },
+        {
+          "label": "Map ID",
+          "value": "map_iron_highlands"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Connected areas",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_silverwood",
+              "name": "Silverwood",
+              "meta": "Return to Silverwood"
+            },
+            {
+              "type": "region",
+              "id": "world_frostreach",
+              "name": "Frostreach",
+              "meta": "Travel to Frostreach"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "biome": "Mountain",
+        "type": "WorldGraph map",
+        "realm": "Mortal"
+      },
+      "sort": {
+        "name": "iron highlands",
+        "level": 14,
+        "rarity": 0,
+        "category": "region"
+      },
+      "description": "mountain region map generated from WorldGraph."
+    },
+    {
+      "id": "world_mirelands",
+      "type": "region",
+      "name": "Mirelands",
+      "subtitle": "Swamp · Levels 12–20",
+      "badges": [
+        {
+          "label": "Region",
+          "tone": "forest"
+        },
+        {
+          "label": "WorldGraph map",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "World ID",
+          "value": "world_mirelands"
+        },
+        {
+          "label": "Realm",
+          "value": "Mortal"
+        },
+        {
+          "label": "Biome",
+          "value": "Swamp"
+        },
+        {
+          "label": "Levels",
+          "value": "12–20"
+        },
+        {
+          "label": "World type",
+          "value": "WorldGraph map"
+        },
+        {
+          "label": "Map ID",
+          "value": "map_mirelands"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Connected areas",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_silverwood",
+              "name": "Silverwood",
+              "meta": "Return to Silverwood"
+            },
+            {
+              "type": "region",
+              "id": "world_ashen_wastes",
+              "name": "Ashen Wastes",
+              "meta": "Travel to Ashen Wastes"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "biome": "Swamp",
+        "type": "WorldGraph map",
+        "realm": "Mortal"
+      },
+      "sort": {
+        "name": "mirelands",
+        "level": 12,
+        "rarity": 0,
+        "category": "region"
+      },
+      "description": "swamp region map generated from WorldGraph."
+    },
+    {
+      "id": "world_prototype_valley",
+      "type": "region",
+      "name": "Prototype Valley",
+      "subtitle": "Authored region",
+      "badges": [
+        {
+          "label": "Region",
+          "tone": "forest"
+        },
+        {
+          "label": "Authored",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "World ID",
+          "value": "world_prototype_valley"
+        },
+        {
+          "label": "World type",
+          "value": "Authored region"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Connected areas",
+          "links": [
+            {
+              "type": "region",
+              "id": "world_whispering_grove",
+              "name": "Whispering Grove",
+              "meta": "TO WHISPERING GROVE"
+            },
+            {
+              "type": "city",
+              "id": "world_start_city",
+              "name": "Dawnwatch",
+              "meta": "DAWNWATCH"
+            }
+          ]
+        },
+        {
+          "title": "Creatures",
+          "links": [
+            {
+              "type": "monster",
+              "id": "mossling",
+              "name": "Mossling",
+              "meta": "Lv 1–3"
+            }
+          ]
+        },
+        {
+          "title": "NPCs",
+          "links": [
+            {
+              "type": "npc",
+              "id": "npc_elara",
+              "name": "Elara"
+            },
+            {
+              "type": "npc",
+              "id": "npc_mira",
+              "name": "Mira"
+            }
+          ]
+        },
+        {
+          "title": "Resources",
+          "links": [
+            {
+              "type": "resource",
+              "id": "resource_type_iron_vein",
+              "name": "Iron Vein"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "type": "Authored region",
+        "realm": "Mortal"
+      },
+      "sort": {
+        "name": "prototype valley",
+        "level": 0,
+        "rarity": 0,
+        "category": "region"
+      },
+      "description": "The first safe clearing, the Ancient Crystal and the old path into Whispering Grove.",
+      "image": "../assets/world-hero.jpg",
+      "image_alt": "The old stone arch and a Mossling in the valley"
+    },
+    {
+      "id": "world_silverwood",
+      "type": "region",
+      "name": "Silverwood",
+      "subtitle": "Forest · Levels 6–14",
+      "badges": [
+        {
+          "label": "Region",
+          "tone": "forest"
+        },
+        {
+          "label": "Authored",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "World ID",
+          "value": "world_silverwood"
+        },
+        {
+          "label": "Realm",
+          "value": "Mortal"
+        },
+        {
+          "label": "Biome",
+          "value": "Forest"
+        },
+        {
+          "label": "Levels",
+          "value": "6–14"
+        },
+        {
+          "label": "World type",
+          "value": "Authored region"
+        },
+        {
+          "label": "Map ID",
+          "value": "map_silverwood"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Connected areas",
+          "links": [
+            {
+              "type": "city",
+              "id": "world_start_city",
+              "name": "Dawnwatch",
+              "meta": "Return to Start City"
+            },
+            {
+              "type": "region",
+              "id": "world_iron_highlands",
+              "name": "Iron Highlands",
+              "meta": "Travel to Iron Highlands"
+            },
+            {
+              "type": "region",
+              "id": "world_mirelands",
+              "name": "Mirelands",
+              "meta": "Travel to Mirelands"
+            },
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum",
+              "meta": "Enter Moonroot Sanctum"
+            }
+          ]
+        },
+        {
+          "title": "Creatures",
+          "links": [
+            {
+              "type": "monster",
+              "id": "enemy_briarling",
+              "name": "Briarling",
+              "meta": "Lv 2–4"
+            },
+            {
+              "type": "monster",
+              "id": "enemy_gloom_moth",
+              "name": "Gloom Moth",
+              "meta": "Lv 3–5"
+            },
+            {
+              "type": "monster",
+              "id": "mossling",
+              "name": "Mossling",
+              "meta": "Lv 1–3"
+            },
+            {
+              "type": "monster",
+              "id": "enemy_root_sentinel",
+              "name": "Root Sentinel",
+              "meta": "Lv 4–6"
+            }
+          ]
+        },
+        {
+          "title": "NPCs",
+          "links": [
+            {
+              "type": "npc",
+              "id": "npc_silverwood_keeper",
+              "name": "Silverwood Keeper"
+            }
+          ]
+        },
+        {
+          "title": "Quests",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_beyond_the_hollow",
+              "name": "Beyond the Hollow"
+            },
+            {
+              "type": "quest",
+              "id": "quest_heart_beneath_silverwood",
+              "name": "The Heart Beneath Silverwood"
+            }
+          ]
+        },
+        {
+          "title": "Dungeons",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_moonroot_sanctum",
+              "name": "Moonroot Sanctum"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "biome": "Forest",
+        "type": "Authored region",
+        "realm": "Mortal"
+      },
+      "sort": {
+        "name": "silverwood",
+        "level": 6,
+        "rarity": 0,
+        "category": "region"
+      },
+      "image": "../assets/coop-silverwood.jpg",
+      "image_alt": "Two adventurers on the Silverwood forest trail"
+    },
+    {
+      "id": "world_whispering_grove",
+      "type": "region",
+      "name": "Whispering Grove",
+      "subtitle": "Forest · Levels 2–6",
+      "badges": [
+        {
+          "label": "Region",
+          "tone": "forest"
+        },
+        {
+          "label": "Authored",
+          "tone": "muted"
+        }
+      ],
+      "facts": [
+        {
+          "label": "World ID",
+          "value": "world_whispering_grove"
+        },
+        {
+          "label": "Realm",
+          "value": "Mortal"
+        },
+        {
+          "label": "Biome",
+          "value": "Forest"
+        },
+        {
+          "label": "Levels",
+          "value": "2–6"
+        },
+        {
+          "label": "World type",
+          "value": "Authored region"
+        },
+        {
+          "label": "Map ID",
+          "value": "map_whispering_grove"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Connected areas",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins",
+              "meta": "ENTER THE HOLLOW RUINS"
+            },
+            {
+              "type": "region",
+              "id": "world_prototype_valley",
+              "name": "Prototype Valley",
+              "meta": "TO PROTOTYPE VALLEY"
+            }
+          ]
+        },
+        {
+          "title": "Creatures",
+          "links": [
+            {
+              "type": "monster",
+              "id": "mossling",
+              "name": "Mossling",
+              "meta": "Lv 1–3"
+            },
+            {
+              "type": "monster",
+              "id": "enemy_stoneback",
+              "name": "Stoneback",
+              "meta": "Lv 3–5"
+            },
+            {
+              "type": "monster",
+              "id": "enemy_thornspitter",
+              "name": "Thornspitter",
+              "meta": "Lv 2–4"
+            }
+          ]
+        },
+        {
+          "title": "NPCs",
+          "links": [
+            {
+              "type": "npc",
+              "id": "npc_rowan",
+              "name": "Rowan"
+            }
+          ]
+        },
+        {
+          "title": "Resources",
+          "links": [
+            {
+              "type": "resource",
+              "id": "resource_type_iron_vein",
+              "name": "Iron Vein"
+            },
+            {
+              "type": "resource",
+              "id": "resource_type_mossbloom",
+              "name": "Mossbloom"
+            }
+          ]
+        },
+        {
+          "title": "Quests",
+          "links": [
+            {
+              "type": "quest",
+              "id": "quest_hollow_ruins_warden",
+              "name": "Echoes Beneath the Grove"
+            }
+          ]
+        },
+        {
+          "title": "Dungeons",
+          "links": [
+            {
+              "type": "dungeon",
+              "id": "world_hollow_ruins",
+              "name": "The Hollow Ruins"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "biome": "Forest",
+        "type": "Authored region",
+        "realm": "Mortal"
+      },
+      "sort": {
+        "name": "whispering grove",
+        "level": 2,
+        "rarity": 0,
+        "category": "region"
+      },
+      "description": "An older listening place beyond the valley gate, where the Mosslings have grown restless.",
+      "image": "../assets/whispering-grove.jpg",
+      "image_alt": "Rowan and Mosslings in the Whispering Grove"
+    }
+  ]
+}

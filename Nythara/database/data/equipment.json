@@ -1,0 +1,869 @@
+{
+  "count": 9,
+  "entries": [
+    {
+      "id": "weapon_grove_blade",
+      "type": "equipment",
+      "name": "Grove Blade",
+      "subtitle": "Weapon · Rare",
+      "badges": [
+        {
+          "label": "Weapon",
+          "tone": "gold"
+        },
+        {
+          "label": "Rare",
+          "tone": "cyan"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "weapon_grove_blade"
+        },
+        {
+          "label": "Category",
+          "value": "Weapon"
+        },
+        {
+          "label": "Rarity",
+          "value": "Rare"
+        },
+        {
+          "label": "Max stack",
+          "value": "1"
+        },
+        {
+          "label": "Sell value",
+          "value": "20 Crowns"
+        },
+        {
+          "label": "Equipment slot",
+          "value": "Weapon"
+        },
+        {
+          "label": "Attack",
+          "value": "+6"
+        },
+        {
+          "label": "Wearable visual",
+          "value": "Yes — player.weapon.grove_blade"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Item record",
+          "links": [
+            {
+              "type": "item",
+              "id": "weapon_grove_blade",
+              "name": "Grove Blade",
+              "meta": "Rare"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "enemy_gloom_moth",
+              "name": "Gloom Moth",
+              "meta": "6% · 1×"
+            },
+            {
+              "type": "monster",
+              "id": "enemy_root_sentinel",
+              "name": "Root Sentinel",
+              "meta": "18% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Crafting",
+          "facts": [
+            {
+              "label": "Grove Blade",
+              "value": "Workbench · requires Raw Iron ×4 · Moss Core ×1 · yields Grove Blade ×1"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "category": "Weapon"
+      },
+      "sort": {
+        "name": "grove blade",
+        "level": 1,
+        "rarity": 2,
+        "category": "weapon"
+      },
+      "description": "A balanced blade forged from raw iron and bound with a moss core. It hums faintly when the grove is restless.",
+      "image": "assets/icons/weapon.svg",
+      "image_alt": "Grove Blade inventory icon"
+    },
+    {
+      "id": "accessory_hollow_sigil_charm",
+      "type": "equipment",
+      "name": "Hollow Sigil Charm",
+      "subtitle": "Accessory · Rare",
+      "badges": [
+        {
+          "label": "Accessory",
+          "tone": "gold"
+        },
+        {
+          "label": "Rare",
+          "tone": "cyan"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "accessory_hollow_sigil_charm"
+        },
+        {
+          "label": "Category",
+          "value": "Accessory"
+        },
+        {
+          "label": "Rarity",
+          "value": "Rare"
+        },
+        {
+          "label": "Max stack",
+          "value": "1"
+        },
+        {
+          "label": "Sell value",
+          "value": "55 Crowns"
+        },
+        {
+          "label": "Equipment slot",
+          "value": "Accessory"
+        },
+        {
+          "label": "Max health",
+          "value": "+12"
+        },
+        {
+          "label": "Wearable visual",
+          "value": "No — stat-only"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Item record",
+          "links": [
+            {
+              "type": "item",
+              "id": "accessory_hollow_sigil_charm",
+              "name": "Hollow Sigil Charm",
+              "meta": "Rare"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "enemy_hollow_warden",
+              "name": "The Hollow Warden",
+              "meta": "20% · 1×"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "slot": "Accessory",
+        "rarity": "Rare",
+        "category": "Accessory"
+      },
+      "sort": {
+        "name": "hollow sigil charm",
+        "level": 1,
+        "rarity": 2,
+        "category": "accessory"
+      },
+      "description": "A cold sigil strung on a worn cord. It offers a little endurance, not a little comfort.",
+      "image": "assets/icons/amulet.svg",
+      "image_alt": "Hollow Sigil Charm inventory icon"
+    },
+    {
+      "id": "armor_hollowguard_vest",
+      "type": "equipment",
+      "name": "Hollowguard Vest",
+      "subtitle": "Body · Epic",
+      "badges": [
+        {
+          "label": "Body",
+          "tone": "gold"
+        },
+        {
+          "label": "Epic",
+          "tone": "violet"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "armor_hollowguard_vest"
+        },
+        {
+          "label": "Category",
+          "value": "Armor"
+        },
+        {
+          "label": "Rarity",
+          "value": "Epic"
+        },
+        {
+          "label": "Max stack",
+          "value": "1"
+        },
+        {
+          "label": "Sell value",
+          "value": "85 Crowns"
+        },
+        {
+          "label": "Equipment slot",
+          "value": "Body"
+        },
+        {
+          "label": "Armor",
+          "value": "+5"
+        },
+        {
+          "label": "Max health",
+          "value": "+25"
+        },
+        {
+          "label": "Wearable visual",
+          "value": "Yes — player.body.hollowguard_vest"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Item record",
+          "links": [
+            {
+              "type": "item",
+              "id": "armor_hollowguard_vest",
+              "name": "Hollowguard Vest",
+              "meta": "Epic"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "enemy_hollow_warden",
+              "name": "The Hollow Warden",
+              "meta": "18% · 1×"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "slot": "Body",
+        "rarity": "Epic",
+        "category": "Armor"
+      },
+      "sort": {
+        "name": "hollowguard vest",
+        "level": 1,
+        "rarity": 3,
+        "category": "armor"
+      },
+      "description": "Plates of tarnished ruin-iron bound over layered cloth. Heavy, but it turns aside more than moss ever could.",
+      "image": "assets/icons/armor.svg",
+      "image_alt": "Hollowguard Vest inventory icon"
+    },
+    {
+      "id": "weapon_moonroot_edge",
+      "type": "equipment",
+      "name": "Moonroot Edge",
+      "subtitle": "Weapon · Epic",
+      "badges": [
+        {
+          "label": "Weapon",
+          "tone": "gold"
+        },
+        {
+          "label": "Epic",
+          "tone": "violet"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "weapon_moonroot_edge"
+        },
+        {
+          "label": "Category",
+          "value": "Weapon"
+        },
+        {
+          "label": "Rarity",
+          "value": "Epic"
+        },
+        {
+          "label": "Max stack",
+          "value": "1"
+        },
+        {
+          "label": "Sell value",
+          "value": "120 Crowns"
+        },
+        {
+          "label": "Equipment slot",
+          "value": "Weapon"
+        },
+        {
+          "label": "Attack",
+          "value": "+11"
+        },
+        {
+          "label": "Level requirement",
+          "value": "10"
+        },
+        {
+          "label": "Wearable visual",
+          "value": "No — stat-only"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Item record",
+          "links": [
+            {
+              "type": "item",
+              "id": "weapon_moonroot_edge",
+              "name": "Moonroot Edge",
+              "meta": "Epic"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "enemy_rootbound_seer",
+              "name": "The Rootbound Seer",
+              "meta": "17% · 1×"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "slot": "Weapon",
+        "rarity": "Epic",
+        "category": "Weapon"
+      },
+      "sort": {
+        "name": "moonroot edge",
+        "level": 10,
+        "rarity": 3,
+        "category": "weapon"
+      },
+      "description": "An old iron blade drawn from beneath Silverwood. Its edge is steady, not hungry.",
+      "image": "assets/icons/weapon.svg",
+      "image_alt": "Moonroot Edge inventory icon"
+    },
+    {
+      "id": "armor_mosswoven_vest",
+      "type": "equipment",
+      "name": "Mosswoven Vest",
+      "subtitle": "Body · Rare",
+      "badges": [
+        {
+          "label": "Body",
+          "tone": "gold"
+        },
+        {
+          "label": "Rare",
+          "tone": "cyan"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "armor_mosswoven_vest"
+        },
+        {
+          "label": "Category",
+          "value": "Armor"
+        },
+        {
+          "label": "Rarity",
+          "value": "Rare"
+        },
+        {
+          "label": "Max stack",
+          "value": "1"
+        },
+        {
+          "label": "Sell value",
+          "value": "28 Crowns"
+        },
+        {
+          "label": "Equipment slot",
+          "value": "Body"
+        },
+        {
+          "label": "Armor",
+          "value": "+3"
+        },
+        {
+          "label": "Max health",
+          "value": "+15"
+        },
+        {
+          "label": "Wearable visual",
+          "value": "Yes — player.body.mosswoven_vest"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Item record",
+          "links": [
+            {
+              "type": "item",
+              "id": "armor_mosswoven_vest",
+              "name": "Mosswoven Vest",
+              "meta": "Rare"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "enemy_briarling",
+              "name": "Briarling",
+              "meta": "8% · 1×"
+            },
+            {
+              "type": "monster",
+              "id": "enemy_root_sentinel",
+              "name": "Root Sentinel",
+              "meta": "14% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Crafting",
+          "facts": [
+            {
+              "label": "Mosswoven Vest",
+              "value": "Workbench · requires Moss Fiber ×5 · Raw Iron ×2 · yields Mosswoven Vest ×1"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "slot": "Body",
+        "rarity": "Rare",
+        "category": "Armor"
+      },
+      "sort": {
+        "name": "mosswoven vest",
+        "level": 1,
+        "rarity": 2,
+        "category": "armor"
+      },
+      "description": "Moss fiber woven through an iron frame. Light, quiet, and warmer than it looks.",
+      "image": "assets/icons/armor.svg",
+      "image_alt": "Mosswoven Vest inventory icon"
+    },
+    {
+      "id": "accessory_seers_talisman",
+      "type": "equipment",
+      "name": "Seer's Talisman",
+      "subtitle": "Accessory · Epic",
+      "badges": [
+        {
+          "label": "Accessory",
+          "tone": "gold"
+        },
+        {
+          "label": "Epic",
+          "tone": "violet"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "accessory_seers_talisman"
+        },
+        {
+          "label": "Category",
+          "value": "Accessory"
+        },
+        {
+          "label": "Rarity",
+          "value": "Epic"
+        },
+        {
+          "label": "Max stack",
+          "value": "1"
+        },
+        {
+          "label": "Sell value",
+          "value": "85 Crowns"
+        },
+        {
+          "label": "Equipment slot",
+          "value": "Accessory"
+        },
+        {
+          "label": "Max health",
+          "value": "+15"
+        },
+        {
+          "label": "Level requirement",
+          "value": "10"
+        },
+        {
+          "label": "Wearable visual",
+          "value": "No — stat-only"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Item record",
+          "links": [
+            {
+              "type": "item",
+              "id": "accessory_seers_talisman",
+              "name": "Seer's Talisman",
+              "meta": "Epic"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "enemy_rootbound_seer",
+              "name": "The Rootbound Seer",
+              "meta": "20% · 1×"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "slot": "Accessory",
+        "rarity": "Epic",
+        "category": "Accessory"
+      },
+      "sort": {
+        "name": "seer's talisman",
+        "level": 10,
+        "rarity": 3,
+        "category": "accessory"
+      },
+      "description": "A quiet charm, warm only when the roots are near.",
+      "image": "assets/icons/amulet.svg",
+      "image_alt": "Seer's Talisman inventory icon"
+    },
+    {
+      "id": "weapon_traveler_sword",
+      "type": "equipment",
+      "name": "Traveler Sword",
+      "subtitle": "Weapon · Uncommon",
+      "badges": [
+        {
+          "label": "Weapon",
+          "tone": "gold"
+        },
+        {
+          "label": "Uncommon",
+          "tone": "forest"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "weapon_traveler_sword"
+        },
+        {
+          "label": "Category",
+          "value": "Weapon"
+        },
+        {
+          "label": "Rarity",
+          "value": "Uncommon"
+        },
+        {
+          "label": "Max stack",
+          "value": "1"
+        },
+        {
+          "label": "Sell value",
+          "value": "25 Crowns"
+        },
+        {
+          "label": "Equipment slot",
+          "value": "Weapon"
+        },
+        {
+          "label": "Attack",
+          "value": "+4"
+        },
+        {
+          "label": "Wearable visual",
+          "value": "Yes — player.weapon.traveler_sword"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Item record",
+          "links": [
+            {
+              "type": "item",
+              "id": "weapon_traveler_sword",
+              "name": "Traveler Sword",
+              "meta": "Uncommon"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "mossling",
+              "name": "Mossling",
+              "meta": "20% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Sold by",
+          "links": [
+            {
+              "type": "npc",
+              "id": "npc_mira",
+              "name": "Mira",
+              "meta": "35 Crowns"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "category": "Weapon"
+      },
+      "sort": {
+        "name": "traveler sword",
+        "level": 1,
+        "rarity": 1,
+        "category": "weapon"
+      },
+      "description": "A plain but well-balanced blade carried by valley travelers.",
+      "image": "assets/icons/weapon.svg",
+      "image_alt": "Traveler Sword inventory icon"
+    },
+    {
+      "id": "armor_traveler_tunic",
+      "type": "equipment",
+      "name": "Traveler Tunic",
+      "subtitle": "Body · Uncommon",
+      "badges": [
+        {
+          "label": "Body",
+          "tone": "gold"
+        },
+        {
+          "label": "Uncommon",
+          "tone": "forest"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "armor_traveler_tunic"
+        },
+        {
+          "label": "Category",
+          "value": "Armor"
+        },
+        {
+          "label": "Rarity",
+          "value": "Uncommon"
+        },
+        {
+          "label": "Max stack",
+          "value": "1"
+        },
+        {
+          "label": "Sell value",
+          "value": "20 Crowns"
+        },
+        {
+          "label": "Equipment slot",
+          "value": "Body"
+        },
+        {
+          "label": "Armor",
+          "value": "+2"
+        },
+        {
+          "label": "Max health",
+          "value": "+10"
+        },
+        {
+          "label": "Wearable visual",
+          "value": "Yes — player.body.traveler_tunic"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Item record",
+          "links": [
+            {
+              "type": "item",
+              "id": "armor_traveler_tunic",
+              "name": "Traveler Tunic",
+              "meta": "Uncommon"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "mossling",
+              "name": "Mossling",
+              "meta": "15% · 1×"
+            }
+          ]
+        },
+        {
+          "title": "Sold by",
+          "links": [
+            {
+              "type": "npc",
+              "id": "npc_mira",
+              "name": "Mira",
+              "meta": "40 Crowns"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "slot": "Body",
+        "rarity": "Uncommon",
+        "category": "Armor"
+      },
+      "sort": {
+        "name": "traveler tunic",
+        "level": 1,
+        "rarity": 1,
+        "category": "armor"
+      },
+      "description": "Layered cloth reinforced at the shoulders and chest.",
+      "image": "assets/icons/cloth.svg",
+      "image_alt": "Traveler Tunic inventory icon"
+    },
+    {
+      "id": "weapon_warden_blade",
+      "type": "equipment",
+      "name": "Warden Blade",
+      "subtitle": "Weapon · Epic",
+      "badges": [
+        {
+          "label": "Weapon",
+          "tone": "gold"
+        },
+        {
+          "label": "Epic",
+          "tone": "violet"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Stable ID",
+          "value": "weapon_warden_blade"
+        },
+        {
+          "label": "Category",
+          "value": "Weapon"
+        },
+        {
+          "label": "Rarity",
+          "value": "Epic"
+        },
+        {
+          "label": "Max stack",
+          "value": "1"
+        },
+        {
+          "label": "Sell value",
+          "value": "90 Crowns"
+        },
+        {
+          "label": "Equipment slot",
+          "value": "Weapon"
+        },
+        {
+          "label": "Attack",
+          "value": "+9"
+        },
+        {
+          "label": "Wearable visual",
+          "value": "Yes — player.weapon.warden_blade"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Item record",
+          "links": [
+            {
+              "type": "item",
+              "id": "weapon_warden_blade",
+              "name": "Warden Blade",
+              "meta": "Epic"
+            }
+          ]
+        },
+        {
+          "title": "Dropped by",
+          "links": [
+            {
+              "type": "monster",
+              "id": "enemy_hollow_warden",
+              "name": "The Hollow Warden",
+              "meta": "22% · 1×"
+            }
+          ]
+        }
+      ],
+      "filters": {
+        "slot": "Weapon",
+        "rarity": "Epic",
+        "category": "Weapon"
+      },
+      "sort": {
+        "name": "warden blade",
+        "level": 1,
+        "rarity": 3,
+        "category": "weapon"
+      },
+      "description": "Forged from metal recovered beneath the Hollow Ruins. The edge still remembers the Warden's last command.",
+      "image": "assets/icons/weapon.svg",
+      "image_alt": "Warden Blade inventory icon"
+    }
+  ]
+}
