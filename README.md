@@ -20,63 +20,34 @@ GitHub paths are case-sensitive.
 <p align="center">
   <img
     src="./assets/banner.png"
-    alt="Anton Deister – Agutroil – Developer, Linux Enthusiast and Open-Source Creator"
+    alt="Anton Deister – Agutroil – Developer, Linux Enthusiast and Game Developer"
     width="100%"
   />
 </p>
 
 <h1 align="center">🧙‍♂️ Anton Deister</h1>
 
-<h3 align="center">
-  Developer · Linux Enthusiast · Game Developer · Open-Source Creator
-</h3>
-
 <p align="center">
-  <strong>@Agutroil</strong>
+  <strong>Developer · Linux Enthusiast · Game Developer · Systems & Technology</strong><br>
+  <code>@Agutroil</code>
 </p>
 
 <p align="center">
-  <em>Code. Linux. Games. Open Source. Magic.</em>
+  <em>Building software, worlds and tools — powered by Linux, shaped by curiosity and a little magic.</em>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Agutroil">
-    <img
-      src="https://img.shields.io/badge/GitHub-Agutroil-181717?style=for-the-badge&logo=github&logoColor=white"
-      alt="GitHub Agutroil"
-    />
-  </a>
-  <a href="https://agutroil.github.io/">
-    <img
-      src="https://img.shields.io/badge/Website-agutroil.github.io-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white"
-      alt="Agutroil Website"
-    />
-  </a>
-  <a href="https://github.com/Agutroil?tab=repositories">
-    <img
-      src="https://img.shields.io/badge/Open_Source-Projects-16A34A?style=for-the-badge&logo=opensourceinitiative&logoColor=white"
-      alt="Open Source Projects"
-    />
-  </a>
+  <a href="https://github.com/Agutroil"><img src="https://img.shields.io/badge/GitHub-Agutroil-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Agutroil" /></a>
+  <a href="https://agutroil.github.io/"><img src="https://img.shields.io/badge/Website-Agutroil-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Agutroil Website" /></a>
+  <a href="https://agutroil.github.io/Nythara/"><img src="https://img.shields.io/badge/Nythara-Project-7C3AED?style=for-the-badge&logo=godotengine&logoColor=white" alt="Nythara Website" /></a>
 </p>
 
 <p align="center">
-  <img
-    src="https://img.shields.io/badge/Linux-Debian-A81D33?style=flat-square&logo=debian&logoColor=white"
-    alt="Debian Linux"
-  />
-  <img
-    src="https://img.shields.io/badge/Game_Engine-Godot-478CBF?style=flat-square&logo=godotengine&logoColor=white"
-    alt="Godot"
-  />
-  <img
-    src="https://img.shields.io/badge/Open_Source-❤-22C55E?style=flat-square"
-    alt="Open Source"
-  />
-  <img
-    src="https://img.shields.io/badge/AI-Assisted_Development-7C3AED?style=flat-square"
-    alt="AI Assisted Development"
-  />
+  <img src="https://img.shields.io/badge/Debian-A81D33?style=flat-square&logo=debian&logoColor=white" alt="Debian Linux" />
+  <img src="https://img.shields.io/badge/Godot-478CBF?style=flat-square&logo=godotengine&logoColor=white" alt="Godot" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/AI_Assisted-Development-7C3AED?style=flat-square&logo=openai&logoColor=white" alt="AI Assisted Development" />
 </p>
 
 ---
@@ -85,507 +56,81 @@ GitHub paths are case-sensitive.
 
 <table>
 <tr>
-
 <td width="67%" valign="top">
 
 Hallo! Ich bin **Anton Deister** – auf GitHub unterwegs als **Agutroil**.
 
-Ich entwickle Software, experimentiere mit Linux und baue eigene Projekte rund um Games, Web, Security, Automatisierung und Open Source.
+Ich entwickle Software, experimentiere mit Linux und arbeite an eigenen Projekten rund um Games, Web, Security, Automatisierung und moderne Entwicklungswerkzeuge.
 
-Besonders spannend finde ich Projekte, bei denen aus einer Idee Schritt für Schritt ein funktionierendes System entsteht.
+Besonders spannend finde ich Projekte, bei denen aus einer Idee Schritt für Schritt ein funktionierendes, testbares und erweiterbares System entsteht.
 
 ### ✦ Meine Schwerpunkte
 
-- 💻 Softwareentwicklung
-- 🐧 Linux & Debian
-- 🎮 Game Development
-- 🌐 Web Development
-- 🔐 Security-focused Development
-- 🤖 AI-assisted Development
-- ⚙️ Automatisierung
-- 🌍 Open Source
-- 🧪 technische Experimente
+<p>
+  <strong>💻 Softwareentwicklung</strong><br>
+  <sub>Von der Idee bis zu funktionierenden, wartbaren Anwendungen und technischen Systemen.</sub>
+</p>
 
-Ich möchte Technologien nicht nur **benutzen**, sondern verstehen, verändern und daraus eigene Systeme bauen.
+<p>
+  <strong>🐧 Linux & Debian</strong><br>
+  <sub>Debian als tägliche Entwicklungsumgebung mit Shell, CLI-Workflows und technischem Systemverständnis.</sub>
+</p>
+
+<p>
+  <strong>🎮 Game Development</strong><br>
+  <sub>Gameplay-Systeme, Welten, Multiplayer, Progression und langfristig erweiterbare Spielarchitektur.</sub>
+</p>
+
+<p>
+  <strong>🌐 Web Development</strong><br>
+  <sub>Moderne Websites und Webanwendungen mit Fokus auf klare Strukturen, Bedienbarkeit und technische Qualität.</sub>
+</p>
+
+<p>
+  <strong>🔐 Security-focused Development</strong><br>
+  <sub>Sicherheit als Bestandteil der Architektur – von Eingabevalidierung bis zu Netzwerk- und Zugriffskontrollen.</sub>
+</p>
+
+<p>
+  <strong>🤖 AI-assisted Development</strong><br>
+  <sub>Coding Agents und KI-Werkzeuge als kontrollierte Unterstützung innerhalb realer Entwicklungsprozesse.</sub>
+</p>
+
+<p>
+  <strong>⚙️ Automatisierung</strong><br>
+  <sub>Wiederkehrende Aufgaben durch Skripte, Pipelines und reproduzierbare Workflows vereinfachen.</sub>
+</p>
+
+<p>
+  <strong>🧪 Testing & Validation</strong><br>
+  <sub>Automatisierte Tests, Regression Checks und klare Qualitäts-Gates für verlässliche Änderungen.</sub>
+</p>
+
+<p>
+  <strong>🏗️ Software Architecture</strong><br>
+  <sub>Systeme modular planen, Verantwortlichkeiten sauber trennen und Erweiterbarkeit langfristig erhalten.</sub>
+</p>
+
+<p>
+  <strong>🛠️ Developer Tools</strong><br>
+  <sub>Eigene Werkzeuge, Bridges und Hilfssysteme entwickeln, die Entwicklungsabläufe schneller und sicherer machen.</sub>
+</p>
+
+Ich möchte Technologien nicht nur benutzen, sondern verstehen, verändern und daraus eigene Systeme bauen.
 
 </td>
-
 <td width="33%" align="center" valign="top">
 
-<img
-  src="./assets/antondeister.png"
-  alt="Anton Deister"
-  width="220"
-/>
+<img src="./assets/antondeister.png" alt="Anton Deister" width="220" />
 
-<br>
-
-### Anton Deister
-
-`@Agutroil`
-
-<sub>Developer · Linux · Games · Open Source</sub>
-
-<br><br>
-
-<kbd>🐧 Linux</kbd>
-<kbd>🎮 Games</kbd>
-
-<br><br>
-
-<kbd>🔐 Security</kbd>
-<kbd>🌍 Open Source</kbd>
-
-<br><br>
-
-<kbd>🤖 AI</kbd>
-<kbd>⚙️ Automation</kbd>
+<h3>Anton Deister</h3>
+<p><code>@Agutroil</code></p>
+<p><sub>Developer · Linux · Games · Technology</sub></p>
+<p><kbd>🐧 Linux</kbd> <kbd>🎮 Games</kbd></p>
+<p><kbd>💻 Development</kbd> <kbd>🔐 Security</kbd></p>
+<p><kbd>🤖 AI</kbd> <kbd>⚙️ Automation</kbd></p>
 
 </td>
-
-</tr>
-</table>
-
----
-
-<div align="center">
-
-## ✦ Agutroil
-
-**Agutroil** ist meine Entwickleridentität für Software, Linux, Games, Web, Security, Open Source und technische Experimente.
-
-<br>
-
-`💻 Code` · `🐧 Linux` · `🎮 Games` · `🔐 Security` · `🌍 Open Source` · `🤖 AI` · `🪄 Magic`
-
-<br>
-
-### Code. Linux. Magic.
-
-</div>
-
----
-
-# 🚀 What I Build
-
-<table>
-<tr>
-
-<td width="50%" valign="top">
-
-### 🎮 Game Development
-
-Ich entwickle eigene Spiele und Game-Systeme mit Fokus auf langfristig erweiterbare Architektur.
-
-**Bereiche**
-
-- 🌍 World Building
-- ⚔️ Combat-Systeme
-- 🌐 Multiplayer
-- 🧙 Charakter-Systeme
-- 📈 Progression
-- 🎒 Inventar
-- 🗡️ Items & Equipment
-- 🌀 Regionen & Portale
-- 👹 Monster & Bosse
-- 🏰 Dungeons
-- ⚡ Performance
-- 🧰 Developer Tools
-- 🎨 Asset Pipelines
-
-Mein wichtigstes Game-Projekt ist **Nythara**.
-
-</td>
-
-<td width="50%" valign="top">
-
-### 🌐 Web Development
-
-Ich entwickle Websites, Webanwendungen und Open-Source-Webprojekte.
-
-**Technologien**
-
-- React
-- TypeScript
-- JavaScript
-- Next.js
-- WordPress
-- PHP
-- HTML
-- CSS
-- Responsive Design
-- moderne UI-Systeme
-
-Dabei interessieren mich besonders gute Architektur, Performance und nachvollziehbare Entwicklungsprozesse.
-
-</td>
-
-</tr>
-
-<tr>
-
-<td width="50%" valign="top">
-
-### 🔐 Secure Applications
-
-Mit Projekten wie **Aura** beschäftige ich mich auch mit sicherheitsorientierten Anwendungen und Echtzeitkommunikation.
-
-**Bereiche**
-
-- End-to-End Encryption
-- Identity Verification
-- Realtime Communication
-- Tamper-Evident History
-- WebSockets
-- Security Testing
-- Privacy
-- Auditability
-- Defensive Architecture
-
-Sicherheitsversprechen sollen durch Architektur und Tests belegbar sein.
-
-</td>
-
-<td width="50%" valign="top">
-
-### 🐧 Linux & Automation
-
-Linux ist der Mittelpunkt meiner Entwicklungsumgebung.
-
-**Werkzeuge & Themen**
-
-- Debian
-- Shell
-- Git
-- GitHub
-- CLI-Workflows
-- Automatisierung
-- lokale Developer Tools
-- Build-Pipelines
-- Continuous Integration
-
-Ich mag Systeme, die transparent, reproduzierbar und kontrollierbar bleiben.
-
-</td>
-
-</tr>
-
-<tr>
-
-<td width="50%" valign="top">
-
-### 🤖 AI-assisted Development
-
-Mich interessiert besonders, wie Coding Agents sinnvoll in echte Softwareprojekte integriert werden können.
-
-**Experimentierfelder**
-
-- Coding Agents
-- AI Tool Bridges
-- automatische Tests
-- Asset Pipelines
-- Developer Automation
-- reproduzierbare Workflows
-- automatisierte Validierung
-- Game Development mit AI Agents
-
-KI soll nicht einfach nur Code erzeugen, sondern Teil eines kontrollierten Entwicklungsprozesses sein.
-
-</td>
-
-<td width="50%" valign="top">
-
-### 🌍 Open Source
-
-Ich veröffentliche Projekte offen auf GitHub und möchte nicht nur den Code, sondern auch den Entwicklungsprozess nachvollziehbar machen.
-
-**Dazu gehören**
-
-- Dokumentation
-- reproduzierbare Builds
-- CI
-- automatisierte Tests
-- Security Checks
-- Architektur-Dokumentation
-- Sprint-Berichte
-- transparente Entwicklungsentscheidungen
-
-</td>
-
-</tr>
-</table>
-
----
-
-# 🌌 Featured Project — Nythara
-
-<p align="center">
-  <a href="https://github.com/Agutroil/Nythara">
-    <img
-      src="https://img.shields.io/badge/PROJECT-NYTHARA-7C3AED?style=for-the-badge"
-      alt="Nythara Project"
-    />
-  </a>
-</p>
-
-<h2 align="center">Nythara</h2>
-
-<p align="center">
-  <strong>A 2D MMORPG inside an immersive 3D fantasy world.</strong>
-</p>
-
-<p align="center">
-  <em>Explore · Fight · Progress · Build · Connect</em>
-</p>
-
-<p align="center">
-  <img
-    src="https://img.shields.io/badge/Godot-4.7.2-478CBF?style=flat-square&logo=godotengine&logoColor=white"
-    alt="Godot 4.7.2"
-  />
-  <img
-    src="https://img.shields.io/badge/GDScript-Game_Logic-355570?style=flat-square&logo=godotengine&logoColor=white"
-    alt="GDScript"
-  />
-  <img
-    src="https://img.shields.io/badge/Multiplayer-ENet-0891B2?style=flat-square"
-    alt="ENet Multiplayer"
-  />
-  <img
-    src="https://img.shields.io/badge/Renderer-GL_Compatibility-16A34A?style=flat-square"
-    alt="GL Compatibility"
-  />
-  <img
-    src="https://img.shields.io/badge/Status-Active_Development-F59E0B?style=flat-square"
-    alt="Active Development"
-  />
-</p>
-
-**Nythara** ist mein größtes aktuelles Game-Development-Projekt.
-
-Das Spiel verbindet **2D-Charaktere mit einer echten 3D-Fantasywelt** und wird als modular aufgebautes MMORPG-/Online-RPG-Projekt entwickelt.
-
-<table>
-<tr>
-
-<td width="50%" valign="top">
-
-### ⚔️ Gameplay & World
-
-- 🌍 große Fantasy-Regionen
-- 🌐 Multiplayer
-- ⚔️ serverautoritäres Combat
-- 🌀 Portale & Regionen
-- 👹 Monster & Bosse
-- 🏰 Dungeons
-- 🗡️ Items & Equipment
-- 🎒 Inventar-Systeme
-- 🧙 Charakter-Systeme
-- 📈 Skills & Progression
-- 📜 Quests
-- 💰 Economy
-
-</td>
-
-<td width="50%" valign="top">
-
-### 🧰 Technology & Development
-
-- Godot 4.7.2
-- GDScript
-- ENet Multiplayer
-- Server Authority
-- GL Compatibility
-- Asset Management
-- Content Pipelines
-- automatisierte Tests
-- AI Bridge
-- Coding Agents
-- GitHub CI
-- Low-End Performance
-
-</td>
-
-</tr>
-</table>
-
-> [!NOTE]
-> Nythara befindet sich aktiv in Entwicklung. Architektur, Content und Präsentation werden kontinuierlich erweitert und getestet.
-
-<p align="center">
-  <a href="https://github.com/Agutroil/Nythara">
-    <img
-      src="https://img.shields.io/badge/Explore_Nythara-GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
-      alt="Explore Nythara"
-    />
-  </a>
-</p>
-
----
-
-# 🔐 Featured Security Project — Aura
-
-<p align="center">
-  <a href="https://github.com/Agutroil/Aura">
-    <img
-      src="https://img.shields.io/badge/PROJECT-AURA-0891B2?style=for-the-badge"
-      alt="Aura Project"
-    />
-  </a>
-</p>
-
-<h2 align="center">Aura</h2>
-
-<p align="center">
-  <strong>End-to-End Encrypted Messaging with Tamper-Evident History</strong>
-</p>
-
-<p align="center">
-  <em>Sealed conversations. Verified identities. Auditable history.</em>
-</p>
-
-**Aura** ist mein Open-Source-Projekt für sichere Echtzeitkommunikation.
-
-Der Fokus liegt auf nachvollziehbarer Sicherheitsarchitektur, Tests und auditierbaren Kommunikationsabläufen statt auf übertriebenen Sicherheitsversprechen.
-
-<table>
-<tr>
-
-<td width="50%" valign="top">
-
-### 🔐 Security & Messaging
-
-- 🔒 End-to-End Encryption
-- 🛡️ Identity Verification
-- 🔗 Tamper-Evident History
-- ✍️ signierte Nachrichtenhistorie
-- 💬 Realtime Messaging
-- 👥 Group Chats
-- 🔎 Message Search
-- 👤 Presence
-- 🔐 Safety Numbers
-- 📱 Responsive UI
-
-</td>
-
-<td width="50%" valign="top">
-
-### 🧰 Technology
-
-- Next.js
-- React
-- TypeScript
-- MySQL
-- Redis
-- WebSockets
-- Cryptographic Key Management
-- Security Tests
-- Integration Tests
-- Playwright E2E
-- GitHub Actions
-
-</td>
-
-</tr>
-</table>
-
-<p align="center">
-  <a href="https://github.com/Agutroil/Aura">
-    <img
-      src="https://img.shields.io/badge/Explore_Aura-GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
-      alt="Explore Aura"
-    />
-  </a>
-</p>
-
-<p align="center">
-  <img
-    src="https://img.shields.io/badge/Status-Active_Development-0891B2?style=flat-square"
-    alt="Aura Active Development"
-  />
-  <img
-    src="https://img.shields.io/badge/License-MIT-blue?style=flat-square"
-    alt="Aura MIT License"
-  />
-  <img
-    src="https://img.shields.io/badge/Security-Focused-16A34A?style=flat-square"
-    alt="Security Focused"
-  />
-</p>
-
-> [!IMPORTANT]
-> Aura ist ein aktiv entwickeltes Security-Projekt mit automatisierten Security-, Integrations- und End-to-End-Tests. Es wurde bislang nicht unabhängig professionell auditiert.
-
----
-
-# 🛠️ Weitere Projekte
-
-<table>
-<tr>
-
-<td width="33%" valign="top">
-
-### 🏰 Astra Kingdom
-
-**Game Systems · Progression · Experimentation**
-
-Game-Projekt mit umfangreichen Gameplay- und Progressionssystemen.
-
-- ⚔️ Combat
-- 📈 Progression
-- 🛡️ Equipment
-- 🏆 Langzeit-Fortschritt
-- 🧩 Game Mechanics
-- 🌍 Open Source
-
-<a href="https://github.com/Agutroil/Astra-Kingdom">
-  <strong>Explore Astra Kingdom →</strong>
-</a>
-
-</td>
-
-<td width="33%" valign="top">
-
-### 🩺 MedCore
-
-**Open-Source Healthcare Platform**
-
-Moderne Open-Source-Anwendung für medizinische und gesundheitsbezogene Workflows.
-
-- ⚛️ React
-- ▲ Next.js
-- 🔷 TypeScript
-- 🔐 Security & Privacy
-- 🧩 Modulare Architektur
-- 📱 Modern UI
-
-<a href="https://github.com/Agutroil/medcore">
-  <strong>Explore MedCore →</strong>
-</a>
-
-</td>
-
-<td width="33%" valign="top">
-
-### 📰 Blog Pulse
-
-**Open-Source WordPress Theme**
-
-Modernes responsives WordPress-Theme für Blogs und Magazine.
-
-- 🧱 Full Site Editing
-- 📱 Responsive Design
-- 🌙 Dark Mode
-- 🧩 Block Patterns
-- 🎨 Design Tokens
-- ⚡ Lightweight Frontend
-
-<a href="https://github.com/Agutroil/blog-pulse">
-  <strong>Explore Blog Pulse →</strong>
-</a>
-
-</td>
-
 </tr>
 </table>
 
@@ -595,641 +140,248 @@ Modernes responsives WordPress-Theme für Blogs und Magazine.
 
 <table>
 <tr>
-
 <td width="33%" valign="top">
 
-### 🐧 System & Linux
+### 🐧 System
 
 <p>
-  <img src="https://img.shields.io/badge/Linux-111827?style=flat-square&logo=linux&logoColor=FCC624" alt="Linux" />
-  <img src="https://img.shields.io/badge/Debian-A81D33?style=flat-square&logo=debian&logoColor=white" alt="Debian" />
-  <img src="https://img.shields.io/badge/Shell-121011?style=flat-square&logo=gnubash&logoColor=white" alt="Shell" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=000000" alt="Linux" />
+  <img src="https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white" alt="Debian" />
+  <img src="https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Shell" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
 </p>
 
-- Debian
-- Linux
-- Shell
-- CLI Workflows
-- Automation
-
 </td>
-
 <td width="33%" valign="top">
 
 ### 🎮 Game Development
 
 <p>
-  <img src="https://img.shields.io/badge/Godot-478CBF?style=flat-square&logo=godotengine&logoColor=white" alt="Godot" />
-  <img src="https://img.shields.io/badge/GDScript-355570?style=flat-square&logo=godotengine&logoColor=white" alt="GDScript" />
+  <img src="https://img.shields.io/badge/Godot-478CBF?style=for-the-badge&logo=godotengine&logoColor=white" alt="Godot" />
+  <img src="https://img.shields.io/badge/GDScript-355570?style=for-the-badge&logo=godotengine&logoColor=white" alt="GDScript" />
+  <img src="https://img.shields.io/badge/Multiplayer-0891B2?style=for-the-badge&logo=socketdotio&logoColor=white" alt="Multiplayer" />
+  <img src="https://img.shields.io/badge/Game_Architecture-334155?style=for-the-badge&logo=diagramsdotnet&logoColor=white" alt="Game Architecture" />
 </p>
 
-- Godot
-- GDScript
-- Multiplayer
-- Game Architecture
-- World Building
-
 </td>
-
 <td width="33%" valign="top">
 
 ### 💻 Programming
 
 <p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=111827" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=000000" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
 </p>
 
-- Python
-- TypeScript
-- JavaScript
-- PHP
-
 </td>
-
 </tr>
-
 <tr>
-
 <td width="33%" valign="top">
 
 ### 🌐 Web
 
 <p>
-  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white" alt="WordPress" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white" alt="WordPress" />
 </p>
 
-- React
-- Next.js
-- WordPress
-- HTML
-- CSS
-
 </td>
-
 <td width="33%" valign="top">
 
-### 🔐 Security & Realtime
+### 🔐 Systems
 
 <p>
-  <img src="https://img.shields.io/badge/E2EE-Secure_Messaging-0891B2?style=flat-square" alt="E2EE" />
-  <img src="https://img.shields.io/badge/WebSockets-Realtime-111827?style=flat-square" alt="WebSockets" />
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis" />
+  <img src="https://img.shields.io/badge/Security-111827?style=for-the-badge&logo=letsencrypt&logoColor=white" alt="Security" />
+  <img src="https://img.shields.io/badge/WebSockets-010101?style=for-the-badge&logo=socketdotio&logoColor=white" alt="WebSockets" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/Redis-FF4438?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" />
+  <img src="https://img.shields.io/badge/Networking-0F172A?style=for-the-badge&logo=cisco&logoColor=white" alt="Networking" />
 </p>
 
-- Secure Messaging
-- Realtime Systems
-- Security Testing
-- Privacy
-- Persistence
-
 </td>
-
 <td width="33%" valign="top">
 
-### 🛠️ Development Tools
+### ⚙️ Development
 
 <p>
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
-  <img src="https://img.shields.io/badge/CI-GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  <img src="https://img.shields.io/badge/CI-GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI with GitHub Actions" />
+  <img src="https://img.shields.io/badge/Testing-Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white" alt="Testing" />
+  <img src="https://img.shields.io/badge/Automation-6E56CF?style=for-the-badge&logo=githubactions&logoColor=white" alt="Automation" />
+  <img src="https://img.shields.io/badge/Coding_Agents-412991?style=for-the-badge&logo=openai&logoColor=white" alt="Coding Agents" />
 </p>
 
-- Git
-- GitHub
-- CI
-- Automation
-- Developer Tooling
-
 </td>
-
-</tr>
-
-<tr>
-
-<td width="33%" valign="top">
-
-### 🤖 AI & Automation
-
-<p>
-  <img src="https://img.shields.io/badge/Coding_Agents-111827?style=flat-square" alt="Coding Agents" />
-  <img src="https://img.shields.io/badge/AI_Workflows-7C3AED?style=flat-square" alt="AI Workflows" />
-  <img src="https://img.shields.io/badge/Asset_Pipelines-0891B2?style=flat-square" alt="Asset Pipelines" />
-</p>
-
-- Coding Agents
-- AI Bridges
-- Agent Tooling
-- Asset Pipelines
-- Developer Automation
-
-</td>
-
-<td width="33%" valign="top">
-
-### 🧪 Testing
-
-<p>
-  <img src="https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white" alt="Vitest" />
-  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white" alt="Playwright" />
-  <img src="https://img.shields.io/badge/CI-GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
-</p>
-
-- Unit Tests
-- Integration Tests
-- E2E
-- Regression Tests
-- CI Validation
-
-</td>
-
-<td width="33%" valign="top">
-
-### 🌍 Open Source
-
-<p>
-  <img src="https://img.shields.io/badge/Open_Source-Projects-16A34A?style=flat-square&logo=opensourceinitiative&logoColor=white" alt="Open Source" />
-  <img src="https://img.shields.io/badge/Documentation-Project_Docs-2563EB?style=flat-square" alt="Documentation" />
-</p>
-
-- Public Projects
-- Documentation
-- Reproducible Workflows
-- Architecture Notes
-- Transparent Development
-
-</td>
-
 </tr>
 </table>
 
 ---
 
-# ⚙️ How I Like to Build
-
-<p align="center">
-  <strong>Idea → Architecture → Implementation → Testing → Security → Validation → Documentation → Open Source → Improve</strong>
-</p>
+# 🚀 Development Areas
 
 <table>
 <tr>
-
-<td width="50%" valign="top">
-
-### 🧠 Engineering
-
-1. Projekt verstehen
-2. Ziel klar definieren
-3. Architektur festlegen
-4. modular implementieren
-5. technische Schulden vermeiden
-6. Performance berücksichtigen
-
-</td>
-
-<td width="50%" valign="top">
-
-### 🧪 Delivery
-
-1. Tests schreiben
-2. Security-Grenzen prüfen
-3. automatisiert validieren
-4. Secrets ausschließen
-5. dokumentieren
-6. über Git & CI veröffentlichen
-
-</td>
-
-</tr>
-</table>
-
-> [!TIP]
-> Ich bevorzuge kleine nachvollziehbare Schritte gegenüber großen Änderungen ohne überprüfbare Zwischenstände.
-
----
-
-# 🤖 Coding Agents & AI-assisted Development
-
-Coding Agents interessieren mich besonders dort, wo sie nicht nur Code generieren, sondern in einen **reproduzierbaren Entwicklungsprozess** eingebunden sind.
-
-<p align="center">
-
-<kbd>Developer</kbd>
-&nbsp; + &nbsp;
-<kbd>Coding Agent</kbd>
-&nbsp; + &nbsp;
-<kbd>Tests</kbd>
-&nbsp; + &nbsp;
-<kbd>Tool Bridges</kbd>
-&nbsp; + &nbsp;
-<kbd>Git</kbd>
-&nbsp; + &nbsp;
-<kbd>CI</kbd>
-
-</p>
-
-### Bereiche, die ich untersuche
-
-- autonome Coding-Workflows
-- AI Bridges
-- Agent Tooling
-- Testautomatisierung
-- Asset Management
-- Asset Pipelines
-- reproduzierbare Builds
-- automatisierte Audits
-- Git-basierte Workflows
-- CI-Integration
-- Game Development mit Coding Agents
-- Security Testing mit automatisierten Workflows
-
-> KI sollte nicht einfach „irgendwie Code schreiben“, sondern Teil eines **kontrollierten, überprüfbaren und reproduzierbaren Entwicklungsprozesses** sein.
-
----
-
-# 🔬 Current Quest
-
-<table>
-<tr>
-
 <td width="50%" valign="top">
 
 ### 🎮 Game Development
 
-- Nythara weiterentwickeln
-- Online-Multiplayer
-- größere Fantasy-Welten
-- World Building
-- Game-System-Design
-- Combat
-- Charakter-Systeme
-- Dungeons
-- Portale
-- Monster
-- Items
-- Progression
-- Performance
+Ich entwickle Spiele und Game-Systeme mit Fokus auf langfristig erweiterbare Architektur.
+
+<p><strong>🌍 World Building</strong><br><sub>Regionen, Städte, Dungeons und spielbare Räume so aufbauen, dass sie Orientierung, Atmosphäre und Gameplay verbinden.</sub></p>
+<p><strong>🌐 Multiplayer</strong><br><sub>Gemeinsame Spielwelten mit klaren Netzwerkgrenzen, persistentem Zustand und nachvollziehbarer Synchronisation.</sub></p>
+<p><strong>⚔️ Combat-Systeme</strong><br><sub>Kampfmechaniken mit Skills, Gegnerverhalten, Feedback, Trefferlogik und serverseitiger Autorität entwickeln.</sub></p>
+<p><strong>🧙 Charakter-Systeme</strong><br><sub>Attribute, Zustände, Builds und Charakterlogik modular und langfristig erweiterbar strukturieren.</sub></p>
+<p><strong>📈 Skills & Progression</strong><br><sub>Level, Erfahrung, Skill-Ränge und Freischaltungen zu einem nachvollziehbaren Fortschrittssystem verbinden.</sub></p>
+<p><strong>🎒 Inventar & Equipment</strong><br><sub>Items, Ausrüstung, Slots, Werte und persistente Inventardaten sauber miteinander verknüpfen.</sub></p>
+<p><strong>📜 Quests</strong><br><sub>Aufgaben, Dialoge, Ziele, Bedingungen und Belohnungen als datengetriebene Systeme umsetzen.</sub></p>
+<p><strong>👹 Monster & Bosse</strong><br><sub>Gegner-Archetypen, Spezialmechaniken und mehrphasige Begegnungen mit klarer Lesbarkeit entwickeln.</sub></p>
+<p><strong>🏰 Dungeons</strong><br><sub>Handgebaute Begegnungen, Bossräume, Fortschrittsregeln und Belohnungen zu eigenständigen Spielabschnitten verbinden.</sub></p>
+<p><strong>⚡ Performance</strong><br><sub>Gameplay und Präsentation so planen, dass auch ältere PCs und schwache integrierte Grafikeinheiten berücksichtigt werden.</sub></p>
+<p><strong>🎨 Asset Pipelines</strong><br><sub>Sprites, Icons, Modelle und Content über nachvollziehbare, reproduzierbare Asset-Workflows integrieren.</sub></p>
+<p><strong>🛠️ Developer Tools</strong><br><sub>Editor-Hilfen, Bridges, Validatoren und interne Werkzeuge entwickeln, die große Projekte beherrschbar halten.</sub></p>
 
 </td>
-
 <td width="50%" valign="top">
 
-### ⚙️ Development & Open Source
+### 🌐 Software & Web
 
-- Aura weiterentwickeln
-- Security-focused Development
-- Open-Source-Projekte ausbauen
-- MedCore weiterentwickeln
-- WordPress-Projekte
-- automatisierte Asset-Pipelines
-- Coding Agents
-- AI Tool Bridges
-- Developer Automation
-- reproduzierbare Entwicklungsprozesse
+Ich beschäftige mich mit modernen Web- und Software-Technologien.
+
+<p><strong>🐍 Python</strong><br><sub>Automatisierung, Datenverarbeitung, Entwicklerwerkzeuge und technische Hilfsskripte.</sub></p>
+<p><strong>🔷 TypeScript</strong><br><sub>Typisierte Webanwendungen und größere Frontend-/Backend-Strukturen mit klaren Schnittstellen.</sub></p>
+<p><strong>🟨 JavaScript</strong><br><sub>Interaktive Weboberflächen, Client-Logik und browserbasierte Funktionen.</sub></p>
+<p><strong>⚛️ React</strong><br><sub>Komponentenbasierte Benutzeroberflächen mit wiederverwendbarer UI-Logik.</sub></p>
+<p><strong>▲ Next.js</strong><br><sub>Strukturierte React-Anwendungen mit Routing, Rendering und moderner Webarchitektur.</sub></p>
+<p><strong>🐘 PHP</strong><br><sub>Serverseitige Weblogik, klassische Webanwendungen und WordPress-nahe Entwicklung.</sub></p>
+<p><strong>🌐 HTML</strong><br><sub>Semantische Seitenstrukturen als stabile Grundlage für zugängliche Weboberflächen.</sub></p>
+<p><strong>🎨 CSS</strong><br><sub>Responsive Layouts, visuelle Systeme und klare Darstellung auf Desktop und Mobilgeräten.</sub></p>
+<p><strong>🐬 MySQL</strong><br><sub>Relationale Datenmodelle, persistente Anwendungsdaten und strukturierte Abfragen.</sub></p>
+<p><strong>🔴 Redis</strong><br><sub>Schnelle Zustände, Caching und temporäre Daten für vernetzte Anwendungen.</sub></p>
+<p><strong>🔌 WebSockets</strong><br><sub>Echtzeitkommunikation für Live-Updates, Messaging und interaktive Netzwerkfunktionen.</sub></p>
 
 </td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
+### 🐧 Linux & Automation
+
+Linux ist meine primäre Entwicklungsumgebung.
+
+<p><strong>🌀 Debian</strong><br><sub>Stabile tägliche Entwicklungsplattform für Programmierung, Tools, Server und Automatisierung.</sub></p>
+<p><strong>🖥️ Shell</strong><br><sub>Dateien, Prozesse, Builds und Entwicklungsabläufe direkt und effizient über die Kommandozeile steuern.</sub></p>
+<p><strong>🔀 Git</strong><br><sub>Änderungen nachvollziehbar versionieren, Branches sauber trennen und Entwicklungsstände sicher zusammenführen.</sub></p>
+<p><strong>🐙 GitHub</strong><br><sub>Repositories, Pull Requests, Issues, Actions und Projektpräsentation in einem zentralen Workflow verbinden.</sub></p>
+<p><strong>⌨️ CLI-Workflows</strong><br><sub>Wiederholbare Abläufe bewusst über Kommandozeilenwerkzeuge statt über manuelle Klickfolgen aufbauen.</sub></p>
+<p><strong>🔄 CI</strong><br><sub>Tests und Validierungen automatisiert bei Änderungen ausführen und Fehler früh sichtbar machen.</sub></p>
+<p><strong>📦 Build-Pipelines</strong><br><sub>Builds, Exporte und Prüfungen reproduzierbar von Quellcode bis Artefakt organisieren.</sub></p>
+<p><strong>⚙️ Automatisierung</strong><br><sub>Wiederkehrende technische Aufgaben durch Skripte und definierte Prozesse zuverlässig vereinfachen.</sub></p>
+<p><strong>🛠️ lokale Developer Tools</strong><br><sub>Eigene Hilfsprogramme und lokale Werkzeuge für Analyse, Validierung und Projektsteuerung entwickeln.</sub></p>
+
+</td>
+<td width="50%" valign="top">
+
+### 🤖 AI-assisted Development
+
+Mich interessiert besonders die Verbindung klassischer Softwareentwicklung mit modernen Coding Agents.
+
+<p><strong>🤖 Coding Agents</strong><br><sub>Agenten für konkrete Entwicklungsaufgaben einsetzen, ohne Kontrolle über Architektur, Tests und Änderungen abzugeben.</sub></p>
+<p><strong>🌉 AI Tool Bridges</strong><br><sub>Werkzeuge und Schnittstellen bauen, über die Agenten kontrolliert mit Entwicklungsumgebungen interagieren können.</sub></p>
+<p><strong>🧪 automatisierte Tests</strong><br><sub>Agent-generierte Änderungen konsequent durch reale Tests und Regression Checks absichern.</sub></p>
+<p><strong>⚙️ Developer Automation</strong><br><sub>Agenten mit bestehenden Git-, Build-, Test- und Tooling-Abläufen zu reproduzierbaren Prozessen verbinden.</sub></p>
+<p><strong>🎨 Asset Pipelines</strong><br><sub>Auch Content- und Asset-Arbeit strukturiert, validierbar und möglichst automatisierbar in den Workflow integrieren.</sub></p>
+<p><strong>🔁 reproduzierbare Workflows</strong><br><sub>Aufgaben so definieren, dass Schritte, Ergebnisse und Prüfungen nachvollziehbar wiederholt werden können.</sub></p>
+<p><strong>✅ automatische Validierung</strong><br><sub>Qualitäts-Gates einsetzen, die Ergebnisse unabhängig vom Agenten objektiv gegen definierte Regeln prüfen.</sub></p>
+<p><strong>🧠 Agent-basierte Entwicklungsprozesse</strong><br><sub>Menschen, Coding Agents, Git, Tests und Reviews zu einem kontrollierten Gesamtprozess verbinden.</sub></p>
+
+</td>
 </tr>
 </table>
 
 ---
 
-# 🌍 Why Open Source?
-
-Open Source bedeutet für mich mehr als öffentlich verfügbaren Quellcode.
-
-Ein Projekt sollte zeigen können:
-
-```text
-Was wurde gebaut?
-Warum wurde es so gebaut?
-Wie funktioniert es?
-Wie wurde es getestet?
-Wie kann man es verändern?
-```
-
-Ich möchte Projekte:
-
-- 📖 dokumentieren
-- 🌍 veröffentlichen
-- 🔍 nachvollziehbar machen
-- 🧪 experimentell weiterentwickeln
-- 🤝 für andere Entwickler zugänglich machen
-- 💡 als Ausgangspunkt für neue Ideen verwenden
-
-> **Entwicklung sollte nachvollziehbar sein.**
-
----
-
-# 📖 Development Philosophy
+<h1 align="center">🌌 Current Focus — Nythara</h1>
 
 <p align="center">
-  <strong><em>“Every bug is just an undocumented spell.”</em></strong>
+  <img src="https://agutroil.github.io/Nythara/assets/nythara-banner.png" alt="Nythara — A 2D MMORPG in a 3D fantasy world" width="100%" />
 </p>
 
-Ich mag Projekte, bei denen Experimentieren ausdrücklich dazugehört.
-
-Ein Prototyp darf zunächst unvollständig sein.  
-Eine Architektur darf sich entwickeln.  
-Ein System darf verbessert werden.
-
-Entscheidend ist:
+<h2 align="center">A 2D MMORPG inside an immersive 3D fantasy world.</h2>
+<p align="center"><em>Explore · Fight · Progress · Build · Connect</em></p>
 
 <p align="center">
-  <strong>✨ bauen → testen → verstehen → verbessern → teilen ✨</strong>
+  <strong>Nythara</strong> ist mein größtes aktuelles Game-Development-Projekt.<br>
+  Das Spiel verbindet gerichtete 2D-Charaktere mit einer stilisierten 3D-Fantasywelt und wächst zu einem Online-RPG mit persistenten Charakteren, serverautoritativem Gameplay, Regionen, Dungeons und langfristiger Progression.
 </p>
-
----
-
-# 🧪 Things I Like to Explore
-
-<p align="center">
-
-<kbd>🐧 Linux</kbd>
-<kbd>🎮 Game Engines</kbd>
-<kbd>🌐 Multiplayer</kbd>
-<kbd>🔐 Security</kbd>
-
-<br><br>
-
-<kbd>💬 Realtime</kbd>
-<kbd>🤖 AI Agents</kbd>
-<kbd>🧠 Developer Tools</kbd>
-<kbd>⚙️ Automation</kbd>
-
-<br><br>
-
-<kbd>🌍 Web</kbd>
-<kbd>📦 Builds</kbd>
-<kbd>🧪 Testing</kbd>
-<kbd>🎨 Assets</kbd>
-
-<br><br>
-
-<kbd>📱 Android</kbd>
-<kbd>📰 WordPress</kbd>
-<kbd>🔧 Git</kbd>
-
-</p>
-
----
-
-# 🧭 Development Areas
-
-```text
-                          Agutroil
-                             │
-          ┌──────────────────┼──────────────────┐
-          │                  │                  │
-          ▼                  ▼                  ▼
-        Linux              Games               Web
-          │                  │                  │
-       Debian              Godot              React
-       Shell             GDScript          TypeScript
-       Git              Multiplayer          Next.js
-          │                  │              WordPress
-          │                  │                  │
-          └─────────────┬────┴────┬─────────────┘
-                        │         │
-                        ▼         ▼
-                    Security   Open Source
-                        │         │
-                        └────┬────┘
-                             ▼
-                        AI Workflows
-                             │
-                             ▼
-                        Automation
-```
-
----
-
-# 📂 Featured Repositories
 
 <table>
 <tr>
+<td width="50%" align="center" valign="top">
 
-<td align="center" width="25%">
+<h3>⚔️ Gameplay & World</h3>
 
-### 🌌 Nythara
-
-**2D MMORPG**  
-inside a 3D fantasy world.
-
-<br>
-
-<a href="https://github.com/Agutroil/Nythara">
-  <strong>Explore Nythara →</strong>
-</a>
-
-</td>
-
-<td align="center" width="25%">
-
-### 🔐 Aura
-
-Secure Messaging  
-with E2EE.
-
-<br>
-
-<a href="https://github.com/Agutroil/Aura">
-  <strong>Explore Aura →</strong>
-</a>
+<p><strong>🌍 Fantasy-Regionen</strong><br><sub>Eigene Gebiete, Biome und miteinander verbundene Fantasy-Welten.</sub></p>
+<p><strong>🌐 Multiplayer</strong><br><sub>Gemeinsame Spielwelt mit persistenten Charakteren und serverseitiger Autorität.</sub></p>
+<p><strong>⚔️ Combat</strong><br><sub>Echtzeitkämpfe mit Skills, Gegner-Archetypen, Telegraphs und Bossmechaniken.</sub></p>
+<p><strong>🌀 Portale & Reisen</strong><br><sub>Reisen zwischen Regionen über Weltübergänge, Portale und freigeschaltete Wege.</sub></p>
+<p><strong>👹 Monster & Bosse</strong><br><sub>Unterschiedliche Kreaturen, Elite-Gegner und mehrphasige Bossbegegnungen.</sub></p>
+<p><strong>🏰 Städte & Dungeons</strong><br><sub>Städte, Quest-Hubs und handgebaute Dungeons mit eigener Progression.</sub></p>
+<p><strong>🗡️ Items & Equipment</strong><br><sub>Loot, Ausrüstung, Seltenheiten, Werte und sichtbare Equipment-Systeme.</sub></p>
+<p><strong>🎒 Inventar</strong><br><sub>Persistente Verwaltung von Items, Ausrüstung, Materialien und Belohnungen.</sub></p>
+<p><strong>🧙 Charakter-Systeme</strong><br><sub>Attribute, Builds, Charakterzustand und langfristige Entwicklung.</sub></p>
+<p><strong>📈 Skills & Progression</strong><br><sub>XP, Level, Skill-Ränge, Loadouts und freischaltbare Charakterentwicklung.</sub></p>
+<p><strong>📜 Quests</strong><br><sub>NPCs, Dialoge, Ziele, Freischaltungen und persistente Quest-Fortschritte.</sub></p>
+<p><strong>💰 Economy</strong><br><sub>Sammeln, Crafting, Händler, Währung und ein wachsender Item-Kreislauf.</sub></p>
 
 </td>
+<td width="50%" align="center" valign="top">
 
-<td align="center" width="25%">
+<h3>🧰 Technology & Development</h3>
 
-### 🩺 MedCore
-
-Open-Source Healthcare  
-Platform.
-
-<br>
-
-<a href="https://github.com/Agutroil/medcore">
-  <strong>Explore MedCore →</strong>
-</a>
-
-</td>
-
-<td align="center" width="25%">
-
-### 📰 Blog Pulse
-
-Modern Open-Source  
-WordPress Theme.
-
-<br>
-
-<a href="https://github.com/Agutroil/blog-pulse">
-  <strong>Explore Blog Pulse →</strong>
-</a>
+<p><strong>🎮 Godot 4.7.2</strong><br><sub>Die zentrale Engine für Gameplay, Welt, UI und Multiplayer.</sub></p>
+<p><strong>📜 GDScript</strong><br><sub>Gameplay-Systeme, Tools, Tests und Runtime-Logik.</sub></p>
+<p><strong>🌐 ENet Multiplayer</strong><br><sub>Netzwerkbasis für echte Clients, Server-Sessions und gemeinsame Welten.</sub></p>
+<p><strong>🛡️ Server Authority</strong><br><sub>Serverseitige Kontrolle über Combat, Fortschritt, Weltzustand und Charakterdaten.</sub></p>
+<p><strong>🖥️ GL Compatibility</strong><br><sub>Breite Hardware-Unterstützung mit Fokus auf ältere PCs und schwache iGPUs.</sub></p>
+<p><strong>🎨 Asset Management</strong><br><sub>Zentrale Verwaltung von Sprites, Icons, Equipment und Welt-Assets.</sub></p>
+<p><strong>🧩 Content Pipelines</strong><br><sub>Strukturierte Daten für Items, Monster, Loot, Regionen und Gameplay-Content.</sub></p>
+<p><strong>🧪 Automated Testing</strong><br><sub>Umfangreiche automatisierte Gameplay-, Netzwerk-, World- und Regressionstests.</sub></p>
+<p><strong>🌉 AI Bridge</strong><br><sub>Werkzeuge für kontrollierte Agent-Interaktion mit Godot und Entwicklungsabläufen.</sub></p>
+<p><strong>🤖 Coding Agents</strong><br><sub>Agent-gestützte Entwicklung innerhalb eines testbaren Git- und Review-Workflows.</sub></p>
+<p><strong>🔄 CI</strong><br><sub>Automatische Validierung und Qualitäts-Gates über GitHub Actions.</sub></p>
+<p><strong>⚡ Low-End Performance</strong><br><sub>Ressourcenschonende Architektur, skalierbare Präsentation und bewusst begrenzte Effekte.</sub></p>
 
 </td>
-
 </tr>
 </table>
 
-<p align="center">
-  <a href="https://github.com/Agutroil?tab=repositories">
-    <img
-      src="https://img.shields.io/badge/View_All_Repositories-GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
-      alt="View all repositories"
-    />
-  </a>
-</p>
+<table>
+<tr>
+<td align="center">
 
----
+<strong>ℹ️ Mehr über Nythara</strong><br><br>
+Weitere Informationen, aktuelle Entwicklung, Welt, Kreaturen, Dungeons und Datenbank findest du auf der offiziellen Nythara-Webseite.<br><br>
+<a href="https://agutroil.github.io/Nythara/"><strong>→ Nythara-Webseite öffnen</strong></a>
 
-# 🔗 Find Me
-
-<p align="center">
-  <a href="https://github.com/Agutroil">
-    <img
-      src="https://img.shields.io/badge/GitHub-@Agutroil-181717?style=for-the-badge&logo=github&logoColor=white"
-      alt="GitHub Agutroil"
-    />
-  </a>
-  <a href="https://agutroil.github.io/">
-    <img
-      src="https://img.shields.io/badge/Website-agutroil.github.io-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white"
-      alt="Agutroil Website"
-    />
-  </a>
-  <a href="https://github.com/Agutroil/Nythara">
-    <img
-      src="https://img.shields.io/badge/Nythara-Explore-7C3AED?style=for-the-badge"
-      alt="Nythara"
-    />
-  </a>
-  <a href="https://github.com/Agutroil/Aura">
-    <img
-      src="https://img.shields.io/badge/Aura-Explore-0891B2?style=for-the-badge"
-      alt="Aura"
-    />
-  </a>
-</p>
-
----
-
-<details>
-
-<summary><strong>🧙 Mehr über Agutroil</strong></summary>
-
-<br>
-
-**Agutroil** ist meine Entwickleridentität für Projekte rund um:
-
-- Linux
-- Softwareentwicklung
-- Game Development
-- Web Development
-- Security
-- Open Source
-- Automatisierung
-- Coding Agents
-- technische Experimente
-
-Ich möchte Technologien nicht nur benutzen, sondern verstehen, verändern und selbst etwas damit erschaffen.
-
-Dabei kombiniere ich klassische Softwareentwicklung zunehmend mit modernen Automatisierungs-, Security- und KI-Werkzeugen.
-
-Mit Projekten wie **Nythara**, **Aura**, **MedCore**, **Astra Kingdom** und **Blog Pulse** veröffentliche ich eigene Projekte und dokumentiere ihre Entwicklung auf GitHub.
-
-Mein Ziel ist nicht, mich auf genau eine Technologie festzulegen.
-
-Mich interessiert vielmehr:
-
-> **Wie kann man aus unterschiedlichen Technologien, Werkzeugen und Ideen funktionierende Systeme bauen?**
-
-</details>
-
----
-
-# ✨ What Drives Me
-
-<p align="center">
-
-<strong>Building software.</strong>
-&nbsp;·&nbsp;
-<strong>Exploring Linux.</strong>
-&nbsp;·&nbsp;
-<strong>Creating games.</strong>
-&nbsp;·&nbsp;
-<strong>Building secure systems.</strong>
-
-<br><br>
-
-<strong>Sharing ideas.</strong>
-&nbsp;·&nbsp;
-<strong>Learning by building.</strong>
-
-</p>
-
-<p align="center">
-
-<kbd>Curiosity</kbd>
-<kbd>Code</kbd>
-<kbd>Linux</kbd>
-<kbd>Games</kbd>
-<kbd>Security</kbd>
-<kbd>Open Source</kbd>
-<kbd>Automation</kbd>
-
-</p>
+</td>
+</tr>
+</table>
 
 ---
 
 <p align="center">
-  <img
-    src="./assets/agutroil-banner.png"
-    alt="Agutroil – Code Linux Magic"
-    width="100%"
-  />
+  <img src="./assets/agutroil-banner.png" alt="Agutroil – Code Linux Magic" width="100%" />
 </p>
 
----
+<hr>
 
-<h2 align="center">
-  🐧 Powered by Linux
-  &nbsp; ✦ &nbsp;
-  🪄 Crafted by Agutroil
-</h2>
+<h2 align="center"><em>“Every bug is just<br>an undocumented spell.”</em></h2>
 
 <p align="center">
-  <kbd>💻 CODE</kbd>
-  <kbd>🐧 LINUX</kbd>
-  <kbd>🎮 GAMES</kbd>
-  <kbd>🔐 SECURITY</kbd>
-  <kbd>🌍 OPEN SOURCE</kbd>
-  <kbd>🤖 AI</kbd>
-  <kbd>🪄 MAGIC</kbd>
-</p>
-
-<h3 align="center">
-  Code. Linux. Magic.
-</h3>
-
-<p align="center">
-  <sub>
-    Made with curiosity, code and a little bit of magic.
-  </sub>
-</p>
-
-<p align="center">
-  ✦ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✦
-</p>
-
-<p align="center">
-  <sub>
-    © Anton Deister · Agutroil
-  </sub>
+  <strong>— Agutroil</strong>
 </p>
