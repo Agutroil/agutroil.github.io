@@ -2,8 +2,7 @@
   "title": "Nythara Database",
   "source_commit": "1f81be367153cc068bca7403809a3bfb6a2187f8",
   "source_short_commit": "1f81be3",
-  "source_ref": "main",
-  "generated_at": "2026-10-28T20:06:05Z",
+  "generated_at": "2026-10-28T20:23:50Z",
   "generator": "tools/export_nythara_database.py",
   "counts": {
     "items": 17,
@@ -25,7 +24,7 @@
       "key": "items",
       "type": "item",
       "label": "Items",
-      "description": "Every item defined on public main, from moss materials to the Warden Blade.",
+      "description": "Every item in the current game build, from moss materials to the Warden Blade.",
       "count": 17
     },
     {

@@ -316,7 +316,7 @@
     if (categories) categories.textContent = String(meta.categories.length);
     if (generated) generated.textContent = formatDate(meta.generated_at);
     if (footerSource) {
-      footerSource.textContent = `Game data · ${meta.source_ref} @ ${meta.source_short_commit}`;
+      footerSource.textContent = `Game data revision · ${meta.source_short_commit}`;
     }
   }
 
@@ -520,26 +520,24 @@
           <span>Source of truth</span>
           <h3>Read from Nythara</h3>
           <p>
-            Parsed from the authored Godot resources and WorldGraph at
-            <span class="mono">${escapeHtml(meta.source_ref)} @ ${escapeHtml(
-              meta.source_short_commit
-            )}</span>.
+            Parsed from the authored Godot resources and WorldGraph at game data
+            revision <span class="mono">${escapeHtml(meta.source_short_commit)}</span>.
           </p>
         </article>
         <article class="note-card">
           <span>Static by design</span>
           <h3>No live backend</h3>
           <p>
-            GitHub Pages serves a generated snapshot. Item stats, encounters and
-            loot are never fetched from a game server here.
+            This site serves a generated snapshot. Item stats, encounters and loot
+            are never fetched from a game server here.
           </p>
         </article>
         <article class="note-card">
-          <span>Scope</span>          <h3>Public main only</h3>
+          <span>Scope</span>
+          <h3>Content catalogue</h3>
           <p>
-            Generated from the public main branch. Unmerged branches never reach this
-            codex, and gameplay systems outside the content definitions are not
-            catalogued here.
+            Generated from the game's content definitions. Work in progress and
+            gameplay systems outside those definitions are not catalogued here.
           </p>
         </article>
       </div>`;
@@ -864,7 +862,7 @@
             .join("")}
 
           <p class="detail-source">
-            Source: Nythara ${escapeHtml(source.source_ref)} @ ${escapeHtml(
+            Game data revision: ${escapeHtml(
               source.source_short_commit
             )} · ${escapeHtml(
               TYPE_LABEL[entry.type] || entry.type

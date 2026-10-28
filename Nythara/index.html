@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Nythara | 2D MMORPG in a 3D Fantasy World · Agutroil</title>
+  <title>Nythara | Online Fantasy RPG in a 3D World · Agutroil</title>
 
   <meta
     name="description"
-    content="Nythara is an open-source 2D MMORPG built with Godot, combining directional 2D characters with an immersive stylized 3D fantasy world."
+    content="Nythara is a 2D MMORPG set in an immersive stylized 3D fantasy world, with server-authoritative combat, persistent characters, dungeons, regions and an online multiplayer foundation."
   >
   <meta
     name="keywords"
-    content="Nythara, Agutroil, Godot, GDScript, MMORPG, indie game, open source, 2D characters, 3D world, multiplayer, Silverwood, Moonroot Sanctum"
+    content="Nythara, Agutroil, online RPG, MMORPG, Godot, GDScript, 2D characters, 3D world, multiplayer, Silverwood, Moonroot Sanctum"
   >
   <meta name="author" content="Anton Deister · Agutroil">
   <meta name="robots" content="index, follow">
@@ -24,10 +24,10 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Agutroil">
-  <meta property="og:title" content="Nythara | 2D MMORPG in a 3D Fantasy World">
+  <meta property="og:title" content="Nythara | Online Fantasy RPG">
   <meta
     property="og:description"
-    content="Directional 2D characters in a hand-built 3D fantasy world. Server-authoritative combat, persistent characters, dungeons and open-source development."
+    content="Directional 2D characters in a hand-built 3D fantasy world. Server-authoritative combat, persistent characters, dungeons and an online multiplayer foundation."
   >
   <meta property="og:url" content="https://agutroil.github.io/Nythara/">
   <meta property="og:image" content="https://agutroil.github.io/Nythara/assets/nythara-banner.png">
@@ -37,10 +37,10 @@
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Nythara | 2D MMORPG in a 3D Fantasy World">
+  <meta name="twitter:title" content="Nythara | Online Fantasy RPG">
   <meta
     name="twitter:description"
-    content="An open-source 2D MMORPG built with Godot, set in an immersive stylized 3D world."
+    content="A 2D MMORPG set in an immersive stylized 3D world, with persistent characters, dungeons and online multiplayer."
   >
   <meta name="twitter:image" content="https://agutroil.github.io/Nythara/assets/nythara-banner.png">
   <meta name="twitter:image:alt" content="Nythara — a 2D MMORPG in a 3D fantasy world">
@@ -51,14 +51,14 @@
     "@type": "VideoGame",
     "name": "Nythara",
     "alternateName": "Nythara MMORPG",
-    "description": "Nythara is an open-source 2D MMORPG built with Godot, combining directional 2D characters with an immersive stylized 3D fantasy world.",
+    "description": "Nythara is a 2D MMORPG set in an immersive stylized 3D fantasy world, with server-authoritative combat, persistent characters, dungeons and an online multiplayer foundation.",
     "url": "https://agutroil.github.io/Nythara/",
     "image": "https://agutroil.github.io/Nythara/assets/nythara-banner.png",
     "genre": "MMORPG",
     "applicationCategory": "Game",
     "gamePlatform": "Linux",
     "operatingSystem": "Linux",
-    "codeRepository": "https://github.com/Agutroil/Nythara",
+    "playMode": "MultiPlayer",
     "author": {
       "@type": "Person",
       "name": "Anton Deister",
@@ -1133,88 +1133,6 @@
       text-underline-offset: 3px;
     }
 
-    .activity {
-      margin-top: 20px;
-      padding: 20px 22px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      background: rgba(4, 9, 18, 0.52);
-    }
-
-    .activity-head {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-
-    .activity-head h3 {
-      margin: 0;
-      font-size: 0.98rem;
-    }
-
-    .activity-head a {
-      color: var(--muted);
-      font-family: var(--mono);
-      font-size: 0.68rem;
-    }
-
-    .activity-head a:hover {
-      color: var(--cyan);
-    }
-
-    .commit-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .commit-list li {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      gap: 4px 10px;
-      padding: 9px 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .commit-list li:first-child {
-      border-top: 0;
-    }
-
-    .commit-list a {
-      flex: 1 1 320px;
-      color: var(--text-soft);
-      font-size: 0.87rem;
-    }
-
-    .commit-list a:hover {
-      color: var(--cyan);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    .commit-list time {
-      color: var(--muted);
-      font-family: var(--mono);
-      font-size: 0.66rem;
-      white-space: nowrap;
-    }
-
-    .activity-fallback {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.82rem;
-    }
-
-    .activity-fallback a {
-      color: var(--gold);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
     .dev-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1726,9 +1644,8 @@
           <a href="#creatures" data-nav>Creatures</a>
           <a href="#dungeons" data-nav>Dungeons</a>
           <a href="#online" data-nav>Online</a>
-          <a href="#news" data-nav>News</a>
+          <a href="#news" data-nav>Milestones</a>
           <a href="#development" data-nav>Development</a>
-          <a href="https://github.com/Agutroil/Nythara" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           <a class="nav-back" href="../">← Agutroil</a>
         </nav>
 
@@ -1753,7 +1670,7 @@
       <div class="wrap">
         <div class="hero-copy-wrap" data-reveal>
           <a class="back-link" href="../">← Back to Agutroil</a>
-          <p class="eyebrow">Agutroil presents · Open-source fantasy MMORPG</p>
+          <p class="eyebrow">Agutroil presents · Online fantasy RPG</p>
           <h1>NYTHARA<span>.</span></h1>
           <p class="hero-tagline">
             A 2D MMORPG set in an immersive 3D fantasy world.
@@ -1773,17 +1690,12 @@
               <span class="arrow" aria-hidden="true">→</span>
             </a>
             <a class="button" href="#news">
-              Development News
+              Milestones
               <span class="arrow" aria-hidden="true">→</span>
             </a>
-            <a
-              class="button ghost"
-              href="https://github.com/Agutroil/Nythara"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub Repository
-              <span class="arrow" aria-hidden="true">↗</span>
+            <a class="button ghost" href="./database/">
+              Open the Database
+              <span class="arrow" aria-hidden="true">→</span>
             </a>
           </div>
         </div>
@@ -1802,12 +1714,12 @@
           </figcaption>
         </figure>
 
-        <ul class="status-strip" aria-label="Project facts">
+        <ul class="status-strip" aria-label="Game facts">
           <li>Godot 4.7.2</li>
           <li>GDScript</li>
           <li>GL Compatibility</li>
-          <li>ENet Multiplayer</li>
-          <li>Open Source</li>
+          <li>Online Multiplayer</li>
+          <li>Server Authoritative</li>
           <li>Active Development</li>
           <li>Linux</li>
         </ul>
@@ -2371,13 +2283,13 @@
           <div class="online-copy" data-reveal>
             <p>
               Position, combat, damage, enemy AI, loot, XP, quests, first clears,
-              equipment and respawn all live on the server. That is what makes a
-              character survive a reconnect — and a server restart.
+              equipment and respawn all live on the server. Characters are restored
+              after a reconnect, a restart and persistent server writes.
             </p>
 
             <div class="fact-grid">
               <div class="fact">
-                <strong>ENet</strong>
+                <strong>ENet + DTLS</strong>
                 <span>Transport</span>
               </div>
               <div class="fact">
@@ -2389,15 +2301,22 @@
                 <span>Characters</span>
               </div>
               <div class="fact">
-                <strong>Co-op</strong>
-                <span>Combat &amp; loot</span>
+                <strong>Reconnect</strong>
+                <span>Session recovery</span>
               </div>
             </div>
 
+            <p>
+              The Internet multiplayer foundation validates IPv4 and IPv6 sessions,
+              certificate and hostname verification, protocol mismatches, replayed
+              sessions, ownership and packet-rate limits. It has been exercised with
+              three real gameplay clients and eight independent load clients.
+            </p>
+
             <p class="scope-note">
-              <strong>Current scope:</strong> development/LAN multiplayer foundation.
-              There is no public production server, no account system and ENet is not
-              encrypted. Do not expose the development server to the internet.
+              <strong>Current scope:</strong> online multiplayer foundation. There is
+              no public production server, no production account system and no WAN
+              performance guarantee yet.
             </p>
           </div>
 
@@ -2423,19 +2342,33 @@
     <section class="section" id="news">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">07 / Development news</p>
+          <p class="eyebrow">07 / Milestones</p>
           <h2>Latest development.</h2>
           <p>
-            Curated from the public sprint reports. Development is active; the main
-            branch is the tested build.
+            Key steps in the world's growth, from the first combat foundations to
+            shared online sessions.
           </p>
         </div>
 
         <div class="news-grid">
           <article class="news-card" data-reveal>
             <div class="news-meta">
-              <span class="sprint">Sprint 22</span>
+              <span class="sprint">Sprint 23</span>
               <span>2026-10-28</span>
+            </div>
+            <h3>Internet multiplayer foundation</h3>
+            <p>
+              ENet sessions gained a DTLS transport, certificate and hostname
+              verification, bounded reconnect and persistent character restore. Real
+              gameplay clients now meet on the dedicated server through the new
+              Internet transport foundation.
+            </p>
+          </article>
+
+          <article class="news-card" data-reveal>
+            <div class="news-meta">
+              <span class="sprint">Sprint 22</span>
+              <span>2026</span>
             </div>
             <h3>Silverwood regional world progression</h3>
             <p>
@@ -2443,15 +2376,6 @@
               territories, three new creatures, warp portals, resurrection altars and
               world loot with real item icons.
             </p>
-            <a
-              class="text-link"
-              href="https://github.com/Agutroil/Nythara/blob/main/docs/SPRINT_22_REPORT.md"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Read the Sprint 22 report on GitHub"
-            >
-              Read on GitHub ↗
-            </a>
           </article>
 
           <article class="news-card" data-reveal>
@@ -2465,15 +2389,6 @@
               to the second dungeon, and the Rootbound Seer introduced the first
               three-phase endgame encounter.
             </p>
-            <a
-              class="text-link"
-              href="https://github.com/Agutroil/Nythara/blob/main/docs/SPRINT_21_REPORT.md"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Read the Sprint 21 report on GitHub"
-            >
-              Read on GitHub ↗
-            </a>
           </article>
 
           <article class="news-card" data-reveal>
@@ -2487,57 +2402,7 @@
               loadout and server-authoritative use, with persistent builds and a safe
               respec.
             </p>
-            <a
-              class="text-link"
-              href="https://github.com/Agutroil/Nythara/blob/main/docs/SPRINT_20_REPORT.md"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Read the Sprint 20 report on GitHub"
-            >
-              Read on GitHub ↗
-            </a>
           </article>
-
-          <article class="news-card" data-reveal>
-            <div class="news-meta">
-              <span class="sprint">Sprint 19</span>
-              <span>2026</span>
-            </div>
-            <h3>Equipment depth and item rarity</h3>
-            <p>
-              Rarity labels, side-by-side stat comparison, three equipment slots and
-              the Warden Blade, Hollowguard Vest and Hollow Sigil Charm.
-            </p>
-            <a
-              class="text-link"
-              href="https://github.com/Agutroil/Nythara/blob/main/docs/SPRINT_19_REPORT.md"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Read the Sprint 19 report on GitHub"
-            >
-              Read on GitHub ↗
-            </a>
-          </article>
-        </div>
-
-        <div class="activity" data-reveal>
-          <div class="activity-head">
-            <h3>Latest GitHub activity</h3>
-            <a
-              href="https://github.com/Agutroil/Nythara/commits/main"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Commit history ↗
-            </a>
-          </div>
-          <ul class="commit-list" id="commit-list" hidden></ul>
-          <p class="activity-fallback" id="commit-fallback">
-            Live activity is unavailable right now.
-            <a href="https://github.com/Agutroil/Nythara/commits/main" target="_blank" rel="noopener noreferrer">
-              Read the commit history on GitHub ↗
-            </a>
-          </p>
         </div>
       </div>
     </section>
@@ -2550,8 +2415,8 @@
           <p class="eyebrow">08 / Current development</p>
           <h2>Where the world stands.</h2>
           <p>
-            Nythara is under active development. The public main branch is the tested
-            Sprint 22 build; newer work lives on feature branches until it is validated.
+            Nythara is under active development. Sprint 23 established the online
+            multiplayer foundation; world and content work continues alongside it.
           </p>
         </div>
 
@@ -2559,19 +2424,19 @@
           <article class="dev-card done" data-reveal>
             <h3>✓ Shipped</h3>
             <ul>
+              <li>Internet multiplayer foundation</li>
+              <li>DTLS sessions and persistent characters</li>
               <li>Silverwood regional progression</li>
               <li>Briarling, Gloom Moth and Root Sentinel</li>
-              <li>Warp portals and resurrection altars</li>
               <li>Moonroot Sanctum and the Rootbound Seer</li>
-              <li>Skill builds and four-slot loadouts</li>
-              <li>Equipment rarity and stat comparison</li>
+              <li>Skill builds, equipment rarity and stat comparison</li>
             </ul>
           </article>
 
           <article class="dev-card active" data-reveal>
             <h3>→ In development</h3>
             <ul>
-              <li>Online multiplayer infrastructure</li>
+              <li>Online session polish and social systems</li>
               <li>World expansion beyond the current regions</li>
               <li>More dungeon and creature content</li>
               <li>Continued low-end performance work</li>
@@ -2607,25 +2472,17 @@
           <div class="tech">Godot<span>4.7.2</span></div>
           <div class="tech">GDScript<span>Gameplay</span></div>
           <div class="tech">ENet<span>Networking</span></div>
+          <div class="tech">DTLS<span>Encrypted sessions</span></div>
           <div class="tech">GL Compatibility<span>Renderer</span></div>
           <div class="tech">Python<span>Tooling</span></div>
-          <div class="tech">GitHub Actions<span>Validation</span></div>
           <div class="tech">Linux<span>Primary platform</span></div>
-          <div class="tech">MIT<span>License</span></div>
+          <div class="tech">Server Persistence<span>Character state</span></div>
         </div>
 
         <p class="world-note">
-          The repository also ships an editor AI Bridge, an automated asset manager and
-          a canonical validation script covering scripts, assets, unit tests, gameplay
+          The project also includes an editor AI Bridge, an automated asset manager and
+          a canonical validation suite covering scripts, assets, unit tests, gameplay
           smokes, benchmarks and real network runs.
-          <a
-            class="text-link"
-            href="https://github.com/Agutroil/Nythara/blob/main/docs/ARCHITECTURE.md"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read the architecture docs ↗
-          </a>
         </p>
       </div>
     </section>
@@ -2663,8 +2520,8 @@
         </div>
 
         <p class="world-note">
-          No GPU benchmark is claimed here. Performance evidence and measurements live
-          in the repository's sprint reports and performance notes.
+          No GPU benchmark is claimed here. The low-end profiles are part of the
+          current build, not a promise about every machine.
         </p>
       </div>
     </section>
@@ -2677,7 +2534,7 @@
           <p class="eyebrow">11 / Gallery</p>
           <h2>Real frames from<br>the current build.</h2>
           <p>
-            Every image is a runtime capture from the committed Nythara tree — no
+            Every image is a runtime capture from the current Nythara build — no
             composited characters, no mockups.
           </p>
         </div>
@@ -2734,21 +2591,16 @@
     <section class="section-small">
       <div class="wrap">
         <div class="cta" data-reveal>
-          <p class="eyebrow">Open source · Active development</p>
+          <p class="eyebrow">Online fantasy RPG · Active development</p>
           <h2>Enter the world<br>of Nythara.</h2>
           <p>
-            Follow the sprint reports, read the code, or return to the rest of
-            Agutroil's projects.
+            Explore the world, meet its creatures, or open the game database for items,
+            monsters, dungeons and regions.
           </p>
           <div class="actions">
-            <a
-              class="button primary"
-              href="https://github.com/Agutroil/Nythara"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on GitHub
-              <span class="arrow" aria-hidden="true">↗</span>
+            <a class="button primary" href="./database/">
+              Open the Database
+              <span class="arrow" aria-hidden="true">→</span>
             </a>
             <a class="button" href="#news">
               Follow Development
@@ -2768,11 +2620,11 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <strong>NYTHARA</strong>
-          <span>Built with Godot · Linux · Open Source</span>
+          <span>A 2D MMORPG in a 3D fantasy world</span>
         </div>
 
         <nav class="footer-links" aria-label="Nythara footer">
-          <a href="https://github.com/Agutroil/Nythara" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="./database/">Database</a>
           <a href="../">Agutroil</a>
           <a href="./">Home</a>
           <a href="#top">Back to top ↑</a>
@@ -2780,8 +2632,8 @@
       </div>
 
       <div class="footer-base">
-        Crafted by Agutroil · © 2026 Anton Deister · Nythara is an open-source project
-        in active development.
+        Crafted by Agutroil · © 2026 Anton Deister · Nythara is a game project in active
+        development.
       </div>
     </div>
   </footer>
@@ -2904,53 +2756,6 @@
         dialog.addEventListener("click", (event) => {
           if (event.target === dialog) dialog.close();
         });
-      }
-
-      const commitList = document.getElementById("commit-list");
-      const commitFallback = document.getElementById("commit-fallback");
-      const commitsUrl = "https://api.github.com/repos/Agutroil/Nythara/commits?per_page=3";
-
-      if (commitList && commitFallback && "fetch" in window) {
-        const controller = new AbortController();
-        const timeout = window.setTimeout(() => controller.abort(), 6000);
-
-        fetch(commitsUrl, {
-          headers: { Accept: "application/vnd.github+json" },
-          signal: controller.signal
-        })
-          .then((response) => {
-            if (!response.ok) throw new Error(`GitHub API ${response.status}`);
-            return response.json();
-          })
-          .then((commits) => {
-            if (!Array.isArray(commits) || commits.length === 0) throw new Error("No commits");
-
-            commits.slice(0, 3).forEach((commit) => {
-              const item = document.createElement("li");
-              const link = document.createElement("a");
-              link.href = commit.html_url;
-              link.target = "_blank";
-              link.rel = "noopener noreferrer";
-              link.textContent = (commit.commit?.message || "Commit").split("\n")[0];
-
-              const time = document.createElement("time");
-              const date = new Date(commit.commit?.author?.date || "");
-              time.dateTime = commit.commit?.author?.date || "";
-              time.textContent = Number.isNaN(date.getTime())
-                ? ""
-                : date.toLocaleDateString("en", { year: "numeric", month: "short", day: "numeric" });
-
-              item.append(link, time);
-              commitList.append(item);
-            });
-
-            commitList.hidden = false;
-            commitFallback.hidden = true;
-          })
-          .catch(() => {
-            commitFallback.hidden = false;
-          })
-          .finally(() => window.clearTimeout(timeout));
       }
     })();
   </script>

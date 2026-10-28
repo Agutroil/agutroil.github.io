@@ -76,7 +76,7 @@ BIOME_LABELS = {
 }
 
 CATEGORY_META = [
-    ("items", "item", "Items", "Every item defined on public main, from moss materials to the Warden Blade."),
+    ("items", "item", "Items", "Every item in the current game build, from moss materials to the Warden Blade."),
     ("equipment", "equipment", "Equipment", "Wearable gear with slots, stats and visual support."),
     ("monsters", "monster", "Monsters", "Creatures with authored stats, territories and loot."),
     ("bosses", "boss", "Bosses", "The authored multi-phase encounters beneath the forest."),
@@ -2057,7 +2057,6 @@ def export() -> None:
         "title": "Nythara Database",
         "source_commit": source_commit,
         "source_short_commit": source_short,
-        "source_ref": SOURCE_REF if SOURCE_REF not in ("", "HEAD", "WORKTREE") else git(SOURCE_REPO, "rev-parse", "--abbrev-ref", "HEAD"),
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "generator": "tools/export_nythara_database.py",
         "counts": counts,
@@ -2082,7 +2081,7 @@ def export() -> None:
         payload = {"count": len(entries), "entries": entries}
         (OUTPUT / f"{key}.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    print(f"source: {source_short} ({metadata['source_ref']})")
+    print(f"source: {source_short}")
     print(f"output: {OUTPUT}")
     for key, entries in categories.items():
         print(f"  {key:10} {len(entries):3}")

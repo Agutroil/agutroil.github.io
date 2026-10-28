@@ -1,9 +1,9 @@
 # Nythara database
 
 The page at <https://agutroil.github.io/Nythara/database/> is a static snapshot of
-the public Nythara game repository. Nothing is queried at runtime: the exporter
-reads the game definitions once, writes JSON, and the page loads that JSON with
-plain JavaScript on GitHub Pages.
+Nythara's game content. Nothing is queried at runtime: the exporter reads the
+game definitions once, writes JSON, and the page loads that JSON with plain
+JavaScript.
 
 ## Regenerate
 
@@ -15,26 +15,25 @@ python3 tools/export_nythara_database.py \
   --output Nythara/database/data
 ```
 
-`--nythara-repo` and `--output` are ordinary paths, so the checkout can live
-anywhere. Python 3.12+ with the standard library is enough; there is nothing to
-install.
+`--nythara-repo` and `--output` are ordinary paths, so the game checkout can
+live anywhere. Python 3.12+ with the standard library is enough; there is
+nothing to install.
 
-The exporter is read-only with respect to the game repository. By default it
-exports the committed `main` ref (`--source-ref main`) through `git archive`,
-which opens it in a temporary directory. That means:
+The exporter is read-only with respect to the game checkout. By default it
+exports a committed revision through `git archive`, which opens it in a
+temporary directory. That means:
 
-- unmerged work in other branches never leaks into the published snapshot;
-- the recorded `source_commit` in `metadata.json` is a real, public commit;
+- uncommitted work never leaks into the published snapshot;
+- the recorded `source_commit` in `metadata.json` is a real revision;
 - the working tree of the game checkout is never touched.
 
-Use `--source-ref HEAD` only for a local preview of unpublished work. Do not
-commit data exported that way: the recorded SHA would not exist publicly.
+Use `--source-ref HEAD` only for a local preview of uncommitted work.
 
 ## Output
 
 | File | Contents |
 | --- | --- |
-| `metadata.json` | Source commit, generation timestamp, category counts, warnings |
+| `metadata.json` | Game data revision, generation timestamp, category counts, warnings |
 | `items.json` | Items with rarity, stats, slot, sources and loot links |
 | `equipment.json` | Wearable subset with slot, stats and visual support |
 | `monsters.json` | Creatures with stats, archetype, region and loot table |
@@ -49,7 +48,8 @@ commit data exported that way: the recorded SHA would not exist publicly.
 | `loot.json` | Loot tables with entries and chances |
 
 Entries are sorted by stable ID and every list is ordered deterministically, so
-the same game commit produces byte-identical JSON apart from `generated_at`.
+the same game data revision produces byte-identical JSON apart from
+`generated_at`.
 
 ## Validation
 
@@ -70,10 +70,10 @@ Images are curated, not mirrored. `Nythara/database/assets/` contains only the
 icons and creature previews used by the catalogue plus the site screenshots that
 already live in `Nythara/assets/`. When new content needs artwork, add the
 individual file and register its path in the exporter's image map; do not copy
-the whole game asset tree into this repository.
+the whole game asset tree into this checkout.
 
 ## Deploy
 
 Commit the regenerated `Nythara/database/data/*.json` together with any asset
-changes and push to `main`. GitHub Pages serves the directory as-is; the source
-commit shown on the page comes from `metadata.json`.
+changes and push the website. The static host serves the directory as-is; the
+game data revision shown on the page comes from `metadata.json`.
