@@ -535,11 +535,11 @@
           </p>
         </article>
         <article class="note-card">
-          <span>Scope</span>
-          <h3>Public main only</h3>
+          <span>Scope</span>          <h3>Public main only</h3>
           <p>
-            Unmerged development branches, including in-progress online work, are
-            not represented in this codex.
+            Generated from the public main branch. Unmerged branches never reach this
+            codex, and gameplay systems outside the content definitions are not
+            catalogued here.
           </p>
         </article>
       </div>`;
