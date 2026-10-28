@@ -719,7 +719,8 @@
 
   function searchScore(entry, query, tokens) {
     if (!tokens.every((token) => entry.__search.includes(token))) return 0;
-    let score = 0;
+    // A match anywhere in the indexed text still counts; name hits rank higher.
+    let score = 10;
     if (entry.__name === query) score += 200;
     else if (entry.__name.startsWith(query)) score += 120;
     else if (entry.__name.includes(query)) score += 80;
