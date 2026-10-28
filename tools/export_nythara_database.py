@@ -81,7 +81,7 @@ CATEGORY_META = [
     ("monsters", "monster", "Monsters", "Creatures with authored stats, territories and loot."),
     ("bosses", "boss", "Bosses", "The authored multi-phase encounters beneath the forest."),
     ("dungeons", "dungeon", "Dungeons", "Authored cooperative dungeons with rooms, bosses and first clears."),
-    ("regions", "region", "Fields & Regions", "WorldGraph regions and the authored places inside them."),
+    ("regions", "region", "Fields & Regions", "Regions, landmarks and the paths that connect them."),
     ("cities", "city", "Cities & Settlements", "Settlements, districts and their world connections."),
     ("npcs", "npc", "NPCs", "Quest givers, vendors and healers."),
     ("quests", "quest", "Quests", "Objectives, rewards, turn-ins and prerequisites."),
@@ -1552,7 +1552,7 @@ def export() -> None:
         add_fact(facts, "Biome", BIOME_LABELS.get(biome, biome))
         if level_range:
             add_fact(facts, "Levels", fmt_range(level_range[0], level_range[1]))
-        add_fact(facts, "World type", "Authored region" if authored_scene else "WorldGraph map")
+        add_fact(facts, "World type", "Playable region" if authored_scene else "World map")
         if region.get("map_id"):
             add_fact(facts, "Map ID", region["map_id"])
 
@@ -1606,9 +1606,9 @@ def export() -> None:
             image, image_alt = SITE_IMAGES[slug]
         display_name = region.get("display_name") or world_names[region_id]
         description = world.get("description", "")
-        # Silverwood's world-definition description is stale generator metadata;
-        # the Sprint 22 scene is authored. Do not publish that contradiction.
-        if authored_scene and re.search(r"generated from WorldGraph", description, re.IGNORECASE):
+        # World-definition descriptions that merely describe the generator are not
+        # player-facing prose. Keep the authored facts and leave the field empty.
+        if re.search(r"generated from WorldGraph", description, re.IGNORECASE):
             description = ""
         subtitle_parts = []
         if biome:
@@ -1616,7 +1616,7 @@ def export() -> None:
         if level_range:
             subtitle_parts.append(f"Levels {fmt_range(level_range[0], level_range[1])}")
         if not subtitle_parts:
-            subtitle_parts.append("Authored region" if authored_scene else "WorldGraph map")
+            subtitle_parts.append("Playable region" if authored_scene else "World map")
         entry = make_entry(
             entry_id=region_record_id(region_id),
             kind="region",
@@ -1627,13 +1627,13 @@ def export() -> None:
             image_alt=image_alt,
             badges=[
                 {"label": "Region", "tone": "forest"},
-                {"label": "Authored" if authored_scene else "WorldGraph map", "tone": "muted"},
+                {"label": "Playable" if authored_scene else "World map", "tone": "muted"},
             ],
             facts=facts,
             sections=sections,
             filters={
                 **(({"biome": BIOME_LABELS.get(biome, biome)}) if biome else {}),
-                "type": "Authored region" if authored_scene else "WorldGraph map",
+                "type": "Playable region" if authored_scene else "World map",
                 "realm": "Mortal",
             },
             level=level_range[0] if level_range else None,

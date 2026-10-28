@@ -329,8 +329,7 @@
         <p class="eyebrow">Database unavailable</p>
         <h2>The Nythara database could not be loaded.</h2>
         <p>
-          The generated game data could not be read. This is a static snapshot, so
-          a missing or blocked JSON file is enough to stop the catalogue.
+          The game database could not be loaded. Please try again in a moment.
         </p>
         <div class="button-row">
           <button class="button" type="button" data-retry>Try again</button>
@@ -494,8 +493,8 @@
           <h2 tabindex="-1">Every real entry, one place.</h2>
           <p>
             Search the full catalogue or step through items, creatures, dungeons,
-            regions and the systems that connect them. Every count below is read
-            from the generated game data, not typed by hand.
+            regions and the systems that connect them. Every count and connection
+            below comes from the game's current content.
           </p>
         </div>
         <span class="home-total"><strong>${state.total}</strong> primary entries</span>
@@ -517,33 +516,33 @@
 
       <div class="codex-notes">
         <article class="note-card">
-          <span>Source of truth</span>
-          <h3>Read from Nythara</h3>
+          <span>World codex</span>
+          <h3>Built from the game</h3>
           <p>
-            Parsed from the authored Godot resources and WorldGraph at game data
-            revision <span class="mono">${escapeHtml(meta.source_short_commit)}</span>.
+            Every entry reflects Nythara's current content at game data revision
+            <span class="mono">${escapeHtml(meta.source_short_commit)}</span>.
           </p>
         </article>
         <article class="note-card">
-          <span>Static by design</span>
-          <h3>No live backend</h3>
+          <span>Public reference</span>
+          <h3>Open to every adventurer</h3>
           <p>
-            This site serves a generated snapshot. Item stats, encounters and loot
-            are never fetched from a game server here.
+            Browse the full catalogue without an account. Items, creatures, regions
+            and quests are available directly in the browser.
           </p>
         </article>
         <article class="note-card">
           <span>Scope</span>
-          <h3>Content catalogue</h3>
+          <h3>Current content</h3>
           <p>
-            Generated from the game's content definitions. Work in progress and
-            gameplay systems outside those definitions are not catalogued here.
+            The catalogue covers the content in the current alpha. Systems still in
+            development are not listed here.
           </p>
         </article>
       </div>`;
 
     setStatus(
-      `<strong>${state.total}</strong> entries across <strong>${meta.categories.length}</strong> categories · search by name, stable ID, region or item`
+      `<strong>${state.total}</strong> entries across <strong>${meta.categories.length}</strong> categories · search by name, region, dungeon or item`
     );
   }
 
@@ -813,7 +812,7 @@
   function renderDetail() {
     const entry = getEntry(state.route.type, state.route.id);
     if (!entry) {
-      renderNotFound("That entry does not exist in the generated codex.");
+      renderNotFound("That entry does not exist in the game database.");
       return;
     }
     const category = state.route.category;
@@ -866,9 +865,9 @@
               source.source_short_commit
             )} · ${escapeHtml(
               TYPE_LABEL[entry.type] || entry.type
-            )} <code>${escapeHtml(entry.id)}</code> · generated ${escapeHtml(
+            )} <code>${escapeHtml(entry.id)}</code> · updated ${escapeHtml(
               formatDate(source.generated_at)
-            )}. Static snapshot, not a live server feed.
+            )}. Public content catalogue.
           </p>
         </article>
       </div>`;
@@ -886,10 +885,10 @@
       <div class="message-panel">
         <p class="eyebrow">Not in the codex</p>
         <h2>This page is not part of the Nythara Database.</h2>
-        <p>${escapeHtml(message || "The address does not match one of the generated entries.")}</p>
+        <p>${escapeHtml(message || "The address does not match a database entry.")}</p>
         <div class="button-row">
           <a class="button" href="#">Back to the database</a>
-          <a class="button button--ghost" href="../">Nythara project page</a>
+          <a class="button button--ghost" href="../">Nythara game page</a>
         </div>
       </div>`;
     setStatus("Entry not found.");

@@ -12,7 +12,7 @@
           "tone": "forest"
         },
         {
-          "label": "WorldGraph map",
+          "label": "World map",
           "tone": "muted"
         }
       ],
@@ -35,7 +35,7 @@
         },
         {
           "label": "World type",
-          "value": "WorldGraph map"
+          "value": "World map"
         },
         {
           "label": "Map ID",
@@ -63,7 +63,7 @@
       ],
       "filters": {
         "biome": "Ash",
-        "type": "WorldGraph map",
+        "type": "World map",
         "realm": "Mortal"
       },
       "sort": {
@@ -71,8 +71,7 @@
         "level": 30,
         "rarity": 0,
         "category": "region"
-      },
-      "description": "ash region map generated from WorldGraph."
+      }
     },
     {
       "id": "world_astral_frontier",
@@ -85,7 +84,7 @@
           "tone": "forest"
         },
         {
-          "label": "WorldGraph map",
+          "label": "World map",
           "tone": "muted"
         }
       ],
@@ -108,7 +107,7 @@
         },
         {
           "label": "World type",
-          "value": "WorldGraph map"
+          "value": "World map"
         },
         {
           "label": "Map ID",
@@ -130,7 +129,7 @@
       ],
       "filters": {
         "biome": "Astral",
-        "type": "WorldGraph map",
+        "type": "World map",
         "realm": "Mortal"
       },
       "sort": {
@@ -138,8 +137,7 @@
         "level": 40,
         "rarity": 0,
         "category": "region"
-      },
-      "description": "astral region map generated from WorldGraph."
+      }
     },
     {
       "id": "world_azure_coast",
@@ -152,7 +150,7 @@
           "tone": "forest"
         },
         {
-          "label": "WorldGraph map",
+          "label": "World map",
           "tone": "muted"
         }
       ],
@@ -175,7 +173,7 @@
         },
         {
           "label": "World type",
-          "value": "WorldGraph map"
+          "value": "World map"
         },
         {
           "label": "Map ID",
@@ -197,7 +195,7 @@
       ],
       "filters": {
         "biome": "Coast",
-        "type": "WorldGraph map",
+        "type": "World map",
         "realm": "Mortal"
       },
       "sort": {
@@ -205,8 +203,7 @@
         "level": 10,
         "rarity": 0,
         "category": "region"
-      },
-      "description": "coast region map generated from WorldGraph."
+      }
     },
     {
       "id": "region_dawnlands",
@@ -219,7 +216,7 @@
           "tone": "forest"
         },
         {
-          "label": "Authored",
+          "label": "Playable",
           "tone": "muted"
         }
       ],
@@ -242,7 +239,7 @@
         },
         {
           "label": "World type",
-          "value": "Authored region"
+          "value": "Playable region"
         },
         {
           "label": "Map ID",
@@ -280,7 +277,7 @@
       ],
       "filters": {
         "biome": "Plains",
-        "type": "Authored region",
+        "type": "Playable region",
         "realm": "Mortal"
       },
       "sort": {
@@ -301,7 +298,7 @@
           "tone": "forest"
         },
         {
-          "label": "WorldGraph map",
+          "label": "World map",
           "tone": "muted"
         }
       ],
@@ -324,7 +321,7 @@
         },
         {
           "label": "World type",
-          "value": "WorldGraph map"
+          "value": "World map"
         },
         {
           "label": "Map ID",
@@ -346,7 +343,7 @@
       ],
       "filters": {
         "biome": "Tundra",
-        "type": "WorldGraph map",
+        "type": "World map",
         "realm": "Mortal"
       },
       "sort": {
@@ -354,8 +351,7 @@
         "level": 24,
         "rarity": 0,
         "category": "region"
-      },
-      "description": "tundra region map generated from WorldGraph."
+      }
     },
     {
       "id": "world_iron_highlands",
@@ -368,7 +364,7 @@
           "tone": "forest"
         },
         {
-          "label": "WorldGraph map",
+          "label": "World map",
           "tone": "muted"
         }
       ],
@@ -391,7 +387,7 @@
         },
         {
           "label": "World type",
-          "value": "WorldGraph map"
+          "value": "World map"
         },
         {
           "label": "Map ID",
@@ -419,7 +415,7 @@
       ],
       "filters": {
         "biome": "Mountain",
-        "type": "WorldGraph map",
+        "type": "World map",
         "realm": "Mortal"
       },
       "sort": {
@@ -427,8 +423,7 @@
         "level": 14,
         "rarity": 0,
         "category": "region"
-      },
-      "description": "mountain region map generated from WorldGraph."
+      }
     },
     {
       "id": "world_mirelands",
@@ -441,7 +436,7 @@
           "tone": "forest"
         },
         {
-          "label": "WorldGraph map",
+          "label": "World map",
           "tone": "muted"
         }
       ],
@@ -464,7 +459,7 @@
         },
         {
           "label": "World type",
-          "value": "WorldGraph map"
+          "value": "World map"
         },
         {
           "label": "Map ID",
@@ -492,7 +487,7 @@
       ],
       "filters": {
         "biome": "Swamp",
-        "type": "WorldGraph map",
+        "type": "World map",
         "realm": "Mortal"
       },
       "sort": {
@@ -500,21 +495,20 @@
         "level": 12,
         "rarity": 0,
         "category": "region"
-      },
-      "description": "swamp region map generated from WorldGraph."
+      }
     },
     {
       "id": "world_prototype_valley",
       "type": "region",
       "name": "Prototype Valley",
-      "subtitle": "Authored region",
+      "subtitle": "Playable region",
       "badges": [
         {
           "label": "Region",
           "tone": "forest"
         },
         {
-          "label": "Authored",
+          "label": "Playable",
           "tone": "muted"
         }
       ],
@@ -525,7 +519,7 @@
         },
         {
           "label": "World type",
-          "value": "Authored region"
+          "value": "Playable region"
         }
       ],
       "sections": [
@@ -584,7 +578,7 @@
         }
       ],
       "filters": {
-        "type": "Authored region",
+        "type": "Playable region",
         "realm": "Mortal"
       },
       "sort": {
@@ -608,7 +602,7 @@
           "tone": "forest"
         },
         {
-          "label": "Authored",
+          "label": "Playable",
           "tone": "muted"
         }
       ],
@@ -631,7 +625,7 @@
         },
         {
           "label": "World type",
-          "value": "Authored region"
+          "value": "Playable region"
         },
         {
           "label": "Map ID",
@@ -735,7 +729,7 @@
       ],
       "filters": {
         "biome": "Forest",
-        "type": "Authored region",
+        "type": "Playable region",
         "realm": "Mortal"
       },
       "sort": {
@@ -758,7 +752,7 @@
           "tone": "forest"
         },
         {
-          "label": "Authored",
+          "label": "Playable",
           "tone": "muted"
         }
       ],
@@ -781,7 +775,7 @@
         },
         {
           "label": "World type",
-          "value": "Authored region"
+          "value": "Playable region"
         },
         {
           "label": "Map ID",
@@ -877,7 +871,7 @@
       ],
       "filters": {
         "biome": "Forest",
-        "type": "Authored region",
+        "type": "Playable region",
         "realm": "Mortal"
       },
       "sort": {

@@ -2,7 +2,7 @@
   "title": "Nythara Database",
   "source_commit": "1f81be367153cc068bca7403809a3bfb6a2187f8",
   "source_short_commit": "1f81be3",
-  "generated_at": "2026-10-28T20:23:50Z",
+  "generated_at": "2026-10-28T20:58:33Z",
   "generator": "tools/export_nythara_database.py",
   "counts": {
     "items": 17,
@@ -59,7 +59,7 @@
       "key": "regions",
       "type": "region",
       "label": "Fields & Regions",
-      "description": "WorldGraph regions and the authored places inside them.",
+      "description": "Regions, landmarks and the paths that connect them.",
       "count": 10
     },
     {
