@@ -124,6 +124,7 @@
     body {
       margin: 0;
       min-width: 320px;
+      isolation: isolate;
       overflow-x: hidden;
       color: var(--text);
       background: var(--bg);
@@ -191,17 +192,15 @@
 
     .site-background {
       z-index: -4;
-      background:
-        radial-gradient(circle at 16% 8%, rgba(52, 132, 104, 0.20), transparent 36%),
-        radial-gradient(circle at 86% 2%, rgba(80, 104, 196, 0.18), transparent 34%),
-        radial-gradient(circle at 50% 100%, rgba(104, 78, 150, 0.12), transparent 46%),
-        linear-gradient(180deg, #060b14 0%, #060810 52%, #04070d 100%);
+      background: #060810 url("./assets/nythara-background.webp") center top / cover no-repeat;
     }
 
     .site-veil {
       z-index: -3;
       background:
-        linear-gradient(180deg, rgba(4, 7, 13, 0.05) 0%, rgba(4, 7, 13, 0.35) 46%, rgba(4, 7, 13, 0.72) 100%);
+        radial-gradient(circle at 16% 8%, rgba(52, 132, 104, 0.10), transparent 36%),
+        radial-gradient(circle at 86% 2%, rgba(80, 104, 196, 0.10), transparent 34%),
+        linear-gradient(180deg, rgba(4, 7, 13, 0.60), rgba(4, 7, 13, 0.82));
     }
 
     .site-grid {

@@ -52,11 +52,9 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  isolation: isolate;
   color: var(--text);
-  background:
-    radial-gradient(ellipse 70% 40% at 18% -8%, rgba(47, 125, 91, 0.22), transparent 68%),
-    radial-gradient(ellipse 60% 40% at 88% 2%, rgba(60, 92, 170, 0.18), transparent 70%),
-    linear-gradient(180deg, #070b14 0%, var(--bg) 42%, var(--bg-deep) 100%);
+  background: var(--bg);
   font-family: var(--sans);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -69,12 +67,15 @@ body::before {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.38;
   background-image:
-    linear-gradient(rgba(120, 221, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(120, 221, 255, 0.035) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: linear-gradient(180deg, #000 0%, transparent 70%);
+    linear-gradient(rgba(120, 221, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 221, 255, 0.012) 1px, transparent 1px),
+    radial-gradient(ellipse at 88% 2%, rgba(60, 92, 170, 0.08), transparent 70%),
+    linear-gradient(180deg, rgba(3, 6, 12, 0.78), rgba(3, 6, 12, 0.90)),
+    url("../assets/nythara-background.webp");
+  background-size: 64px 64px, 64px 64px, cover, cover, cover;
+  background-position: center top;
+  background-repeat: repeat, repeat, no-repeat, no-repeat, no-repeat;
 }
 
 [hidden] {
