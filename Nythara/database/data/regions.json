@@ -71,7 +71,19 @@
         "level": 30,
         "rarity": 0,
         "category": "region"
-      }
+      },
+      "image": "../assets/nythara-background.webp",
+      "image_kind": "scene",
+      "image_alt": "Dark cliffs and ruined arches representing the Ashen Wastes",
+      "image_note": "World artwork",
+      "image_crop": [
+        150,
+        280,
+        640,
+        360,
+        1672,
+        941
+      ]
     },
     {
       "id": "world_astral_frontier",
@@ -137,7 +149,19 @@
         "level": 40,
         "rarity": 0,
         "category": "region"
-      }
+      },
+      "image": "../assets/nythara-background.webp",
+      "image_kind": "scene",
+      "image_alt": "Moonlit sky and arcane light representing the Astral Frontier",
+      "image_note": "World artwork",
+      "image_crop": [
+        800,
+        30,
+        640,
+        360,
+        1672,
+        941
+      ]
     },
     {
       "id": "world_azure_coast",
@@ -203,7 +227,19 @@
         "level": 10,
         "rarity": 0,
         "category": "region"
-      }
+      },
+      "image": "../assets/nythara-background.webp",
+      "image_kind": "scene",
+      "image_alt": "Blue water and distant shore artwork representing the Azure Coast",
+      "image_note": "World artwork",
+      "image_crop": [
+        750,
+        480,
+        640,
+        360,
+        1672,
+        941
+      ]
     },
     {
       "id": "region_dawnlands",
@@ -285,7 +321,19 @@
         "level": 1,
         "rarity": 0,
         "category": "region"
-      }
+      },
+      "image": "../assets/nythara-banner.jpg",
+      "image_kind": "scene",
+      "image_alt": "Open green valley artwork representing the Dawnlands",
+      "image_note": "World artwork",
+      "image_crop": [
+        550,
+        230,
+        528,
+        297,
+        1600,
+        533
+      ]
     },
     {
       "id": "world_frostreach",
@@ -351,7 +399,19 @@
         "level": 24,
         "rarity": 0,
         "category": "region"
-      }
+      },
+      "image": "../assets/nythara-background.webp",
+      "image_kind": "scene",
+      "image_alt": "Cold blue mountain artwork representing Frostreach",
+      "image_note": "World artwork",
+      "image_crop": [
+        1150,
+        195,
+        480,
+        270,
+        1672,
+        941
+      ]
     },
     {
       "id": "world_iron_highlands",
@@ -423,7 +483,19 @@
         "level": 14,
         "rarity": 0,
         "category": "region"
-      }
+      },
+      "image": "../assets/nythara-background.webp",
+      "image_kind": "scene",
+      "image_alt": "Rocky mountain artwork representing the Iron Highlands",
+      "image_note": "World artwork",
+      "image_crop": [
+        140,
+        220,
+        640,
+        360,
+        1672,
+        941
+      ]
     },
     {
       "id": "world_mirelands",
@@ -495,7 +567,19 @@
         "level": 12,
         "rarity": 0,
         "category": "region"
-      }
+      },
+      "image": "../assets/nythara-background.webp",
+      "image_kind": "scene",
+      "image_alt": "Misty forest and water artwork representing the Mirelands",
+      "image_note": "World artwork",
+      "image_crop": [
+        260,
+        480,
+        640,
+        360,
+        1672,
+        941
+      ]
     },
     {
       "id": "world_prototype_valley",
@@ -588,8 +672,18 @@
         "category": "region"
       },
       "description": "The first safe clearing, the Ancient Crystal and the old path into Whispering Grove.",
-      "image": "../assets/world-hero.jpg",
-      "image_alt": "The old stone arch and a Mossling in the valley"
+      "image": "../assets/nythara-banner.jpg",
+      "image_kind": "scene",
+      "image_alt": "Nythara valley artwork representing Prototype Valley",
+      "image_note": "World artwork",
+      "image_crop": [
+        560,
+        225,
+        528,
+        297,
+        1600,
+        533
+      ]
     },
     {
       "id": "world_silverwood",
@@ -738,8 +832,9 @@
         "rarity": 0,
         "category": "region"
       },
-      "image": "../assets/coop-silverwood.jpg",
-      "image_alt": "Two adventurers on the Silverwood forest trail"
+      "image": "../assets/world-hero.jpg",
+      "image_kind": "scene",
+      "image_alt": "Silverwood's forest trail and ancient stone arch"
     },
     {
       "id": "world_whispering_grove",
@@ -882,7 +977,16 @@
       },
       "description": "An older listening place beyond the valley gate, where the Mosslings have grown restless.",
       "image": "../assets/whispering-grove.jpg",
-      "image_alt": "Rowan and Mosslings in the Whispering Grove"
+      "image_kind": "scene",
+      "image_alt": "The trees, rocks and creatures of Whispering Grove",
+      "image_crop": [
+        330,
+        35,
+        880,
+        495,
+        1280,
+        720
+      ]
     }
   ]
 }

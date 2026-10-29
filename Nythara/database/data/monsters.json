@@ -133,7 +133,8 @@
         "category": "melee"
       },
       "image": "assets/creatures/briarling.png",
-      "image_alt": "Briarling idle sprite"
+      "image_kind": "sprite",
+      "image_alt": "Briarling sprite"
     },
     {
       "id": "enemy_gloom_moth",
@@ -271,7 +272,8 @@
         "category": "ranged"
       },
       "image": "assets/creatures/gloom_moth.png",
-      "image_alt": "Gloom Moth idle sprite"
+      "image_kind": "sprite",
+      "image_alt": "Gloom Moth sprite"
     },
     {
       "id": "mossling",
@@ -514,7 +516,10 @@
         "level": 1,
         "rarity": 0,
         "category": "melee"
-      }
+      },
+      "image": "assets/creatures/mossling.png",
+      "image_kind": "sprite",
+      "image_alt": "Mossling sprite"
     },
     {
       "id": "enemy_root_sentinel",
@@ -654,7 +659,8 @@
         "category": "heavy"
       },
       "image": "assets/creatures/root_sentinel.png",
-      "image_alt": "Root Sentinel idle sprite"
+      "image_kind": "sprite",
+      "image_alt": "Root Sentinel sprite"
     },
     {
       "id": "enemy_stoneback",
@@ -831,7 +837,11 @@
         "level": 3,
         "rarity": 0,
         "category": "heavy"
-      }
+      },
+      "image": "assets/creatures/stoneback-portrait.webp",
+      "image_kind": "portrait",
+      "image_alt": "Stoneback sprite portrait derived from its in-game appearance",
+      "image_note": "Sprite portrait"
     },
     {
       "id": "enemy_hollow_warden",
@@ -1030,8 +1040,10 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "../assets/hollow-warden.jpg",
-      "image_alt": "The Hollow Warden in its arena beneath the ruins"
+      "image": "assets/creatures/hollow-warden-portrait.webp",
+      "image_kind": "portrait",
+      "image_alt": "The Hollow Warden sprite portrait derived from its in-game appearance",
+      "image_note": "Sprite portrait"
     },
     {
       "id": "enemy_rootbound_seer",
@@ -1208,8 +1220,10 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "../assets/rootbound-seer.jpg",
-      "image_alt": "The Rootbound Seer in the Moonroot Sanctum"
+      "image": "assets/creatures/rootbound-seer-portrait.webp",
+      "image_kind": "portrait",
+      "image_alt": "The Rootbound Seer sprite portrait derived from its in-game appearance",
+      "image_note": "Sprite portrait"
     },
     {
       "id": "enemy_thornspitter",
@@ -1392,7 +1406,11 @@
         "level": 2,
         "rarity": 0,
         "category": "ranged"
-      }
+      },
+      "image": "assets/creatures/thornspitter-portrait.webp",
+      "image_kind": "portrait",
+      "image_alt": "Illustrated Thornspitter preview in Nythara's forest creature style",
+      "image_note": "Illustrated preview"
     }
   ]
 }

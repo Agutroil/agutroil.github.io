@@ -75,7 +75,19 @@
         "level": 1,
         "rarity": 0,
         "category": "city"
-      }
+      },
+      "image": "../assets/nythara-background.webp",
+      "image_kind": "scene",
+      "image_alt": "Fantasy citadel artwork representing Dawnwatch",
+      "image_note": "World artwork",
+      "image_crop": [
+        790,
+        270,
+        640,
+        360,
+        1672,
+        941
+      ]
     }
   ]
 }

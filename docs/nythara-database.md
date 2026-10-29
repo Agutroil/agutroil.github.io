@@ -58,18 +58,24 @@ display name, or a path that is not a Nythara checkout. Those are reported as
 errors and exit non-zero.
 
 Relationship problems are reported but do not abort the export: a cross-link
-that does not resolve to a generated entry, or an image path missing under
-`Nythara/database/`, is printed to stderr as a warning and stored in
+that does not resolve to a generated entry is printed to stderr as a warning
+and stored in
 `metadata.json` under `warnings`. Publishing with a non-empty `warnings` array
 is a bug. The current snapshot exports with zero warnings and zero errors, and
 that is the state to check after every regeneration.
 
 ## Assets
 
+Every entry requires a local preview and alt text. The exporter applies the
+shared policy in `tools/nythara_previews.py` and blocks on missing assets,
+unmapped categories, invalid crops or scene images used for characters.
+The website-only preview refresh, provenance and generation prompts are documented
+in [Nythara database previews](nythara-database-previews.md).
+
 Images are curated, not mirrored. `Nythara/database/assets/` contains only the
 icons and creature previews used by the catalogue plus the site screenshots that
 already live in `Nythara/assets/`. When new content needs artwork, add the
-individual file and register its path in the exporter's image map; do not copy
+individual file and register its path in the shared preview map; do not copy
 the whole game asset tree into this checkout.
 
 ## Deploy

@@ -215,8 +215,10 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "../assets/hollow-warden.jpg",
-      "image_alt": "The Hollow Warden in its arena beneath the ruins"
+      "image": "assets/creatures/hollow-warden-portrait.webp",
+      "image_kind": "portrait",
+      "image_alt": "The Hollow Warden sprite portrait derived from its in-game appearance",
+      "image_note": "Sprite portrait"
     },
     {
       "id": "enemy_rootbound_seer",
@@ -410,8 +412,10 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "../assets/rootbound-seer.jpg",
-      "image_alt": "The Rootbound Seer in the Moonroot Sanctum"
+      "image": "assets/creatures/rootbound-seer-portrait.webp",
+      "image_kind": "portrait",
+      "image_alt": "The Rootbound Seer sprite portrait derived from its in-game appearance",
+      "image_note": "Sprite portrait"
     }
   ]
 }

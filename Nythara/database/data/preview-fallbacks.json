@@ -1,0 +1,96 @@
+{
+  "item": {
+    "image": "assets/icons/treasure.svg",
+    "image_kind": "icon",
+    "image_alt": "Item treasure emblem",
+    "image_note": "Item emblem"
+  },
+  "equipment": {
+    "image": "assets/icons/armor.svg",
+    "image_kind": "icon",
+    "image_alt": "Equipment armor emblem",
+    "image_note": "Equipment emblem"
+  },
+  "monster": {
+    "image": "assets/creatures/mossling.png",
+    "image_kind": "sprite",
+    "image_alt": "Representative Nythara forest creature sprite",
+    "image_note": "Creature portrait"
+  },
+  "boss": {
+    "image": "assets/creatures/rootbound-seer-portrait.webp",
+    "image_kind": "portrait",
+    "image_alt": "Representative Nythara guardian portrait",
+    "image_note": "Guardian portrait"
+  },
+  "dungeon": {
+    "image": "../assets/hollow-warden.jpg",
+    "image_kind": "scene",
+    "image_alt": "Representative dungeon arena view",
+    "image_crop": [
+      425,
+      180,
+      640,
+      360,
+      1280,
+      720
+    ],
+    "image_note": "Dungeon scenery"
+  },
+  "region": {
+    "image": "../assets/nythara-banner.jpg",
+    "image_kind": "scene",
+    "image_alt": "Representative Nythara landscape artwork",
+    "image_note": "World artwork",
+    "image_crop": [
+      550,
+      230,
+      528,
+      297,
+      1600,
+      533
+    ]
+  },
+  "city": {
+    "image": "../assets/nythara-background.webp",
+    "image_kind": "scene",
+    "image_alt": "Representative Nythara settlement artwork",
+    "image_note": "World artwork",
+    "image_crop": [
+      790,
+      270,
+      640,
+      360,
+      1672,
+      941
+    ]
+  },
+  "npc": {
+    "image": "assets/npcs/elara-portrait.webp",
+    "image_kind": "portrait",
+    "image_alt": "Representative Nythara quest giver portrait",
+    "image_note": "Role portrait"
+  },
+  "quest": {
+    "image": "assets/icons/quest.svg",
+    "image_kind": "icon",
+    "image_alt": "Quest parchment icon"
+  },
+  "skill": {
+    "image": "assets/icons/weapon.svg",
+    "image_kind": "icon",
+    "image_alt": "Combat skill emblem",
+    "image_note": "Skill emblem"
+  },
+  "resource": {
+    "image": "assets/icons/herb.svg",
+    "image_kind": "icon",
+    "image_alt": "Gatherable plant resource emblem",
+    "image_note": "Resource emblem"
+  },
+  "loot": {
+    "image": "assets/icons/treasure.svg",
+    "image_kind": "icon",
+    "image_alt": "Loot chest icon"
+  }
+}

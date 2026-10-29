@@ -91,6 +91,7 @@
       },
       "description": "A balanced blade forged from raw iron and bound with a moss core. It hums faintly when the grove is restless.",
       "image": "assets/icons/weapon.svg",
+      "image_kind": "icon",
       "image_alt": "Grove Blade inventory icon"
     },
     {
@@ -155,6 +156,7 @@
       },
       "description": "A cold stone seal from the Hollow Warden. Its edge still remembers the ruin's old oath.",
       "image": "assets/icons/monster_drop.svg",
+      "image_kind": "icon",
       "image_alt": "Hollow Sigil inventory icon"
     },
     {
@@ -232,6 +234,7 @@
       },
       "description": "A cold sigil strung on a worn cord. It offers a little endurance, not a little comfort.",
       "image": "assets/icons/amulet.svg",
+      "image_kind": "icon",
       "image_alt": "Hollow Sigil Charm inventory icon"
     },
     {
@@ -313,6 +316,7 @@
       },
       "description": "Plates of tarnished ruin-iron bound over layered cloth. Heavy, but it turns aside more than moss ever could.",
       "image": "assets/icons/armor.svg",
+      "image_kind": "icon",
       "image_alt": "Hollowguard Vest inventory icon"
     },
     {
@@ -394,6 +398,7 @@
       },
       "description": "An old iron blade drawn from beneath Silverwood. Its edge is steady, not hungry.",
       "image": "assets/icons/weapon.svg",
+      "image_kind": "icon",
       "image_alt": "Moonroot Edge inventory icon"
     },
     {
@@ -458,6 +463,7 @@
       },
       "description": "A pale fragment left where the Rootbound Seer fell.",
       "image": "assets/icons/monster_drop.svg",
+      "image_kind": "icon",
       "image_alt": "Moonroot Shard inventory icon"
     },
     {
@@ -563,6 +569,7 @@
       },
       "description": "A dense green core that still hums with valley growth.",
       "image": "assets/icons/monster_drop.svg",
+      "image_kind": "icon",
       "image_alt": "Moss Core inventory icon"
     },
     {
@@ -652,6 +659,7 @@
       },
       "description": "A soft, faintly luminous fiber combed from valley moss.",
       "image": "assets/icons/herb.svg",
+      "image_kind": "icon",
       "image_alt": "Moss Fiber inventory icon"
     },
     {
@@ -748,6 +756,7 @@
       },
       "description": "Moss fiber woven through an iron frame. Light, quiet, and warmer than it looks.",
       "image": "assets/icons/armor.svg",
+      "image_kind": "icon",
       "image_alt": "Mosswoven Vest inventory icon"
     },
     {
@@ -842,6 +851,7 @@
       },
       "description": "A rough iron nodule chipped from a valley vein. It still holds the cold of the stone.",
       "image": "assets/icons/ore.svg",
+      "image_kind": "icon",
       "image_alt": "Raw Iron inventory icon"
     },
     {
@@ -923,6 +933,7 @@
       },
       "description": "A quiet charm, warm only when the roots are near.",
       "image": "assets/icons/amulet.svg",
+      "image_kind": "icon",
       "image_alt": "Seer's Talisman inventory icon"
     },
     {
@@ -1068,6 +1079,7 @@
       },
       "description": "A bitter herbal draught that restores 25 health.",
       "image": "assets/icons/potion.svg",
+      "image_kind": "icon",
       "image_alt": "Small Healing Potion inventory icon"
     },
     {
@@ -1138,6 +1150,7 @@
       },
       "description": "A dense knot of grove stone from a Stoneback's back. It is warm to the touch.",
       "image": "assets/icons/ore.svg",
+      "image_kind": "icon",
       "image_alt": "Stone Core inventory icon"
     },
     {
@@ -1202,6 +1215,7 @@
       },
       "description": "A brittle barb shed by a Thornspitter. The tip still carries a faint sting.",
       "image": "assets/icons/monster_drop.svg",
+      "image_kind": "icon",
       "image_alt": "Thorn Fragment inventory icon"
     },
     {
@@ -1290,6 +1304,7 @@
       },
       "description": "A plain but well-balanced blade carried by valley travelers.",
       "image": "assets/icons/weapon.svg",
+      "image_kind": "icon",
       "image_alt": "Traveler Sword inventory icon"
     },
     {
@@ -1382,6 +1397,7 @@
       },
       "description": "Layered cloth reinforced at the shoulders and chest.",
       "image": "assets/icons/cloth.svg",
+      "image_kind": "icon",
       "image_alt": "Traveler Tunic inventory icon"
     },
     {
@@ -1459,6 +1475,7 @@
       },
       "description": "Forged from metal recovered beneath the Hollow Ruins. The edge still remembers the Warden's last command.",
       "image": "assets/icons/weapon.svg",
+      "image_kind": "icon",
       "image_alt": "Warden Blade inventory icon"
     }
   ]

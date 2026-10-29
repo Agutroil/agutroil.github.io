@@ -1272,70 +1272,80 @@ body[data-view="notfound"] .db-hero {
 
 .entry-media {
   position: relative;
-  min-height: 108px;
+  height: 184px;
   display: grid;
   place-items: center;
   overflow: hidden;
   border-bottom: 1px solid var(--border);
   background:
-    radial-gradient(ellipse 60% 70% at 50% 20%, rgba(120, 221, 255, 0.08), transparent 68%),
-    linear-gradient(180deg, rgba(9, 17, 29, 0.9), rgba(5, 9, 17, 0.88));
+    radial-gradient(ellipse at 50% 30%, rgba(120, 221, 255, 0.10), transparent 70%),
+    #080f1c;
 }
 
-.entry-media.is-art {
-  aspect-ratio: 16 / 9;
-  min-height: 150px;
-}
-
-.entry-media.is-art img {
+.entry-media.is-scene img,
+.scene-preview {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.entry-media.is-icon {
-  min-height: 118px;
-}
-
 .entry-media.is-icon img {
-  width: 62px;
-  height: 62px;
+  width: 76px;
+  height: 76px;
   object-fit: contain;
 }
 
-.entry-media.is-sprite {
-  min-height: 150px;
+.entry-media.is-sprite img,
+.entry-media.is-portrait img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.45));
 }
 
-.entry-media.is-sprite img {
-  width: 104px;
-  height: 104px;
-  object-fit: contain;
+.entry-media.is-portrait {
+  padding-bottom: 24px;
+}
+
+.is-sprite img {
   image-rendering: pixelated;
-  filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.4));
 }
 
-.entry-media.is-rune {
-  min-height: 104px;
-}
-
-.entry-media.is-art.is-rune,
-.entry-media.is-sprite.is-rune {
-  min-height: 150px;
-}
-
-.media-rune {
-  width: 64px;
-  height: 64px;
-  display: grid;
-  place-items: center;
-  color: var(--gold);
-  border: 1px solid rgba(232, 194, 122, 0.24);
-  border-radius: 50%;
-  background: rgba(232, 194, 122, 0.05);
+.preview-note {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  max-width: calc(100% - 20px);
+  padding: 3px 9px;
+  transform: translateX(-50%);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-soft);
+  background: rgba(3, 6, 12, 0.90);
   font-family: var(--mono);
-  font-size: 1.35rem;
-  box-shadow: 0 0 30px rgba(232, 194, 122, 0.08);
+  font-size: 0.6rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.entry-media.is-bundle,
+.detail-media.is-bundle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.entry-media.is-bundle img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.entry-media.is-bundle .bundle-extra {
+  width: 52px;
+  height: 52px;
 }
 
 .entry-body {
@@ -1548,34 +1558,47 @@ body[data-view="notfound"] .db-hero {
   box-shadow: var(--shadow);
 }
 
-.detail-media.is-art img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.detail-media.is-art:not(.is-rune) {
+.detail-media.is-scene {
   aspect-ratio: 16 / 9;
   min-height: 0;
   align-self: center;
 }
 
+.detail-media.is-scene img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .detail-media.is-icon img {
-  width: 86px;
-  height: 86px;
+  width: 106px;
+  height: 106px;
   object-fit: contain;
 }
 
-.detail-media.is-sprite img {
-  width: 148px;
-  height: 148px;
-  object-fit: contain;
-  image-rendering: pixelated;
-  filter: drop-shadow(0 20px 24px rgba(0, 0, 0, 0.42));
+.detail-media.is-sprite,
+.detail-media.is-portrait {
+  min-height: 300px;
+  padding: 20px 20px 40px;
 }
 
-.detail-media.is-art {
-  min-height: 260px;
+.detail-media.is-sprite img,
+.detail-media.is-portrait img {
+  width: 230px;
+  height: 230px;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 20px rgba(0, 0, 0, 0.42));
+}
+
+.detail-media.is-bundle img {
+  width: 94px;
+  height: 94px;
+  object-fit: contain;
+}
+
+.detail-media.is-bundle .bundle-extra {
+  width: 62px;
+  height: 62px;
 }
 
 .detail-copy {
@@ -1921,10 +1944,6 @@ footer {
     max-height: 300px;
   }
 
-  .detail-media.is-art {
-    min-height: 220px;
-  }
-
   .view-title-row {
     align-items: flex-start;
     flex-direction: column;
@@ -2075,11 +2094,6 @@ footer {
 
   .detail-media {
     min-height: 180px;
-  }
-
-  .detail-media.is-sprite img {
-    width: 118px;
-    height: 118px;
   }
 
   .message-panel {

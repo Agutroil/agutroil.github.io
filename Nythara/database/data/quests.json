@@ -82,7 +82,10 @@
         "rarity": 0,
         "category": "quest"
       },
-      "description": "Something has stirred the Mosslings beyond the old path. Thin their numbers so Elara can tend Whispering Grove again."
+      "description": "Something has stirred the Mosslings beyond the old path. Thin their numbers so Elara can tend Whispering Grove again.",
+      "image": "assets/icons/quest.svg",
+      "image_kind": "icon",
+      "image_alt": "Quest parchment for A Restless Grove"
     },
     {
       "id": "quest_beyond_the_hollow",
@@ -168,7 +171,10 @@
         "rarity": 0,
         "category": "quest"
       },
-      "description": "Rowan's news from the Hollow Ruins points toward Silverwood. Reach the old forest and return with what you learn."
+      "description": "Rowan's news from the Hollow Ruins points toward Silverwood. Reach the old forest and return with what you learn.",
+      "image": "assets/icons/quest.svg",
+      "image_kind": "icon",
+      "image_alt": "Quest parchment for Beyond the Hollow"
     },
     {
       "id": "quest_hollow_ruins_warden",
@@ -265,7 +271,10 @@
         "rarity": 0,
         "category": "quest"
       },
-      "description": "Rowan hears an old oath stirring under Whispering Grove. Enter the Hollow Ruins, silence the Hollow Warden and bring word back to the grove."
+      "description": "Rowan hears an old oath stirring under Whispering Grove. Enter the Hollow Ruins, silence the Hollow Warden and bring word back to the grove.",
+      "image": "assets/icons/quest.svg",
+      "image_kind": "icon",
+      "image_alt": "Quest parchment for Echoes Beneath the Grove"
     },
     {
       "id": "quest_heart_beneath_silverwood",
@@ -361,7 +370,10 @@
         "rarity": 0,
         "category": "quest"
       },
-      "description": "Follow the trail below the Moonroot canopy and defeat the Rootbound Seer. First-clear treasure is tracked independently from Rowan's quest."
+      "description": "Follow the trail below the Moonroot canopy and defeat the Rootbound Seer. First-clear treasure is tracked independently from Rowan's quest.",
+      "image": "assets/icons/quest.svg",
+      "image_kind": "icon",
+      "image_alt": "Quest parchment for The Heart Beneath Silverwood"
     }
   ]
 }

@@ -75,7 +75,11 @@
         "level": 0,
         "rarity": 0,
         "category": "quest giver"
-      }
+      },
+      "image": "assets/npcs/elara-portrait.webp",
+      "image_kind": "portrait",
+      "image_alt": "Representative quest giver portrait for Elara, holding a parchment",
+      "image_note": "Role portrait"
     },
     {
       "id": "npc_elyra",
@@ -120,7 +124,11 @@
         "level": 0,
         "rarity": 0,
         "category": "healer"
-      }
+      },
+      "image": "assets/npcs/elyra-portrait.webp",
+      "image_kind": "portrait",
+      "image_alt": "Representative healer portrait for Elyra, holding a potion",
+      "image_note": "Role portrait"
     },
     {
       "id": "npc_mira",
@@ -209,7 +217,11 @@
         "level": 0,
         "rarity": 0,
         "category": "vendor"
-      }
+      },
+      "image": "assets/npcs/mira-portrait.webp",
+      "image_kind": "portrait",
+      "image_alt": "Representative vendor portrait for Mira, carrying a goods satchel",
+      "image_note": "Role portrait"
     },
     {
       "id": "npc_rowan",
@@ -285,7 +297,11 @@
         "level": 0,
         "rarity": 0,
         "category": "quest giver"
-      }
+      },
+      "image": "assets/npcs/rowan-portrait.webp",
+      "image_kind": "portrait",
+      "image_alt": "Rowan's hooded character and staff, based on his in-game appearance",
+      "image_note": "Sprite portrait"
     },
     {
       "id": "npc_silverwood_keeper",
@@ -362,7 +378,11 @@
         "level": 0,
         "rarity": 0,
         "category": "quest giver"
-      }
+      },
+      "image": "assets/npcs/silverwood-keeper-portrait.webp",
+      "image_kind": "portrait",
+      "image_alt": "Representative forest keeper portrait with a wooden staff",
+      "image_note": "Role portrait"
     }
   ]
 }

@@ -85,6 +85,7 @@
       },
       "description": "Sweep nearby enemies once each, using effective attack and normal armor.",
       "image": "assets/icons/weapon.svg",
+      "image_kind": "icon",
       "image_alt": "Cleave skill icon"
     },
     {
@@ -171,6 +172,7 @@
       },
       "description": "Brace briefly. Temporary armor never changes your permanent equipment stats.",
       "image": "assets/icons/armor.svg",
+      "image_kind": "icon",
       "image_alt": "Guard skill icon"
     },
     {
@@ -247,7 +249,10 @@
         "rarity": 0,
         "category": "passive"
       },
-      "description": "Set your stance and gain 2 armor while the skill remains unlocked."
+      "description": "Set your stance and gain 2 armor while the skill remains unlocked.",
+      "image": "assets/icons/armor.svg",
+      "image_kind": "icon",
+      "image_alt": "Iron Will skill icon"
     },
     {
       "id": "skill_power_strike",
@@ -333,6 +338,7 @@
       },
       "description": "A committed single-target swing through the normal armor rule.",
       "image": "assets/icons/weapon.svg",
+      "image_kind": "icon",
       "image_alt": "Power Strike skill icon"
     },
     {
@@ -419,6 +425,7 @@
       },
       "description": "Draw a steady breath and recover a portion of maximum health.",
       "image": "assets/icons/potion.svg",
+      "image_kind": "icon",
       "image_alt": "Second Wind skill icon"
     },
     {
@@ -509,7 +516,10 @@
         "rarity": 0,
         "category": "passive"
       },
-      "description": "The valley's moss-light settles in your chest, raising maximum health by 10."
+      "description": "The valley's moss-light settles in your chest, raising maximum health by 10.",
+      "image": "assets/icons/herb.svg",
+      "image_kind": "icon",
+      "image_alt": "Vital Spark skill icon"
     }
   ]
 }

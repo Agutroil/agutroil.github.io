@@ -142,6 +142,7 @@
 
   const state = {
     metadata: null,
+    previewFallbacks: {},
     data: {},
     byType: {},
     total: 0,
@@ -257,7 +258,11 @@
     searchStatus.textContent = "Loading the codex…";
 
     try {
-      const metadata = await fetchJson("data/metadata.json");
+      const [metadata, previewFallbacks] = await Promise.all([
+        fetchJson("data/metadata.json"),
+        fetchJson("data/preview-fallbacks.json"),
+      ]);
+      state.previewFallbacks = previewFallbacks;
       const payloads = await Promise.all(
         metadata.categories.map((category) => fetchJson(`data/${category.key}.json`))
       );
@@ -389,22 +394,35 @@
     });
   }
 
-  function mediaType(type) {
-    if (["region", "dungeon", "city", "boss"].includes(type)) return "is-art";
-    if (type === "monster") return "is-sprite";
-    return "is-icon";
-  }
-
   function mediaMarkup(entry, detail = false) {
-    const base = detail ? "detail-media" : "entry-media";
-    const layout = mediaType(entry.type);
-    const classes = [base, layout, entry.image ? "" : "is-rune"].filter(Boolean).join(" ");
-    if (!entry.image) {
-      return `<div class="${classes}"><span class="media-rune" aria-hidden="true">✦</span></div>`;
+    const fallback = state.previewFallbacks[entry.type] || state.previewFallbacks.quest;
+    let visual = entry.image ? entry : fallback;
+    // Character entries always use a character portrait, including older snapshots.
+    if (["monster", "boss", "npc"].includes(entry.type) &&
+        !["sprite", "portrait"].includes(visual.image_kind)) {
+      visual = fallback;
     }
+    const base = detail ? "detail-media" : "entry-media";
+    const kind = visual.image_kind || "icon";
     const loading = detail ? "" : ' loading="lazy"';
-    return `<div class="${classes}">
-      <img src="${escapeHtml(entry.image)}" alt="${escapeHtml(entry.image_alt || entry.name)}" decoding="async"${loading}>
+    const alt = escapeHtml(visual.image_alt || entry.name);
+    let picture;
+    const crop = visual.image_crop;
+    if (kind === "scene" && Array.isArray(crop) && crop.length === 6 && crop.every(Number.isFinite)) {
+      const [x, y, width, height, sourceWidth, sourceHeight] = crop;
+      picture = `<svg class="scene-preview" viewBox="${x} ${y} ${width} ${height}"
+          preserveAspectRatio="xMidYMid slice" role="img" aria-label="${alt}">
+        <image href="${escapeHtml(visual.image)}" width="${sourceWidth}" height="${sourceHeight}"></image>
+      </svg>`;
+    } else {
+      picture = `<img src="${escapeHtml(visual.image)}" alt="${alt}" decoding="async"${loading}>`;
+    }
+    const extras = (visual.image_extras || []).map((extra) =>
+      `<img class="bundle-extra" src="${escapeHtml(extra.image)}" alt="${escapeHtml(extra.image_alt)}" decoding="async"${loading}>`
+    ).join("");
+    return `<div class="${base} is-${escapeHtml(kind)}" data-preview="${escapeHtml(entry.type)}">
+      ${picture}${extras}
+      ${visual.image_note ? `<span class="preview-note">${escapeHtml(visual.image_note)}</span>` : ""}
     </div>`;
   }
 

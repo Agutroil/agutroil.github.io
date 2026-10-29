@@ -67,6 +67,7 @@
         "category": "resource"
       },
       "image": "assets/icons/ore.svg",
+      "image_kind": "icon",
       "image_alt": "Iron Vein resource icon"
     },
     {
@@ -130,6 +131,7 @@
         "category": "resource"
       },
       "image": "assets/icons/herb.svg",
+      "image_kind": "icon",
       "image_alt": "Mossbloom resource icon"
     }
   ]

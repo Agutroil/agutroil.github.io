@@ -28,6 +28,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
+from nythara_previews import CREATURES, FALLBACKS, assign_preview, apply_previews, validate_previews
+
 # ---------------------------------------------------------------------------
 # Presentation vocabulary
 # ---------------------------------------------------------------------------
@@ -99,16 +101,6 @@ SITE_IMAGES = {
     "moonroot_sanctum": ("../assets/rootbound-seer.jpg", "The Rootbound Seer in the Moonroot Sanctum"),
 }
 
-MONSTER_SPRITES = {
-    "enemy_briarling": "assets/creatures/briarling.png",
-    "enemy_gloom_moth": "assets/creatures/gloom_moth.png",
-    "enemy_root_sentinel": "assets/creatures/root_sentinel.png",
-    "enemy_mossling": "assets/creatures/mossling.png",
-}
-BOSS_IMAGES = {
-    "enemy_hollow_warden": SITE_IMAGES["hollow_ruins"],
-    "enemy_rootbound_seer": SITE_IMAGES["moonroot_sanctum"],
-}
 ICON_FALLBACK = "assets/icons/missing.svg"
 
 
@@ -522,6 +514,7 @@ def make_entry(
     if image:
         entry["image"] = image
         entry["image_alt"] = image_alt or name
+    assign_preview(entry, OUTPUT.parent)
     return entry
 
 
@@ -1329,13 +1322,9 @@ def export() -> None:
         if enemy["loot"]:
             add_fact(facts, "Loot table", enemy["loot_name"])
 
-        image = None
-        image_alt = None
-        if enemy_id in MONSTER_SPRITES:
-            image = MONSTER_SPRITES[enemy_id]
-            image_alt = f"{enemy['name']} idle sprite"
-        elif enemy_id in BOSS_IMAGES:
-            image, image_alt = BOSS_IMAGES[enemy_id] if isinstance(BOSS_IMAGES[enemy_id], tuple) else (BOSS_IMAGES[enemy_id], enemy["name"])
+        visual = CREATURES.get(enemy_id, {})
+        image = visual.get("image")
+        image_alt = visual.get("image_alt")
 
         filters = {
             "classification": classification,
@@ -2010,6 +1999,11 @@ def export() -> None:
         "loot": loot_entries,
     }
 
+    # Preview coverage is required, including character-only artwork and loot bundles.
+    # This also applies to entries introduced in a future game data revision.
+    apply_previews(categories, OUTPUT.parent)
+    validate_previews(categories, OUTPUT.parent)
+
     # Stable IDs must be unique and every entry needs a display name.
     for key, entries in categories.items():
         ids = [entry["id"] for entry in entries]
@@ -2076,6 +2070,7 @@ def export() -> None:
     }
 
     OUTPUT.mkdir(parents=True, exist_ok=True)
+    (OUTPUT / "preview-fallbacks.json").write_text(json.dumps(FALLBACKS, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (OUTPUT / "metadata.json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     for key, entries in categories.items():
         payload = {"count": len(entries), "entries": entries}

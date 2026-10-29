@@ -137,8 +137,17 @@
         "category": "dungeon"
       },
       "description": "A sealed sanctuary beneath Silverwood, where the Rootbound Seer guards the moonroot heart.",
-      "image": "../assets/rootbound-seer.jpg",
-      "image_alt": "The Rootbound Seer in the Moonroot Sanctum"
+      "image": "../assets/warp-portal.jpg",
+      "image_kind": "scene",
+      "image_alt": "The Moonroot Sanctum entrance portal and its stone ring",
+      "image_crop": [
+        75,
+        260,
+        560,
+        315,
+        1280,
+        720
+      ]
     },
     {
       "id": "world_hollow_ruins",
@@ -295,7 +304,16 @@
       },
       "description": "A ruined listening place beneath the grove, where the Hollow Warden still keeps its oath.",
       "image": "../assets/hollow-warden.jpg",
-      "image_alt": "The Hollow Warden in its arena beneath the ruins"
+      "image_kind": "scene",
+      "image_alt": "The Hollow Ruins arena, cropped to the encounter and stone halls",
+      "image_crop": [
+        425,
+        180,
+        640,
+        360,
+        1280,
+        720
+      ]
     }
   ]
 }

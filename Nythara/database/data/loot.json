@@ -75,8 +75,19 @@
         "rarity": 0,
         "category": "loot"
       },
-      "image": "assets/icons/treasure.svg",
-      "image_alt": "Loot chest icon"
+      "image": "assets/icons/herb.svg",
+      "image_kind": "bundle",
+      "image_alt": "Moss Fiber, available from Briarling Remains",
+      "image_extras": [
+        {
+          "image": "assets/icons/armor.svg",
+          "image_alt": "Mosswoven Vest"
+        },
+        {
+          "image": "assets/icons/potion.svg",
+          "image_alt": "Small Healing Potion"
+        }
+      ]
     },
     {
       "id": "gloom_moth",
@@ -152,8 +163,19 @@
         "rarity": 0,
         "category": "loot"
       },
-      "image": "assets/icons/treasure.svg",
-      "image_alt": "Loot chest icon"
+      "image": "assets/icons/monster_drop.svg",
+      "image_kind": "bundle",
+      "image_alt": "Moss Core, available from Gloom Moth Remains",
+      "image_extras": [
+        {
+          "image": "assets/icons/weapon.svg",
+          "image_alt": "Grove Blade"
+        },
+        {
+          "image": "assets/icons/potion.svg",
+          "image_alt": "Small Healing Potion"
+        }
+      ]
     },
     {
       "id": "mossling",
@@ -241,8 +263,19 @@
         "rarity": 0,
         "category": "loot"
       },
-      "image": "assets/icons/treasure.svg",
-      "image_alt": "Loot chest icon"
+      "image": "assets/icons/herb.svg",
+      "image_kind": "bundle",
+      "image_alt": "Moss Fiber, available from Mossling Remains",
+      "image_extras": [
+        {
+          "image": "assets/icons/monster_drop.svg",
+          "image_alt": "Moss Core"
+        },
+        {
+          "image": "assets/icons/weapon.svg",
+          "image_alt": "Traveler Sword"
+        }
+      ]
     },
     {
       "id": "hollow_warden",
@@ -342,8 +375,19 @@
         "rarity": 0,
         "category": "loot"
       },
-      "image": "assets/icons/treasure.svg",
-      "image_alt": "Loot chest icon"
+      "image": "assets/icons/monster_drop.svg",
+      "image_kind": "bundle",
+      "image_alt": "Hollow Sigil, available from Remains of the Hollow Warden",
+      "image_extras": [
+        {
+          "image": "assets/icons/ore.svg",
+          "image_alt": "Stone Core"
+        },
+        {
+          "image": "assets/icons/potion.svg",
+          "image_alt": "Small Healing Potion"
+        }
+      ]
     },
     {
       "id": "rootbound_seer",
@@ -425,8 +469,19 @@
         "rarity": 0,
         "category": "loot"
       },
-      "image": "assets/icons/treasure.svg",
-      "image_alt": "Loot chest icon"
+      "image": "assets/icons/monster_drop.svg",
+      "image_kind": "bundle",
+      "image_alt": "Moonroot Shard, available from Remains of the Rootbound Seer",
+      "image_extras": [
+        {
+          "image": "assets/icons/weapon.svg",
+          "image_alt": "Moonroot Edge"
+        },
+        {
+          "image": "assets/icons/amulet.svg",
+          "image_alt": "Seer's Talisman"
+        }
+      ]
     },
     {
       "id": "root_sentinel",
@@ -508,8 +563,19 @@
         "rarity": 0,
         "category": "loot"
       },
-      "image": "assets/icons/treasure.svg",
-      "image_alt": "Loot chest icon"
+      "image": "assets/icons/monster_drop.svg",
+      "image_kind": "bundle",
+      "image_alt": "Moss Core, available from Root Sentinel Remains",
+      "image_extras": [
+        {
+          "image": "assets/icons/weapon.svg",
+          "image_alt": "Grove Blade"
+        },
+        {
+          "image": "assets/icons/armor.svg",
+          "image_alt": "Mosswoven Vest"
+        }
+      ]
     },
     {
       "id": "enemy_stoneback",
@@ -591,8 +657,19 @@
         "rarity": 0,
         "category": "loot"
       },
-      "image": "assets/icons/treasure.svg",
-      "image_alt": "Loot chest icon"
+      "image": "assets/icons/ore.svg",
+      "image_kind": "bundle",
+      "image_alt": "Stone Core, available from Stoneback Remains",
+      "image_extras": [
+        {
+          "image": "assets/icons/monster_drop.svg",
+          "image_alt": "Moss Core"
+        },
+        {
+          "image": "assets/icons/potion.svg",
+          "image_alt": "Small Healing Potion"
+        }
+      ]
     },
     {
       "id": "enemy_thornspitter",
@@ -668,8 +745,19 @@
         "rarity": 0,
         "category": "loot"
       },
-      "image": "assets/icons/treasure.svg",
-      "image_alt": "Loot chest icon"
+      "image": "assets/icons/monster_drop.svg",
+      "image_kind": "bundle",
+      "image_alt": "Thorn Fragment, available from Thornspitter Remains",
+      "image_extras": [
+        {
+          "image": "assets/icons/herb.svg",
+          "image_alt": "Moss Fiber"
+        },
+        {
+          "image": "assets/icons/potion.svg",
+          "image_alt": "Small Healing Potion"
+        }
+      ]
     }
   ]
 }
