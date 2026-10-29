@@ -151,6 +151,7 @@
     activeCategory: null,
     query: "",
     filters: {},
+    filtersOpen: null,
     sort: "name-asc",
     visible: PAGE_SIZE,
     lastSearchResults: [],
@@ -207,7 +208,12 @@
     if (raw === "search") return { name: "search" };
     if (raw.includes("/")) {
       const [type, ...rest] = raw.split("/");
-      const id = decodeURIComponent(rest.join("/"));
+      let id;
+      try {
+        id = decodeURIComponent(rest.join("/"));
+      } catch {
+        return { name: "notfound", raw };
+      }
       if (TYPE_TO_CATEGORY[type] && id) {
         return { name: "detail", type, id, category: TYPE_TO_CATEGORY[type] };
       }
@@ -226,6 +232,7 @@
 
   function resetCategoryState(category) {
     state.filters = {};
+    state.filtersOpen = null;
     state.sort = DEFAULT_SORT[category] || "name-asc";
     state.visible = PAGE_SIZE;
   }
@@ -316,7 +323,7 @@
     if (categories) categories.textContent = String(meta.categories.length);
     if (generated) generated.textContent = formatDate(meta.generated_at);
     if (footerSource) {
-      footerSource.textContent = `Game data revision · ${meta.source_short_commit}`;
+      footerSource.textContent = `Game Data Revision: ${meta.source_short_commit}`;
     }
   }
 
@@ -358,7 +365,7 @@
       document.title = "Search · Nythara Database";
       return;
     }
-    document.title = "Nythara Database | Items, Monsters, Dungeons & World";
+    document.title = "Nythara Database — World, Creatures, Items & Dungeons";
   }
 
   function getEntry(type, id) {
@@ -375,6 +382,7 @@
     catNav.querySelectorAll("a").forEach((link) => {
       if (link.dataset.cat === active) {
         link.setAttribute("aria-current", "location");
+        catNav.scrollLeft = link.offsetLeft - catNav.offsetLeft - (catNav.clientWidth - link.offsetWidth) / 2;
       } else {
         link.removeAttribute("aria-current");
       }
@@ -407,14 +415,14 @@
   }
 
   function factRows(facts) {
-    return `<div class="fact-list">${facts
+    return `<dl class="fact-list">${facts
       .map(
         (fact) => `<div class="fact-row">
           <dt>${escapeHtml(fact.label)}</dt>
           <dd>${escapeHtml(fact.value)}</dd>
         </div>`
       )
-      .join("")}</div>`;
+      .join("")}</dl>`;
   }
 
   function factGrid(facts) {
@@ -443,7 +451,7 @@
 
   function cardFacts(entry) {
     return (entry.facts || [])
-      .filter((fact) => fact.label !== "Stable ID")
+      .filter((fact) => !["Stable ID", "World ID", "Map ID", "Appearance ID"].includes(fact.label))
       .slice(0, 3)
       .map(
         (fact) => `<div class="entry-fact">
@@ -490,14 +498,14 @@
       <div class="home-intro">
         <div>
           <p class="eyebrow">Browse the codex</p>
-          <h2 tabindex="-1">Every real entry, one place.</h2>
+          <h2 tabindex="-1">Prepare for the next adventure.</h2>
           <p>
             Search the full catalogue or step through items, creatures, dungeons,
-            regions and the systems that connect them. Every count and connection
-            below comes from the game's current content.
+            regions and the adventures that connect them. Follow a creature to its
+            home, a dungeon to its guardian, or a reward to the place it can be found.
           </p>
         </div>
-        <span class="home-total"><strong>${state.total}</strong> primary entries</span>
+        <span class="home-total"><strong>${state.total}</strong> catalogued entries</span>
       </div>
 
       <div class="category-group">
@@ -508,7 +516,7 @@
       </div>
 
       <div class="category-group">
-        <div class="group-head"><h3>Systems &amp; support</h3></div>
+        <div class="group-head"><h3>Gear &amp; adventures</h3></div>
         <div class="category-grid">
           ${secondary.map((category) => categoryCard(category, false)).join("")}
         </div>
@@ -517,10 +525,10 @@
       <div class="codex-notes">
         <article class="note-card">
           <span>World codex</span>
-          <h3>Built from the game</h3>
+          <h3>Follow the trail</h3>
           <p>
-            Every entry reflects Nythara's current content at game data revision
-            <span class="mono">${escapeHtml(meta.source_short_commit)}</span>.
+            Every creature, region and dungeon links to the places, encounters and
+            rewards that surround it. Start anywhere and see where the trail leads.
           </p>
         </article>
         <article class="note-card">
@@ -585,7 +593,8 @@
   }
 
   function filtersMarkup(filters, activeCount) {
-    return `<details class="filter-panel" open>
+    const open = state.filtersOpen ?? !window.matchMedia("(max-width: 980px)").matches;
+    return `<details class="filter-panel"${open ? " open" : ""}>
       <summary>
         <span>Filters${activeCount ? ` · ${activeCount} active` : ""}</span>
         <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
@@ -686,7 +695,7 @@
         </nav>
         <div class="view-title-row">
           <div>
-            <p class="eyebrow">${primary ? "Core catalogue" : "Systems &amp; support"}</p>
+            <p class="eyebrow">${primary ? "Core catalogue" : "Gear &amp; adventures"}</p>
             <h2 tabindex="-1">${escapeHtml(meta.label)}</h2>
             <p class="view-desc">${escapeHtml(meta.description)}</p>
           </div>
@@ -754,7 +763,7 @@
             <span aria-current="page">Search</span>
           </nav>
           <h2 tabindex="-1">Search the codex</h2>
-          <p class="view-desc">Find an item, creature, dungeon, region, NPC, quest or skill by name or stable ID.</p>
+          <p class="view-desc">Find an item, creature, dungeon, region, NPC, quest or skill by name, location or reward.</p>
         </div>
         <div class="message-panel">
           <p class="eyebrow">Global search</p>
@@ -797,7 +806,7 @@
             ${resultsMarkup(state.lastSearchResults, results.length)}`
           : `<div class="empty-state">
               <h3>No entries match “${escapeHtml(query)}”.</h3>
-              <p>Try a shorter term, a stable ID or a location.</p>
+              <p>Try a shorter name, a creature, a piece of gear or a location.</p>
               <button class="button button--ghost" type="button" data-clear-search>Clear search</button>
             </div>`
       }`;
@@ -819,6 +828,7 @@
     const meta = categoryMeta(category);
     const source = state.metadata;
     const backHref = `#${category}`;
+    const facts = (entry.facts || []).filter((fact) => !["Stable ID", "World ID", "Map ID", "Appearance ID"].includes(fact.label));
 
     viewRoot.innerHTML = `
       <div class="detail">
@@ -844,9 +854,9 @@
             </div>
           </header>
 
-          ${entry.facts?.length ? `<section class="facts-block" aria-labelledby="facts-title">
-            <h3 id="facts-title">Data</h3>
-            ${factGrid(entry.facts)}
+          ${facts.length ? `<section class="facts-block" aria-labelledby="facts-title">
+            <h3 id="facts-title">At a glance</h3>
+            ${factGrid(facts)}
           </section>` : ""}
 
           ${(entry.sections || [])
@@ -861,13 +871,8 @@
             .join("")}
 
           <p class="detail-source">
-            Game data revision: ${escapeHtml(
-              source.source_short_commit
-            )} · ${escapeHtml(
-              TYPE_LABEL[entry.type] || entry.type
-            )} <code>${escapeHtml(entry.id)}</code> · updated ${escapeHtml(
-              formatDate(source.generated_at)
-            )}. Public content catalogue.
+            Game Data Revision: ${escapeHtml(source.source_short_commit)} · Updated
+            ${escapeHtml(formatDate(source.generated_at))}. Content may change during the alpha.
           </p>
         </article>
       </div>`;
@@ -1077,6 +1082,12 @@
       }
     });
 
+    viewRoot.addEventListener("toggle", (event) => {
+      if (event.target.matches(".filter-panel")) {
+        state.filtersOpen = event.target.open;
+      }
+    }, true);
+
     viewRoot.addEventListener("change", (event) => {
       const select = event.target.closest("[data-filter]");
       if (select) {
@@ -1097,11 +1108,10 @@
     viewRoot.addEventListener("click", (event) => {
       const loadMore = event.target.closest("[data-load-more]");
       if (loadMore) {
+        const previousVisible = state.visible;
         state.visible += PAGE_SIZE;
         render({ focus: false });
-        const next = viewRoot.querySelector("[data-load-more]");
-        if (next) next.focus();
-        else viewRoot.querySelector("#results-count")?.focus();
+        viewRoot.querySelectorAll(".entry-card")[previousVisible]?.focus();
         return;
       }
 
@@ -1146,7 +1156,10 @@
     document.querySelectorAll('a[href="#top"]').forEach((link) => {
       link.addEventListener("click", (event) => {
         event.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({
+          top: 0,
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+        });
         document.getElementById("main")?.focus({ preventScroll: true });
       });
     });

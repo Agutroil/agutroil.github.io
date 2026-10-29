@@ -4,38 +4,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Nythara Database | Items, Monsters, Dungeons &amp; World</title>
+  <title>Nythara Database — World, Creatures, Items &amp; Dungeons</title>
   <meta
     name="description"
-    content="Explore the official Nythara game database with items, monsters, bosses, dungeons, regions, cities, quests and character systems."
+    content="Explore Nythara's world, creatures, equipment, quests, skills, regions, dungeons and loot."
   >
   <meta name="author" content="Anton Deister">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#060810">
+  <link rel="icon" type="image/svg+xml" href="../assets/nythara-mark.svg">
   <link rel="canonical" href="https://agutroil.github.io/Nythara/database/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Agutroil">
-  <meta property="og:title" content="Nythara Database | Items, Monsters, Dungeons &amp; World">
+  <meta property="og:title" content="Nythara Database — World, Creatures, Items &amp; Dungeons">
   <meta
     property="og:description"
-    content="Explore the official Nythara game database with items, monsters, bosses, dungeons, regions, cities, quests and character systems."
+    content="Explore Nythara's world, creatures, equipment, quests, skills, regions, dungeons and loot."
   >
   <meta property="og:url" content="https://agutroil.github.io/Nythara/database/">
-  <meta property="og:image" content="https://agutroil.github.io/Nythara/assets/nythara-banner.png">
+  <meta property="og:image" content="https://agutroil.github.io/Nythara/assets/nythara-banner.jpg">
   <meta property="og:image:width" content="1600">
   <meta property="og:image:height" content="533">
   <meta property="og:image:alt" content="Nythara — a 2D MMORPG in a 3D fantasy world">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Nythara Database | Items, Monsters, Dungeons &amp; World">
+  <meta name="twitter:title" content="Nythara Database — World, Creatures, Items &amp; Dungeons">
   <meta
     name="twitter:description"
-    content="Explore the official Nythara game database with items, monsters, bosses, dungeons, regions, cities, quests and character systems."
+    content="Explore Nythara's world, creatures, equipment, quests, skills, regions, dungeons and loot."
   >
-  <meta name="twitter:image" content="https://agutroil.github.io/Nythara/assets/nythara-banner.png">
+  <meta name="twitter:image" content="https://agutroil.github.io/Nythara/assets/nythara-banner.jpg">
   <meta name="twitter:image:alt" content="Nythara — a 2D MMORPG in a 3D fantasy world">
 
   <script type="application/ld+json">
@@ -151,7 +152,7 @@
   <header class="topbar">
     <div class="wrap nav">
       <a class="brand" href="../" aria-label="Back to the Nythara game page">
-        <span class="brand-mark" aria-hidden="true">✦</span>
+        <img class="brand-mark" src="../assets/nythara-mark.svg" alt="" width="40" height="40">
         <span class="brand-text">
           <strong>NYTHARA</strong>
           <small>Database · by Agutroil</small>
@@ -180,7 +181,7 @@
         <a href="#monsters" data-cat="monsters">Monsters</a>
         <a href="#bosses" data-cat="bosses">Bosses</a>
         <a href="#dungeons" data-cat="dungeons">Dungeons</a>
-        <a href="#regions" data-cat="regions">Fields</a>
+        <a href="#regions" data-cat="regions">Regions</a>
         <a href="#cities" data-cat="cities">Cities</a>
         <a href="#npcs" data-cat="npcs">NPCs</a>
         <a href="#quests" data-cat="quests">Quests</a>
@@ -200,8 +201,8 @@
             Official game database · world codex
           </p>
           <h1>NYTHARA <span>DATABASE</span></h1>
-          <p class="hero-tagline">Explore the world, creatures, equipment and adventures of Nythara.</p>
-          <p class="hero-secondary">A public encyclopedia of Nythara's world.</p>
+          <p class="hero-tagline">Explore Nythara's world, creatures, items, equipment, quests, skills, dungeons, regions and loot.</p>
+          <p class="hero-secondary">Find your next destination. Prepare for your next encounter.</p>
 
           <div class="hero-hints" aria-label="Suggested searches">
             <span>Start with</span>
@@ -215,7 +216,7 @@
         <aside class="snapshot" aria-label="Database snapshot">
           <div class="snapshot-top">
             <span class="snapshot-kicker">Codex snapshot</span>
-            <span class="snapshot-state"><span class="pulse" aria-hidden="true"></span>Public</span>
+            <span class="snapshot-state"><span class="pulse" aria-hidden="true"></span>Alpha</span>
           </div>
           <div class="snapshot-count">
             <strong id="snapshot-count">—</strong>
@@ -223,7 +224,7 @@
           </div>
           <dl class="snapshot-meta">
             <div>
-              <dt>Game data</dt>
+              <dt>Game Data Revision</dt>
               <dd><span id="snapshot-source">game data</span></dd>
             </div>
             <div>
@@ -236,8 +237,8 @@
             </div>
           </dl>
           <p class="snapshot-note">
-            A public catalogue of Nythara's world. Item stats, creatures, regions and
-            quests reflect the current game content.
+            Your guide to the current alpha. Follow the connections between
+            creatures, their homes and the loot they leave behind.
           </p>
         </aside>
       </div>
@@ -252,7 +253,7 @@
             id="db-search"
             name="q"
             type="search"
-            placeholder="Search the Nythara Database..."
+            placeholder="Search creatures, gear, places…"
             autocomplete="off"
             spellcheck="false"
             aria-controls="view-root"
