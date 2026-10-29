@@ -3,15 +3,15 @@
 :root {
   color-scheme: dark;
 
-  --bg: #060810;
-  --bg-deep: #03060d;
-  --panel: rgba(8, 14, 25, 0.78);
-  --panel-strong: rgba(8, 14, 26, 0.94);
-  --panel-soft: rgba(17, 28, 44, 0.58);
+  --bg: #071310;
+  --bg-deep: #030b0c;
+  --panel: rgba(7, 21, 23, 0.82);
+  --panel-strong: rgba(7, 23, 25, 0.95);
+  --panel-soft: rgba(18, 41, 41, 0.64);
 
-  --text: #f3f8fd;
-  --text-soft: #dbe6f2;
-  --muted: #a3b1c2;
+  --text: #f4fbf6;
+  --text-soft: #e0eee7;
+  --muted: #b9cdc4;
 
   --cyan: #78ddff;
   --moon: #a5ecff;
@@ -22,10 +22,10 @@
   --forest-deep: #2f7d5b;
   --danger: #e7968c;
 
-  --border: rgba(150, 190, 220, 0.16);
-  --border-strong: rgba(120, 221, 255, 0.34);
+  --border: rgba(158, 222, 200, 0.18);
+  --border-strong: rgba(120, 221, 255, 0.36);
 
-  --shadow: 0 26px 80px rgba(0, 0, 0, 0.42);
+  --shadow: 0 26px 80px rgba(1, 8, 8, 0.44);
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 22px;
@@ -68,14 +68,15 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(120, 221, 255, 0.012) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(120, 221, 255, 0.012) 1px, transparent 1px),
-    radial-gradient(ellipse at 88% 2%, rgba(60, 92, 170, 0.08), transparent 70%),
-    linear-gradient(180deg, rgba(3, 6, 12, 0.78), rgba(3, 6, 12, 0.90)),
-    url("../assets/nythara-background.webp");
-  background-size: 64px 64px, 64px 64px, cover, cover, cover;
+    linear-gradient(rgba(196, 255, 232, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196, 255, 232, 0.018) 1px, transparent 1px),
+    radial-gradient(ellipse 80% 55% at 50% 0%, rgba(3, 13, 14, 0.30), transparent 72%),
+    radial-gradient(ellipse at 88% 2%, rgba(80, 170, 140, 0.10), transparent 70%),
+    linear-gradient(180deg, rgba(3, 15, 16, 0.62) 0%, rgba(3, 14, 16, 0.58) 28%, rgba(3, 13, 16, 0.66) 62%, rgba(2, 10, 13, 0.82) 100%),
+    url("../assets/nythara-database-green-background.webp");
+  background-size: 64px 64px, 64px 64px, cover, cover, cover, cover;
   background-position: center top;
-  background-repeat: repeat, repeat, no-repeat, no-repeat, no-repeat;
+  background-repeat: repeat, repeat, no-repeat, no-repeat, no-repeat, no-repeat;
 }
 
 [hidden] {
@@ -183,8 +184,8 @@ dt {
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(150, 190, 220, 0.12);
-  background: rgba(5, 9, 17, 0.82);
+  border-bottom: 1px solid rgba(158, 222, 200, 0.16);
+  background: rgba(4, 16, 17, 0.90);
   backdrop-filter: blur(22px) saturate(130%);
   -webkit-backdrop-filter: blur(22px) saturate(130%);
 }
@@ -264,8 +265,8 @@ dt {
 }
 
 .codex-nav {
-  border-bottom: 1px solid rgba(150, 190, 220, 0.1);
-  background: rgba(5, 9, 17, 0.58);
+  border-bottom: 1px solid rgba(158, 222, 200, 0.12);
+  background: rgba(4, 15, 17, 0.72);
 }
 
 .codex-nav-inner {
@@ -349,9 +350,9 @@ dt {
   top: var(--topbar);
   z-index: 80;
   padding: 14px 0 10px;
-  border-bottom: 1px solid rgba(150, 190, 220, 0.11);
+  border-bottom: 1px solid rgba(158, 222, 200, 0.12);
   background:
-    linear-gradient(180deg, rgba(5, 9, 17, 0.94), rgba(6, 10, 18, 0.86)),
+    linear-gradient(180deg, rgba(4, 16, 18, 0.95), rgba(4, 15, 19, 0.88)),
     radial-gradient(ellipse 50% 100% at 50% 0%, rgba(120, 221, 255, 0.06), transparent 70%);
   backdrop-filter: blur(18px) saturate(125%);
   -webkit-backdrop-filter: blur(18px) saturate(125%);
@@ -372,9 +373,9 @@ dt {
   border: 1px solid rgba(120, 221, 255, 0.22);
   border-radius: 16px;
   background:
-    radial-gradient(ellipse 50% 120% at 10% 0%, rgba(120, 221, 255, 0.08), transparent 70%),
-    rgba(8, 14, 25, 0.9);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
+    radial-gradient(ellipse 50% 120% at 10% 0%, rgba(120, 221, 255, 0.09), transparent 70%),
+    rgba(6, 23, 24, 0.94);
+  box-shadow: 0 18px 50px rgba(1, 8, 8, 0.26);
   transition: border-color 0.18s ease, box-shadow 0.18s ease;
 }
 
@@ -547,7 +548,7 @@ body[data-view="notfound"] .db-hero {
   color: var(--text-soft);
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: rgba(12, 22, 36, 0.58);
+  background: rgba(8, 27, 28, 0.72);
   font-size: 0.76rem;
   font-weight: 700;
   transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
@@ -566,9 +567,9 @@ body[data-view="notfound"] .db-hero {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background:
-    radial-gradient(ellipse 80% 60% at 100% 0%, rgba(232, 194, 122, 0.1), transparent 62%),
-    radial-gradient(ellipse 70% 60% at 0% 100%, rgba(47, 125, 91, 0.16), transparent 62%),
-    linear-gradient(160deg, rgba(13, 23, 36, 0.92), rgba(6, 11, 20, 0.94));
+    radial-gradient(ellipse 80% 60% at 100% 0%, rgba(232, 194, 122, 0.11), transparent 62%),
+    radial-gradient(ellipse 70% 60% at 0% 100%, rgba(47, 125, 91, 0.20), transparent 62%),
+    linear-gradient(160deg, rgba(9, 29, 30, 0.94), rgba(5, 16, 20, 0.95));
   box-shadow: var(--shadow);
 }
 
@@ -701,7 +702,7 @@ body[data-view="notfound"] .db-hero {
   padding: clamp(28px, 4vw, 48px);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  background: linear-gradient(160deg, rgba(12, 21, 34, 0.88), rgba(5, 10, 18, 0.9));
+  background: linear-gradient(160deg, rgba(9, 29, 30, 0.90), rgba(4, 14, 18, 0.92));
 }
 
 .loading-panel {
@@ -885,8 +886,8 @@ body[data-view="notfound"] .db-hero {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background:
-    radial-gradient(ellipse 70% 80% at 100% 0%, rgba(120, 221, 255, 0.06), transparent 60%),
-    linear-gradient(155deg, rgba(13, 23, 37, 0.78), rgba(6, 11, 20, 0.86));
+    radial-gradient(ellipse 70% 80% at 100% 0%, rgba(120, 221, 255, 0.07), transparent 60%),
+    linear-gradient(155deg, rgba(10, 31, 32, 0.84), rgba(5, 17, 20, 0.90));
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
@@ -894,8 +895,8 @@ body[data-view="notfound"] .db-hero {
   transform: translateY(-2px);
   border-color: rgba(120, 221, 255, 0.32);
   background:
-    radial-gradient(ellipse 70% 80% at 100% 0%, rgba(120, 221, 255, 0.11), transparent 60%),
-    linear-gradient(155deg, rgba(15, 27, 43, 0.9), rgba(7, 13, 23, 0.92));
+    radial-gradient(ellipse 70% 80% at 100% 0%, rgba(120, 221, 255, 0.12), transparent 60%),
+    linear-gradient(155deg, rgba(12, 38, 38, 0.92), rgba(6, 20, 23, 0.94));
 }
 
 .category-card--primary {
@@ -982,7 +983,7 @@ body[data-view="notfound"] .db-hero {
   padding: 20px;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  background: rgba(8, 14, 25, 0.6);
+  background: rgba(7, 24, 25, 0.72);
 }
 
 .note-card span {
@@ -1118,7 +1119,9 @@ body[data-view="notfound"] .db-hero {
 .filter-panel {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  background: rgba(8, 14, 25, 0.66);
+  background: rgba(6, 22, 24, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .filter-panel summary {
@@ -1182,7 +1185,7 @@ body[data-view="notfound"] .db-hero {
   background:
     linear-gradient(45deg, transparent 50%, var(--muted) 50%) calc(100% - 15px) 19px / 5px 5px no-repeat,
     linear-gradient(135deg, var(--muted) 50%, transparent 50%) calc(100% - 10px) 19px / 5px 5px no-repeat,
-    rgba(5, 10, 20, 0.6);
+    rgba(4, 16, 18, 0.78);
   appearance: none;
   font-size: 0.8rem;
 }
@@ -1280,7 +1283,7 @@ body[data-view="notfound"] .db-hero {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background:
-    linear-gradient(165deg, rgba(12, 21, 34, 0.82), rgba(5, 10, 18, 0.9));
+    linear-gradient(165deg, rgba(9, 29, 30, 0.88), rgba(4, 14, 18, 0.94));
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -1292,8 +1295,8 @@ body[data-view="notfound"] .db-hero {
 }
 
 .entry-card[data-variant="boss"] {
-  border-color: rgba(232, 194, 122, 0.38);
-  background: linear-gradient(165deg, rgba(232, 194, 122, 0.08), rgba(5, 10, 18, 0.94));
+  border-color: rgba(232, 194, 122, 0.42);
+  background: linear-gradient(165deg, rgba(232, 194, 122, 0.09), rgba(5, 17, 19, 0.95));
 }
 
 .entry-card[data-variant="boss"]:hover,
@@ -1326,8 +1329,8 @@ body[data-view="notfound"] .db-hero {
   overflow: hidden;
   border-bottom: 1px solid var(--border);
   background:
-    radial-gradient(ellipse at 50% 30%, rgba(120, 221, 255, 0.10), transparent 70%),
-    #080f1c;
+    radial-gradient(ellipse at 50% 30%, rgba(120, 221, 255, 0.11), transparent 70%),
+    #071716;
 }
 
 .entry-media.is-scene img,
@@ -1539,7 +1542,7 @@ body[data-view="notfound"] .db-hero {
   border-top: 2px solid rgba(232, 194, 122, 0.3);
   border-radius: var(--radius-md);
   color: var(--muted);
-  background: radial-gradient(ellipse at 50% 0%, rgba(120, 221, 255, 0.06), transparent 75%), rgba(5, 10, 18, 0.7);
+  background: radial-gradient(ellipse at 50% 0%, rgba(120, 221, 255, 0.07), transparent 75%), rgba(4, 16, 18, 0.8);
   text-align: center;
 }
 
@@ -1610,8 +1613,9 @@ body[data-view="notfound"] .db-hero {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background:
-    radial-gradient(ellipse 70% 60% at 50% 30%, rgba(120, 221, 255, 0.1), transparent 68%),
-    linear-gradient(180deg, rgba(10, 19, 32, 0.9), rgba(5, 9, 17, 0.9));
+    radial-gradient(ellipse 70% 60% at 50% 30%, rgba(120, 221, 255, 0.13), transparent 68%),
+    radial-gradient(ellipse 90% 70% at 50% 100%, rgba(47, 125, 91, 0.14), transparent 70%),
+    linear-gradient(180deg, rgba(8, 25, 26, 0.94), rgba(4, 13, 16, 0.95));
   box-shadow: var(--shadow);
 }
 
@@ -1731,7 +1735,7 @@ body[data-view="notfound"] .db-hero {
   padding: 12px 13px;
   border: 1px solid var(--border);
   border-radius: 10px;
-  background: rgba(8, 14, 25, 0.54);
+  background: rgba(6, 22, 24, 0.74);
 }
 
 .fact dt {
@@ -1766,7 +1770,7 @@ body[data-view="notfound"] .db-hero {
   padding: 10px 13px;
   border: 1px solid var(--border);
   border-radius: 9px;
-  background: rgba(8, 14, 25, 0.48);
+  background: rgba(6, 22, 24, 0.68);
 }
 
 .fact-row dt {
@@ -1799,7 +1803,7 @@ body[data-view="notfound"] .db-hero {
   padding: 9px 12px;
   border: 1px solid var(--border);
   border-radius: 9px;
-  background: rgba(12, 22, 36, 0.6);
+  background: rgba(8, 27, 28, 0.72);
   transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
 }
 
@@ -1856,8 +1860,8 @@ body[data-view="notfound"] .db-hero {
 
 footer {
   padding: 34px 0 42px;
-  border-top: 1px solid rgba(150, 190, 220, 0.12);
-  background: linear-gradient(180deg, rgba(4, 8, 15, 0.7), rgba(3, 6, 12, 0.94));
+  border-top: 1px solid rgba(158, 222, 200, 0.14);
+  background: linear-gradient(180deg, rgba(3, 12, 13, 0.72), rgba(2, 8, 10, 0.94));
 }
 
 .footer-grid {
@@ -2025,6 +2029,10 @@ footer {
 @media (max-width: 620px) {
   :root {
     --topbar: 64px;
+  }
+
+  body::before {
+    background-position: 70% top;
   }
 
   .wrap {
@@ -2215,7 +2223,7 @@ footer {
   border: 1px solid var(--border);
   border-radius: 12px;
   color: var(--text-soft);
-  background: rgba(7, 15, 27, 0.86);
+  background: rgba(6, 23, 25, 0.88);
   font-size: 0.8rem;
 }
 .category-overview a:hover, .category-overview a:focus-visible { border-color: var(--border-strong); background: rgba(120, 221, 255, 0.06); }
@@ -2230,8 +2238,8 @@ footer {
 .copy-feedback:not(:empty) { padding: 6px 10px; border-radius: 8px; background: rgba(121, 212, 156, 0.08); }
 .share-link { flex: 1 1 100%; min-width: 0; width: 100%; padding: 12px; border: 1px solid var(--border-strong); border-radius: 10px; color: var(--text); background: var(--bg-deep); font-size: 1rem; }
 .detail-record { min-width: 0; }
-.detail-record[data-variant="boss"], .detail-record[data-variant="equipment"] { padding: clamp(16px, 2.5vw, 28px); border: 1px solid var(--border); border-radius: var(--radius-xl); background: rgba(5, 12, 22, 0.82); }
-.detail-record[data-variant="boss"] { border-color: rgba(232, 194, 122, 0.42); background: radial-gradient(ellipse at 10% 0%, rgba(232, 194, 122, 0.06), transparent 48%), rgba(5, 12, 22, 0.9); }
+.detail-record[data-variant="boss"], .detail-record[data-variant="equipment"] { padding: clamp(16px, 2.5vw, 28px); border: 1px solid var(--border); border-radius: var(--radius-xl); background: rgba(5, 20, 22, 0.86); }
+.detail-record[data-variant="boss"] { border-color: rgba(232, 194, 122, 0.42); background: radial-gradient(ellipse at 10% 0%, rgba(232, 194, 122, 0.07), transparent 48%), rgba(5, 19, 21, 0.91); }
 .detail-record[data-variant="boss"] .detail-media { min-height: 340px; border-color: rgba(232, 194, 122, 0.28); }
 .detail-record[data-variant="boss"] .detail-media img { width: 270px; height: 270px; }
 .detail-record[data-variant="boss"] .detail-copy > .eyebrow { color: var(--gold); }
