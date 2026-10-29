@@ -28,7 +28,7 @@
   <meta property="og:title" content="Nythara — Online Fantasy RPG">
   <meta
     property="og:description"
-    content="A 2D MMORPG in an immersive 3D fantasy world, with online multiplayer, party gameplay, persistent characters, combat, regions and dungeons."
+    content="A 2D MMORPG in an immersive 3D fantasy world, with online multiplayer, friends, Looking for Group, party gameplay, persistent characters, combat, regions and dungeons."
   >
   <meta property="og:url" content="https://agutroil.github.io/Nythara/">
   <meta property="og:image" content="https://agutroil.github.io/Nythara/assets/nythara-banner.jpg">
@@ -2055,6 +2055,7 @@
         <ul class="status-strip" aria-label="Game facts">
           <li>Online Multiplayer Alpha</li>
           <li>Party Gameplay</li>
+          <li>Friends &amp; LFG</li>
           <li>Persistent Characters</li>
           <li>Real-time Combat</li>
           <li>Two Dungeons</li>
@@ -2687,12 +2688,21 @@
           <p class="eyebrow">07 / Online multiplayer alpha</p>
           <h2>A shared world,<br>built for adventurers.</h2>
           <p>Nythara brings independent players together in one shared,
-            server-authoritative fantasy world. Meet other adventurers, form parties,
-            explore Silverwood together and enter dungeons as a group.</p>
+            server-authoritative fantasy world. Meet other adventurers, stay close to
+            friends, form parties, find a group for the next dungeon and explore
+            Silverwood together.</p>
         </div>
 
         <div class="online-layout">
           <div class="online-copy" data-reveal>
+            <p>Meet other adventurers through a server-owned friends list and see who
+              is online, which region they are exploring and whether they are already
+              in a party. Invite a friend straight into your group or send a whisper
+              without leaving the world.</p>
+            <p>A session-based Looking for Group board lets a party leader publish a
+              run for Silverwood, The Hollow Ruins, Moonroot Sanctum or a general
+              adventure. Other players request to join, and the leader decides who
+              enters.</p>
             <p>Gather up to five players around a party leader, send secure party
               invitations and keep in touch through party chat.</p>
             <p>The party HUD shows names, levels and health, with region information
@@ -2703,13 +2713,14 @@
               without rebuilding the group.</p>
             <p class="scope-note">
               <strong>Online Multiplayer Alpha</strong>
-              Online multiplayer remains in alpha. Public server infrastructure and
-              broader social discovery are still in development.
+              Online multiplayer remains in alpha. Friends, presence and Looking for
+              Group are part of the current build; public server infrastructure and
+              global matchmaking remain future work.
             </p>
           </div>
 
           <figure class="online-capture" data-reveal>
-            <img src="./assets/screenshots/sprint-24-party-silverwood-1600x900.jpg"
+            <img src="./assets/screenshots/sprint-25-party-silverwood-1600x900.jpg"
               alt="Nythara party exploring Silverwood with the party HUD showing leader, levels and health"
               width="1600" height="900" loading="lazy" decoding="async">
             <figcaption>
@@ -2724,12 +2735,17 @@
           <div class="fact"><strong>Online Multiplayer</strong><span>Explore the same persistent world with other players.</span></div>
           <div class="fact"><strong>Party Gameplay</strong><span>Up to five players per party.</span></div>
           <div class="fact"><strong>Party HUD</strong><span>See your party's health, levels, locations and who is reconnecting.</span></div>
+          <div class="fact"><strong>Friends &amp; Presence</strong><span>See who is online, where they are and whether they are grouped.</span></div>
+          <div class="fact"><strong>Looking for Group</strong><span>Publish a run and find adventurers for the next dungeon.</span></div>
           <div class="fact"><strong>Shared Combat</strong><span>Fight creatures and bosses together.</span></div>
           <div class="fact"><strong>Multiplayer Dungeons</strong><span>Enter Moonroot Sanctum and The Hollow Ruins as a party.</span></div>
           <div class="fact"><strong>Reconnect</strong><span>Return to your group after short connection interruptions.</span></div>
         </div>
 
         <ul class="online-features" aria-label="More online features">
+          <li class="online-feature">Friends list and whispers</li>
+          <li class="online-feature">Live presence by region</li>
+          <li class="online-feature">Looking for Group board</li>
           <li class="online-feature">Secure party invitations</li>
           <li class="online-feature">Party chat</li>
           <li class="online-feature">Persistent characters</li>
@@ -2737,7 +2753,7 @@
         </ul>
 
         <figure class="combat-capture" data-reveal>
-          <img src="./assets/screenshots/sprint-24-party-combat-1600x900.jpg"
+          <img src="./assets/screenshots/sprint-25-party-combat-1600x900.jpg"
             alt="Nythara players fighting a Root Sentinel together with party health visible"
             width="1600" height="900" loading="lazy" decoding="async">
           <figcaption>
@@ -2799,6 +2815,14 @@
 
         <div class="news-grid">
           <article class="news-card party-milestone" data-reveal>
+            <div class="news-meta"><span class="milestone">Social Discovery</span><span>October 2026</span></div>
+            <h3>Friends, Presence &amp; Group Discovery</h3>
+            <p>A server-owned friends list shows who is online, where they are and
+              whether they are grouped. Friends can be invited straight into a party,
+              and a Looking for Group board helps leaders and adventurers find each
+              other for Silverwood and both dungeons.</p>
+          </article>
+          <article class="news-card" data-reveal>
             <div class="news-meta"><span class="milestone">Party Gameplay</span><span>October 2026</span></div>
             <h3>Party Gameplay &amp; Online UX</h3>
             <p>Parties, party chat, the party HUD, multiplayer dungeon runs and reconnect
@@ -2878,6 +2902,7 @@
             <h3>✓ Current alpha</h3>
             <ul>
               <li>Online multiplayer alpha with party gameplay</li>
+              <li>Friends, presence and Looking for Group</li>
               <li>Parties of up to five, party HUD and party chat</li>
               <li>Party dungeon runs and reconnect support</li>
               <li>Secure connections and persistent characters</li>
@@ -2900,7 +2925,7 @@
           <article class="dev-card next" data-reveal>
             <h3>✦ More ways to adventure</h3>
             <ul>
-              <li>Expanded social discovery</li>
+              <li>More social activities and shared goals</li>
               <li>A growing economy</li>
               <li>Deeper character progression</li>
               <li>Performance and polish</li>
@@ -2931,6 +2956,7 @@
           <div class="tech">Server Authority<span>Shared world</span></div>
           <div class="tech">Persistent Characters<span>Player state</span></div>
           <div class="tech">Party State<span>Leader · Roster · Party HUD</span></div>
+          <div class="tech">Social Discovery<span>Friends · Presence · LFG</span></div>
           <div class="tech">Reconnect<span>Party membership · Dungeon return</span></div>
           <div class="tech">GL Compatibility<span>Renderer</span></div>
           <div class="tech">Linux<span>Primary platform</span></div>
@@ -2997,12 +3023,24 @@
         </div>
 
         <div class="gallery">
-          <a class="shot" href="./assets/screenshots/sprint-24-party-silverwood-1600x900.jpg" data-lightbox data-caption="Party adventures in Silverwood with the leader, levels and health shown in the party HUD.">
-            <img src="./assets/screenshots/sprint-24-party-silverwood-1600x900.jpg" alt="Nythara party exploring Silverwood with the party HUD visible" width="1600" height="900" loading="lazy" decoding="async">
+          <a class="shot" href="./assets/screenshots/sprint-25-friends-1600x900.jpg" data-lightbox data-caption="The friends list shows an online friend, their region and the party, whisper and remove actions.">
+            <img src="./assets/screenshots/sprint-25-friends-1600x900.jpg" alt="Nythara friends list with an online friend and presence details" width="1600" height="900" loading="lazy" decoding="async">
+            <span>Friends &amp; Presence</span>
+          </a>
+          <a class="shot" href="./assets/screenshots/sprint-25-lfg-1600x900.jpg" data-lightbox data-caption="Looking for Group lists a Moonroot Sanctum run and an incoming join request for the party leader.">
+            <img src="./assets/screenshots/sprint-25-lfg-1600x900.jpg" alt="Nythara Looking for Group board with a Moonroot Sanctum listing and join request" width="1600" height="900" loading="lazy" decoding="async">
+            <span>Looking for Group</span>
+          </a>
+          <a class="shot" href="./assets/screenshots/sprint-25-lfg-party-1600x900.jpg" data-lightbox data-caption="The same party after the leader accepted the Looking for Group request.">
+            <img src="./assets/screenshots/sprint-25-lfg-party-1600x900.jpg" alt="Nythara party formed through Looking for Group with three members in the party HUD" width="1600" height="900" loading="lazy" decoding="async">
+            <span>Party Formed</span>
+          </a>
+          <a class="shot" href="./assets/screenshots/sprint-25-party-silverwood-1600x900.jpg" data-lightbox data-caption="Party adventures in Silverwood with the leader, levels and health shown in the party HUD.">
+            <img src="./assets/screenshots/sprint-25-party-silverwood-1600x900.jpg" alt="Nythara party exploring Silverwood with the party HUD visible" width="1600" height="900" loading="lazy" decoding="async">
             <span>Party in Silverwood</span>
           </a>
-          <a class="shot" href="./assets/screenshots/sprint-24-party-combat-1600x900.jpg" data-lightbox data-caption="A party fighting a Root Sentinel together in Silverwood.">
-            <img src="./assets/screenshots/sprint-24-party-combat-1600x900.jpg" alt="Nythara players fighting together in online party combat" width="1600" height="900" loading="lazy" decoding="async">
+          <a class="shot" href="./assets/screenshots/sprint-25-party-combat-1600x900.jpg" data-lightbox data-caption="A party fighting a Root Sentinel together in Silverwood.">
+            <img src="./assets/screenshots/sprint-25-party-combat-1600x900.jpg" alt="Nythara players fighting together in online party combat" width="1600" height="900" loading="lazy" decoding="async">
             <span>Fight as a Party</span>
           </a>
           <a class="shot" href="./assets/screenshots/sprint-24-party-dungeon-1600x900.jpg" data-lightbox data-caption="Party members face the Hollow Warden inside The Hollow Ruins.">
