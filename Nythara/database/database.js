@@ -481,7 +481,8 @@
   }
 
   function entryCard(entry) {
-    return `<a class="entry-card" data-type="${escapeHtml(entry.type)}" href="#${escapeHtml(
+    const variant = entry.badges?.some((badge) => badge.label === "Boss") ? "boss" : entry.type;
+    return `<a class="entry-card" data-type="${escapeHtml(entry.type)}" data-variant="${escapeHtml(variant)}" href="#${escapeHtml(
       entry.type
     )}/${encodeURIComponent(entry.id)}">
       ${mediaMarkup(entry)}
@@ -685,6 +686,7 @@
       ${
         entries.length === 0
           ? `<div class="empty-state">
+              <svg class="icon empty-icon" aria-hidden="true"><use href="#i-search"></use></svg>
               <h3>No entries match these filters.</h3>
               <p>Try a different filter or clear the current selection.</p>
               <button class="button button--ghost" type="button" data-reset-filters>Clear filters</button>
@@ -829,6 +831,7 @@
             </div>
             ${resultsMarkup(state.lastSearchResults, results.length)}`
           : `<div class="empty-state">
+              <svg class="icon empty-icon" aria-hidden="true"><use href="#i-search"></use></svg>
               <h3>No entries match “${escapeHtml(query)}”.</h3>
               <p>Try a shorter name, a creature, a piece of gear or a location.</p>
               <button class="button button--ghost" type="button" data-clear-search>Clear search</button>
@@ -902,11 +905,13 @@
     delete button.dataset.copying;
     const status = document.getElementById("copy-status");
     if (copied) {
-      button.textContent = "Copied";
-      status.textContent = "Link copied.";
+      button.textContent = "Copied ✓";
+      button.dataset.copied = "true";
+      status.textContent = "Link copied to clipboard.";
       window.setTimeout(() => {
         if (!button.isConnected) return;
         button.textContent = "Copy Link";
+        delete button.dataset.copied;
         status.textContent = "";
       }, 2500);
     } else {

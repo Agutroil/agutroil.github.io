@@ -220,7 +220,7 @@
     }
 
     .section {
-      padding: clamp(70px, 9vw, 116px) 0;
+      padding: clamp(56px, 8vw, 104px) 0;
     }
 
     .section-small {
@@ -252,7 +252,7 @@
     .section-head h2 {
       margin: 10px 0 16px;
       font-size: clamp(2.1rem, 5vw, 3.9rem);
-      line-height: 1.02;
+      line-height: 1.08;
       letter-spacing: -0.045em;
     }
 
@@ -530,7 +530,8 @@
       transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
     }
 
-    .button:hover {
+    .button:hover,
+    .button:focus-visible {
       transform: translateY(-2px);
       border-color: var(--border-strong);
       background: rgba(120, 221, 255, 0.10);
@@ -541,6 +542,11 @@
       border-color: transparent;
       background: linear-gradient(135deg, #a5ecff, var(--cyan));
       box-shadow: 0 16px 44px rgba(120, 221, 255, 0.18);
+    }
+
+    .button.primary:hover,
+    .button.primary:focus-visible {
+      background: linear-gradient(135deg, #c2f3ff, var(--moon));
     }
 
     .button.ghost {
@@ -776,6 +782,7 @@
     .card-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-auto-rows: 1fr;
       gap: 14px;
     }
 
@@ -788,6 +795,7 @@
     .combat-capture {
       display: grid;
       grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      align-items: center;
       margin: 28px 0 0;
       overflow: hidden;
       border: 1px solid rgba(120, 221, 255, 0.24);
@@ -800,6 +808,7 @@
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: cover;
+      border-right: 1px solid var(--border);
     }
 
     .combat-capture figcaption {
@@ -821,7 +830,7 @@
     .combat-capture h3 {
       margin: 8px 0 10px;
       font-size: clamp(1.45rem, 2.5vw, 2rem);
-      line-height: 1.05;
+      line-height: 1.15;
       letter-spacing: -0.03em;
     }
 
@@ -891,6 +900,7 @@
       background: rgba(120, 221, 255, 0.07);
       color: var(--cyan);
       font-size: 1.05rem;
+      line-height: 1;
     }
 
     .feature-card {
@@ -911,6 +921,7 @@
       margin: 0 0 6px;
       font-size: 1rem;
       letter-spacing: -0.01em;
+      line-height: 1.4;
     }
 
     .feature-card p {
@@ -1091,7 +1102,7 @@
     }
 
     .online-layout figcaption {
-      padding: 10px 14px;
+      padding: 18px 20px;
       border-top: 1px solid var(--border);
       color: var(--muted);
       font-size: 0.88rem;
@@ -1141,6 +1152,15 @@
       background: rgba(4, 9, 17, 0.46);
       font-size: 0.82rem;
       font-weight: 650;
+    }
+
+    .online-feature::before {
+      content: "";
+      flex: 0 0 6px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--forest);
     }
 
     .online-feature span[aria-hidden] {
@@ -1195,8 +1215,10 @@
 
     .scope-note {
       padding: 14px 16px;
+      border: 1px solid rgba(232, 194, 122, 0.22);
       border-left: 2px solid var(--gold);
-      background: rgba(232, 194, 122, 0.06);
+      border-radius: 0 12px 12px 0;
+      background: linear-gradient(120deg, rgba(232, 194, 122, 0.08), rgba(4, 9, 17, 0.5));
       color: var(--muted);
       font-size: 0.82rem;
     }
@@ -1407,7 +1429,8 @@
       transition: transform 0.3s ease;
     }
 
-    .shot:hover img {
+    .shot:hover img,
+    .shot:focus-visible img {
       transform: scale(1.025);
     }
 
@@ -1571,7 +1594,7 @@
       transform: none;
     }
 
-    .party-features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 28px; }
+    .party-features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 12px; margin-top: 28px; }
     .party-milestone { grid-column: 1 / -1; border-color: rgba(232, 194, 122, 0.3); }
     .combat-capture .party-rewards { margin-top: 12px; color: var(--text-soft); }
     @media (max-width: 980px) { .party-features { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -1630,7 +1653,7 @@
 
     .codex-preview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; min-height: 720px; }
     .codex-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-lg); background: rgba(6, 13, 24, 0.94); transition: border-color 0.18s ease, transform 0.18s ease; }
-    .codex-card:hover { transform: translateY(-3px); border-color: var(--border-strong); }
+    .codex-card:hover, .codex-card:focus-visible { transform: translateY(-3px); border-color: var(--border-strong); }
     .codex-visual { position: relative; display: grid; place-items: center; height: 210px; overflow: hidden; border-bottom: 1px solid var(--border); background: radial-gradient(ellipse at 50% 30%, rgba(120, 221, 255, 0.10), transparent 70%), #080f1c; }
     .codex-visual img { width: 160px; height: 160px; object-fit: contain; }
     .codex-visual.is-sprite img { image-rendering: pixelated; }
@@ -1744,6 +1767,11 @@
 
       .online-layout figure {
         order: 2;
+      }
+
+      .combat-capture img {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
       }
 
       .overview-grid {
@@ -2636,8 +2664,8 @@
 
         <div class="party-features" role="group" aria-label="Online and party features">
           <div class="fact"><strong>Online Multiplayer</strong><span>Explore the same persistent world with other players.</span></div>
-          <div class="fact"><strong>Party Gameplay</strong><span>Up to Five Players per party.</span></div>
-          <div class="fact"><strong>Party HUD</strong><span>Track members, health, levels, regions and reconnect state.</span></div>
+          <div class="fact"><strong>Party Gameplay</strong><span>Up to five players per party.</span></div>
+          <div class="fact"><strong>Party HUD</strong><span>See your party's health, levels, locations and who is reconnecting.</span></div>
           <div class="fact"><strong>Shared Combat</strong><span>Fight creatures and bosses together.</span></div>
           <div class="fact"><strong>Multiplayer Dungeons</strong><span>Enter Moonroot Sanctum and The Hollow Ruins as a party.</span></div>
           <div class="fact"><strong>Reconnect</strong><span>Return to your group after short connection interruptions.</span></div>
@@ -2645,8 +2673,8 @@
 
         <ul class="online-features" aria-label="More online features">
           <li class="online-feature">Secure party invitations</li>
-          <li class="online-feature">Party Chat</li>
-          <li class="online-feature">Persistent Characters</li>
+          <li class="online-feature">Party chat</li>
+          <li class="online-feature">Persistent characters</li>
           <li class="online-feature">Trading</li>
         </ul>
 
