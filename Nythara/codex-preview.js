@@ -36,7 +36,8 @@
         <image href="${asset(entry.image)}" width="${sourceWidth}" height="${sourceHeight}"></image>
       </svg>`;
     } else {
-      image = `<img src="${asset(entry.image)}" alt="${alt}" loading="lazy" decoding="async">`;
+      const [width, height] = entry.image_kind === "scene" ? [1600, 900] : [160, 160];
+      image = `<img src="${asset(entry.image)}" alt="${alt}" width="${width}" height="${height}" loading="lazy" decoding="async">`;
     }
     return `<span class="codex-visual is-${escapeHtml(entry.image_kind)}">${image}
       ${entry.image_note ? `<span class="codex-note">${escapeHtml(entry.image_note)}</span>` : ""}

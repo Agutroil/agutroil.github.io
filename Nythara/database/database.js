@@ -49,7 +49,6 @@
   };
 
   const PRIMARY_CATEGORIES = ["items", "monsters", "bosses", "dungeons", "regions", "cities"];
-  const SECONDARY_CATEGORIES = ["equipment", "npcs", "quests", "skills", "resources", "loot"];
   const SEARCH_POOL = ["items", "monsters", "dungeons", "regions", "cities", "npcs", "quests", "skills", "resources", "loot"];
 
   const FILTERS = {
@@ -143,6 +142,8 @@
   const state = {
     metadata: null,
     previewFallbacks: {},
+    permalinks: {},
+    imageDimensions: {},
     data: {},
     byType: {},
     total: 0,
@@ -156,11 +157,11 @@
     sort: "name-asc",
     visible: PAGE_SIZE,
     lastSearchResults: [],
-    focusOnRender: false,
-    scrollOnRender: false,
   };
 
   const viewRoot = document.getElementById("view-root");
+  const homeMarkup = viewRoot.innerHTML;
+  const catalogueUrl = document.getElementById("catalogue-preload").href;
   const searchForm = document.getElementById("search-form");
   const searchInput = document.getElementById("db-search");
   const searchClear = document.getElementById("search-clear");
@@ -239,7 +240,7 @@
   }
 
   async function fetchJson(path) {
-    const response = await fetch(path, { cache: "no-cache" });
+    const response = await fetch(path);
     if (!response.ok) {
       throw new Error(`${path} returned ${response.status}`);
     }
@@ -250,28 +251,23 @@
     state.loaded = false;
     state.error = null;
     viewRoot.setAttribute("aria-busy", "true");
-    viewRoot.innerHTML = `
-      <div class="loading-panel" role="status">
-        <span class="loading-rune" aria-hidden="true">✦</span>
-        <p>Reading the Nythara codex…</p>
-      </div>`;
+    if (state.route.name !== "home") {
+      viewRoot.innerHTML = `<div class="loading-panel" role="status"><p>Reading the Nythara codex…</p></div>`;
+      viewRoot.dataset.view = "loading";
+    }
     searchStatus.textContent = "Loading the codex…";
 
     try {
-      const [metadata, previewFallbacks] = await Promise.all([
-        fetchJson("data/metadata.json"),
-        fetchJson("data/preview-fallbacks.json"),
-      ]);
+      const { metadata, previewFallbacks, categories, permalinks, imageDimensions } = await fetchJson(catalogueUrl);
       state.previewFallbacks = previewFallbacks;
-      const payloads = await Promise.all(
-        metadata.categories.map((category) => fetchJson(`data/${category.key}.json`))
-      );
+      state.permalinks = permalinks;
+      state.imageDimensions = imageDimensions;
 
       state.metadata = metadata;
       state.data = {};
       state.byType = {};
-      metadata.categories.forEach((category, index) => {
-        const payload = payloads[index];
+      metadata.categories.forEach((category) => {
+        const payload = categories[category.key];
         state.data[category.key] = payload;
         const type = CATEGORY_TYPE[category.key];
         state.byType[type] = new Map(payload.entries.map((entry) => [entry.id, entry]));
@@ -333,6 +329,7 @@
   }
 
   function renderError() {
+    viewRoot.dataset.view = "error";
     document.body.dataset.view = "notfound";
     document.title = "Database unavailable · Nythara";
     searchStatus.textContent = "The codex could not be loaded.";
@@ -384,6 +381,9 @@
         : state.route.name === "detail"
           ? state.route.category
           : null;
+    const activeKey = active || "";
+    if (catNav.dataset.active === activeKey) return;
+    catNav.dataset.active = activeKey;
     catNav.querySelectorAll("a").forEach((link) => {
       if (link.dataset.cat === active) {
         link.setAttribute("aria-current", "location");
@@ -415,11 +415,13 @@
         <image href="${escapeHtml(visual.image)}" width="${sourceWidth}" height="${sourceHeight}"></image>
       </svg>`;
     } else {
-      picture = `<img src="${escapeHtml(visual.image)}" alt="${alt}" decoding="async"${loading}>`;
+      const [width, height] = state.imageDimensions[visual.image] || [160, 160];
+      picture = `<img src="${escapeHtml(visual.image)}" alt="${alt}" width="${width}" height="${height}" decoding="async"${loading}>`;
     }
-    const extras = (visual.image_extras || []).map((extra) =>
-      `<img class="bundle-extra" src="${escapeHtml(extra.image)}" alt="${escapeHtml(extra.image_alt)}" decoding="async"${loading}>`
-    ).join("");
+    const extras = (visual.image_extras || []).map((extra) => {
+      const [width, height] = state.imageDimensions[extra.image] || [160, 160];
+      return `<img class="bundle-extra" src="${escapeHtml(extra.image)}" alt="${escapeHtml(extra.image_alt)}" width="${width}" height="${height}" decoding="async"${loading}>`;
+    }).join("");
     return `<div class="${base} is-${escapeHtml(kind)}" data-preview="${escapeHtml(entry.type)}">
       ${picture}${extras}
       ${visual.image_note ? `<span class="preview-note">${escapeHtml(visual.image_note)}</span>` : ""}
@@ -482,6 +484,7 @@
 
   function entryCard(entry) {
     const variant = entry.badges?.some((badge) => badge.label === "Boss") ? "boss" : entry.type;
+    const facts = cardFacts(entry);
     return `<a class="entry-card" data-type="${escapeHtml(entry.type)}" data-variant="${escapeHtml(variant)}" href="#${escapeHtml(
       entry.type
     )}/${encodeURIComponent(entry.id)}">
@@ -491,92 +494,14 @@
         <span class="entry-name">${escapeHtml(entry.name)}</span>
         ${entry.subtitle ? `<span class="entry-subtitle">${escapeHtml(entry.subtitle)}</span>` : ""}
         ${entry.badges?.length ? badgeMarkup(entry.badges.slice(0, 3)) : ""}
-        ${cardFacts(entry) ? `<div class="entry-facts">${cardFacts(entry)}</div>` : ""}
+        ${facts ? `<div class="entry-facts">${facts}</div>` : ""}
       </div>
-    </a>`;
-  }
-
-  function categoryCard(category, primary) {
-    const icon = category.key;
-    return `<a class="category-card${primary ? " category-card--primary" : ""}" href="#${escapeHtml(category.key)}">
-      <span class="category-arrow" aria-hidden="true">↗</span>
-      <span class="category-icon"><svg class="icon" aria-hidden="true"><use href="#i-${escapeHtml(
-        icon
-      )}"></use></svg></span>
-      <span class="category-label">${escapeHtml(category.label)}</span>
-      <span class="category-count">${plural(category.count, "entry", "entries")}</span>
-      <span class="category-desc">${escapeHtml(category.description)}</span>
     </a>`;
   }
 
   function renderHome() {
-    const meta = state.metadata;
-    const primary = PRIMARY_CATEGORIES.map(categoryMeta).filter(Boolean);
-    const secondary = SECONDARY_CATEGORIES.map(categoryMeta).filter(Boolean);
-    viewRoot.innerHTML = `
-      <div class="home-intro">
-        <div>
-          <p class="eyebrow">Browse the codex</p>
-          <h2 tabindex="-1">Prepare for the next adventure.</h2>
-          <p>
-            Search the full catalogue or step through items, creatures, dungeons,
-            regions and the adventures that connect them. Follow a creature to its
-            home, a dungeon to its guardian, or a reward to the place it can be found.
-          </p>
-        </div>
-        <span class="home-total"><strong>${state.total}</strong> catalogued entries</span>
-      </div>
-
-      <nav class="category-overview" aria-label="Category overview">
-        ${["items", "equipment", "monsters", "bosses", "dungeons", "regions"].map(categoryMeta).filter(Boolean).map((category) =>
-          `<a href="#${escapeHtml(category.key)}"><strong>${category.count}</strong><span>${escapeHtml(category.key === "regions" ? "Regions" : category.label)}</span></a>`
-        ).join("")}
-      </nav>
-
-      <div class="category-group">
-        <div class="group-head"><h3>Core catalogue</h3></div>
-        <div class="category-grid category-grid--primary">
-          ${primary.map((category) => categoryCard(category, true)).join("")}
-        </div>
-      </div>
-
-      <div class="category-group">
-        <div class="group-head"><h3>Gear &amp; adventures</h3></div>
-        <div class="category-grid">
-          ${secondary.map((category) => categoryCard(category, false)).join("")}
-        </div>
-      </div>
-
-      <div class="codex-notes">
-        <article class="note-card">
-          <span>World codex</span>
-          <h3>Follow the trail</h3>
-          <p>
-            Every creature, region and dungeon links to the places, encounters and
-            rewards that surround it. Start anywhere and see where the trail leads.
-          </p>
-        </article>
-        <article class="note-card">
-          <span>Public reference</span>
-          <h3>Open to every adventurer</h3>
-          <p>
-            Browse the full catalogue without an account. Items, creatures, regions
-            and quests are available directly in the browser.
-          </p>
-        </article>
-        <article class="note-card">
-          <span>Scope</span>
-          <h3>Current content</h3>
-          <p>
-            The catalogue covers the content in the current alpha. Systems still in
-            development are not listed here.
-          </p>
-        </article>
-      </div>`;
-
-    setStatus(
-      `<strong>${state.total}</strong> entries across <strong>${meta.categories.length}</strong> categories · search by name, region, dungeon or item`
-    );
+    if (viewRoot.dataset.view !== "home") viewRoot.innerHTML = homeMarkup;
+    setStatus(`<strong>${state.total}</strong> entries across <strong>${state.metadata.categories.length}</strong> categories · search by name, region, dungeon or item`);
   }
 
   function visibleEntries(entries) {
@@ -687,8 +612,8 @@
         entries.length === 0
           ? `<div class="empty-state">
               <svg class="icon empty-icon" aria-hidden="true"><use href="#i-search"></use></svg>
-              <h3>No entries match these filters.</h3>
-              <p>Try a different filter or clear the current selection.</p>
+              <h3>No Codex entries match these filters.</h3>
+              <p>Try another trail: change a filter or clear your selection.</p>
               <button class="button button--ghost" type="button" data-reset-filters>Clear filters</button>
             </div>`
           : ""
@@ -905,7 +830,7 @@
     delete button.dataset.copying;
     const status = document.getElementById("copy-status");
     if (copied) {
-      button.textContent = "Copied ✓";
+      button.textContent = "Copied";
       button.dataset.copied = "true";
       status.textContent = "Link copied to clipboard.";
       window.setTimeout(() => {
@@ -964,6 +889,7 @@
     viewRoot.innerHTML = `
       <div class="detail">
         <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="../">Nythara</a><span class="sep">/</span>
           <a href="#">Database</a><span class="sep">/</span>
           <a href="${backHref}">${escapeHtml(meta?.label || category)}</a><span class="sep">/</span>
           <span aria-current="page">${escapeHtml(entry.name)}</span>
@@ -973,6 +899,7 @@
             <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
             Back to ${escapeHtml(meta?.label || category)}
           </a>
+          <a class="permalink-link" href="${escapeHtml(state.permalinks[`${entry.type}/${entry.id}`])}">Permanent Codex page ↗</a>
           <button class="copy-link" type="button" data-copy-link aria-label="Copy link to ${escapeHtml(entry.name)}">Copy Link</button>
           <span class="copy-feedback" id="copy-status" role="status" aria-live="polite"></span>
           <input class="share-link" id="share-link" type="url" aria-label="Link to this entry" readonly hidden>
@@ -1063,6 +990,7 @@
       renderNotFound();
     }
 
+    viewRoot.dataset.view = state.route.name;
     viewRoot.setAttribute("aria-busy", "false");
 
     if (focus) {
@@ -1313,6 +1241,7 @@
 
     const initial = parseRoute();
     state.route = initial;
+    document.body.dataset.view = initial.name;
     if (initial.name === "category") {
       resetCategoryState(initial.category);
       state.activeCategory = initial.category;

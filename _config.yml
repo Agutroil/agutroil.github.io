@@ -1,0 +1,14 @@
+# Keep development tooling and preserved profile originals out of the Pages build.
+# The originals remain in Git for the profile README and project history.
+exclude:
+  - tools
+  - docs
+  - README.md
+  - assets/Auto-Abenteuer-banner.png
+  - assets/Profil.png
+  - assets/agutroil-banner.png
+  - assets/antondeister.png
+  - assets/background.png
+  - assets/banner.png
+  - assets/aura-banner.svg
+  - Nythara/assets/nythara-banner.png

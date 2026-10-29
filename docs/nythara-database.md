@@ -98,3 +98,10 @@ explicit links and also show their reverse references under Related Entries.
 Item/equipment and monster/boss aliases share an identity, so they do not appear
 as unrelated duplicate records. Copy Link uses the Clipboard API, selection-based
 copy, then a selectable URL field when copying is unavailable.
+
+## Public entry pages and quality checks
+
+After exporting or updating preview data, run `python3 tools/build_nythara_pages.py`
+to refresh the canonical static entry pages, sitemap and combined browser catalogue.
+Run `python3 tools/check_website.py` before publication. See
+[website quality](website-quality.md) for the complete browser and Lighthouse workflow.

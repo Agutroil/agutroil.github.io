@@ -23,7 +23,7 @@ These commands read and write only the website snapshot. The regular exporter ca
 - New character assets are saved under `Nythara/database/assets/creatures/*-portrait.webp` and `Nythara/database/assets/npcs/*-portrait.webp`. Transparent padding was trimmed and outputs were encoded to 256 × 256 WebP for delivery; all nine total less than 100 KB. Existing original sprites are untouched.
 - Items, equipment, skills and resources reuse the public inventory/icon set. Loot bundles show actual linked drops rather than an empty or universal placeholder.
 - Regions and Dawnwatch without direct captures use labelled **World artwork** crops of the existing banner and shared background. These depict a theme, not a verified region screenshot. Dungeon crops show the Hollow Ruins arena and Moonroot entrance without the full gameplay HUD.
-- `Nythara/assets/nythara-background.webp` is used unchanged. SHA-256: `5b6b32098832e4d6c8d6181313cc516d7187ee4773a7e37a633b081887ef47ac`.
+- `Nythara/assets/nythara-background.webp` keeps the same artwork and dimensions. The website quality pass re-encoded this older representative artwork as WebP at quality 90 (2,430,781 → 308,546 bytes). SHA-256: `5eefbf29c4047958ff1f18acc66578f08369829190f0b94ce6acdecd6e8272fe`. The two green page backgrounds are separate assets and remain unchanged.
 
 ## Generation prompts
 

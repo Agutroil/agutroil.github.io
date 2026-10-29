@@ -1,0 +1,13 @@
+{
+  "name": "nythara-website-quality",
+  "private": true,
+  "scripts": {
+    "browser": "node check_nythara_browser.cjs",
+    "lighthouse": "node measure_nythara_lighthouse.cjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "lighthouse": "12.8.2",
+    "playwright": "1.64.1"
+  }
+}

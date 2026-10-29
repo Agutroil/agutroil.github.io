@@ -308,7 +308,7 @@ Mich interessiert besonders die Verbindung klassischer Softwareentwicklung mit m
 <h1 align="center">🌌 Current Focus — Nythara</h1>
 
 <p align="center">
-  <img src="https://agutroil.github.io/Nythara/assets/nythara-banner.png" alt="Nythara — A 2D MMORPG in a 3D fantasy world" width="100%" />
+  <img src="https://agutroil.github.io/Nythara/assets/nythara-banner.jpg" alt="Nythara — A 2D MMORPG in a 3D fantasy world" width="100%" />
 </p>
 
 <h2 align="center">A 2D MMORPG inside an immersive 3D fantasy world.</h2>

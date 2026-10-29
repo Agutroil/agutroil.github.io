@@ -1,0 +1,14 @@
+{
+  "image_max_bytes": 2097152,
+  "background_max_bytes": 512000,
+  "protected_assets": {
+    "Nythara/assets/nythara-green-background.webp": "4a726542f860fac224f73331cb044eb89cbd75c27797f8557bb66b37ba1d49e1",
+    "Nythara/assets/nythara-database-green-background.webp": "6bde94f91e875fcb28b1788202bc4fee6d768183a7ee880f4766c3caa9b6cfc2",
+    "Nythara/database/assets/creatures/mossling.png": "555f87c92571290d6bf5894d63a1469d3cdcd47973da153f10a5b4f167f47208",
+    "Nythara/database/assets/creatures/briarling.png": "f62a16e7211f1b76317f8a296bcfac66747c5f165953906d1ea77d6729ee3fab",
+    "Nythara/database/assets/creatures/gloom_moth.png": "4fffcf0f7aab58d0518e5ea320781ca9ff3d572d8ae2719781e4ca85625cd995",
+    "Nythara/database/assets/creatures/root_sentinel.png": "fcf1259620288a509f3a3e1ecd45f4f8d616886a88759dcf62b51d7a51a1313e"
+  },
+  "site_max_bytes": 52428800,
+  "runtime_js_max_bytes": 102400
+}
