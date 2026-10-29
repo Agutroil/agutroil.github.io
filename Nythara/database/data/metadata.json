@@ -1,8 +1,8 @@
 {
   "title": "Nythara Database",
-  "source_commit": "a21811015801e130a5752b6453e7839ad7ca77a3",
-  "source_short_commit": "a218110",
-  "generated_at": "2026-10-29T16:16:27Z",
+  "source_commit": "b2bac4d03207db30e3d8e0314056b9f96a64e0e0",
+  "source_short_commit": "b2bac4d",
+  "generated_at": "2026-10-29T19:41:11Z",
   "generator": "tools/export_nythara_database.py",
   "counts": {
     "items": 17,
