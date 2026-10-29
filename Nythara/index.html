@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Explore Nythara, a 2D MMORPG inside an immersive 3D fantasy world with online multiplayer, party gameplay, persistent characters, combat, progression, dungeons and a game codex."
+    content="Explore Nythara, a 2D MMORPG in an immersive 3D fantasy world with friends, Looking for Group, five-player parties, persistent characters, combat, dungeons and a game codex."
   >
   <meta
     name="keywords"
@@ -41,7 +41,7 @@
   <meta name="twitter:title" content="Nythara — Online Fantasy RPG">
   <meta
     name="twitter:description"
-    content="A 2D MMORPG in an immersive 3D fantasy world, with online multiplayer, party gameplay, persistent characters, combat and dungeons."
+    content="A 2D MMORPG in an immersive 3D fantasy world, with friends, Looking for Group, five-player parties, persistent characters, combat and dungeons."
   >
   <meta name="twitter:image" content="https://agutroil.github.io/Nythara/assets/nythara-banner.jpg">
   <meta name="twitter:image:alt" content="Nythara — a 2D MMORPG in a 3D fantasy world">
@@ -52,7 +52,7 @@
     "@type": "VideoGame",
     "name": "Nythara",
     "alternateName": "Nythara MMORPG",
-    "description": "Explore Nythara, a 2D MMORPG inside an immersive 3D fantasy world with online multiplayer, party gameplay, persistent characters, combat, progression, dungeons and a game codex.",
+    "description": "Explore Nythara, a 2D MMORPG in an immersive 3D fantasy world with friends, Looking for Group, five-player parties, persistent characters, combat, dungeons and a game codex.",
     "url": "https://agutroil.github.io/Nythara/",
     "image": "https://agutroil.github.io/Nythara/assets/nythara-banner.jpg",
     "genre": "MMORPG",
@@ -1133,7 +1133,8 @@
       gap: clamp(26px, 5vw, 54px);
     }
 
-    .online-layout figure {
+    .online-layout figure,
+    .social-layout figure {
       margin: 0;
       overflow: hidden;
       border: 1px solid var(--border);
@@ -1141,13 +1142,15 @@
       background: rgba(3, 14, 15, 0.68);
     }
 
-    .online-layout figure img {
+    .online-layout figure img,
+    .social-layout figure img {
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: cover;
     }
 
-    .online-layout figcaption {
+    .online-layout figcaption,
+    .social-layout figcaption {
       padding: 18px 20px;
       border-top: 1px solid var(--border);
       color: var(--muted);
@@ -1155,13 +1158,15 @@
       line-height: 1.65;
     }
 
-    .online-layout figcaption h3 {
+    .online-layout figcaption h3,
+    .social-layout figcaption h3 {
       margin: 0 0 6px;
       color: var(--text);
       font-size: 1.2rem;
     }
 
-    .online-layout figcaption p {
+    .online-layout figcaption p,
+    .social-layout figcaption p {
       margin: 0;
     }
 
@@ -1176,6 +1181,142 @@
 
     .online-capture {
       box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3), 0 0 50px rgba(120, 221, 255, 0.06);
+    }
+
+    .social-jumps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      margin-top: 18px;
+    }
+
+    .social-jumps a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      color: var(--gold);
+      font-size: 0.88rem;
+    }
+
+    .social-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      align-items: start;
+      gap: 24px;
+    }
+
+    .social-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .social-layout figure,
+    .social-cards .social-card {
+      background: rgba(3, 18, 19, 0.92);
+    }
+
+    .social-card h3 {
+      margin: 0 0 8px;
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .social-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.65;
+    }
+
+    .social-card-wide {
+      grid-column: 1 / -1;
+    }
+
+    a.social-card {
+      transition: border-color 0.18s ease, background 0.18s ease;
+    }
+
+    a.social-card:hover,
+    a.social-card:focus-visible {
+      border-color: var(--border-strong);
+      background: rgba(13, 42, 40, 0.9);
+    }
+
+    .social-card .social-card-link {
+      margin-top: 10px;
+      color: var(--gold);
+      font-size: 0.76rem;
+    }
+
+    .capture-link {
+      position: relative;
+      display: block;
+    }
+
+    .capture-link::after {
+      content: "View screenshot ↗";
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      padding: 5px 9px;
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      color: var(--text);
+      background: rgba(3, 14, 15, 0.94);
+      font-size: 0.72rem;
+    }
+
+    .capture-link:hover::after,
+    .capture-link:focus-visible::after {
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+
+    .capture-link:focus-visible {
+      outline-offset: -5px;
+    }
+
+    .presence-states {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .presence-states li {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 4px 9px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.72rem;
+    }
+
+    .presence-states li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--forest);
+    }
+
+    .presence-states .is-reconnecting::before { background: var(--gold); }
+    .presence-states .is-offline::before { background: var(--muted); }
+
+    @media (max-width: 980px) {
+      .social-layout { grid-template-columns: 1fr; }
+      .social-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 620px) {
+      .social-layout { gap: 18px; }
+      .social-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+      .social-card { padding: 14px 12px; }
     }
 
     .online-features {
@@ -1994,7 +2135,7 @@
           <a href="#creatures" data-nav>Creatures</a>
           <a href="#dungeons" data-nav>Dungeons</a>
           <a href="#online" data-nav>Online</a>
-          <a href="#news" data-nav>Milestones</a>
+          <a href="#friends" data-nav>Social</a>
           <a href="#development" data-nav>Roadmap</a>
           <a class="nav-back" href="../">← Agutroil</a>
         </nav>
@@ -2687,27 +2828,20 @@
         <div class="section-head" data-reveal>
           <p class="eyebrow">07 / Online multiplayer alpha</p>
           <h2>A shared world,<br>built for adventurers.</h2>
-          <p>Nythara brings independent players together in one shared,
-            server-authoritative fantasy world. Meet other adventurers, stay close to
+          <p>Nythara brings independent players together in one shared
+            fantasy world. Meet other adventurers, stay close to
             friends, form parties, find a group for the next dungeon and explore
             Silverwood together.</p>
         </div>
 
         <div class="online-layout">
           <div class="online-copy" data-reveal>
-            <p>Meet other adventurers through a server-owned friends list and see who
-              is online, which region they are exploring and whether they are already
-              in a party. Invite a friend straight into your group or send a whisper
-              without leaving the world.</p>
-            <p>A session-based Looking for Group board lets a party leader publish a
-              run for Silverwood, The Hollow Ruins, Moonroot Sanctum or a general
-              adventure. Other players request to join, and the leader decides who
-              enters.</p>
             <p>Gather up to five players around a party leader, send secure party
-              invitations and keep in touch through party chat.</p>
+              invitations and keep in touch through party chat. Explore the same
+              trails, fight creatures together and take your group into the dungeons.</p>
             <p>The party HUD shows names, levels and health, with region information
-              and a reconnecting status when a member is away. Characters, combat,
-              enemies, progression and world state stay under server authority.</p>
+              and a reconnecting status during connection interruptions. Keep an eye
+              on your companions as the adventure unfolds.</p>
             <p>Reconnect support keeps party membership intact during short connection
               interruptions, including dungeon runs. Return with the same character
               without rebuilding the group.</p>
@@ -2717,6 +2851,10 @@
               Group are part of the current build; public server infrastructure and
               global matchmaking remain future work.
             </p>
+            <div class="social-jumps">
+              <a class="text-link" href="#friends">Friends &amp; Presence →</a>
+              <a class="text-link" href="#group">Find Your Group →</a>
+            </div>
           </div>
 
           <figure class="online-capture" data-reveal>
@@ -2732,10 +2870,10 @@
         </div>
 
         <div class="party-features" role="group" aria-label="Online and party features">
-          <div class="fact"><strong>Online Multiplayer</strong><span>Explore the same persistent world with other players.</span></div>
+          <div class="fact"><strong>Online Multiplayer</strong><span>Explore a shared world with other players.</span></div>
           <div class="fact"><strong>Party Gameplay</strong><span>Up to five players per party.</span></div>
-          <div class="fact"><strong>Party HUD</strong><span>See your party's health, levels, locations and who is reconnecting.</span></div>
-          <div class="fact"><strong>Friends &amp; Presence</strong><span>See who is online, where they are and whether they are grouped.</span></div>
+          <div class="fact"><strong>Party HUD</strong><span>See your party's health, levels, regions and who is reconnecting.</span></div>
+          <div class="fact"><strong>Friends &amp; Presence</strong><span>See who is online, their region and whether they are grouped.</span></div>
           <div class="fact"><strong>Looking for Group</strong><span>Publish a run and find adventurers for the next dungeon.</span></div>
           <div class="fact"><strong>Shared Combat</strong><span>Fight creatures and bosses together.</span></div>
           <div class="fact"><strong>Multiplayer Dungeons</strong><span>Enter Moonroot Sanctum and The Hollow Ruins as a party.</span></div>
@@ -2784,10 +2922,150 @@
 
     <div class="divider"></div>
 
+    <section class="section" id="friends" aria-labelledby="friends-title">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">08 / Friends &amp; social</p>
+          <h2 id="friends-title">Friends &amp; Presence</h2>
+          <p>Stay connected with adventurers you meet across Nythara. See when friends
+            are online, reconnecting or exploring another region, then send a party
+            invitation or start a conversation.</p>
+        </div>
+
+        <div class="social-layout">
+          <figure class="online-capture" data-reveal>
+            <a class="capture-link" href="./assets/screenshots/sprint-25-friends-1600x900.jpg" data-lightbox data-caption="The friends list shows an online friend in Whispering Grove, with invite, whisper and remove actions.">
+              <img src="./assets/screenshots/sprint-25-friends-1600x900.jpg"
+                alt="Nythara friends list showing an online friend in Whispering Grove with invite, whisper and remove actions"
+                width="1600" height="900" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <h3>A familiar face on the trail</h3>
+              <p>Friendships stay saved between sessions, ready for your next adventure.</p>
+              <ul class="presence-states" aria-label="Friend presence states">
+                <li>Online</li>
+                <li class="is-reconnecting">Reconnecting</li>
+                <li class="is-offline">Offline</li>
+              </ul>
+            </figcaption>
+          </figure>
+
+          <div class="social-cards">
+            <article class="fact social-card" data-reveal>
+              <h3>Friends</h3>
+              <p>Accept or decline friend requests and keep a persistent friends list.
+                Remove a friendship whenever you choose.</p>
+            </article>
+            <article class="fact social-card" data-reveal>
+              <h3>Online Presence</h3>
+              <p>See who is online, reconnecting or offline before reaching out.</p>
+            </article>
+            <article class="fact social-card" data-reveal>
+              <h3>Region Status</h3>
+              <p>Check a friend's character, level and current world to see where their
+                adventure has taken them.</p>
+            </article>
+            <article class="fact social-card" data-reveal>
+              <h3>Party Status</h3>
+              <p>See whether a friend is grouped and send a party invitation directly
+                from the friends list.</p>
+            </article>
+            <article class="fact social-card" data-reveal>
+              <h3>Reconnect</h3>
+              <p>A reconnecting status lets friends know when a connection is briefly
+                interrupted.</p>
+            </article>
+            <article class="fact social-card" data-reveal>
+              <h3>Whisper</h3>
+              <p>Start a private conversation with a friend without leaving your adventure.</p>
+            </article>
+          </div>
+        </div>
+        <div class="social-jumps">
+          <a class="text-link" href="#group">Looking for more companions? Find Your Group →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section" id="group" aria-labelledby="group-title">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">09 / Looking for Group</p>
+          <h2 id="group-title">Find Your Group</h2>
+          <p>Looking for Group helps adventurers find companions for exploration and
+            dungeon runs. Browse a run, request to join and let the party leader bring
+            the group together.</p>
+        </div>
+
+        <div class="social-layout">
+          <figure class="online-capture" data-reveal>
+            <a class="capture-link" href="./assets/screenshots/sprint-25-lfg-1600x900.jpg" data-lightbox data-caption="Looking for Group lists a Moonroot Sanctum run and an incoming join request for the party leader.">
+              <img src="./assets/screenshots/sprint-25-lfg-1600x900.jpg"
+                alt="Nythara Looking for Group board with a Moonroot Sanctum listing and a join request"
+                width="1600" height="900" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <h3>Your next adventure starts with a group</h3>
+              <p>The board brings players together within the current server session.
+                Joining a group leaves travel and starting the activity in your hands.</p>
+            </figcaption>
+          </figure>
+
+          <div class="social-cards">
+            <article class="fact social-card" data-reveal>
+              <h3>Browse Groups</h3>
+              <p>Find listings for General Adventure, Silverwood, The Hollow Ruins
+                and Moonroot Sanctum.</p>
+            </article>
+            <article class="fact social-card" data-reveal>
+              <h3>Join Requests</h3>
+              <p>Request a place in a listed run. The party leader reviews requests
+                and chooses who joins.</p>
+            </article>
+            <a class="fact social-card" href="./database/#dungeon/world_moonroot_sanctum" data-reveal>
+              <h3>Moonroot Sanctum</h3>
+              <p>Find companions for the moonlit sanctuary and its guardian, the Rootbound Seer.</p>
+              <span class="social-card-link">Explore dungeon →</span>
+            </a>
+            <a class="fact social-card" href="./database/#dungeon/world_hollow_ruins" data-reveal>
+              <h3>The Hollow Ruins</h3>
+              <p>Gather a party for root-choked halls and the Hollow Warden encounter.</p>
+              <span class="social-card-link">Explore dungeon →</span>
+            </a>
+            <article class="fact social-card social-card-wide" data-reveal>
+              <h3>Party Formation</h3>
+              <p>An accepted request brings you into the party. LFG does not
+                automatically teleport you or start a dungeon.</p>
+            </article>
+          </div>
+        </div>
+
+        <figure class="combat-capture" data-reveal>
+          <a class="capture-link" href="./assets/screenshots/sprint-25-lfg-party-1600x900.jpg" data-lightbox data-caption="The party after the leader accepted a Looking for Group request, with three members visible in the party HUD.">
+            <img src="./assets/screenshots/sprint-25-lfg-party-1600x900.jpg"
+              alt="Three adventurers in a Nythara party formed through Looking for Group, with the party HUD visible"
+              width="1600" height="900" loading="lazy" decoding="async">
+          </a>
+          <figcaption>
+            <span class="capture-kicker">Looking for Group · Party formed</span>
+            <h3>From a request to a shared adventure</h3>
+            <p>Once the leader accepts, keep track of your companions in the party HUD
+              and plan your next steps together.</p>
+            <p class="party-rewards">Listings and join requests belong to the current
+              server session. Global matchmaking remains future work.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
     <section class="section" id="codex">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">08 / The world codex</p>
+          <p class="eyebrow">10 / The world codex</p>
           <h2>Explore the<br>Nythara Codex.</h2>
           <p>Meet a forest creature, discover its home and follow the trail to the
             guardian beyond. Find the gear and skills to prepare for your next adventure.</p>
@@ -2805,7 +3083,7 @@
     <section class="section" id="news">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">09 / Milestones</p>
+          <p class="eyebrow">11 / Milestones</p>
           <h2>Milestones in<br>the making.</h2>
           <p>
             From the first forest trail to a shared online world — the steps that
@@ -2889,7 +3167,7 @@
     <section class="section" id="development">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">10 / The road ahead</p>
+          <p class="eyebrow">12 / The road ahead</p>
           <h2>The Road Ahead.</h2>
           <p>
             The online multiplayer alpha is the beginning. More places to explore,
@@ -2940,7 +3218,7 @@
     <section class="section" id="technology">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">11 / Technology</p>
+          <p class="eyebrow">13 / Technology</p>
           <h2>Built for<br>a living world.</h2>
           <p>
             Godot and GDScript, a dedicated server and a focused technology stack.
@@ -2953,8 +3231,8 @@
           <div class="tech">Godot<span>4.7.2</span></div>
           <div class="tech">GDScript<span>Gameplay</span></div>
           <div class="tech tech-networking">Networking<span>Godot Multiplayer · ENet · Verified DTLS · IPv4 / IPv6</span></div>
-          <div class="tech">Server Authority<span>Shared world</span></div>
-          <div class="tech">Persistent Characters<span>Player state</span></div>
+          <div class="tech">Server Authority<span>Server-authoritative gameplay</span></div>
+          <div class="tech">Character Storage<span>Persistent character storage</span></div>
           <div class="tech">Party State<span>Leader · Roster · Party HUD</span></div>
           <div class="tech">Social Discovery<span>Friends · Presence · LFG</span></div>
           <div class="tech">Reconnect<span>Party membership · Dungeon return</span></div>
@@ -2974,7 +3252,7 @@
     <section class="section" id="hardware">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">12 / Broad hardware support</p>
+          <p class="eyebrow">14 / Broad hardware support</p>
           <h2>Built to run<br>on modest hardware.</h2>
           <p>
             Nythara is designed with integrated graphics and older GPUs in mind.
@@ -3014,7 +3292,7 @@
     <section class="section" id="gallery">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">13 / Gallery</p>
+          <p class="eyebrow">15 / Gallery</p>
           <h2>A glimpse of<br>the adventure.</h2>
           <p>
             In-game captures from Silverwood, the online multiplayer alpha and
