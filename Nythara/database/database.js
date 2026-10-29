@@ -526,6 +526,12 @@
         <span class="home-total"><strong>${state.total}</strong> catalogued entries</span>
       </div>
 
+      <nav class="category-overview" aria-label="Category overview">
+        ${["items", "equipment", "monsters", "bosses", "dungeons", "regions"].map(categoryMeta).filter(Boolean).map((category) =>
+          `<a href="#${escapeHtml(category.key)}"><strong>${category.count}</strong><span>${escapeHtml(category.key === "regions" ? "Regions" : category.label)}</span></a>`
+        ).join("")}
+      </nav>
+
       <div class="category-group">
         <div class="group-head"><h3>Core catalogue</h3></div>
         <div class="category-grid category-grid--primary">
@@ -836,6 +842,83 @@
     );
   }
 
+  const relationshipKey = (type, id) => `${({ boss: "monster", equipment: "item" })[type] || type}/${id}`;
+
+  function preferredEntry(entry) {
+    if (entry.type === "monster") return getEntry("boss", entry.id) || entry;
+    if (entry.type === "item") return getEntry("equipment", entry.id) || entry;
+    return entry;
+  }
+
+  function relatedEntries(entry) {
+    const ownKey = relationshipKey(entry.type, entry.id);
+    const related = new Map();
+    const add = (type, id, meta = "") => {
+      const key = relationshipKey(type, id);
+      const target = getEntry(type, id);
+      if (!target || key === ownKey || related.has(key)) return;
+      const preferred = preferredEntry(target);
+      related.set(key, { type: preferred.type, id, name: preferred.name, meta });
+    };
+    // Only explicit game-data links count, including their reverse references.
+    for (const section of entry.sections || []) {
+      for (const link of section.links || []) add(link.type, link.id, section.title);
+    }
+    for (const payload of Object.values(state.data)) {
+      for (const source of payload.entries) {
+        if ((source.sections || []).some((section) => (section.links || []).some((link) => relationshipKey(link.type, link.id) === ownKey))) {
+          add(source.type, source.id);
+        }
+      }
+    }
+    return [...related.values()];
+  }
+
+  async function copyDetailLink(button) {
+    if (button.dataset.copying) return;
+    button.dataset.copying = "true";
+    const url = window.location.href;
+    let copied = false;
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(url);
+        copied = true;
+      }
+    } catch { /* Fall through to the browser's selection-based copy. */ }
+    if (!button.isConnected) return;
+    if (!copied) {
+      const field = document.createElement("textarea");
+      field.value = url;
+      field.readOnly = true;
+      field.tabIndex = -1;
+      field.setAttribute("aria-hidden", "true");
+      field.style.cssText = "position:fixed;left:-9999px;top:0";
+      document.body.append(field);
+      field.select();
+      try { copied = document.execCommand("copy"); } catch { /* Offer manual copy below. */ }
+      field.remove();
+      button.focus({ preventScroll: true });
+    }
+    delete button.dataset.copying;
+    const status = document.getElementById("copy-status");
+    if (copied) {
+      button.textContent = "Copied";
+      status.textContent = "Link copied.";
+      window.setTimeout(() => {
+        if (!button.isConnected) return;
+        button.textContent = "Copy Link";
+        status.textContent = "";
+      }, 2500);
+    } else {
+      const field = document.getElementById("share-link");
+      field.hidden = false;
+      field.value = url;
+      field.focus();
+      field.select();
+      status.textContent = "Select and copy the link below.";
+    }
+  }
+
   function renderDetail() {
     const entry = getEntry(state.route.type, state.route.id);
     if (!entry) {
@@ -846,7 +929,32 @@
     const meta = categoryMeta(category);
     const source = state.metadata;
     const backHref = `#${category}`;
-    const facts = (entry.facts || []).filter((fact) => !["Stable ID", "World ID", "Map ID", "Appearance ID"].includes(fact.label));
+    const isBoss = entry.type === "boss" || entry.badges?.some((badge) => badge.label === "Boss");
+    const isEquipment = entry.type === "equipment" || (entry.type === "item" && getEntry("equipment", entry.id));
+    const variant = isBoss ? "boss" : isEquipment ? "equipment" : entry.type;
+    const facts = (entry.facts || [])
+      .filter((fact) => !["Stable ID", "World ID", "Map ID", "Appearance ID"].includes(fact.label))
+      .map((fact) => fact.label === "Wearable visual" && fact.value.startsWith("Yes")
+        ? { label: "Appearance", value: "Visible when equipped" } : fact);
+    const primaryLabels = isBoss || entry.type === "monster" ? ["Health", "Attack", "Armor"]
+      : isEquipment ? ["Attack", "Armor", "Max health"] : [];
+    const contextLabels = ({ boss: ["Levels"], monster: ["Levels", "Archetype"], dungeon: ["Levels", "Requirement"],
+      equipment: ["Equipment slot", "Level requirement"], region: ["Levels", "Biome"], quest: ["Rewards"], skill: ["Required level", "Cooldown"] })[variant] || [];
+    const primary = facts.filter((fact) => primaryLabels.includes(fact.label));
+    const context = facts.filter((fact) => contextLabels.includes(fact.label));
+    const remaining = facts.filter((fact) => !primary.includes(fact) && !context.includes(fact));
+    const related = relatedEntries(entry);
+    const locations = new Map();
+    for (const section of entry.sections || []) {
+      for (const link of section.links || []) {
+        if (["region", "dungeon"].includes(link.type) || (variant === "dungeon" && link.type === "boss")) {
+          locations.set(`${link.type}/${link.id}`, link);
+        }
+      }
+    }
+    const loot = related.find((link) => link.type === "loot");
+    const rarity = facts.find((fact) => fact.label === "Rarity")?.value || "";
+    const kicker = isBoss ? "Boss encounter" : variant === "dungeon" ? "Dungeon expedition" : `${TYPE_LABEL[entry.type] || entry.type} · Nythara Codex`;
 
     viewRoot.innerHTML = `
       <div class="detail">
@@ -855,38 +963,53 @@
           <a href="${backHref}">${escapeHtml(meta?.label || category)}</a><span class="sep">/</span>
           <span aria-current="page">${escapeHtml(entry.name)}</span>
         </nav>
-        <a class="back-link" href="${backHref}">
-          <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
-          Back to ${escapeHtml(meta?.label || category)}
-        </a>
+        <div class="detail-actions">
+          <a class="back-link" href="${backHref}">
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+            Back to ${escapeHtml(meta?.label || category)}
+          </a>
+          <button class="copy-link" type="button" data-copy-link aria-label="Copy link to ${escapeHtml(entry.name)}">Copy Link</button>
+          <span class="copy-feedback" id="copy-status" role="status" aria-live="polite"></span>
+          <input class="share-link" id="share-link" type="url" aria-label="Link to this entry" readonly hidden>
+        </div>
 
-        <article class="detail-record" data-type="${escapeHtml(entry.type)}">
+        <article class="detail-record" data-type="${escapeHtml(entry.type)}" data-variant="${escapeHtml(variant)}" data-rarity="${escapeHtml(rarity)}">
           <header class="detail-hero">
             ${mediaMarkup(entry, true)}
             <div class="detail-copy">
-              <p class="eyebrow">${escapeHtml(TYPE_LABEL[entry.type] || entry.type)} entry</p>
+              <p class="eyebrow">${escapeHtml(kicker)}</p>
               <h2 tabindex="-1">${escapeHtml(entry.name)}</h2>
               ${entry.subtitle ? `<p class="detail-subtitle">${escapeHtml(entry.subtitle)}</p>` : ""}
               ${entry.badges?.length ? badgeMarkup(entry.badges) : ""}
               ${entry.description ? `<p class="detail-description">${escapeHtml(entry.description)}</p>` : ""}
+              ${context.length ? factGrid(context).replace('class="facts-grid"', 'class="detail-context"') : ""}
+              ${locations.size ? `<div class="detail-locations">${linksMarkup([...locations.values()])}</div>` : ""}
+              ${primary.length ? factGrid(primary).replace('class="facts-grid"', 'class="hero-stats"') : ""}
+              ${loot ? `<a class="loot-shortcut" href="#loot/${encodeURIComponent(loot.id)}">Explore loot &amp; rewards →</a>` : ""}
             </div>
           </header>
 
-          ${facts.length ? `<section class="facts-block" aria-labelledby="facts-title">
+          ${remaining.length ? `<section class="facts-block" aria-labelledby="facts-title">
             <h3 id="facts-title">At a glance</h3>
-            ${factGrid(facts)}
+            ${factGrid(remaining)}
           </section>` : ""}
 
           ${(entry.sections || [])
             .filter((section) => section.facts?.length || section.links?.length)
             .map(
               (section, index) => `<section class="detail-section" aria-labelledby="section-${index}">
-                <h3 id="section-${index}">${escapeHtml(section.title)}</h3>
+                <h3 id="section-${index}">${escapeHtml(section.title === "Encounter sequence" ? "Encounters" : section.title)}</h3>
                 ${section.facts?.length ? factRows(section.facts) : ""}
                 ${section.links?.length ? linksMarkup(section.links) : ""}
               </section>`
             )
             .join("")}
+
+          ${related.length ? `<section class="related-section" aria-labelledby="related-title">
+            <p class="eyebrow">Follow the connections</p>
+            <h3 id="related-title">Related Entries</h3>
+            ${linksMarkup(related)}
+          </section>` : ""}
 
           <p class="detail-source">
             Game Data Revision: ${escapeHtml(source.source_short_commit)} · Updated
@@ -895,11 +1018,7 @@
         </article>
       </div>`;
 
-    setStatus(
-      `Viewing <strong>${escapeHtml(entry.name)}</strong> · ${escapeHtml(
-        TYPE_LABEL[entry.type] || entry.type
-      )} · game data ${escapeHtml(source.source_short_commit)}`
-    );
+    setStatus(`Viewing <strong>${escapeHtml(entry.name)}</strong> · ${escapeHtml(isBoss ? "Boss" : TYPE_LABEL[entry.type] || entry.type)}`);
   }
 
   function renderNotFound(message = "") {
@@ -1124,6 +1243,11 @@
     });
 
     viewRoot.addEventListener("click", (event) => {
+      const copyLink = event.target.closest("[data-copy-link]");
+      if (copyLink) {
+        copyDetailLink(copyLink);
+        return;
+      }
       const loadMore = event.target.closest("[data-load-more]");
       if (loadMore) {
         const previousVisible = state.visible;

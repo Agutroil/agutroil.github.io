@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Explore Nythara, a 2D MMORPG inside an immersive 3D fantasy world. Discover Silverwood, battle creatures, build your character and fight together in the online multiplayer alpha."
+    content="Explore Nythara, a 2D MMORPG inside an immersive 3D fantasy world with online multiplayer, party gameplay, persistent characters, combat, progression, dungeons and a game codex."
   >
   <meta
     name="keywords"
@@ -28,7 +28,7 @@
   <meta property="og:title" content="Nythara — Online Fantasy RPG">
   <meta
     property="og:description"
-    content="A 2D MMORPG in an immersive 3D fantasy world, with online multiplayer, persistent characters, combat, progression, regions and dungeons."
+    content="A 2D MMORPG in an immersive 3D fantasy world, with online multiplayer, party gameplay, persistent characters, combat, regions and dungeons."
   >
   <meta property="og:url" content="https://agutroil.github.io/Nythara/">
   <meta property="og:image" content="https://agutroil.github.io/Nythara/assets/nythara-banner.jpg">
@@ -41,7 +41,7 @@
   <meta name="twitter:title" content="Nythara — Online Fantasy RPG">
   <meta
     name="twitter:description"
-    content="A 2D MMORPG in an immersive 3D fantasy world, with online multiplayer, persistent characters, combat and dungeons."
+    content="A 2D MMORPG in an immersive 3D fantasy world, with online multiplayer, party gameplay, persistent characters, combat and dungeons."
   >
   <meta name="twitter:image" content="https://agutroil.github.io/Nythara/assets/nythara-banner.jpg">
   <meta name="twitter:image:alt" content="Nythara — a 2D MMORPG in a 3D fantasy world">
@@ -52,7 +52,7 @@
     "@type": "VideoGame",
     "name": "Nythara",
     "alternateName": "Nythara MMORPG",
-    "description": "Explore Nythara, a 2D MMORPG inside an immersive 3D fantasy world. Discover Silverwood, battle creatures, build your character and fight together in the online multiplayer alpha.",
+    "description": "Explore Nythara, a 2D MMORPG inside an immersive 3D fantasy world with online multiplayer, party gameplay, persistent characters, combat, progression, dungeons and a game codex.",
     "url": "https://agutroil.github.io/Nythara/",
     "image": "https://agutroil.github.io/Nythara/assets/nythara-banner.jpg",
     "genre": "MMORPG",
@@ -1571,6 +1571,92 @@
       transform: none;
     }
 
+    .party-features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 28px; }
+    .party-milestone { grid-column: 1 / -1; border-color: rgba(232, 194, 122, 0.3); }
+    .combat-capture .party-rewards { margin-top: 12px; color: var(--text-soft); }
+    @media (max-width: 980px) { .party-features { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 620px) { .party-features { grid-template-columns: 1fr; } }
+
+    .subsection-title {
+      margin: 0 0 18px;
+      color: var(--text-soft);
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .loop-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 12px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .loop-card {
+      position: relative;
+      min-width: 0;
+      padding: 18px 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: linear-gradient(145deg, rgba(8, 20, 32, 0.90), rgba(8, 12, 23, 0.82));
+    }
+
+    .loop-step { position: absolute; top: 16px; right: 14px; color: var(--muted); font: 0.65rem var(--mono); }
+    .loop-icon { width: 24px; height: 24px; color: var(--gold); stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .loop-card:nth-child(2n) .loop-icon { color: var(--cyan); }
+    .loop-card:nth-child(3n) .loop-icon { color: var(--violet); }
+    .loop-card h4 { margin: 12px 0 7px; font-size: 1rem; }
+    .loop-card p { margin: 0; color: var(--muted); font-size: 0.8rem; line-height: 1.65; }
+
+    .inventory-panel {
+      margin-top: 28px;
+      padding: 22px;
+      border: 1px solid rgba(232, 194, 122, 0.22);
+      border-radius: var(--radius-lg);
+      background: rgba(5, 12, 22, 0.88);
+    }
+
+    .inventory-heading { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px 18px; }
+    .inventory-heading h3 { margin: 0; font-size: 1.1rem; }
+    .inventory-heading a { color: var(--gold); font-size: 0.8rem; }
+    .content-counts { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 8px; min-height: 92px; padding: 0; margin: 18px 0 0; list-style: none; }
+    .content-counts a { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 88px; padding: 10px 4px; border: 1px solid var(--border); border-radius: 10px; background: rgba(120, 221, 255, 0.025); }
+    .content-counts a:hover { border-color: var(--border-strong); background: rgba(120, 221, 255, 0.06); }
+    .content-counts strong { color: var(--moon); font-size: 1.85rem; line-height: 1.2; font-variant-numeric: tabular-nums; }
+    .content-counts span { margin-top: 6px; color: var(--muted); font-size: 0.7rem; }
+    .content-status { min-height: 1.7em; margin: 12px 0 0; color: var(--muted); font-size: 0.8rem; }
+    .content-status:empty { display: none; }
+
+    .codex-preview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; min-height: 720px; }
+    .codex-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-lg); background: rgba(6, 13, 24, 0.94); transition: border-color 0.18s ease, transform 0.18s ease; }
+    .codex-card:hover { transform: translateY(-3px); border-color: var(--border-strong); }
+    .codex-visual { position: relative; display: grid; place-items: center; height: 210px; overflow: hidden; border-bottom: 1px solid var(--border); background: radial-gradient(ellipse at 50% 30%, rgba(120, 221, 255, 0.10), transparent 70%), #080f1c; }
+    .codex-visual img { width: 160px; height: 160px; object-fit: contain; }
+    .codex-visual.is-sprite img { image-rendering: pixelated; }
+    .codex-visual.is-icon img { width: 84px; height: 84px; }
+    .codex-visual.is-scene img, .codex-visual svg { width: 100%; height: 100%; object-fit: cover; }
+    .codex-visual .codex-note { position: absolute; bottom: 7px; padding: 3px 8px; border: 1px solid var(--border); border-radius: 6px; color: var(--text-soft); background: rgba(3, 6, 12, 0.94); font: 0.6rem var(--mono); }
+    .codex-card-body { display: block; padding: 20px; }
+    .codex-type { color: var(--gold); font: 0.65rem var(--mono); letter-spacing: 0.09em; text-transform: uppercase; }
+    .codex-card h3 { margin: 8px 0; font-size: 1.2rem; line-height: 1.3; overflow-wrap: anywhere; }
+    .codex-card p { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin: 0; color: var(--muted); font-size: 0.84rem; line-height: 1.65; }
+
+    @media (max-width: 1120px) { .loop-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 860px) { .content-counts { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 620px) {
+      .loop-grid, .codex-preview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+      .loop-card { padding: 16px 13px; }
+      .inventory-panel { padding: 16px; }
+      .codex-preview-grid { min-height: 850px; }
+      .codex-visual { height: 152px; }
+      .codex-visual img { width: 118px; height: 118px; }
+      .codex-card-body { padding: 14px 12px; }
+      .codex-card h3 { font-size: 1rem; }
+      .codex-card p { font-size: 0.76rem; }
+      .codex-type { font-size: 0.58rem; }
+    }
+
     @media (max-width: 1120px) {
       .nav-links a {
         padding-inline: 6px;
@@ -1846,8 +1932,8 @@
           </p>
           <p class="hero-description">
             Follow forest trails, descend into forgotten ruins and shape your own
-            adventurer. Discover Silverwood and share the journey with other players
-            in the online multiplayer alpha.
+            adventurer. Form a party of up to five players and share the journey
+            through Silverwood and beyond in the online multiplayer alpha.
           </p>
 
           <div class="actions">
@@ -1882,7 +1968,7 @@
 
         <ul class="status-strip" aria-label="Game facts">
           <li>Online Multiplayer Alpha</li>
-          <li>Shared World</li>
+          <li>Party Gameplay</li>
           <li>Persistent Characters</li>
           <li>Real-time Combat</li>
           <li>Two Dungeons</li>
@@ -1905,43 +1991,57 @@
           </p>
         </div>
 
-        <div class="overview-grid">
-          <article class="feature-card" data-reveal>
-            <div class="feature-icon" aria-hidden="true">🧭</div>
-            <h3>Explore</h3>
-            <p>
-              Follow trails through distinct regions, discover portals and find your
-              next destination on the world map.
-            </p>
-          </article>
-
-          <article class="feature-card" data-reveal>
-            <div class="feature-icon" aria-hidden="true">⚔</div>
-            <h3>Fight</h3>
-            <p>
-              Read an enemy's next attack, time your skills and face bosses that
-              change tactics as the battle unfolds.
-            </p>
-          </article>
-
-          <article class="feature-card" data-reveal>
-            <div class="feature-icon" aria-hidden="true">✦</div>
-            <h3>Progress</h3>
-            <p>
-              Levels, attributes, skill ranks, equipment and loadouts on one persistent
-              character that carries between sessions.
-            </p>
-          </article>
-
-          <article class="feature-card" data-reveal>
-            <div class="feature-icon" aria-hidden="true">🌐</div>
-            <h3>Connect</h3>
-            <p>
-              Meet adventurers on the trail, chat, trade and take on shared
-              creatures and dungeons in the online multiplayer alpha.
-            </p>
-          </article>
+        <div id="gameplay-loop" aria-labelledby="loop-title">
+          <h3 class="subsection-title" id="loop-title">Your adventure, step by step.</h3>
+          <ol class="loop-grid">
+            <li class="loop-card">
+              <span class="loop-step" aria-hidden="true">01</span>
+              <svg class="loop-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 4 8v13l8-4 8 4V8l-8-5Zm0 0v14M4 8l8 5 8-5"></path></svg>
+              <h4>Explore</h4>
+              <p>Discover connected fantasy regions, hidden paths and ancient ruins.</p>
+            </li>
+            <li class="loop-card">
+              <span class="loop-step" aria-hidden="true">02</span>
+              <svg class="loop-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m15 3 6 6-9 9-6 1 1-6L15 3ZM12 6l6 6M3 21l4-4M4 14l6 6"></path></svg>
+              <h4>Fight</h4>
+              <p>Battle creatures, elites and bosses with real-time skills and readable attacks.</p>
+            </li>
+            <li class="loop-card">
+              <span class="loop-step" aria-hidden="true">03</span>
+              <svg class="loop-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 10h16v11H4V10Zm0 0V8a5 5 0 0 1 5-5h6a5 5 0 0 1 5 5v2M3 14h18M10 12h4v5h-4z"></path></svg>
+              <h4>Loot</h4>
+              <p>Collect equipment, materials and rewards from enemies, quests and dungeons.</p>
+            </li>
+            <li class="loop-card">
+              <span class="loop-step" aria-hidden="true">04</span>
+              <svg class="loop-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20h4v-5H4v5Zm6 0h4V9h-4v11Zm6 0h4V3h-4v17"></path></svg>
+              <h4>Progress</h4>
+              <p>Build your character through levels, skills, equipment and loadouts.</p>
+            </li>
+            <li class="loop-card">
+              <span class="loop-step" aria-hidden="true">05</span>
+              <svg class="loop-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 21V8l8-5 8 5v13M9 21v-8a3 3 0 0 1 6 0v8M2 21h20"></path></svg>
+              <h4>Dungeons</h4>
+              <p>Enter handcrafted encounters and face powerful bosses.</p>
+            </li>
+            <li class="loop-card">
+              <span class="loop-step" aria-hidden="true">06</span>
+              <svg class="loop-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm7-7a4 4 0 0 1 0 8M2 21v-3a6 6 0 0 1 12 0v3m2-6a5 5 0 0 1 6 5v1"></path></svg>
+              <h4>Connect</h4>
+              <p>Form parties of up to five adventurers in Nythara's online multiplayer alpha.</p>
+            </li>
+          </ol>
         </div>
+
+        <section class="inventory-panel" id="current-world" aria-labelledby="current-world-title">
+          <div class="inventory-heading">
+            <h3 id="current-world-title">Explore the current world</h3>
+            <a class="text-link" href="./database/">Open the Codex →</a>
+          </div>
+          <ul class="content-counts" id="content-counts" aria-busy="true"></ul>
+          <p class="content-status" id="content-status" role="status" aria-live="polite">Loading the current catalogue…</p>
+          <noscript><p class="world-note">Explore the current catalogue in the <a class="text-link" href="./database/">Nythara Codex →</a></p></noscript>
+        </section>
 
         <p class="world-note">
           <strong>One connected adventure:</strong> the same character, build and
@@ -2458,7 +2558,7 @@
                 <li>Hand-built rooms and telegraphed attacks</li>
                 <li>Hollow Warden boss fight</li>
                 <li>Per-character first clear and loot</li>
-                <li>Shared encounters for connected players</li>
+                <li>Party runs with dungeon reconnect support</li>
               </ul>
               <a class="text-link dungeon-link" href="./database/#dungeon/world_hollow_ruins">Explore the Hollow Ruins →</a>
             </div>
@@ -2484,7 +2584,7 @@
                 <li>Three-phase Rootbound Seer</li>
                 <li>First clear: Moonroot Shards and Crowns</li>
                 <li>Repeat clears for Rare drops</li>
-                <li>First clears persist across sessions</li>
+                <li>Each eligible party member earns their own rewards</li>
               </ul>
               <a class="text-link dungeon-link" href="./database/#dungeon/world_moonroot_sanctum">Explore Moonroot Sanctum →</a>
             </div>
@@ -2499,100 +2599,102 @@
       <div class="wrap">
         <div class="section-head" data-reveal>
           <p class="eyebrow">07 / Online multiplayer alpha</p>
-          <h2>A shared world,<br>run by the server.</h2>
-          <p>
-            Nythara's online multiplayer alpha brings independent players together in
-            one shared world. Characters, combat, enemies, loot, progression and world
-            state are managed by the server, keeping the adventure consistent for
-            everyone connected.
-          </p>
+          <h2>A shared world,<br>built for adventurers.</h2>
+          <p>Nythara brings independent players together in one shared,
+            server-authoritative fantasy world. Meet other adventurers, form parties,
+            explore Silverwood together and enter dungeons as a group.</p>
         </div>
 
         <div class="online-layout">
           <div class="online-copy" data-reveal>
-            <p>
-              Meet other adventurers in Silverwood, fight the same creatures, chat,
-              trade and enter multiplayer dungeons together.
-            </p>
-
-            <p>
-              Persistent characters and reconnect support let players return to their
-              adventure without rebuilding their progress.
-            </p>
-
-            <div class="fact-grid">
-              <div class="fact">
-                <strong>Secure Online Multiplayer</strong>
-                <span>Encrypted remote connections</span>
-              </div>
-              <div class="fact">
-                <strong>Server Authority</strong>
-                <span>One shared world state</span>
-              </div>
-              <div class="fact">
-                <strong>Persistent Characters</strong>
-                <span>Character &amp; progression saved</span>
-              </div>
-              <div class="fact">
-                <strong>Reconnect</strong>
-                <span>Return to your adventure</span>
-              </div>
-            </div>
-
+            <p>Gather up to five players around a party leader, send secure party
+              invitations and keep in touch through party chat.</p>
+            <p>The party HUD shows names, levels and health, with region information
+              and a reconnecting status when a member is away. Characters, combat,
+              enemies, progression and world state stay under server authority.</p>
+            <p>Reconnect support keeps party membership intact during short connection
+              interruptions, including dungeon runs. Return with the same character
+              without rebuilding the group.</p>
             <p class="scope-note">
               <strong>Online Multiplayer Alpha</strong>
-              Remote multiplayer is implemented and tested with independent game
-              clients. Public server infrastructure and production account services
-              are still part of future development.
+              Online multiplayer remains in alpha. Public server infrastructure and
+              broader social discovery are still in development.
             </p>
           </div>
 
           <figure class="online-capture" data-reveal>
-            <img
-              src="./assets/screenshots/sprint-23-online-multiplayer-1600x900.jpg"
-              alt="Three players sharing the Silverwood online world"
-              width="1600"
-              height="900"
-              loading="lazy"
-              decoding="async"
-            >
+            <img src="./assets/screenshots/sprint-24-party-silverwood-1600x900.jpg"
+              alt="Nythara party exploring Silverwood with the party HUD showing leader, levels and health"
+              width="1600" height="900" loading="lazy" decoding="async">
             <figcaption>
-              <h3>Together in Silverwood</h3>
-              <p>Independent players explore the same server-authoritative world,
-              see each other and share the adventure in real time.</p>
+              <h3>Adventure Together</h3>
+              <p>A party of adventurers explores Silverwood with a shared party HUD
+                for leader, health, level and region information.</p>
             </figcaption>
           </figure>
         </div>
 
-        <ul class="online-features" aria-label="Online multiplayer features">
-          <li class="online-feature"><span aria-hidden="true">⚔️</span>Shared Combat</li>
-          <li class="online-feature"><span aria-hidden="true">💬</span>Chat</li>
-          <li class="online-feature"><span aria-hidden="true">🤝</span>Trading</li>
-          <li class="online-feature"><span aria-hidden="true">🏰</span>Multiplayer Dungeons</li>
+        <div class="party-features" role="group" aria-label="Online and party features">
+          <div class="fact"><strong>Online Multiplayer</strong><span>Explore the same persistent world with other players.</span></div>
+          <div class="fact"><strong>Party Gameplay</strong><span>Up to Five Players per party.</span></div>
+          <div class="fact"><strong>Party HUD</strong><span>Track members, health, levels, regions and reconnect state.</span></div>
+          <div class="fact"><strong>Shared Combat</strong><span>Fight creatures and bosses together.</span></div>
+          <div class="fact"><strong>Multiplayer Dungeons</strong><span>Enter Moonroot Sanctum and The Hollow Ruins as a party.</span></div>
+          <div class="fact"><strong>Reconnect</strong><span>Return to your group after short connection interruptions.</span></div>
+        </div>
+
+        <ul class="online-features" aria-label="More online features">
+          <li class="online-feature">Secure party invitations</li>
+          <li class="online-feature">Party Chat</li>
+          <li class="online-feature">Persistent Characters</li>
+          <li class="online-feature">Trading</li>
         </ul>
 
         <figure class="combat-capture" data-reveal>
-          <img
-            src="./assets/screenshots/sprint-23-multiplayer-combat-1600x900.jpg"
-            alt="Nythara players fighting a Root Sentinel in server-authoritative multiplayer combat"
-            width="1600"
-            height="900"
-            loading="lazy"
-            decoding="async"
-          >
+          <img src="./assets/screenshots/sprint-24-party-combat-1600x900.jpg"
+            alt="Nythara players fighting a Root Sentinel together with party health visible"
+            width="1600" height="900" loading="lazy" decoding="async">
           <figcaption>
-            <span class="capture-kicker">Multiplayer Combat · Silverwood</span>
-            <h3>Fight Together</h3>
-            <p>
-              Several players can fight the same creatures while enemy state,
-              damage, skills, loot and progression remain under server authority.
-            </p>
-            <div class="world-tags">
-              <span class="tag">Shared combat</span>
-              <span class="tag">Shared encounters</span>
-            </div>
+            <span class="capture-kicker">Party combat · Silverwood</span>
+            <h3>Fight as a Party</h3>
+            <p>Party members fight the same creatures while combat, health and enemy
+              state remain under server authority.</p>
+            <div class="world-tags"><span class="tag">Shared combat</span><span class="tag">Party health</span></div>
           </figcaption>
         </figure>
+
+        <figure class="combat-capture" data-reveal>
+          <img src="./assets/screenshots/sprint-24-party-dungeon-1600x900.jpg"
+            alt="Nythara party fighting the Hollow Warden inside The Hollow Ruins with the party HUD visible"
+            width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="capture-kicker">Party dungeon run · The Hollow Ruins</span>
+            <h3>Enter Dungeons Together</h3>
+            <p>Enter multiplayer dungeons such as Moonroot Sanctum and The Hollow Ruins
+              as a party. Face the same boss together, with reconnect support preserving
+              the group during short interruptions.</p>
+            <p class="party-rewards">Eligible party members receive their own dungeon rewards.</p>
+            <div class="world-tags"><span class="tag">Party dungeons</span><span class="tag">Dungeon reconnect</span></div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section" id="codex">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">08 / The world codex</p>
+          <h2>Explore the<br>Nythara Codex.</h2>
+          <p>Meet a forest creature, discover its home and follow the trail to the
+            guardian beyond. Find the gear and skills to prepare for your next adventure.</p>
+        </div>
+        <div class="codex-preview-grid" id="codex-previews" aria-busy="true"></div>
+        <p class="content-status" id="codex-status" role="status" aria-live="polite">Reading the Codex…</p>
+        <div class="actions">
+          <a class="button ghost" href="./database/">Explore every entry <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
       </div>
     </section>
 
@@ -2601,7 +2703,7 @@
     <section class="section" id="news">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">08 / Milestones</p>
+          <p class="eyebrow">09 / Milestones</p>
           <h2>Milestones in<br>the making.</h2>
           <p>
             From the first forest trail to a shared online world — the steps that
@@ -2610,6 +2712,13 @@
         </div>
 
         <div class="news-grid">
+          <article class="news-card party-milestone" data-reveal>
+            <div class="news-meta"><span class="milestone">Party Gameplay</span><span>October 2026</span></div>
+            <h3>Party Gameplay &amp; Online UX</h3>
+            <p>Parties, party chat, the party HUD, multiplayer dungeon runs and reconnect
+              support now expand Nythara's online multiplayer alpha. Up to five
+              adventurers can explore and fight together.</p>
+          </article>
           <article class="news-card" data-reveal>
             <div class="news-meta">
               <span class="milestone">Online Alpha</span>
@@ -2670,11 +2779,11 @@
     <section class="section" id="development">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">09 / The road ahead</p>
-          <h2>What comes next.</h2>
+          <p class="eyebrow">10 / The road ahead</p>
+          <h2>The Road Ahead.</h2>
           <p>
-            Nythara is in active development. Online multiplayer is now in alpha;
-            world and content work continues alongside it.
+            The online multiplayer alpha is the beginning. More places to explore,
+            creatures to face and ways to shape your character lie on the road ahead.
           </p>
         </div>
 
@@ -2682,7 +2791,9 @@
           <article class="dev-card done" data-reveal>
             <h3>✓ Current alpha</h3>
             <ul>
-              <li>Online multiplayer alpha — current</li>
+              <li>Online multiplayer alpha with party gameplay</li>
+              <li>Parties of up to five, party HUD and party chat</li>
+              <li>Party dungeon runs and reconnect support</li>
               <li>Secure connections and persistent characters</li>
               <li>Silverwood regional progression</li>
               <li>Briarling, Gloom Moth and Root Sentinel</li>
@@ -2692,21 +2803,21 @@
           </article>
 
           <article class="dev-card active" data-reveal>
-            <h3>→ In development</h3>
+            <h3>→ More to discover</h3>
             <ul>
-              <li>Online session polish and social systems</li>
-              <li>World expansion beyond the current regions</li>
-              <li>More dungeon and creature content</li>
-              <li>Continued low-end performance work</li>
+              <li>More worlds and paths to explore</li>
+              <li>More creatures and boss encounters</li>
+              <li>More handcrafted dungeons</li>
             </ul>
           </article>
 
           <article class="dev-card next" data-reveal>
-            <h3>✦ Next</h3>
+            <h3>✦ More ways to adventure</h3>
             <ul>
-              <li>Deeper endgame progression</li>
-              <li>More boss encounters</li>
-              <li>Expanded social and economy systems</li>
+              <li>Expanded social discovery</li>
+              <li>A growing economy</li>
+              <li>Deeper character progression</li>
+              <li>Performance and polish</li>
             </ul>
           </article>
         </div>
@@ -2718,7 +2829,7 @@
     <section class="section" id="technology">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">10 / Technology</p>
+          <p class="eyebrow">11 / Technology</p>
           <h2>Built for<br>a living world.</h2>
           <p>
             Godot and GDScript, a dedicated server and a focused technology stack.
@@ -2733,6 +2844,8 @@
           <div class="tech tech-networking">Networking<span>Godot Multiplayer · ENet · Verified DTLS · IPv4 / IPv6</span></div>
           <div class="tech">Server Authority<span>Shared world</span></div>
           <div class="tech">Persistent Characters<span>Player state</span></div>
+          <div class="tech">Party State<span>Leader · Roster · Party HUD</span></div>
+          <div class="tech">Reconnect<span>Party membership · Dungeon return</span></div>
           <div class="tech">GL Compatibility<span>Renderer</span></div>
           <div class="tech">Linux<span>Primary platform</span></div>
         </div>
@@ -2749,7 +2862,7 @@
     <section class="section" id="hardware">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">11 / Broad hardware support</p>
+          <p class="eyebrow">12 / Broad hardware support</p>
           <h2>Built to run<br>on modest hardware.</h2>
           <p>
             Nythara is designed with integrated graphics and older GPUs in mind.
@@ -2789,7 +2902,7 @@
     <section class="section" id="gallery">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">12 / Gallery</p>
+          <p class="eyebrow">13 / Gallery</p>
           <h2>A glimpse of<br>the adventure.</h2>
           <p>
             In-game captures from Silverwood, the online multiplayer alpha and
@@ -2798,49 +2911,41 @@
         </div>
 
         <div class="gallery">
-          <a class="shot" href="./assets/screenshots/sprint-23-online-multiplayer-1600x900.jpg" data-lightbox data-caption="Together in Silverwood: three players sharing the online world.">
-            <img src="./assets/screenshots/sprint-23-online-multiplayer-1600x900.jpg" alt="Three players sharing the Silverwood online world" width="1600" height="900" loading="lazy" decoding="async">
-            <span>Shared world</span>
+          <a class="shot" href="./assets/screenshots/sprint-24-party-silverwood-1600x900.jpg" data-lightbox data-caption="Party adventures in Silverwood with the leader, levels and health shown in the party HUD.">
+            <img src="./assets/screenshots/sprint-24-party-silverwood-1600x900.jpg" alt="Nythara party exploring Silverwood with the party HUD visible" width="1600" height="900" loading="lazy" decoding="async">
+            <span>Party in Silverwood</span>
           </a>
-
+          <a class="shot" href="./assets/screenshots/sprint-24-party-combat-1600x900.jpg" data-lightbox data-caption="A party fighting a Root Sentinel together in Silverwood.">
+            <img src="./assets/screenshots/sprint-24-party-combat-1600x900.jpg" alt="Nythara players fighting together in online party combat" width="1600" height="900" loading="lazy" decoding="async">
+            <span>Fight as a Party</span>
+          </a>
+          <a class="shot" href="./assets/screenshots/sprint-24-party-dungeon-1600x900.jpg" data-lightbox data-caption="Party members face the Hollow Warden inside The Hollow Ruins.">
+            <img src="./assets/screenshots/sprint-24-party-dungeon-1600x900.jpg" alt="Nythara party fighting the Hollow Warden inside The Hollow Ruins" width="1600" height="900" loading="lazy" decoding="async">
+            <span>Party Dungeon Run</span>
+          </a>
           <a class="shot" href="./assets/briar-thicket.jpg" data-lightbox data-caption="Briarlings hold the Briar Thicket in Silverwood.">
             <img src="./assets/briar-thicket.jpg" alt="Briarlings in the Silverwood thicket" width="1280" height="720" loading="lazy" decoding="async">
             <span>Briar Thicket</span>
           </a>
-
           <a class="shot" href="./assets/new-monsters.jpg" data-lightbox data-caption="Gloom Moth, Root Sentinel and Briarling in one Silverwood frame.">
             <img src="./assets/new-monsters.jpg" alt="A Gloom Moth, Root Sentinel and Briarling together in Silverwood" width="1280" height="720" loading="lazy" decoding="async">
-            <span>Forest creatures</span>
+            <span>Forest Creatures</span>
           </a>
-
-          <a class="shot" href="./assets/warp-portal.jpg" data-lightbox data-caption="The locked Moonroot Sanctum portal, with its requirement shown in the world.">
-            <img src="./assets/warp-portal.jpg" alt="The Moonroot Sanctum warp portal with cyan energy" width="1280" height="720" loading="lazy" decoding="async">
-            <span>Warp portal</span>
+          <a class="shot" href="./assets/warp-portal.jpg" data-lightbox data-caption="The Moonroot Sanctum portal opens the way beneath Silverwood.">
+            <img src="./assets/warp-portal.jpg" alt="The Moonroot Sanctum portal with cyan energy" width="1280" height="720" loading="lazy" decoding="async">
+            <span>Moonroot Portal</span>
           </a>
-
           <a class="shot" href="./assets/resurrection-altar.jpg" data-lightbox data-caption="A quiet forest shrine: the Silverwood resurrection altar.">
             <img src="./assets/resurrection-altar.jpg" alt="The Silverwood resurrection altar with a rune circle" width="1280" height="720" loading="lazy" decoding="async">
-            <span>Resurrection altar</span>
+            <span>Resurrection Altar</span>
           </a>
-
           <a class="shot" href="./assets/world-loot.jpg" data-lightbox data-caption="Discover loot and equipment on the trail through Silverwood.">
             <img src="./assets/world-loot.jpg" alt="A Nythara loot container showing item icons" width="1280" height="720" loading="lazy" decoding="async">
-            <span>World loot</span>
+            <span>World Loot</span>
           </a>
-
-          <a class="shot" href="./assets/screenshots/sprint-23-multiplayer-combat-1600x900.jpg" data-lightbox data-caption="Nythara players fighting a Root Sentinel together in Silverwood.">
-            <img src="./assets/screenshots/sprint-23-multiplayer-combat-1600x900.jpg" alt="Nythara players fighting a Root Sentinel in server-authoritative multiplayer combat" width="1600" height="900" loading="lazy" decoding="async">
-            <span>Shared combat</span>
-          </a>
-
-          <a class="shot" href="./assets/hollow-warden.jpg" data-lightbox data-caption="The Hollow Warden in the Hollow Ruins.">
-            <img src="./assets/hollow-warden.jpg" alt="The Hollow Warden boss in the Hollow Ruins" width="1280" height="720" loading="lazy" decoding="async">
+          <a class="shot" href="./assets/hollow-warden.jpg" data-lightbox data-caption="The Hollow Warden guards the end of the first descent.">
+            <img src="./assets/hollow-warden.jpg" alt="The Hollow Warden boss in The Hollow Ruins" width="1280" height="720" loading="lazy" decoding="async">
             <span>Hollow Warden</span>
-          </a>
-
-          <a class="shot" href="./assets/rootbound-seer.jpg" data-lightbox data-caption="The Rootbound Seer's phase three in Moonroot Sanctum.">
-            <img src="./assets/rootbound-seer.jpg" alt="The Rootbound Seer boss in Moonroot Sanctum" width="1280" height="720" loading="lazy" decoding="async">
-            <span>Rootbound Seer</span>
           </a>
         </div>
       </div>
@@ -3023,5 +3128,6 @@
       }
     })();
   </script>
+  <script src="./codex-preview.js" defer></script>
 </body>
 </html>

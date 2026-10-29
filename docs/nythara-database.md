@@ -83,3 +83,18 @@ the whole game asset tree into this checkout.
 Commit the regenerated `Nythara/database/data/*.json` together with any asset
 changes and push the website. The static host serves the directory as-is; the
 game data revision shown on the page comes from `metadata.json`.
+
+## Current public snapshot
+
+The public catalogue is pinned to game revision
+`f717adea8ba662f467963c65c30124dda19abf82`. Regenerate that exact revision with
+`--source-ref f717adea8ba662f467963c65c30124dda19abf82`; this uses the exporter's
+committed archive path and leaves the game checkout untouched. The content
+remains 63 primary entries, 74 category records and 299 explicit cross-links.
+
+The game page reads counters from local metadata and lazily loads only the five
+category files needed for its six Codex previews. Detail pages preserve the
+explicit links and also show their reverse references under Related Entries.
+Item/equipment and monster/boss aliases share an identity, so they do not appear
+as unrelated duplicate records. Copy Link uses the Clipboard API, selection-based
+copy, then a selectable URL field when copying is unavailable.
