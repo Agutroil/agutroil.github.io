@@ -30,7 +30,7 @@
   <meta property="og:title" content="Nythara — Online Fantasy RPG">
   <meta
     property="og:description"
-    content="A 2D MMORPG in an immersive 3D fantasy world, with online multiplayer, friends, Looking for Group, party gameplay, persistent characters, combat, regions and dungeons."
+    content="A 2D MMORPG in an immersive 3D fantasy world, with online multiplayer, friends, Looking for Group, persistent guilds, party gameplay, persistent characters, combat, regions and dungeons."
   >
   <meta property="og:url" content="https://agutroil.github.io/Nythara/">
   <meta property="og:image" content="https://agutroil.github.io/Nythara/assets/nythara-banner.jpg">
@@ -129,6 +129,7 @@
           <a href="#dungeons" data-nav>Dungeons</a>
           <a href="#online" data-nav>Online</a>
           <a href="#friends" data-nav>Social</a>
+          <a href="#guilds" data-nav>Guilds</a>
           <a href="#development" data-nav>Roadmap</a>
           <a class="nav-back" href="../">← Agutroil</a>
         </nav>
@@ -840,13 +841,14 @@
               without rebuilding the group.</p>
             <p class="scope-note">
               <strong>Online Multiplayer Alpha</strong>
-              Online multiplayer remains in alpha. Friends, presence and Looking for
-              Group are part of the current build; public server infrastructure and
-              global matchmaking remain future work.
+              Online multiplayer remains in alpha. Friends, presence, Looking for
+              Group and persistent guilds are part of the current build; public server
+              infrastructure and global matchmaking remain future work.
             </p>
             <div class="social-jumps">
               <a class="text-link" href="#friends">Friends &amp; Presence →</a>
               <a class="text-link" href="#group">Find Your Group →</a>
+              <a class="text-link" href="#guilds">Guilds &amp; Communities →</a>
             </div>
           </div>
 
@@ -1055,10 +1057,102 @@
 
     <div class="divider"></div>
 
+    <section class="section" id="guilds" aria-labelledby="guilds-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">10 / Guilds</p>
+          <h2 id="guilds-title">A community that<br>stays with you.</h2>
+          <p>Build a persistent community inside Nythara. Create a guild, invite
+            adventurers, manage roles and stay connected through guild chat across
+            play sessions.</p>
+        </div>
+
+        <div class="social-layout">
+          <figure class="online-capture">
+            <a class="capture-link" href="./assets/screenshots/sprint-26-guild-roster-1600x900.jpg" data-lightbox data-caption="The Silver Sentinels guild roster with Alice as Guild Master, Bob as Officer, Charlie as Member and live region presence.">
+              <picture><source type="image/webp" srcset="./assets/screenshots/sprint-26-guild-roster-1600x900.webp"><img src="./assets/screenshots/sprint-26-guild-roster-1600x900.jpg"
+                alt="Nythara guild roster showing Guild Master, Officer and Member roles with region presence and a guild message"
+                width="1600" height="900" loading="lazy" decoding="async"></picture>
+            </a>
+            <figcaption>
+              <h3>Silver Sentinels</h3>
+              <p>Every member has a role and a place in the roster. Presence, region
+                and party state come from the same live session as friends and parties.</p>
+            </figcaption>
+          </figure>
+
+          <div class="social-cards">
+            <article class="fact social-card">
+              <h3>Persistent Guilds</h3>
+              <p>Create a guild with a unique name and keep its membership, roles,
+                leader and message across sessions.</p>
+            </article>
+            <article class="fact social-card">
+              <h3>Guild Roster</h3>
+              <p>See character name, role, online state, region, level and party
+                context for up to 20 members.</p>
+            </article>
+            <article class="fact social-card">
+              <h3>Roles</h3>
+              <p>Guild Master, Officer and Member roles decide who invites, promotes,
+                edits the guild message or disbands.</p>
+            </article>
+            <article class="fact social-card">
+              <h3>Guild Chat</h3>
+              <p>Speak to current guild members in a dedicated channel. Former members
+                lose access immediately.</p>
+            </article>
+            <article class="fact social-card">
+              <h3>Online Presence</h3>
+              <p>Reuse Nythara's server-owned presence to see who is online,
+                reconnecting or exploring another region.</p>
+            </article>
+            <article class="fact social-card">
+              <h3>Party Invitations</h3>
+              <p>Invite a guild member through the existing party flow. Guild
+                membership and party membership stay separate.</p>
+            </article>
+          </div>
+        </div>
+
+        <figure class="combat-capture">
+          <a class="capture-link" href="./assets/screenshots/sprint-26-guild-chat-1600x900.jpg" data-lightbox data-caption="Guild chat between three real Nythara clients, with the GUILD channel selected in the existing chat panel.">
+            <picture><source type="image/webp" srcset="./assets/screenshots/sprint-26-guild-chat-1600x900.webp"><img src="./assets/screenshots/sprint-26-guild-chat-1600x900.jpg"
+              alt="Guild chat in Nythara between Alice, Bob and Charlie with the GUILD channel selected"
+              width="1600" height="900" loading="lazy" decoding="async"></picture>
+          </a>
+          <figcaption>
+            <span class="capture-kicker">Guild chat · Silver Sentinels</span>
+            <h3>Stay connected between sessions</h3>
+            <p>Guild chat uses the existing chat panel and channel selector. The server
+              verifies current membership on every message.</p>
+            <div class="world-tags"><span class="tag">Guild chat</span><span class="tag">Member-only</span></div>
+          </figcaption>
+        </figure>
+
+        <figure class="combat-capture">
+          <a class="capture-link" href="./assets/screenshots/sprint-26-guild-party-1600x900.jpg" data-lightbox data-caption="Guild members grouped in Dawnwatch with the party HUD, formed through the ordinary party invite flow.">
+            <picture><source type="image/webp" srcset="./assets/screenshots/sprint-26-guild-party-1600x900.webp"><img src="./assets/screenshots/sprint-26-guild-party-1600x900.jpg"
+              alt="Nythara guild members grouped in Dawnwatch with the party HUD visible"
+              width="1600" height="900" loading="lazy" decoding="async"></picture>
+          </a>
+          <figcaption>
+            <span class="capture-kicker">Guild and party · Dawnwatch</span>
+            <h3>From guild roster to shared adventure</h3>
+            <p>Guild members can form a normal party and set out together. Joining a
+              guild does not create a party automatically.</p>
+            <div class="world-tags"><span class="tag">Guild roster</span><span class="tag">Party gameplay</span></div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
     <section class="section" id="codex">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">10 / The world codex</p>
+          <p class="eyebrow">11 / The world codex</p>
           <h2>Explore the<br>Nythara Codex.</h2>
           <p>Meet a forest creature, discover its home and follow the trail to the
             guardian beyond. Find the gear and skills to prepare for your next adventure.</p>
@@ -1076,7 +1170,7 @@
     <section class="section" id="news">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">11 / Milestones</p>
+          <p class="eyebrow">12 / Milestones</p>
           <h2>Milestones in<br>the making.</h2>
           <p>
             From the first forest trail to a shared online world — the steps that
@@ -1085,6 +1179,14 @@
         </div>
 
         <div class="news-grid">
+          <article class="news-card">
+            <div class="news-meta"><span class="milestone">Guilds</span><span>October 2026</span></div>
+            <h3>Persistent Guilds &amp; Social Groups</h3>
+            <p>Create a guild, invite adventurers and manage Guild Master, Officer
+              and Member roles. Guild membership, roles, leadership and the guild
+              message survive a server restart, while guild chat keeps current
+              members connected between sessions.</p>
+          </article>
           <article class="news-card party-milestone">
             <div class="news-meta"><span class="milestone">Social Discovery</span><span>October 2026</span></div>
             <h3>Friends, Presence &amp; Group Discovery</h3>
@@ -1160,7 +1262,7 @@
     <section class="section" id="development">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">12 / The road ahead</p>
+          <p class="eyebrow">13 / The road ahead</p>
           <h2>The Road Ahead.</h2>
           <p>
             The online multiplayer alpha is the beginning. More places to explore,
@@ -1211,7 +1313,7 @@
     <section class="section" id="technology">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">13 / Technology</p>
+          <p class="eyebrow">14 / Technology</p>
           <h2>Built for<br>a living world.</h2>
           <p>
             Godot and GDScript, a dedicated server and a focused technology stack.
@@ -1245,7 +1347,7 @@
     <section class="section" id="hardware">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">14 / Broad hardware support</p>
+          <p class="eyebrow">15 / Broad hardware support</p>
           <h2>Built to run<br>on modest hardware.</h2>
           <p>
             Nythara is designed with integrated graphics and older GPUs in mind.
@@ -1285,7 +1387,7 @@
     <section class="section" id="gallery">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">15 / Gallery</p>
+          <p class="eyebrow">16 / Gallery</p>
           <h2>A glimpse of<br>the adventure.</h2>
           <p>
             In-game captures from Silverwood, the online multiplayer alpha and

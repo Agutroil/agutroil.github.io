@@ -158,7 +158,7 @@ def audit() -> tuple[dict, list[str]]:
                 'tracking': r'googletagmanager|google-analytics|connect\.facebook\.net|hotjar|plausible\.io/js',
             }
             if relative.startswith('Nythara/'):
-                patterns.update({'unsupported guild claim': r'sprint[ -]?26|persistent guild|guild roles|guild persistence|guild management',
+                patterns.update({'unsupported guild claim': r'guild bank|guild levels?|guild xp|guild perks?|guild wars?|guild housing|alliance system|guild raids?|sprint[ -]?27',
                     'source marketing': r'open[ -]source|source code|github repository|view source|(?-i:\bMIT\b)|\bclone\b|\bfork\b'})
             for label, pattern in patterns.items():
                 if re.search(pattern, text, re.I): fail(path, label)
@@ -175,7 +175,7 @@ def audit() -> tuple[dict, list[str]]:
     for url in urls:
         if urlsplit(url).fragment: errors.append('Hash route in sitemap')
         check_ref(url, ROOT / 'sitemap.xml')
-    if meta['source_short_commit'] != 'a218110': errors.append('Unexpected game data revision')
+    if meta['source_short_commit'] != 'b2bac4d': errors.append('Unexpected game data revision')
     for key in aliases:
         check_ref(aliases[key], ROOT / 'Nythara/database/index.html')
     summary = {'production_files': len(files), 'published_bytes': sum(p.stat().st_size for p in files),
