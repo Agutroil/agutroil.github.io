@@ -6,8 +6,11 @@ from __future__ import annotations
 import argparse
 import json
 from copy import deepcopy
+from hashlib import sha256
 from pathlib import Path
 from urllib.parse import urlsplit
+
+from site_assets import image_size
 
 DATABASE = Path(__file__).resolve().parents[1] / "Nythara" / "database"
 VISUAL_FIELDS = {"image", "image_alt", "image_kind", "image_note", "image_crop", "image_extras"}
@@ -23,32 +26,23 @@ def preview(image: str, kind: str, alt: str, note: str = "", crop: list[int] | N
     return result
 
 
-CREATURES = {
-    "enemy_briarling": preview("assets/creatures/briarling.png", "sprite", "Briarling sprite"),
-    "enemy_gloom_moth": preview("assets/creatures/gloom_moth.png", "sprite", "Gloom Moth sprite"),
-    "mossling": preview("assets/creatures/mossling.png", "sprite", "Mossling sprite"),
-    "enemy_root_sentinel": preview("assets/creatures/root_sentinel.png", "sprite", "Root Sentinel sprite"),
-    "enemy_stoneback": preview("assets/creatures/stoneback-portrait.webp", "portrait", "Stoneback sprite portrait derived from its in-game appearance", "Sprite portrait"),
-    "enemy_thornspitter": preview("assets/creatures/thornspitter-portrait.webp", "portrait", "Illustrated Thornspitter preview in Nythara's forest creature style", "Illustrated preview"),
-    "enemy_hollow_warden": preview("assets/creatures/hollow-warden-portrait.webp", "portrait", "The Hollow Warden sprite portrait derived from its in-game appearance", "Sprite portrait"),
-    "enemy_rootbound_seer": preview("assets/creatures/rootbound-seer-portrait.webp", "portrait", "The Rootbound Seer sprite portrait derived from its in-game appearance", "Sprite portrait"),
+# The approved capture registry is local to the website; generation never reads
+# the private game checkout. Each stable ID has exactly one current hero.
+CAPTURE_LIBRARY = json.loads(Path(__file__).with_name("nythara-current-captures.json").read_text())
+CAPTURES = {entry["stable_id"]: entry for entry in CAPTURE_LIBRARY["entries"]}
+CURRENT_PREVIEWS = {
+    key: preview(entry["image"], "capture", entry["image_alt"])
+    for key, entry in CAPTURES.items() if entry["database_ready"]
 }
-CREATURES["enemy_mossling"] = CREATURES["mossling"]
-
-NPCS = {
-    "npc_rowan": preview("assets/npcs/rowan-portrait.webp", "portrait", "Rowan's hooded character and staff, based on his in-game appearance", "Sprite portrait"),
-    "npc_elara": preview("assets/npcs/elara-portrait.webp", "portrait", "Representative quest giver portrait for Elara, holding a parchment", "Role portrait"),
-    "npc_elyra": preview("assets/npcs/elyra-portrait.webp", "portrait", "Representative healer portrait for Elyra, holding a potion", "Role portrait"),
-    "npc_mira": preview("assets/npcs/mira-portrait.webp", "portrait", "Representative vendor portrait for Mira, carrying a goods satchel", "Role portrait"),
-    "npc_silverwood_keeper": preview("assets/npcs/silverwood-keeper-portrait.webp", "portrait", "Representative forest keeper portrait with a wooden staff", "Role portrait"),
+CAPTURE_TYPES = {
+    "monster": ("monster",), "boss": ("monster", "boss"),
+    "npc": ("npc",), "city": ("city",), "region": ("region",), "dungeon": ("dungeon",),
 }
+CREATURES = {key: CURRENT_PREVIEWS[key] for key, entry in CAPTURES.items() if entry["category"] in ("monster", "boss")}
+NPCS = {key: CURRENT_PREVIEWS[key] for key, entry in CAPTURES.items() if entry["category"] == "npc"}
 
-# Quiet crops of existing public artwork and scenes. Artwork is deliberately
-# labelled as representative instead of being presented as a capture of an unseen region.
+# Regions without an approved capture keep clearly labelled public world artwork.
 WORLDS = {
-    "world_silverwood": preview("../assets/world-hero.jpg", "scene", "Silverwood's forest trail and ancient stone arch"),
-    "world_whispering_grove": preview("../assets/whispering-grove.jpg", "scene", "The trees, rocks and creatures of Whispering Grove", crop=[330, 35, 880, 495, 1280, 720]),
-    "world_prototype_valley": preview("../assets/nythara-banner.jpg", "scene", "Nythara valley artwork representing Prototype Valley", "World artwork", [560, 225, 528, 297, 1600, 533]),
     "region_dawnlands": preview("../assets/nythara-banner.jpg", "scene", "Open green valley artwork representing the Dawnlands", "World artwork", [550, 230, 528, 297, 1600, 533]),
     "world_iron_highlands": preview("../assets/nythara-background.webp", "scene", "Rocky mountain artwork representing the Iron Highlands", "World artwork", [140, 220, 640, 360, 1672, 941]),
     "world_mirelands": preview("../assets/nythara-background.webp", "scene", "Misty forest and water artwork representing the Mirelands", "World artwork", [260, 480, 640, 360, 1672, 941]),
@@ -56,20 +50,18 @@ WORLDS = {
     "world_frostreach": preview("../assets/nythara-background.webp", "scene", "Cold blue mountain artwork representing Frostreach", "World artwork", [1150, 195, 480, 270, 1672, 941]),
     "world_ashen_wastes": preview("../assets/nythara-background.webp", "scene", "Dark cliffs and ruined arches representing the Ashen Wastes", "World artwork", [150, 280, 640, 360, 1672, 941]),
     "world_astral_frontier": preview("../assets/nythara-background.webp", "scene", "Moonlit sky and arcane light representing the Astral Frontier", "World artwork", [800, 30, 640, 360, 1672, 941]),
-    "world_start_city": preview("../assets/nythara-background.webp", "scene", "Fantasy citadel artwork representing Dawnwatch", "World artwork", [790, 270, 640, 360, 1672, 941]),
-    "world_hollow_ruins": preview("../assets/hollow-warden.jpg", "scene", "The Hollow Ruins arena, cropped to the encounter and stone halls", crop=[425, 180, 640, 360, 1280, 720]),
-    "world_moonroot_sanctum": preview("../assets/warp-portal.jpg", "scene", "The Moonroot Sanctum entrance portal and its stone ring", crop=[75, 260, 560, 315, 1280, 720]),
 }
+WORLDS.update({key: CURRENT_PREVIEWS[key] for key, entry in CAPTURES.items() if entry["category"] in ("city", "region", "dungeon")})
 
 FALLBACKS = {
     "item": preview("assets/icons/treasure.svg", "icon", "Item treasure emblem", "Item emblem"),
     "equipment": preview("assets/icons/armor.svg", "icon", "Equipment armor emblem", "Equipment emblem"),
-    "monster": preview("assets/creatures/mossling.png", "sprite", "Representative Nythara forest creature sprite", "Creature portrait"),
-    "boss": {**CREATURES["enemy_rootbound_seer"], "image_alt": "Representative Nythara guardian portrait", "image_note": "Guardian portrait"},
-    "dungeon": {**WORLDS["world_hollow_ruins"], "image_alt": "Representative dungeon arena view", "image_note": "Dungeon scenery"},
+    "monster": preview("assets/icons/monster_drop.svg", "icon", "Creature emblem", "Creature emblem"),
+    "boss": preview("assets/icons/monster_drop.svg", "icon", "Boss emblem", "Boss emblem"),
+    "dungeon": preview("assets/icons/key.svg", "icon", "Dungeon key emblem", "Dungeon emblem"),
     "region": {**WORLDS["region_dawnlands"], "image_alt": "Representative Nythara landscape artwork"},
-    "city": {**WORLDS["world_start_city"], "image_alt": "Representative Nythara settlement artwork"},
-    "npc": {**NPCS["npc_elara"], "image_alt": "Representative Nythara quest giver portrait"},
+    "city": preview("../assets/nythara-background.webp", "scene", "Representative Nythara settlement artwork", "World artwork", [790, 270, 640, 360, 1672, 941]),
+    "npc": preview("assets/icons/scroll.svg", "icon", "NPC dialogue emblem", "NPC emblem"),
     "quest": preview("assets/icons/quest.svg", "icon", "Quest parchment icon"),
     "skill": preview("assets/icons/weapon.svg", "icon", "Combat skill emblem", "Skill emblem"),
     "resource": preview("assets/icons/herb.svg", "icon", "Gatherable plant resource emblem", "Resource emblem"),
@@ -103,15 +95,11 @@ def assign_preview(entry: dict, database: Path = DATABASE) -> None:
     if kind in ("monster", "boss"):
         visual = CREATURES.get(entry_id)
         if visual is None:
-            archetype = entry.get("filters", {}).get("archetype")
-            candidate = {"Ranged": "enemy_thornspitter", "Heavy": "enemy_stoneback"}.get(archetype, "mossling")
-            visual = {**(FALLBACKS["boss"] if kind == "boss" else CREATURES[candidate]), "image_alt": f"Representative creature portrait for {entry['name']}", "image_note": "Representative portrait"}
+            visual = FALLBACKS[kind]
     elif kind == "npc":
         visual = NPCS.get(entry_id)
         if visual is None:
-            role = entry.get("filters", {}).get("role")
-            candidate = {"Healer": "npc_elyra", "Vendor": "npc_mira"}.get(role, "npc_elara")
-            visual = {**NPCS[candidate], "image_alt": f"Representative role portrait for {entry['name']}", "image_note": "Role portrait"}
+            visual = FALLBACKS[kind]
     elif kind in ("region", "city", "dungeon"):
         visual = WORLDS.get(entry_id, FALLBACKS[kind])
     elif kind == "skill":
@@ -165,14 +153,21 @@ def validate_previews(categories: dict[str, list[dict]], database: Path = DATABA
             if not entry.get("image_alt", "").strip():
                 raise ValueError(f"Missing preview alt text for {entry['id']}")
             kind = entry.get("image_kind")
-            if kind not in {"sprite", "portrait", "scene", "icon", "bundle"}:
+            source = CAPTURES.get(entry["id"], {})
+            allowed_type = CAPTURE_TYPES.get(source.get("category"), ())
+            if entry["id"] in CURRENT_PREVIEWS and entry["type"] in allowed_type and kind != "capture":
+                raise ValueError(f"Current capture missing for approved stable ID: {entry['id']}")
+            if kind not in {"sprite", "portrait", "scene", "icon", "bundle", "capture"}:
                 raise ValueError(f"Invalid preview kind for {entry['id']}")
-            if entry["type"] in ("monster", "boss", "npc") and kind not in ("sprite", "portrait"):
-                raise ValueError(f"Character preview must be sprite based: {entry['id']}")
-            if entry["type"] in ("monster", "boss", "npc"):
-                image = entry["image"]
-                if not image.startswith(("assets/creatures/", "assets/npcs/")) or Path(image).suffix not in (".png", ".webp"):
-                    raise ValueError(f"Character preview cannot be a scene: {entry['id']}")
+            if kind == "capture":
+                expected = CURRENT_PREVIEWS.get(entry["id"])
+                if not expected or entry["image"] != expected["image"] or entry["type"] not in allowed_type or entry.get("image_crop"):
+                    raise ValueError(f"Capture does not match its approved stable ID: {entry['id']}")
+                asset = local_asset(entry["image"], database)
+                if image_size(asset) != (1600, 900) or sha256(asset.read_bytes()).hexdigest() != source["sha256"]:
+                    raise ValueError(f"Unverified capture asset: {entry['id']}")
+            elif entry["type"] in ("monster", "boss", "npc") and kind not in ("sprite", "portrait", "icon"):
+                raise ValueError(f"Character scene must be an approved current capture: {entry['id']}")
             if crop := entry.get("image_crop"):
                 if len(crop) != 6 or not all(isinstance(value, int) for value in crop):
                     raise ValueError(f"Invalid preview crop for {entry['id']}")
@@ -201,7 +196,7 @@ def main() -> None:
         for key, payload in payloads.items():
             (DATABASE / "data" / f"{key}.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
         (DATABASE / "data/preview-fallbacks.json").write_text(json.dumps(FALLBACKS, ensure_ascii=False, indent=2) + "\n")
-    print(f"Preview coverage: {count}/{count}; missing assets: 0; character screenshots: 0")
+    print(f"Preview coverage: {count}/{count}; missing assets: 0; approved current captures: {sum(entry.get('image_kind') == 'capture' for entries in categories.values() for entry in entries)}")
 
 
 if __name__ == "__main__":

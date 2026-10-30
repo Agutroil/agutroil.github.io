@@ -2282,3 +2282,51 @@ footer {
 
 .permalink-link, .home-intro .text-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--gold); font-size: 0.85rem; }
 .permalink-link:hover, .home-intro .text-link:hover { color: var(--cyan); }
+
+/* Full runtime frames keep their composition on cards and detail pages. */
+.entry-media.is-capture,
+.detail-media.is-capture,
+.detail-record[data-variant="boss"] .detail-media.is-capture {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  align-self: center;
+}
+
+.entry-media.is-capture img,
+.detail-media.is-capture img,
+.detail-record[data-variant="boss"] .detail-media.is-capture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.full-capture {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.full-capture > span {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 5px 9px;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  color: var(--text);
+  background: rgba(3, 14, 15, 0.94);
+  font-size: 0.7rem;
+}
+
+.full-capture:focus-visible { outline-offset: -5px; }
+.full-capture:hover > span { color: var(--gold); }
+
+@media (min-width: 981px) {
+  .detail-hero:has(> .is-capture) {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  }
+}

@@ -61,6 +61,8 @@ def image_markup(entry: dict) -> str:
         width, height = image_size(DATABASE / entry['image'])
         picture = f'<img src="{escape(src)}" alt="{alt}" width="{width}" height="{height}" decoding="async">'
     note = f'<span class="preview-note">{escape(entry["image_note"])}</span>' if entry.get('image_note') else ''
+    if entry['image_kind'] == 'capture':
+        picture = f'<a class="full-capture" href="{escape(src)}" aria-label="View full image: {alt}">{picture}<span aria-hidden="true">View full image ↗</span></a>'
     return f'<div class="detail-media is-{escape(entry["image_kind"])}">{picture}{note}</div>'
 
 

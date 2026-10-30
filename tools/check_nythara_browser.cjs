@@ -62,7 +62,7 @@ fs.mkdirSync(output,{recursive:true});
     await screenshot(`guild-${width}`,'#guilds');
     await screenshot(`guild-features-${width}`,'.guild-features');
     await screenshot(`guild-captures-${width}`,'#guild-captures');
-    const guildGallery=page.locator('#gallery .shot').filter({has:page.locator('img[src*="sprint-26"]')});
+    const guildGallery=page.locator('#gallery .shot').filter({has:page.locator('img[src*="current-social-guild-"]')});
     assert.equal(await guildGallery.count(),3);
     await page.locator('#gallery .gallery').evaluate(el=>el.scrollIntoView({block:'start'}));
     const galleryBox=await page.locator('#gallery .gallery').boundingBox();
@@ -82,8 +82,10 @@ fs.mkdirSync(output,{recursive:true});
     await page.keyboard.press('Escape');
     assert(await opener.evaluate(el=>el===document.activeElement));
    }
-   for(const [label,hash] of [['home',''],['monsters','#monsters'],['monster','#monster/enemy_briarling'],['boss','#monster/enemy_rootbound_seer'],['dungeon','#dungeon/world_moonroot_sanctum'],['equipment','#equipment/weapon_warden_blade']]){
+   for(const [label,hash] of [['home',''],['monsters','#monsters'],['monster','#monster/enemy_briarling'],['boss','#monster/enemy_rootbound_seer'],['dungeon','#dungeon/world_moonroot_sanctum'],['city','#city/world_start_city'],['region','#region/world_whispering_grove'],['npc','#npc/npc_elara'],['equipment','#equipment/weapon_warden_blade']]){
     await goto('/Nythara/database/'+hash);await decode('main');await geometry(`Database ${label} ${width}`);
+    const frames=await page.locator('.entry-media.is-capture,.detail-media.is-capture').evaluateAll(els=>els.map(el=>{const r=el.getBoundingClientRect();return r.width/r.height;}));
+    assert(frames.every(ratio=>Math.abs(ratio-16/9)<0.02),`Capture frames ${label} ${width}`);
     assert.equal(await page.locator('#snapshot-source').textContent(),'b2bac4d');
     assert.equal(await page.locator('#footer-source').textContent(),'Game Data Revision: b2bac4d');
     if([390,1440].includes(width))await screenshot(`db-${label}-${width}`,label==='home'?'#hero':'#view-root');
@@ -105,6 +107,15 @@ fs.mkdirSync(output,{recursive:true});
   for(const entry of all){
    await goto('/Nythara/database/#'+entry.type+'/'+entry.id);
    assert.equal(await page.locator('.detail-copy h2').textContent(),entry.name);
+   if(entry.image_kind==='capture'){
+    const capture=page.locator('.detail-media.is-capture img');
+    assert.equal(await capture.getAttribute('src'),entry.image,entry.id);
+    assert.equal(await page.locator('.full-capture').getAttribute('href'),entry.image,entry.id);
+    await capture.evaluate(img=>img.decode());
+    const box=await capture.boundingBox();
+    assert(Math.abs(box.width/box.height-16/9)<0.02,`Current frame aspect ratio ${entry.id}`);
+    assert(await capture.evaluate(img=>img.naturalWidth===1600&&img.naturalHeight===900),entry.id);
+   }
    assert.equal(await page.locator('.permalink-link').getAttribute('href'),aliases[`${entry.type}/${entry.id}`]);
    const own=key(entry.type,entry.id);
    const expected=new Set(links(entry).map(l=>key(l.type,l.id)).filter(k=>k!==own));
@@ -162,7 +173,7 @@ fs.mkdirSync(output,{recursive:true});
   await page.keyboard.press('Escape');assert(await opener.evaluate(el=>el===document.activeElement));
   for(const width of [390,1440]){
    await page.setViewportSize({width,height:1000});
-   for(const guildOpener of await page.locator('a[data-lightbox][href*="sprint-26"]').all()){
+   for(const guildOpener of await page.locator('a[data-lightbox][href*="current-social-guild-"]').all()){
     await guildOpener.focus();await page.keyboard.press('Enter');
     assert.equal(await page.evaluate(()=>document.activeElement.id),'lightbox-close');
     await page.keyboard.press('Tab');

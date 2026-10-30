@@ -672,18 +672,9 @@
         "category": "region"
       },
       "description": "The first safe clearing, the Ancient Crystal and the old path into Whispering Grove.",
-      "image": "../assets/nythara-banner.jpg",
-      "image_kind": "scene",
-      "image_alt": "Nythara valley artwork representing Prototype Valley",
-      "image_note": "World artwork",
-      "image_crop": [
-        560,
-        225,
-        528,
-        297,
-        1600,
-        533
-      ]
+      "image": "../assets/screenshots/current/current-region-prototype-valley.webp",
+      "image_kind": "capture",
+      "image_alt": "Prototype Valley clearing with the Ancient Crystal, Elara, Mira and the forest edge."
     },
     {
       "id": "world_silverwood",
@@ -832,9 +823,9 @@
         "rarity": 0,
         "category": "region"
       },
-      "image": "../assets/world-hero.jpg",
-      "image_kind": "scene",
-      "image_alt": "Silverwood's forest trail and ancient stone arch"
+      "image": "../assets/screenshots/current/current-region-silverwood.webp",
+      "image_kind": "capture",
+      "image_alt": "Silverwood trail with the stone waypoint, tree canopy and the current player as scale."
     },
     {
       "id": "world_whispering_grove",
@@ -976,17 +967,9 @@
         "category": "region"
       },
       "description": "An older listening place beyond the valley gate, where the Mosslings have grown restless.",
-      "image": "../assets/whispering-grove.jpg",
-      "image_kind": "scene",
-      "image_alt": "The trees, rocks and creatures of Whispering Grove",
-      "image_crop": [
-        330,
-        35,
-        880,
-        495,
-        1280,
-        720
-      ]
+      "image": "../assets/screenshots/current/current-region-whispering-grove.webp",
+      "image_kind": "capture",
+      "image_alt": "Whispering Grove shrine clearing with framed trees and the current player as scale."
     }
   ]
 }

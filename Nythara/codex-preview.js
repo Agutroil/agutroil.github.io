@@ -22,7 +22,7 @@
   const fact = (entry, label) => entry.facts?.find((item) => item.label === label)?.value;
 
   async function readData(file) {
-    const response = await fetch(new URL(`data/${file}.json`, database));
+    const response = await fetch(new URL(`data/${file}.json`, database), { cache: "no-cache" });
     if (!response.ok) throw new Error("Codex data unavailable");
     return response.json();
   }
@@ -36,7 +36,7 @@
         <image href="${asset(entry.image)}" width="${sourceWidth}" height="${sourceHeight}"></image>
       </svg>`;
     } else {
-      const [width, height] = entry.image_kind === "scene" ? [1600, 900] : [160, 160];
+      const [width, height] = ["scene", "capture"].includes(entry.image_kind) ? [1600, 900] : [160, 160];
       image = `<img src="${asset(entry.image)}" alt="${alt}" width="${width}" height="${height}" loading="lazy" decoding="async">`;
     }
     return `<span class="codex-visual is-${escapeHtml(entry.image_kind)}">${image}

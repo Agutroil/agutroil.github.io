@@ -94,11 +94,11 @@ CATEGORY_META = [
 
 # Curated mapping of real in-game captures that already ship with the website.
 SITE_IMAGES = {
-    "silverwood": ("../assets/coop-silverwood.jpg", "Two adventurers on the Silverwood forest trail"),
-    "whispering_grove": ("../assets/whispering-grove.jpg", "Rowan and Mosslings in the Whispering Grove"),
-    "prototype_valley": ("../assets/world-hero.jpg", "The old stone arch and a Mossling in the valley"),
-    "hollow_ruins": ("../assets/hollow-warden.jpg", "The Hollow Warden in its arena beneath the ruins"),
-    "moonroot_sanctum": ("../assets/rootbound-seer.jpg", "The Rootbound Seer in the Moonroot Sanctum"),
+    "silverwood": ("../assets/screenshots/current/current-region-silverwood.webp", "Silverwood forest trail with the current Adventurer"),
+    "whispering_grove": ("../assets/screenshots/current/current-region-whispering-grove.webp", "Whispering Grove shrine clearing"),
+    "prototype_valley": ("../assets/screenshots/current/current-region-prototype-valley.webp", "Prototype Valley clearing"),
+    "hollow_ruins": ("../assets/screenshots/current/current-dungeon-hollow-ruins.webp", "The Hollow Ruins dungeon halls"),
+    "moonroot_sanctum": ("../assets/screenshots/current/current-dungeon-moonroot-sanctum.webp", "Moonroot Sanctum dungeon corridor"),
 }
 
 ICON_FALLBACK = "assets/icons/missing.svg"

@@ -132,9 +132,9 @@
         "rarity": 0,
         "category": "melee"
       },
-      "image": "assets/creatures/briarling.png",
-      "image_kind": "sprite",
-      "image_alt": "Briarling sprite"
+      "image": "../assets/screenshots/current/current-monster-briarling.webp",
+      "image_kind": "capture",
+      "image_alt": "Current Briarling in Silverwood."
     },
     {
       "id": "enemy_gloom_moth",
@@ -271,9 +271,9 @@
         "rarity": 0,
         "category": "ranged"
       },
-      "image": "assets/creatures/gloom_moth.png",
-      "image_kind": "sprite",
-      "image_alt": "Gloom Moth sprite"
+      "image": "../assets/screenshots/current/current-monster-gloom-moth.webp",
+      "image_kind": "capture",
+      "image_alt": "Current Gloom Moth on the Silverwood trail."
     },
     {
       "id": "mossling",
@@ -517,9 +517,9 @@
         "rarity": 0,
         "category": "melee"
       },
-      "image": "assets/creatures/mossling.png",
-      "image_kind": "sprite",
-      "image_alt": "Mossling sprite"
+      "image": "../assets/screenshots/current/current-monster-mossling.webp",
+      "image_kind": "capture",
+      "image_alt": "Current Mossling in the Whispering Grove."
     },
     {
       "id": "enemy_root_sentinel",
@@ -658,9 +658,9 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "assets/creatures/root_sentinel.png",
-      "image_kind": "sprite",
-      "image_alt": "Root Sentinel sprite"
+      "image": "../assets/screenshots/current/current-monster-root-sentinel.webp",
+      "image_kind": "capture",
+      "image_alt": "Current Root Sentinel in the Silverwood thicket."
     },
     {
       "id": "enemy_stoneback",
@@ -838,10 +838,9 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "assets/creatures/stoneback-portrait.webp",
-      "image_kind": "portrait",
-      "image_alt": "Stoneback sprite portrait derived from its in-game appearance",
-      "image_note": "Sprite portrait"
+      "image": "../assets/screenshots/current/current-monster-stoneback.webp",
+      "image_kind": "capture",
+      "image_alt": "Current Stoneback in the Whispering Grove."
     },
     {
       "id": "enemy_hollow_warden",
@@ -1040,10 +1039,9 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "assets/creatures/hollow-warden-portrait.webp",
-      "image_kind": "portrait",
-      "image_alt": "The Hollow Warden sprite portrait derived from its in-game appearance",
-      "image_note": "Sprite portrait"
+      "image": "../assets/screenshots/current/current-hollow-warden.webp",
+      "image_kind": "capture",
+      "image_alt": "Hollow Warden boss encounter in The Hollow Ruins."
     },
     {
       "id": "enemy_rootbound_seer",
@@ -1220,10 +1218,9 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "assets/creatures/rootbound-seer-portrait.webp",
-      "image_kind": "portrait",
-      "image_alt": "The Rootbound Seer sprite portrait derived from its in-game appearance",
-      "image_note": "Sprite portrait"
+      "image": "../assets/screenshots/current/current-rootbound-seer.webp",
+      "image_kind": "capture",
+      "image_alt": "Rootbound Seer boss encounter in Moonroot Sanctum."
     },
     {
       "id": "enemy_thornspitter",
@@ -1407,10 +1404,9 @@
         "rarity": 0,
         "category": "ranged"
       },
-      "image": "assets/creatures/thornspitter-portrait.webp",
-      "image_kind": "portrait",
-      "image_alt": "Illustrated Thornspitter preview in Nythara's forest creature style",
-      "image_note": "Illustrated preview"
+      "image": "../assets/screenshots/current/current-monster-thornspitter.webp",
+      "image_kind": "capture",
+      "image_alt": "Current Thornspitter in the Whispering Grove."
     }
   ]
 }

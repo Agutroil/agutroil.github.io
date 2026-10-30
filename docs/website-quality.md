@@ -1,6 +1,6 @@
 # Public website quality
 
-The game snapshot remains `a218110`. This pass changes the public presentation and
+The game snapshot remains `b2bac4d`. This pass changes the public presentation and
 its tooling. It adds no gameplay, account system, tracking or data collection.
 
 ## Build and check
@@ -82,12 +82,14 @@ Git, and profile README image links still resolve through their intended host.
 The initial production candidate set was 22,713,882 bytes (21.662 MiB): Nythara
 8,146,595 bytes and Database 405,758 bytes. That included large original PNGs.
 
-- The two green backgrounds and four synchronized creature sprites are protected
-  by SHA-256 checks in `tools/website-budgets.json` and remain byte-identical.
-- Six used 1600×900 runtime captures gain WebP sources at quality 90, effort 6.
-  The original JPEGs remain full-size lightbox targets and compatibility fallbacks.
-  These WebPs save about 49% together; measured PSNR against the decoded originals
-  is 42.96–46.33 dB. Text and HUD details were also checked visually.
+- The two green backgrounds and four current creature captures are protected
+  by SHA-256 checks in `tools/website-budgets.json`. All 35 current runtime images
+  additionally have registry checks for approved stable IDs, checksums and 1600×900
+  dimensions. Superseded sprite previews and runtime screenshots were removed only
+  after their production references reached zero.
+- The current runtime library uses WebP at quality 86, effort 6. Its 35 full frames
+  total 2,322,056 bytes. The source JPEG masters remain in their original repository;
+  the website serves its own optimized copies and full-image targets.
 - Only the hero gains AVIF, at 800 and 1600 pixels, quality 70, effort 6. The small
   variant is 45,908 bytes; the large is 115,488 bytes. JPEG remains the social-card
   image and fallback. No unnecessary third format is generated for each capture.
@@ -98,7 +100,7 @@ The initial production candidate set was 22,713,882 bytes (21.662 MiB): Nythara
   profile README/history and are excluded from the Pages build. The small header
   portrait is 120×120, sufficient for its 40-pixel display at 3× pixel density.
 - Photos and artwork remain raster images; text stays browser-rendered, icons
-  remain SVG, and creature sprites retain pixel rendering.
+  remain SVG, and current runtime captures retain their full 16:9 composition.
 
 Enforced production limits are 2 MiB per image and 500 KiB per background. Prefer
 under 300 KiB for routine previews. The shared world artwork is about 301 KiB,
@@ -146,3 +148,5 @@ second deployment system was introduced. The fast checks above run locally.
 Push the reviewed final changes once to `main`, wait for the existing GitHub
 Pages workflow, then verify the live HTML, assets, generated URLs, sitemap and
 actual missing-path response. Keep the public site a game presentation.
+
+Current runtime image policy and stable-ID coverage: [Current runtime previews](nythara-database-previews.md).

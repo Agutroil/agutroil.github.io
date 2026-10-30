@@ -397,9 +397,9 @@
   function mediaMarkup(entry, detail = false) {
     const fallback = state.previewFallbacks[entry.type] || state.previewFallbacks.quest;
     let visual = entry.image ? entry : fallback;
-    // Character entries always use a character portrait, including older snapshots.
+    // Current runtime captures are verified against stable IDs during generation.
     if (["monster", "boss", "npc"].includes(entry.type) &&
-        !["sprite", "portrait"].includes(visual.image_kind)) {
+        !["sprite", "portrait", "capture", "icon"].includes(visual.image_kind)) {
       visual = fallback;
     }
     const base = detail ? "detail-media" : "entry-media";
@@ -422,6 +422,9 @@
       const [width, height] = state.imageDimensions[extra.image] || [160, 160];
       return `<img class="bundle-extra" src="${escapeHtml(extra.image)}" alt="${escapeHtml(extra.image_alt)}" width="${width}" height="${height}" decoding="async"${loading}>`;
     }).join("");
+    if (detail && kind === "capture") {
+      picture = `<a class="full-capture" href="${escapeHtml(visual.image)}" aria-label="View full image: ${alt}">${picture}<span aria-hidden="true">View full image ↗</span></a>`;
+    }
     return `<div class="${base} is-${escapeHtml(kind)}" data-preview="${escapeHtml(entry.type)}">
       ${picture}${extras}
       ${visual.image_note ? `<span class="preview-note">${escapeHtml(visual.image_note)}</span>` : ""}

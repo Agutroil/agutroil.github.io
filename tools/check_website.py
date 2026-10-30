@@ -138,7 +138,7 @@ def audit() -> tuple[dict, list[str]]:
     if len(canonicals) != len(set(canonicals)): errors.append('Duplicate canonical pages')
     for path in files:
         relative = str(path.relative_to(ROOT))
-        if relative.startswith('Nythara/') and re.search(r'sprint[ -]?27', relative, re.I):
+        if relative.startswith('Nythara/') and re.search(r'sprint[ -]?(?:27|28)', relative, re.I):
             fail(path, 'Unmerged sprint asset')
         if path.suffix in IMAGE_EXTENSIONS:
             width, height = image_size(path)
@@ -156,11 +156,13 @@ def audit() -> tuple[dict, list[str]]:
                 'private repository': r'(?:github\.com|raw\.githubusercontent\.com)/Agutroil/Nythara\b',
                 'private API': r'api\.github\.com[^\s\"\']*Nythara',
                 'local filesystem path': r'/home/deister|file://',
+                'runtime identity': r'\b(?:chr|acc)_[A-Za-z0-9_-]{6,}\b|development_identity',
                 'secret': r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|\bgh[pousr]_[A-Za-z0-9]{20,}|\bgithub_pat_[A-Za-z0-9_]{20,}|\bsk-[A-Za-z0-9_-]{24,}|(?:password|access_token|credential)\s*[=:]\s*[\"\'][^\"\']{8,}',
                 'tracking': r'googletagmanager|google-analytics|connect\.facebook\.net|hotjar|plausible\.io/js',
             }
             if relative.startswith('Nythara/'):
-                patterns.update({'unsupported guild claim': r'guild bank|guild levels?|guild xp|guild perks?|guild wars?|guild housing|alliance system|guild raids?|sprint[ -]?27',
+                patterns.update({'unsupported guild claim': r'guild bank|shared guild storage|guild progression|cooperative guild tasks|guild levels?|guild xp|guild perks?|guild wars?|guild housing|alliance system|guild raids?|sprint[ -]?(?:27|28)',
+                    'obsolete runtime image': r'screenshots/sprint-\d+|assets/(?:world-hero|whispering-grove|hollow-warden|rootbound-seer|briar-thicket|new-monsters|warp-portal|skills-loadout|resurrection-altar|world-loot)\.(?:jpg|webp)|assets/(?:npcs|creatures)/',
                     'unmerged game revision': r'\b32a2679[0-9a-f]*\b',
                     'source marketing': r'open[ -]source|source code|github repository|view source|(?-i:\bMIT\b)|\bclone\b|\bfork\b'})
             for label, pattern in patterns.items():
@@ -170,6 +172,12 @@ def audit() -> tuple[dict, list[str]]:
             except ValueError: fail(path, 'Invalid JSON')
     for relative, expected in budgets['protected_assets'].items():
         if sha256((ROOT / relative).read_bytes()).hexdigest() != expected: errors.append(f'Protected game/green asset changed: {relative}')
+    library = json.loads((ROOT / 'tools/nythara-current-captures.json').read_text())
+    if len(library['entries']) != 35: errors.append('Current capture library is incomplete')
+    for capture in library['entries']:
+        asset = ROOT / 'Nythara/database' / capture['image']
+        if image_size(asset) != (1600, 900) or sha256(asset.read_bytes()).hexdigest() != capture['sha256']:
+            errors.append(f'Current capture changed: {capture["stable_id"]}')
     sitemap = ET.parse(ROOT / 'sitemap.xml')
     urls = [node.text for node in sitemap.findall('.//{*}loc')]
     if len(urls) != len(set(urls)): errors.append('Duplicate sitemap URLs')

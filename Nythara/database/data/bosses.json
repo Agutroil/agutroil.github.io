@@ -215,10 +215,9 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "assets/creatures/hollow-warden-portrait.webp",
-      "image_kind": "portrait",
-      "image_alt": "The Hollow Warden sprite portrait derived from its in-game appearance",
-      "image_note": "Sprite portrait"
+      "image": "../assets/screenshots/current/current-hollow-warden.webp",
+      "image_kind": "capture",
+      "image_alt": "Hollow Warden boss encounter in The Hollow Ruins."
     },
     {
       "id": "enemy_rootbound_seer",
@@ -412,10 +411,9 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "assets/creatures/rootbound-seer-portrait.webp",
-      "image_kind": "portrait",
-      "image_alt": "The Rootbound Seer sprite portrait derived from its in-game appearance",
-      "image_note": "Sprite portrait"
+      "image": "../assets/screenshots/current/current-rootbound-seer.webp",
+      "image_kind": "capture",
+      "image_alt": "Rootbound Seer boss encounter in Moonroot Sanctum."
     }
   ]
 }

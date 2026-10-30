@@ -12,30 +12,22 @@
     "image_note": "Equipment emblem"
   },
   "monster": {
-    "image": "assets/creatures/mossling.png",
-    "image_kind": "sprite",
-    "image_alt": "Representative Nythara forest creature sprite",
-    "image_note": "Creature portrait"
+    "image": "assets/icons/monster_drop.svg",
+    "image_kind": "icon",
+    "image_alt": "Creature emblem",
+    "image_note": "Creature emblem"
   },
   "boss": {
-    "image": "assets/creatures/rootbound-seer-portrait.webp",
-    "image_kind": "portrait",
-    "image_alt": "Representative Nythara guardian portrait",
-    "image_note": "Guardian portrait"
+    "image": "assets/icons/monster_drop.svg",
+    "image_kind": "icon",
+    "image_alt": "Boss emblem",
+    "image_note": "Boss emblem"
   },
   "dungeon": {
-    "image": "../assets/hollow-warden.jpg",
-    "image_kind": "scene",
-    "image_alt": "Representative dungeon arena view",
-    "image_crop": [
-      425,
-      180,
-      640,
-      360,
-      1280,
-      720
-    ],
-    "image_note": "Dungeon scenery"
+    "image": "assets/icons/key.svg",
+    "image_kind": "icon",
+    "image_alt": "Dungeon key emblem",
+    "image_note": "Dungeon emblem"
   },
   "region": {
     "image": "../assets/nythara-banner.jpg",
@@ -66,10 +58,10 @@
     ]
   },
   "npc": {
-    "image": "assets/npcs/elara-portrait.webp",
-    "image_kind": "portrait",
-    "image_alt": "Representative Nythara quest giver portrait",
-    "image_note": "Role portrait"
+    "image": "assets/icons/scroll.svg",
+    "image_kind": "icon",
+    "image_alt": "NPC dialogue emblem",
+    "image_note": "NPC emblem"
   },
   "quest": {
     "image": "assets/icons/quest.svg",
