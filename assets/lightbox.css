@@ -1,0 +1,52 @@
+/* Shared presentation extracted from Nythara's existing screenshot dialog. */
+dialog.lightbox {
+  --lightbox-limit: 88dvh;
+  width: min(1600px, 94vw);
+  max-width: 94vw;
+  max-height: var(--lightbox-limit);
+  padding: 0;
+  color: var(--text, var(--agt-text));
+  border: 1px solid var(--border-strong, var(--agt-border));
+  border-radius: var(--radius-lg);
+  background: #050a13;
+  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.55);
+}
+dialog.lightbox::backdrop { background: rgba(2, 5, 10, 0.88); }
+.lightbox-inner { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; max-height: var(--lightbox-limit); }
+.lightbox-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border, var(--agt-border));
+  font: 0.75rem/1.5 var(--mono);
+  color: var(--muted, var(--agt-muted));
+}
+.lightbox-close {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  color: var(--cyan, var(--agt-accent));
+  border: 1px solid var(--border, var(--agt-border));
+  border-radius: var(--radius-sm);
+  background: #0b1422;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.lightbox-close:hover { border-color: var(--cyan, var(--agt-accent)); background: #111e30; }
+.lightbox-close:focus-visible { outline: 3px solid var(--gold, var(--agt-gold)); outline-offset: 3px; }
+.lightbox-inner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(var(--lightbox-limit) - 160px);
+  min-height: 0;
+  object-fit: contain;
+  background: #03070d;
+}
+.lightbox-inner p { margin: 0; padding: 10px 14px 14px; color: var(--muted, var(--agt-muted)); font-size: 0.8rem; line-height: 1.5; }
+@media (max-width: 640px) { dialog.lightbox { --lightbox-limit: 84dvh; } }
