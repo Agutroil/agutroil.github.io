@@ -43,7 +43,7 @@ fs.mkdirSync(output,{recursive:true});
   };
   const decode=async selector=>page.locator(selector+' img').evaluateAll(imgs=>Promise.all(imgs.map(img=>{if(!img.getAttribute('src'))return;img.loading='eager';return img.decode();})));
   const screenshot=async(label,selector)=>{
-   await page.locator(selector).scrollIntoViewIfNeeded();
+   await page.locator(selector).evaluate(el=>el.scrollIntoView({block:'start'}));
    await page.screenshot({path:path.join(output,label+'.png')});
   };
   if (!process.env.QA_A11Y_ONLY) {
@@ -52,15 +52,40 @@ fs.mkdirSync(output,{recursive:true});
    await page.setViewportSize({width,height:1000});
    await goto('/Nythara/');
    await page.waitForSelector('#content-counts a');
-   for(const id of ['top','gameplay','world','friends','group','online','codex','gallery']){
+   for(const id of ['top','gameplay','world','online','friends','group','guilds','codex','gallery']){
     const section=page.locator('#'+id);await section.scrollIntoViewIfNeeded();
     if(id==='codex')await page.waitForSelector('.codex-card');
     await decode('#'+id);await geometry(`Nythara ${id} ${width}`);
     if([390,1440].includes(width))await screenshot(`game-${id}-${width}`,'#'+id);
    }
+   if([390,1440].includes(width)){
+    await screenshot(`guild-${width}`,'#guilds');
+    await screenshot(`guild-features-${width}`,'.guild-features');
+    await screenshot(`guild-captures-${width}`,'#guild-captures');
+    const guildGallery=page.locator('#gallery .shot').filter({has:page.locator('img[src*="sprint-26"]')});
+    assert.equal(await guildGallery.count(),3);
+    await page.locator('#gallery .gallery').evaluate(el=>el.scrollIntoView({block:'start'}));
+    const galleryBox=await page.locator('#gallery .gallery').boundingBox();
+    const lastGuildBox=await guildGallery.last().boundingBox();
+    await page.screenshot({path:path.join(output,`guild-gallery-${width}.png`),clip:{x:galleryBox.x,y:galleryBox.y,width:galleryBox.width,height:lastGuildBox.y+lastGuildBox.height-galleryBox.y}});
+    await screenshot(`game-footer-${width}`,'footer');
+   }
+   await page.locator('footer').scrollIntoViewIfNeeded();
    await geometry(`Nythara footer ${width}`);
+   for(const opener of await page.locator('#guilds [data-lightbox]').all()){
+    await opener.click();
+    await page.locator('#lightbox-image').evaluate(img=>img.decode());
+    assert.equal(await page.locator('#lightbox-image').getAttribute('src'),await opener.getAttribute('href'));
+    const dialogBox=await page.locator('#lightbox').boundingBox();
+    assert(dialogBox.x>=0&&dialogBox.x+dialogBox.width<=width&&dialogBox.y>=0&&dialogBox.y+dialogBox.height<=1000,`Guild dialog ${width}`);
+    assert(await page.locator('#lightbox').evaluate(el=>el.scrollWidth<=el.clientWidth&&el.scrollHeight<=el.clientHeight),`Guild dialog overflow ${width}`);
+    await page.keyboard.press('Escape');
+    assert(await opener.evaluate(el=>el===document.activeElement));
+   }
    for(const [label,hash] of [['home',''],['monsters','#monsters'],['monster','#monster/enemy_briarling'],['boss','#monster/enemy_rootbound_seer'],['dungeon','#dungeon/world_moonroot_sanctum'],['equipment','#equipment/weapon_warden_blade']]){
     await goto('/Nythara/database/'+hash);await decode('main');await geometry(`Database ${label} ${width}`);
+    assert.equal(await page.locator('#snapshot-source').textContent(),'b2bac4d');
+    assert.equal(await page.locator('#footer-source').textContent(),'Game Data Revision: b2bac4d');
     if([390,1440].includes(width))await screenshot(`db-${label}-${width}`,label==='home'?'#hero':'#view-root');
    }
    await goto('/Nythara/database/#monsters');
@@ -135,6 +160,19 @@ fs.mkdirSync(output,{recursive:true});
   for(let i=0;i<4;i++)await page.keyboard.press('Tab');
   assert(!await page.evaluate(()=>document.activeElement.closest('header.topbar')));
   await page.keyboard.press('Escape');assert(await opener.evaluate(el=>el===document.activeElement));
+  for(const width of [390,1440]){
+   await page.setViewportSize({width,height:1000});
+   for(const guildOpener of await page.locator('a[data-lightbox][href*="sprint-26"]').all()){
+    await guildOpener.focus();await page.keyboard.press('Enter');
+    assert.equal(await page.evaluate(()=>document.activeElement.id),'lightbox-close');
+    await page.keyboard.press('Tab');
+    // Native dialogs can move Tab focus to browser chrome, but never to the inert page.
+    assert(await page.evaluate(()=>document.activeElement===document.body||document.getElementById('lightbox').contains(document.activeElement)));
+    await page.keyboard.press('Escape');
+    assert(await guildOpener.evaluate(el=>el===document.activeElement));
+   }
+  }
+  report.functional.push('Sprint 26: all guild and gallery images open by keyboard, contain focus, close with Escape and restore focus; dialogs fit all widths; visible Codex revision b2bac4d');
   assert.equal(await page.locator('html').evaluate(el=>getComputedStyle(el).scrollBehavior),'auto');
   report.functional.push('Skip link, modal focus, native focus containment, Escape, opener focus restoration, reduced motion');
   await page.setViewportSize({width:844,height:390});
@@ -155,10 +193,15 @@ fs.mkdirSync(output,{recursive:true});
   report.accessibility = [];
   for(const width of [390,1440]){
    const auditContext = await browser.newContext({viewport:{width,height:1000},reducedMotion:'reduce'});
-   for(const [label,route] of [['game','/Nythara/'],['database','/Nythara/database/'],['monster','/Nythara/database/#monster/enemy_briarling'],['boss','/Nythara/database/#boss/enemy_rootbound_seer'],['dungeon','/Nythara/database/#dungeon/world_moonroot_sanctum'],['equipment','/Nythara/database/#equipment/weapon_warden_blade'],['static','/Nythara/database/monster/briarling/'],['404','/404.html']]){
+   for(const [label,route] of [['game','/Nythara/'],['guild-dialog','/Nythara/'],['database','/Nythara/database/'],['monster','/Nythara/database/#monster/enemy_briarling'],['boss','/Nythara/database/#boss/enemy_rootbound_seer'],['dungeon','/Nythara/database/#dungeon/world_moonroot_sanctum'],['equipment','/Nythara/database/#equipment/weapon_warden_blade'],['static','/Nythara/database/monster/briarling/'],['404','/404.html']]){
     const auditPage=await auditContext.newPage();
     await auditPage.goto(base+route);
     if(route.split('#')[0]==='/Nythara/database/')await auditPage.waitForSelector('#view-root[aria-busy="false"]');
+    if(label==='guild-dialog'){
+     await auditPage.locator('#guilds [data-lightbox]').first().click();
+     await auditPage.locator('#lightbox-image').evaluate(img=>img.decode());
+     await auditPage.screenshot({path:path.join(output,`guild-dialog-${width}.png`)});
+    }
     const axe=await new AxeBuilder({page:auditPage}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();
     report.accessibility.push({label,width,violations:axe.violations.map(v=>({id:v.id,impact:v.impact,targets:v.nodes.map(n=>n.target)}))});
     await auditPage.close();

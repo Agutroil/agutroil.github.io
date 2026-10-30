@@ -138,6 +138,8 @@ def audit() -> tuple[dict, list[str]]:
     if len(canonicals) != len(set(canonicals)): errors.append('Duplicate canonical pages')
     for path in files:
         relative = str(path.relative_to(ROOT))
+        if relative.startswith('Nythara/') and re.search(r'sprint[ -]?27', relative, re.I):
+            fail(path, 'Unmerged sprint asset')
         if path.suffix in IMAGE_EXTENSIONS:
             width, height = image_size(path)
             if min(width, height) <= 0: fail(path, 'Invalid image dimensions')
@@ -159,6 +161,7 @@ def audit() -> tuple[dict, list[str]]:
             }
             if relative.startswith('Nythara/'):
                 patterns.update({'unsupported guild claim': r'guild bank|guild levels?|guild xp|guild perks?|guild wars?|guild housing|alliance system|guild raids?|sprint[ -]?27',
+                    'unmerged game revision': r'\b32a2679[0-9a-f]*\b',
                     'source marketing': r'open[ -]source|source code|github repository|view source|(?-i:\bMIT\b)|\bclone\b|\bfork\b'})
             for label, pattern in patterns.items():
                 if re.search(pattern, text, re.I): fail(path, label)

@@ -1161,6 +1161,128 @@ a.social-card:focus-visible {
   font-size: 0.76rem;
 }
 
+.social-progression {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.social-progression li {
+  position: relative;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(5, 22, 23, 0.92);
+}
+
+.social-progression li + li::before {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  color: var(--cyan);
+  font-size: 0.8rem;
+  transform: translateY(-50%);
+}
+
+.social-progression a,
+.progression-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  min-height: 100%;
+  padding: 14px 16px;
+  border-radius: inherit;
+  color: var(--text-soft);
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.social-progression a > span,
+.progression-step > span {
+  color: var(--cyan);
+  font: 0.65rem var(--mono);
+}
+
+.social-progression a:hover,
+.social-progression a:focus-visible {
+  color: var(--cyan);
+  background: rgba(120, 221, 255, 0.07);
+}
+
+.social-progression li:nth-child(4) {
+  border-color: rgba(180, 154, 255, 0.45);
+  background: rgba(25, 28, 45, 0.92);
+}
+
+.social-progression li:last-child {
+  border-color: rgba(121, 212, 156, 0.45);
+}
+
+.social-progression li:last-child .progression-step {
+  color: var(--forest);
+}
+
+.guild-intro {
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  align-items: stretch;
+}
+
+.guild-intro .guild-capacity {
+  margin-top: 8px;
+  color: var(--forest);
+  font-size: 0.78rem;
+}
+
+.guild-roles {
+  display: grid;
+  gap: 12px;
+}
+
+.guild-role {
+  min-width: 0;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(7, 26, 26, 0.96), rgba(8, 20, 27, 0.94));
+}
+
+.guild-role h3 {
+  margin: 0 0 7px;
+  color: var(--forest);
+  font-size: 0.98rem;
+}
+
+.guild-master h3 { color: var(--gold); }
+.guild-officer h3 { color: var(--violet); }
+
+.guild-role p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.guild-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.guild-features .social-card {
+  padding: 18px;
+  background: rgba(3, 18, 19, 0.92);
+}
+
+.guild-features h3 { color: var(--cyan); }
+#guild-captures .capture-kicker { color: var(--cyan); }
+
 .capture-link {
   position: relative;
   display: block;
@@ -1222,12 +1344,20 @@ a.social-card:focus-visible {
 @media (max-width: 980px) {
   .social-layout { grid-template-columns: 1fr; }
   .social-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .guild-roles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 620px) {
   .social-layout { gap: 18px; }
   .social-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .social-card { padding: 14px 12px; }
+  .social-progression { grid-template-columns: 1fr; gap: 12px; }
+  .social-progression a,
+  .progression-step { flex-direction: row; justify-content: flex-start; align-items: center; gap: 14px; min-height: 46px; padding: 10px 14px; }
+  .social-progression li + li::before { content: "↓"; top: -13px; left: 19px; transform: none; line-height: 12px; }
+  .guild-roles { grid-template-columns: 1fr; }
+  .guild-features { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .guild-features .social-card { padding: 16px 12px; }
 }
 
 .online-features {
