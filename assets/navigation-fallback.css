@@ -1,0 +1,5 @@
+/* Loaded only without JavaScript; all portfolio destinations remain usable. */
+@media (max-width: 640px) {
+  .topbar { position: static; }
+  .nav-links { display: flex; }
+}

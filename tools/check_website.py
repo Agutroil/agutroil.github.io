@@ -68,7 +68,8 @@ class Document(HTMLParser):
 def audit() -> tuple[dict, list[str]]:
     files = published_files(); errors = []; links = 0; images = 0
     from build_nythara_pages import build_outputs
-    for generated, expected in build_outputs().items():
+    from build_site import build_outputs as build_portfolio
+    for generated, expected in {**build_outputs(), **build_portfolio()}.items():
         if not generated.is_file() or generated.read_text() != expected:
             errors.append(f'Stale generated output: {generated.relative_to(ROOT)}')
     file_set = set(files)
@@ -153,9 +154,10 @@ def audit() -> tuple[dict, list[str]]:
         if path.suffix in {'.html', '.css', '.js', '.json', '.txt', '.xml', '.svg'}:
             text = path.read_text()
             patterns = {
-                'private repository': r'(?:github\.com|raw\.githubusercontent\.com)/Agutroil/Nythara\b',
+                'private repository': r'(?:github\.com|raw\.githubusercontent\.com)/Agutroil/(?:Nythara|medcore|blog-pulse|Aura|Astra-Kingdom)\b',
                 'private API': r'api\.github\.com[^\s\"\']*Nythara',
-                'local filesystem path': r'/home/deister|file://',
+                'local filesystem path': r'/home/[^/\s\"\']+|file://',
+                'personal email': r'\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b',
                 'runtime identity': r'\b(?:chr|acc)_[A-Za-z0-9_-]{6,}\b|development_identity',
                 'secret': r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|\bgh[pousr]_[A-Za-z0-9]{20,}|\bgithub_pat_[A-Za-z0-9_]{20,}|\bsk-[A-Za-z0-9_-]{24,}|(?:password|access_token|credential)\s*[=:]\s*[\"\'][^\"\']{8,}',
                 'tracking': r'googletagmanager|google-analytics|connect\.facebook\.net|hotjar|plausible\.io/js',
@@ -187,6 +189,13 @@ def audit() -> tuple[dict, list[str]]:
         if urlsplit(url).fragment: errors.append('Hash route in sitemap')
         check_ref(url, ROOT / 'sitemap.xml')
     if meta['source_short_commit'] != 'b2bac4d': errors.append('Unexpected game data revision')
+    if meta['source_commit'] != 'b2bac4d03207db30e3d8e0314056b9f96a64e0e0': errors.append('Unexpected full game data revision')
+    robots = (ROOT / 'robots.txt').read_text()
+    if 'Sitemap: https://agutroil.github.io/sitemap.xml' not in robots or re.search(r'^Disallow:\s*/\s*$', robots, re.M):
+        errors.append('Robots must allow the public site and declare its sitemap')
+    verification = ROOT / 'google13e11fd3f22aedac.html'
+    if verification.read_text().strip() != f'google-site-verification: {verification.name}':
+        errors.append('Google ownership verification changed')
     for key in aliases:
         check_ref(aliases[key], ROOT / 'Nythara/database/index.html')
     summary = {'production_files': len(files), 'published_bytes': sum(p.stat().st_size for p in files),
@@ -196,7 +205,10 @@ def audit() -> tuple[dict, list[str]]:
         'css_bytes': sum(p.stat().st_size for p in files if p.suffix == '.css'),
         'js_bytes': sum(p.stat().st_size for p in files if p.suffix == '.js'),
         'image_bytes': sum(p.stat().st_size for p in files if p.suffix in IMAGE_EXTENSIONS),
-        'html_pages': len(documents), 'images_in_html': images, 'internal_references_checked': links,
+        'html_pages': len(documents),
+        'unique_titles': len({title for doc in documents.values() for title in doc.titles}),
+        'unique_descriptions': len({desc for doc in documents.values() for desc in doc.meta.get('description', [])}),
+        'images_in_html': images, 'internal_references_checked': links,
         'sitemap_urls': len(urls), 'privacy_findings': 0 if not errors else None,
         'largest_20': [{'path': str(p.relative_to(ROOT)), 'bytes': p.stat().st_size} for p in sorted(files, key=lambda p: p.stat().st_size, reverse=True)[:20]]}
     if summary['published_bytes'] > budgets['site_max_bytes']: errors.append('Published site budget exceeded')

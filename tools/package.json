@@ -1,8 +1,8 @@
 {
-  "name": "nythara-website-quality",
+  "name": "agutroil-website-quality",
   "private": true,
   "scripts": {
-    "browser": "node check_nythara_browser.cjs",
+    "browser": "node check_portfolio_browser.cjs && node check_nythara_browser.cjs",
     "lighthouse": "node measure_nythara_lighthouse.cjs"
   },
   "devDependencies": {
