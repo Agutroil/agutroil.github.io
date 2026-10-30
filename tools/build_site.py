@@ -17,7 +17,7 @@ def build_outputs():
               'image': 'https://agutroil.github.io/assets/anton-deister-profile.webp',
               'sameAs': ['https://github.com/Agutroil'],
               'knowsAbout': ['Linux', 'Debian', 'Software Development', 'Game Development',
-                             'Web Development', 'Open Source', 'Godot', 'Programming']}
+                             'Web Development', 'Godot', 'Programming']}
     schema = {'@context': 'https://schema.org', '@graph': [person,
               {'@type': 'WebSite', '@id': 'https://agutroil.github.io/#website',
                'name': 'Agutroil', 'url': 'https://agutroil.github.io/',
