@@ -46,6 +46,12 @@ fs.mkdirSync(output,{recursive:true});
    await page.locator(selector).evaluate(el=>el.scrollIntoView({block:'start'}));
    await page.screenshot({path:path.join(output,label+'.png')});
   };
+  const closeImage=async opener=>{
+   await page.keyboard.press('Escape');
+   // The native close event and the site's focus restoration run asynchronously.
+   await page.waitForFunction(el=>!document.getElementById('lightbox').open&&document.activeElement===el,await opener.elementHandle());
+   assert(await opener.evaluate(el=>el===document.activeElement));
+  };
   if (!process.env.QA_A11Y_ONLY) {
   if (!process.env.QA_FUNCTIONAL_ONLY) {
   for(const width of [320,360,390,430,768,1024,1280,1440,1920,2560]){
@@ -79,8 +85,7 @@ fs.mkdirSync(output,{recursive:true});
     const dialogBox=await page.locator('#lightbox').boundingBox();
     assert(dialogBox.x>=0&&dialogBox.x+dialogBox.width<=width&&dialogBox.y>=0&&dialogBox.y+dialogBox.height<=1000,`Guild dialog ${width}`);
     assert(await page.locator('#lightbox').evaluate(el=>el.scrollWidth<=el.clientWidth&&el.scrollHeight<=el.clientHeight),`Guild dialog overflow ${width}`);
-    await page.keyboard.press('Escape');
-    assert(await opener.evaluate(el=>el===document.activeElement));
+    await closeImage(opener);
    }
    for(const [label,hash] of [['home',''],['monsters','#monsters'],['monster','#monster/enemy_briarling'],['boss','#monster/enemy_rootbound_seer'],['dungeon','#dungeon/world_moonroot_sanctum'],['city','#city/world_start_city'],['region','#region/world_whispering_grove'],['npc','#npc/npc_elara'],['equipment','#equipment/weapon_warden_blade']]){
     await goto('/Nythara/database/'+hash);await decode('main');await geometry(`Database ${label} ${width}`);
@@ -170,7 +175,7 @@ fs.mkdirSync(output,{recursive:true});
   assert(await page.evaluate(()=>document.getElementById('lightbox').contains(document.activeElement)));
   for(let i=0;i<4;i++)await page.keyboard.press('Tab');
   assert(!await page.evaluate(()=>document.activeElement.closest('header.topbar')));
-  await page.keyboard.press('Escape');assert(await opener.evaluate(el=>el===document.activeElement));
+  await closeImage(opener);
   for(const width of [390,1440]){
    await page.setViewportSize({width,height:1000});
    for(const guildOpener of await page.locator('a[data-lightbox][href*="current-social-guild-"]').all()){
@@ -179,8 +184,7 @@ fs.mkdirSync(output,{recursive:true});
     await page.keyboard.press('Tab');
     // Native dialogs can move Tab focus to browser chrome, but never to the inert page.
     assert(await page.evaluate(()=>document.activeElement===document.body||document.getElementById('lightbox').contains(document.activeElement)));
-    await page.keyboard.press('Escape');
-    assert(await guildOpener.evaluate(el=>el===document.activeElement));
+    await closeImage(guildOpener);
    }
   }
   report.functional.push('Sprint 26: all guild and gallery images open by keyboard, contain focus, close with Escape and restore focus; dialogs fit all widths; visible Codex revision b2bac4d');
