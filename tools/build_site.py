@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build the portfolio and shared footer; never reads another repository."""
 import argparse
+from hashlib import sha256
 import json
 import re
 from string import Template
@@ -12,6 +13,7 @@ from site_layout import database_book, footer, screenshot_dialog
 def build_outputs():
     templates = ROOT / 'tools/templates'
     header = (templates / 'portfolio-header.html').read_text().rstrip()
+    homepage_css_revision = sha256((ROOT / 'assets/homepage.css').read_bytes()).hexdigest()[:12]
     person = {'@type': 'Person', '@id': 'https://agutroil.github.io/#person',
               'name': 'Anton Deister', 'alternateName': 'Agutroil', 'url': 'https://agutroil.github.io/',
               'image': 'https://agutroil.github.io/assets/anton-deister-profile.webp',
@@ -28,7 +30,7 @@ def build_outputs():
                'isPartOf': {'@id': 'https://agutroil.github.io/#website'}}]}
     outputs = {ROOT / 'index.html': Template((templates / 'portfolio-home.html').read_text()).substitute(
         header=header.replace('<a href="/">Startseite</a>', '<a href="/" aria-current="page">Startseite</a>', 1),
-        footer=footer('de'), database_book=database_book(), lightbox=screenshot_dialog('de'),
+        footer=footer('de'), database_book=database_book(), lightbox=screenshot_dialog('de'), homepage_css_revision=homepage_css_revision,
         structured_data=json.dumps(schema, ensure_ascii=False, indent=2)),
         ROOT / '404.html': Template((templates / '404.html').read_text()).substitute(header=header, footer=footer('de'))}
     # Only synchronize this marked fragment; the hand-authored game page stays editable.
