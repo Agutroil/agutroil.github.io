@@ -23,14 +23,7 @@
   --border-strong: rgba(120, 221, 255, 0.36);
 
   --shadow: 0 26px 80px rgba(1, 8, 8, 0.42);
-  --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 22px;
-  --radius-xl: 30px;
 
-  --wrap: 1180px;
-  --sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
 *,
@@ -1702,53 +1695,6 @@ a.social-card:focus-visible {
   color: var(--muted);
 }
 
-footer {
-  padding: 44px 0 38px;
-  border-top: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(3, 12, 13, 0.62), rgba(2, 9, 11, 0.88));
-}
-
-.footer-grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 22px;
-}
-
-.footer-brand strong {
-  display: block;
-  font-size: 1.05rem;
-  letter-spacing: 0.12em;
-}
-
-.footer-brand span {
-  color: var(--muted);
-  font-family: var(--mono);
-  font-size: 0.68rem;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 18px;
-  color: var(--muted);
-  font-size: 0.84rem;
-  font-weight: 700;
-}
-
-.footer-links a:hover {
-  color: var(--cyan);
-}
-
-.footer-base {
-  margin-top: 26px;
-  padding-top: 18px;
-  border-top: 1px solid var(--border);
-  color: #a9bdb4;
-  font-family: var(--mono);
-  font-size: 0.67rem;
-}
 
 dialog.lightbox {
   width: min(1120px, calc(100% - 32px));

@@ -1,7 +1,9 @@
-# Public website quality
+# Agutroil website quality
 
-The game snapshot remains `b2bac4d`. This pass changes the public presentation and
-its tooling. It adds no gameplay, account system, tracking or data collection.
+The portfolio showcases Nythara only, following the owner's current direction.
+The game snapshot remains `b2bac4d`. Website work uses the published snapshot;
+it never opens the private game checkout. No gameplay, account system, tracking
+or data collection is added.
 
 ## Build and check
 
@@ -11,7 +13,8 @@ packages are development tools only and are excluded from GitHub Pages.
 From the repository root:
 
 ```bash
-python3 tools/build_nythara_pages.py
+python3 tools/build_site.py
+python3 tools/build_site.py --check
 python3 -m unittest discover -s tools -p 'test_*.py'
 python3 tools/nythara_previews.py
 python3 tools/check_website.py --report
@@ -30,17 +33,19 @@ npm ci --prefix tools
 npx --prefix tools playwright install chromium
 python3 -m http.server 8792 --bind 127.0.0.1
 # In another terminal:
-node tools/check_nythara_browser.cjs
+npm run browser --prefix tools
 node tools/measure_nythara_lighthouse.cjs
 ```
 
 Set `CHROME_PATH` to an installed Chromium/Chrome executable when needed. Set
 `QA_BASE` to test another local origin or the deployed site. Reports and screenshots
-stay under `.git/nythara-quality/`, outside the published files. The browser checker
+stay under `.git/nythara-quality/` and `.git/complete-quality/`, outside the published files. The browser checkers
 covers 320, 360, 390, 430, 768, 1024, 1280, 1440, 1920 and 2560 CSS pixels, landscape,
 actual 200% Chromium browser zoom and reflow, long labels, all detail routes, relationships, Copy Link,
 keyboard controls, modal focus, reduced motion, JavaScript-free Codex content and
-WCAG A/AA checks with axe. Browser automation complements manual screenshot review;
+WCAG A/AA checks with axe. The portfolio suite additionally checks the homepage,
+404, mobile menu states, no-JavaScript navigation, shared footer and all 76 static
+entry/category/catalogue pages at mobile and desktop widths. Browser automation complements manual screenshot review;
 it cannot establish accessibility for every assistive technology.
 
 Lighthouse uses its unmodified mobile and desktop profiles. Scores vary with CPU,
@@ -49,6 +54,16 @@ production cache headers; final live measurements include GitHub Pages delivery.
 There is no browser-specific content, audit detection or score manipulation.
 
 ## Static Codex URLs
+
+`tools/build_site.py` builds the homepage and 404 from their templates, synchronizes
+the marked shared footer on the hand-authored Nythara page, then runs the Codex
+generator. Its `--check` option checks freshness without writing. The shared footer
+has one source in `tools/templates/site-footer.html`; labels follow the page language.
+Common colors, spacing, typefaces, radii and footer presentation live in
+`assets/design.css`. Nythara retains its existing green palette and current art.
+Portfolio-specific presentation and the small progressive menu are separate files.
+Only the stylesheet inside `noscript` expands navigation without JavaScript, so
+normal rendering does not shift when the deferred menu script runs.
 
 `tools/build_nythara_pages.py` reads only the already-public JSON snapshot. It
 never opens the game checkout. Run it after updating the snapshot or preview map;
@@ -96,9 +111,13 @@ The initial production candidate set was 22,713,882 bytes (21.662 MiB): Nythara
 - The older representative world-art WebP shrinks from 2,430,781 to 308,546 bytes;
   the Agutroil background shrinks from 2,562,378 to 374,504 bytes. Both keep their
   original dimensions. The new green backgrounds are untouched.
-- Root-page PNG delivery switches to WebP. Original PNGs stay in Git for the
+- Root-page PNG delivery uses WebP. Original PNGs stay in Git for the
   profile README/history and are excluded from the Pages build. The small header
-  portrait is 120×120, sufficient for its 40-pixel display at 3× pixel density.
+  portrait is 120×120, sufficient for its 36-pixel display at 3× pixel density.
+  The main portrait is now 560×700; the brand social image is 1280×480 and the
+  portfolio background is 1280×720. These three deliveries save 611,080 bytes.
+  The obsolete `banner.webp` delivery had no consumer references and was removed,
+  saving a further 162,576 bytes. The original profile banners remain in Git.
 - Photos and artwork remain raster images; text stays browser-rendered, icons
   remain SVG, and current runtime captures retain their full 16:9 composition.
 
@@ -143,10 +162,10 @@ checked separately from an actually missing path, which must return HTTP 404.
 
 ## Deployment
 
-No suitable tracked Actions workflow existed, so no additional workflow or
-second deployment system was introduced. The fast checks above run locally.
-Push the reviewed final changes once to `main`, wait for the existing GitHub
-Pages workflow, then verify the live HTML, assets, generated URLs, sitemap and
-actual missing-path response. Keep the public site a game presentation.
+The existing `pages-build-deployment` workflow publishes from `main` at the
+repository root. Use a feature branch and a reviewable PR after the local checks
+pass. Respect any required checks or branch rules; merge normally, then verify
+the Pages run and the deployed HTML, assets, generated URLs, sitemap and actual
+missing-path response. Do not introduce a second hosting system.
 
 Current runtime image policy and stable-ID coverage: [Current runtime previews](nythara-database-previews.md).

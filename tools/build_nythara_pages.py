@@ -16,6 +16,7 @@ from urllib.parse import urljoin
 import xml.etree.ElementTree as ET
 
 from site_assets import ROOT, image_size
+from site_layout import footer
 
 BASE = 'https://agutroil.github.io'
 DATABASE = ROOT / 'Nythara/database'
@@ -112,7 +113,7 @@ def build_outputs() -> dict[Path, str]:
         visual_crumbs = ''.join(f'<li><a href="{escape(href)}">{escape(name)}</a></li>' if i < len(crumbs) - 1 else f'<li aria-current="page">{escape(name)}</li>' for i, (name, href) in enumerate(crumbs))
         html = template.substitute(title=escape(title), description=escape(description, quote=True), canonical=escape(BASE + path),
             structured_data=json.dumps(structured, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c'),
-            breadcrumbs=f'<nav class="static-crumbs" aria-label="Breadcrumb"><ol>{visual_crumbs}</ol></nav>', content=content, revision=escape(metadata['source_short_commit']))
+            breadcrumbs=f'<nav class="static-crumbs" aria-label="Breadcrumb"><ol>{visual_crumbs}</ol></nav>', content=content, revision=escape(metadata['source_short_commit']), footer=footer())
         outputs[ROOT / path.lstrip('/') / 'index.html'] = '\n'.join(line.rstrip() for line in html.splitlines()) + '\n'
         urls.append(path)
 
@@ -180,7 +181,8 @@ def build_outputs() -> dict[Path, str]:
     updated = datetime.fromisoformat(metadata['generated_at'].replace('Z', '+00:00'))
     outputs[DATABASE / 'index.html'] = Template((ROOT / 'tools/templates/database-home.html').read_text()).substitute(
         home_content=home_content, primary_count=metadata['total_primary_entries'], revision=metadata['source_short_commit'],
-        category_count=len(metadata['categories']), updated_date=f'{updated:%b} {updated.day}, {updated.year}')
+        category_count=len(metadata['categories']), updated_date=f'{updated:%b} {updated.day}, {updated.year}',
+        footer=footer(revision=metadata['source_short_commit']))
 
     # One runtime request replaces the metadata + category request waterfall.
     runtime = deepcopy(categories)

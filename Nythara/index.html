@@ -14,7 +14,7 @@
     name="keywords"
     content="Nythara, Agutroil, online RPG, MMORPG, online multiplayer alpha, persistent characters, 2D characters, 3D world, Silverwood, Moonroot Sanctum"
   >
-  <meta name="author" content="Anton Deister · Agutroil">
+  <meta name="author" content="Agutroil">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#071411">
 
@@ -64,14 +64,15 @@
     "playMode": "https://schema.org/MultiPlayer",
     "author": {
       "@type": "Person",
-      "name": "Anton Deister",
-      "alternateName": "Agutroil",
+      "name": "Agutroil",
       "url": "https://agutroil.github.io/"
     }
   }
   </script>
 
+  <link rel="stylesheet" href="/assets/design.css">
   <link rel="stylesheet" href="./nythara.css?v=current-sprites">
+  <noscript><link rel="stylesheet" href="./navigation-fallback.css"></noscript>
 </head>
 
 <body>
@@ -1482,28 +1483,29 @@
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <strong>NYTHARA</strong>
-          <span>A 2D MMORPG in a 3D fantasy world</span>
+  <!-- Shared footer: tools/templates/site-footer.html -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="site-footer-row">
+        <div class="site-footer-brand">
+          <strong>Agutroil</strong>
+          <p>Code. Linux. Magic.</p>
         </div>
-
-        <nav class="footer-links" aria-label="Nythara footer">
-          <a href="./database/">Database</a>
-          <a href="../">Agutroil</a>
-          <a href="./">Home</a>
-          <a href="#top">Back to top ↑</a>
+        <nav class="site-footer-links" aria-label="Footer navigation">
+          <a href="/">Home</a>
+          <a href="/#projects">Projects</a>
+          <a href="/Nythara/">Nythara</a>
+          <a href="/Nythara/database/">Database</a>
+          <a href="https://github.com/Agutroil">GitHub @Agutroil</a>
         </nav>
       </div>
+      <div class="site-footer-meta">
+        <span>© 2026 Agutroil · <span aria-hidden="true">🐧</span> Powered by Linux · Crafted by Agutroil</span>
 
-      <div class="footer-base">
-        Crafted by Agutroil · © 2026 Anton Deister · Nythara is a game project in active
-        development.
       </div>
     </div>
   </footer>
+  <!-- End shared footer -->
 
   <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-caption">
     <div class="lightbox-inner">

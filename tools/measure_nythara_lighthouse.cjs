@@ -10,7 +10,7 @@ const cli = path.join(path.dirname(require.resolve('lighthouse/package.json')), 
 fs.mkdirSync(output, {recursive:true});
 const rows = [];
 for (const profile of (process.env.QA_PROFILES || 'mobile,desktop').split(',')) {
-  for (const [page, route] of [['Nythara','/Nythara/'],['Database','/Nythara/database/']]) {
+  for (const [page, route] of [['Homepage','/'],['Nythara','/Nythara/'],['Database','/Nythara/database/']].filter(([page])=>!process.env.QA_PAGES||process.env.QA_PAGES.split(',').includes(page))) {
     const filename = path.join(output, `${page.toLowerCase()}-${profile}.json`);
     const args = [cli, base+route, '--only-categories=performance,accessibility,best-practices,seo', '--output=json', `--output-path=${filename}`, '--chrome-flags=--headless --no-sandbox', '--quiet'];
     if(profile==='desktop')args.push('--preset=desktop');
