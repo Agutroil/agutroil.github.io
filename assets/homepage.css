@@ -5,23 +5,46 @@
   --home-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
   --home-transition: 150ms ease;
   background:
-    radial-gradient(ellipse 80% 650px at 0% 24%, rgba(45, 94, 152, 0.12), transparent 78%),
-    radial-gradient(ellipse 75% 900px at 100% 53%, rgba(101, 68, 150, 0.09), transparent 78%),
-    radial-gradient(ellipse 80% 650px at 25% 90%, rgba(43, 111, 136, 0.08), transparent 78%),
-    var(--agt-bg);
+    radial-gradient(ellipse 90% 24% at 0% 32%, rgba(28, 119, 184, 0.28), transparent 76%),
+    radial-gradient(ellipse 80% 25% at 100% 54%, rgba(108, 62, 176, 0.30), transparent 76%),
+    radial-gradient(ellipse 85% 20% at 22% 90%, rgba(59, 106, 172, 0.22), transparent 78%),
+    linear-gradient(180deg, #081428 0%, #0d223b 26%, #121e37 43%, #102b43 62%, #201b3d 86%, #161d35 100%);
 }
 
 .homepage::before {
   height: clamp(1040px, 68vw, 1360px);
   background:
-    linear-gradient(180deg, rgba(6, 11, 20, 0.18), rgba(6, 11, 20, 0.25) 36%, rgba(6, 11, 20, 0.78) 82%),
+    linear-gradient(180deg, rgba(6, 11, 20, 0.14), rgba(6, 11, 20, 0.25) 36%, rgba(6, 11, 20, 0.72) 82%),
     url("./agutroil-background.webp") center top / cover no-repeat;
   /* Fade the artwork into the page's colors, including behind the About section. */
-  -webkit-mask-image: linear-gradient(180deg, #000 28%, rgba(0, 0, 0, 0.8) 58%, transparent 100%);
-  mask-image: linear-gradient(180deg, #000 28%, rgba(0, 0, 0, 0.8) 58%, transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, #000 35%, rgba(0, 0, 0, 0.86) 65%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 35%, rgba(0, 0, 0, 0.86) 65%, transparent 100%);
 }
 
 .homepage main, .homepage > .site-footer { z-index: 1; }
+
+/* Reuse only the central sky/valley crop below the hero, never a second castle. */
+.homepage main::before {
+  content: "";
+  position: absolute;
+  inset: 30% 0 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.14;
+  background: url("./agutroil-background.webp") center 56% / max(300%, 4000px) auto no-repeat;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 22%, #000 72%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 22%, #000 72%, transparent);
+}
+
+.homepage :is(.stack-card, .focus-card, .project-card, .github-panel) {
+  background: rgba(7, 14, 27, 0.88);
+  box-shadow: 0 18px 42px rgba(2, 7, 18, 0.20);
+}
+
+/* Long single-column phone layouts use just the color fields, without extra paint. */
+@media (max-width: 900px) {
+  .homepage main::before { display: none; }
+}
 
 .homepage .topbar {
   top: 12px;
