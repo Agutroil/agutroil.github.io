@@ -30,10 +30,13 @@
   <script type="application/ld+json">$structured_data</script>
   <link rel="stylesheet" href="/assets/design.css">
   <link rel="stylesheet" href="/assets/portfolio.css">
+  <link rel="stylesheet" href="/assets/homepage.css">
+  <link rel="stylesheet" href="/assets/lightbox.css">
   <noscript><link rel="stylesheet" href="/assets/navigation-fallback.css"></noscript>
   <script src="/assets/portfolio.js" defer></script>
+  <script src="/assets/lightbox.js" defer></script>
 </head>
-<body id="top">
+<body class="homepage" id="top">
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
 $header
   <main id="main" tabindex="-1">
@@ -93,10 +96,10 @@ $header
               <div class="project-title"><img src="/Nythara/assets/nythara-mark.svg" width="36" height="36" alt=""><h3 id="nythara-title">Nythara</h3></div>
               <p class="project-description">Ein Online-Fantasy-RPG mit gerichteten 2D-Charakteren in einer stilisierten 3D-Welt. Erkunde Regionen und Dungeons, entwickle deinen Charakter und spiele gemeinsam in Gruppen und Gilden.</p>
               <ul class="tags" aria-label="Nythara-Technologien"><li class="tag">Godot</li><li class="tag">GDScript</li><li class="tag">Linux</li><li class="tag">Multiplayer</li></ul>
-              <div class="actions"><a class="button" href="/Nythara/">Nythara erkunden <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/Nythara/database/">Datenbank öffnen <span aria-hidden="true">→</span></a></div>
+              <div class="actions"><a class="button" href="/Nythara/">Nythara erkunden <span aria-hidden="true">→</span></a><a class="button database-button" href="/Nythara/database/">$database_book<span>Datenbank öffnen</span><span aria-hidden="true">→</span></a></div>
             </div>
             <figure class="project-preview">
-              <a href="/Nythara/assets/screenshots/current/current-player-equipped-adventurer.webp" aria-label="Nythara-Spielaufnahme in voller Größe öffnen"><img src="/Nythara/assets/screenshots/current/current-player-equipped-adventurer.webp" alt="Aktuelle Nythara-Spielaufnahme: ausgerüsteter Abenteurer in der 3D-Spielwelt" width="1600" height="900" loading="lazy" decoding="async"></a>
+              <a href="/Nythara/assets/screenshots/current/current-player-equipped-adventurer.webp" data-lightbox data-caption="Aktuelle Nythara-Spielaufnahme" aria-haspopup="dialog" aria-controls="lightbox" aria-label="Nythara-Spielaufnahme in voller Größe öffnen"><img src="/Nythara/assets/screenshots/current/current-player-equipped-adventurer.webp" alt="Aktuelle Nythara-Spielaufnahme: ausgerüsteter Abenteurer in der 3D-Spielwelt" width="1600" height="900" loading="lazy" decoding="async"></a>
               <figcaption>Aktuelle Spielaufnahme · Alpha in Entwicklung. Projektseite und Datenbank sind auf Englisch.</figcaption>
             </figure>
           </div>
@@ -124,5 +127,6 @@ $header
     </section>
   </main>
 $footer
+$lightbox
 </body>
 </html>

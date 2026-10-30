@@ -1,0 +1,186 @@
+/* Homepage polish only; shared project styles and content stay independent. */
+.homepage {
+  --home-surface: rgba(11, 20, 34, 0.92);
+  --home-highlight: rgba(120, 221, 255, 0.08);
+  --home-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+  --home-transition: 150ms ease;
+  background:
+    radial-gradient(ellipse 80% 650px at 0% 24%, rgba(45, 94, 152, 0.12), transparent 78%),
+    radial-gradient(ellipse 75% 900px at 100% 53%, rgba(101, 68, 150, 0.09), transparent 78%),
+    radial-gradient(ellipse 80% 650px at 25% 90%, rgba(43, 111, 136, 0.08), transparent 78%),
+    var(--agt-bg);
+}
+
+.homepage::before {
+  height: clamp(1040px, 68vw, 1360px);
+  background:
+    linear-gradient(180deg, rgba(6, 11, 20, 0.18), rgba(6, 11, 20, 0.25) 36%, rgba(6, 11, 20, 0.78) 82%),
+    url("./agutroil-background.webp") center top / cover no-repeat;
+  /* Fade the artwork into the page's colors, including behind the About section. */
+  -webkit-mask-image: linear-gradient(180deg, #000 28%, rgba(0, 0, 0, 0.8) 58%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 28%, rgba(0, 0, 0, 0.8) 58%, transparent 100%);
+}
+
+.homepage main, .homepage > .site-footer { z-index: 1; }
+
+.homepage .topbar {
+  top: 12px;
+  width: min(var(--wrap), calc(100% - 40px));
+  margin: 12px auto 0;
+  border: 1px solid var(--agt-border);
+  border-radius: var(--radius-md);
+  background: var(--home-surface);
+  box-shadow: var(--home-shadow), inset 0 1px 0 rgba(120, 221, 255, 0.05);
+}
+
+/* The blur is confined to the compact header; opaque fallback stays readable. */
+@supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+  .homepage .topbar {
+    background: rgba(9, 18, 31, 0.88);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.homepage .nav {
+  width: 100%;
+  min-height: 64px;
+  gap: 32px;
+  padding: 8px 18px;
+}
+
+.homepage .nav-links a { gap: 6px; }
+.homepage .project-preview [data-lightbox] { cursor: zoom-in; }
+
+.homepage .database-button {
+  min-height: 50px;
+  padding: 10px 14px;
+  color: var(--agt-gold);
+  border-color: rgba(232, 194, 122, 0.42);
+  background: linear-gradient(145deg, rgba(232, 194, 122, 0.06), transparent 70%), #0b1422;
+  box-shadow: inset 0 1px 0 rgba(232, 194, 122, 0.05), 0 0 16px rgba(232, 194, 122, 0.04);
+  white-space: nowrap;
+  transition: border-color var(--home-transition), box-shadow var(--home-transition), color var(--home-transition);
+}
+
+.homepage .database-button-icon {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.homepage .database-button:hover {
+  color: var(--agt-gold);
+  border-color: rgba(232, 194, 122, 0.78);
+  background: linear-gradient(145deg, rgba(232, 194, 122, 0.12), transparent 70%), #101c2c;
+  box-shadow: inset 0 1px 0 rgba(232, 194, 122, 0.08), 0 0 18px rgba(232, 194, 122, 0.09);
+}
+
+.homepage .database-button:hover .database-button-icon { filter: brightness(1.1); }
+.homepage .database-button:focus-visible { outline: 3px solid var(--agt-gold); outline-offset: 4px; }
+
+.homepage :is(.nav-links, .site-footer-links) a {
+  border-radius: var(--radius-sm);
+  transition: color var(--home-transition), background-color var(--home-transition), box-shadow var(--home-transition);
+}
+
+.homepage :is(.nav-links, .site-footer-links) a:hover {
+  background: var(--agt-surface-raised);
+  color: var(--agt-accent);
+  text-decoration: none;
+}
+
+.homepage :is(.nav-links, .site-footer-links) a:focus-visible {
+  outline: 3px solid var(--agt-gold);
+  outline-offset: 4px;
+}
+
+.homepage .nav-links a[aria-current="page"] {
+  color: var(--agt-accent);
+  background: var(--home-highlight);
+  box-shadow: inset 0 -2px 0 rgba(120, 221, 255, 0.65);
+}
+
+.homepage .section + .section {
+  position: relative;
+  border-top: 0;
+}
+
+.homepage .section + .section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(var(--wrap), calc(100% - 40px));
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(120, 221, 255, 0.17) 25%, rgba(180, 154, 255, 0.13) 75%, transparent);
+  pointer-events: none;
+}
+
+.homepage .site-footer {
+  padding: 40px 0 24px;
+  border-top: 0;
+  background: transparent;
+}
+
+.homepage .site-footer-inner {
+  width: min(var(--wrap), calc(100% - 40px));
+  padding: clamp(24px, 3vw, 36px);
+  border: 1px solid var(--agt-border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(17, 30, 48, 0.96), rgba(9, 18, 31, 0.96));
+  box-shadow: var(--home-shadow);
+}
+
+.homepage .site-footer-brand strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.homepage .site-footer-brand strong::after {
+  content: "";
+  width: 24px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--agt-accent), var(--agt-violet));
+}
+
+.homepage .site-footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 4px 12px;
+}
+
+.homepage .site-footer-links a {
+  justify-self: start;
+  padding: 6px 10px;
+}
+
+.homepage .site-footer-links a:last-child { grid-column: 2 / -1; }
+.homepage .site-footer-meta { margin-top: 20px; padding-top: 20px; }
+
+@media (max-width: 640px) {
+  .homepage::before { background-position: center top, 8% top; }
+  .homepage .topbar { width: calc(100% - 32px); top: 8px; margin-top: 8px; }
+  .homepage .nav { gap: 0 16px; padding: 8px 12px; }
+  .homepage .nav-links.is-open { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
+  .homepage .nav-links a { min-height: 48px; }
+  .homepage .section + .section::before { width: calc(100% - 32px); }
+  .homepage .site-footer { padding-top: 24px; }
+  .homepage .site-footer-inner { width: calc(100% - 32px); padding: 24px; }
+  .homepage .site-footer-row { flex-direction: column; gap: 20px; }
+  .homepage .site-footer-links { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 8px; }
+  .homepage .site-footer-links a:last-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 360px) {
+  .homepage .database-button { gap: 8px; padding-inline: 10px; }
+  .homepage .database-button-icon { width: 24px; height: 24px; flex-basis: 24px; }
+}

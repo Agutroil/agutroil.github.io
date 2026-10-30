@@ -6,7 +6,7 @@ import re
 from string import Template
 
 from site_assets import ROOT
-from site_layout import footer
+from site_layout import database_book, footer, screenshot_dialog
 
 
 def build_outputs():
@@ -28,7 +28,8 @@ def build_outputs():
                'isPartOf': {'@id': 'https://agutroil.github.io/#website'}}]}
     outputs = {ROOT / 'index.html': Template((templates / 'portfolio-home.html').read_text()).substitute(
         header=header.replace('<a href="/">Startseite</a>', '<a href="/" aria-current="page">Startseite</a>', 1),
-        footer=footer('de'), structured_data=json.dumps(schema, ensure_ascii=False, indent=2)),
+        footer=footer('de'), database_book=database_book(), lightbox=screenshot_dialog('de'),
+        structured_data=json.dumps(schema, ensure_ascii=False, indent=2)),
         ROOT / '404.html': Template((templates / '404.html').read_text()).substitute(header=header, footer=footer('de'))}
     # Only synchronize this marked fragment; the hand-authored game page stays editable.
     game = ROOT / 'Nythara/index.html'

@@ -73,38 +73,4 @@
     sections.forEach((section) => navObserver.observe(section));
   }
 
-  const dialog = document.getElementById("lightbox");
-  const dialogImage = document.getElementById("lightbox-image");
-  const dialogCaption = document.getElementById("lightbox-caption");
-  const dialogClose = document.getElementById("lightbox-close");
-  let lightboxOpener = null;
-
-  if (dialog && dialogImage && dialogCaption && typeof dialog.showModal === "function") {
-    document.querySelectorAll("[data-lightbox]").forEach((link) => {
-      link.addEventListener("click", (event) => {
-        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-        event.preventDefault();
-        lightboxOpener = link;
-        dialogImage.src = link.getAttribute("href");
-        const preview = link.querySelector("img");
-        dialogImage.alt = preview?.alt || "";
-        dialogImage.width = Number(preview?.getAttribute("width")) || 1600;
-        dialogImage.height = Number(preview?.getAttribute("height")) || 900;
-        dialogCaption.textContent = link.getAttribute("data-caption") || "";
-        dialog.showModal();
-        dialogClose?.focus();
-      });
-    });
-
-    dialogClose?.addEventListener("click", () => dialog.close());
-
-    dialog.addEventListener("close", () => {
-      lightboxOpener?.focus({ preventScroll: true });
-      lightboxOpener = null;
-    });
-
-    dialog.addEventListener("click", (event) => {
-      if (event.target === dialog) dialog.close();
-    });
-  }
 })();
