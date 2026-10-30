@@ -56,12 +56,15 @@ p { margin: 0 0 16px; }
 .hero-shell { display: grid; grid-template-columns: minmax(0, 1fr) 236px; gap: var(--space-5); align-items: center; padding: clamp(24px, 4vw, 48px); border: 1px solid var(--agt-border); border-radius: var(--radius-xl); background: #0b1422f0; }
 .hero-shell > * { min-width: 0; }
 .hero h1 { margin: 0 0 12px; font-size: clamp(3.1rem, 7vw, 5.8rem); letter-spacing: -0.055em; }
+.hero-name { display: block; margin-top: 12px; font-size: clamp(1.6rem, 3vw, 2.25rem); font-weight: 650; line-height: 1.25; letter-spacing: -0.025em; }
 .hero-motto { margin-bottom: 20px; color: var(--agt-gold); font: 600 1rem/1.6 var(--mono); }
 .hero-role { max-width: 45ch; font-size: clamp(1.05rem, 1.6vw, 1.3rem); color: var(--agt-text); }
 .hero-description { max-width: 56ch; margin-bottom: 0; color: var(--agt-muted); }
 .hero-profile { margin: 0; }
 .hero-profile img { width: 100%; aspect-ratio: 1122 / 1402; object-fit: contain; border-radius: var(--radius-md); background: var(--agt-bg); }
 .hero-profile figcaption { margin-top: 12px; font: 0.75rem/1.6 var(--mono); text-align: center; color: var(--agt-muted); }
+.hero-profile figcaption strong { display: block; margin-bottom: 4px; color: var(--agt-text); font: 700 1rem/1.4 var(--sans); }
+.hero-profile figcaption span { display: block; }
 .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: var(--space-3); }
 .button { display: inline-flex; justify-content: center; align-items: center; gap: 10px; min-height: 48px; padding: 10px 18px; border: 1px solid var(--agt-accent); border-radius: var(--radius-sm); background: var(--agt-accent); color: var(--agt-bg); text-decoration: none; font-weight: 750; line-height: 1.5; transition: background-color 150ms ease, border-color 150ms ease; }
 .button:hover { background: #a5eaff; border-color: #a5eaff; }
@@ -121,7 +124,9 @@ p { margin: 0 0 16px; }
   .menu-toggle[hidden] { display: none; }
   .nav-links[hidden] { display: none; }
   .hero-shell { grid-template-columns: 1fr; border-radius: var(--radius-lg); }
-  .hero-profile { display: none; }
+  .hero-profile { display: flex; align-items: center; gap: 16px; }
+  .hero-profile img { width: 80px; height: 100px; flex: 0 0 80px; }
+  .hero-profile figcaption { margin: 0; text-align: left; }
   .hero h1 { font-size: clamp(2.9rem, 12vw, 4.5rem); }
   .hero-role { font-size: 1.05rem; }
   .hero-description { font-size: 0.95rem; }
