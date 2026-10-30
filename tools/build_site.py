@@ -13,7 +13,8 @@ def build_outputs():
     templates = ROOT / 'tools/templates'
     header = (templates / 'portfolio-header.html').read_text().rstrip()
     person = {'@type': 'Person', '@id': 'https://agutroil.github.io/#person',
-              'name': 'Agutroil', 'url': 'https://agutroil.github.io/',
+              'name': 'Anton Deister', 'alternateName': 'Agutroil', 'url': 'https://agutroil.github.io/',
+              'image': 'https://agutroil.github.io/assets/anton-deister-profile.webp',
               'sameAs': ['https://github.com/Agutroil'],
               'knowsAbout': ['Linux', 'Debian', 'Software Development', 'Game Development',
                              'Web Development', 'Open Source', 'Godot', 'Programming']}
@@ -22,7 +23,7 @@ def build_outputs():
                'name': 'Agutroil', 'url': 'https://agutroil.github.io/',
                'inLanguage': 'de', 'author': {'@id': person['@id']}},
               {'@type': 'ProfilePage', 'url': 'https://agutroil.github.io/',
-               'name': 'Agutroil — Entwickler, Linux & Open-Source-Projekte',
+               'name': 'Anton Deister | Agutroil – Entwickler, Linux, Games & Web',
                'mainEntity': {'@id': person['@id']},
                'isPartOf': {'@id': 'https://agutroil.github.io/#website'}}]}
     outputs = {ROOT / 'index.html': Template((templates / 'portfolio-home.html').read_text()).substitute(
