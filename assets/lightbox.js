@@ -7,23 +7,41 @@
   const caption = document.getElementById("lightbox-caption");
   const close = document.getElementById("lightbox-close");
   if (!dialog || !image || !caption || !close || typeof dialog.showModal !== "function") return;
+  const previous = document.getElementById("lightbox-previous");
+  const next = document.getElementById("lightbox-next");
+  const position = document.getElementById("lightbox-position");
+  const navigation = dialog.querySelector(".lightbox-navigation");
 
   const root = document.documentElement;
   const body = document.body;
   let opener = null;
   let saved = null;
+  let gallery = [];
+  let current = 0;
 
-  document.addEventListener("click", (event) => {
-    const link = event.target.closest("a[data-lightbox]");
-    if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || dialog.open) return;
-    event.preventDefault();
-    opener = link;
+  const showImage = (index) => {
+    current = (index + gallery.length) % gallery.length;
+    const link = gallery[current];
     const preview = link.querySelector("img");
     image.src = link.getAttribute("href");
     image.alt = preview?.alt || "";
     image.width = Number(preview?.getAttribute("width")) || 1600;
     image.height = Number(preview?.getAttribute("height")) || 900;
     caption.textContent = link.getAttribute("data-caption") || image.alt;
+    if (position) position.textContent = `${current + 1} / ${gallery.length}`;
+    if (navigation) navigation.hidden = gallery.length < 2;
+  };
+
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("a[data-lightbox]");
+    if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || dialog.open) return;
+    event.preventDefault();
+    opener = link;
+    // Repeated previews on the game page share one position in the gallery.
+    gallery = Array.from(new Map(Array.from(document.querySelectorAll("a[data-lightbox]"), item => [item.href, item])).values());
+    const index = gallery.findIndex(item => item.href === link.href);
+    gallery[index] = link;
+    showImage(index);
 
     saved = {
       x: window.scrollX, y: window.scrollY,
@@ -40,6 +58,15 @@
   });
 
   close.addEventListener("click", () => dialog.close());
+  previous?.addEventListener("click", () => showImage(current - 1));
+  next?.addEventListener("click", () => showImage(current + 1));
+  dialog.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || gallery.length < 2) return;
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      showImage(current + (event.key === "ArrowLeft" ? -1 : 1));
+    }
+  });
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) dialog.close();
   });

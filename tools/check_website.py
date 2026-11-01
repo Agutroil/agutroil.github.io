@@ -139,7 +139,7 @@ def audit() -> tuple[dict, list[str]]:
     if len(canonicals) != len(set(canonicals)): errors.append('Duplicate canonical pages')
     for path in files:
         relative = str(path.relative_to(ROOT))
-        if relative.startswith('Nythara/') and re.search(r'sprint[ -]?(?:27|28)', relative, re.I):
+        if re.search(r'sprint[ -]?(?:2[7-9]|3[01])\b', relative, re.I):
             fail(path, 'Unmerged sprint asset')
         if path.suffix in IMAGE_EXTENSIONS:
             width, height = image_size(path)
@@ -154,6 +154,7 @@ def audit() -> tuple[dict, list[str]]:
         if path.suffix in {'.html', '.css', '.js', '.json', '.txt', '.xml', '.svg'}:
             text = path.read_text()
             patterns = {
+                'unmerged sprint content': r'sprint[ -]?(?:2[7-9]|3[01])\b',
                 'private repository': r'(?:github\.com|raw\.githubusercontent\.com)/Agutroil/(?:Nythara|medcore|blog-pulse|Aura|Astra-Kingdom)\b',
                 'private API': r'api\.github\.com[^\s\"\']*Nythara',
                 'local filesystem path': r'/home/[^/\s\"\']+|file://',

@@ -27,6 +27,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Agutroil">
+  <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Nythara — Online Fantasy RPG">
   <meta
     property="og:description"
@@ -72,7 +73,7 @@
 
   <link rel="stylesheet" href="/assets/design.css">
   <link rel="stylesheet" href="./nythara.css?v=current-sprites">
-  <link rel="stylesheet" href="/assets/lightbox.css">
+  <link rel="stylesheet" href="/assets/lightbox.css?v=gallery">
   <noscript><link rel="stylesheet" href="./navigation-fallback.css"></noscript>
 </head>
 
@@ -148,10 +149,10 @@
           <p class="hero-release">Online Multiplayer Alpha</p>
           <h1>NYTHARA<span>.</span></h1>
           <p class="hero-tagline">
-            A 2D MMORPG inside an immersive 3D fantasy world.
+            A 2D MMORPG set in an immersive 3D fantasy world.
           </p>
           <p class="hero-secondary">
-            Explore · Fight · Progress · Build · Connect
+            Explore, fight, craft, and forge your own legend.
           </p>
           <p class="hero-description">
             Follow forest trails, descend into forgotten ruins and shape your own
@@ -170,7 +171,7 @@
               <span class="arrow" aria-hidden="true">→</span>
             </a>
             <a class="button ghost" href="./database/">
-              Open the Database
+              Explore Nythara Database
               <span class="arrow" aria-hidden="true">→</span>
             </a>
           </div>
@@ -1468,7 +1469,7 @@
           </p>
           <div class="actions">
             <a class="button primary" href="./database/">
-              Open the Database
+              Explore Nythara Database
               <span class="arrow" aria-hidden="true">→</span>
             </a>
             <a class="button" href="#world">
@@ -1515,12 +1516,19 @@
         <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close image">✕</button>
       </div>
       <img id="lightbox-image" alt="">
-      <p id="lightbox-caption"></p>
+      <div class="lightbox-foot">
+        <div class="lightbox-navigation" role="group" aria-label="Screenshot navigation" hidden>
+          <button class="lightbox-step" id="lightbox-previous" type="button" aria-label="Previous image">←</button>
+          <span id="lightbox-position" aria-live="polite" aria-atomic="true"></span>
+          <button class="lightbox-step" id="lightbox-next" type="button" aria-label="Next image">→</button>
+        </div>
+        <p id="lightbox-caption"></p>
+      </div>
     </div>
   </dialog>
 
   <script src="./site.js?v=shared-lightbox" defer></script>
-  <script src="/assets/lightbox.js" defer></script>
+  <script src="/assets/lightbox.js?v=gallery" defer></script>
   <script src="./codex-preview.js?v=current-sprites" defer></script>
 </body>
 </html>
