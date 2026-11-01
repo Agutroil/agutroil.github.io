@@ -44,8 +44,8 @@ fs.mkdirSync(output, {recursive:true});
     assert.deepEqual(outside, [], label);
   };
   try {
-    for (const width of [320,360,390,430,768,1024,1280,1440,1920,2560]) {
-      await page.setViewportSize({width,height:1000});
+    for (const [width,height] of [[320,1000],[360,1000],[390,844],[430,1000],[768,1024],[1024,1000],[1280,1000],[1366,768],[1440,1000],[1600,900],[1920,1000],[2560,1000]]) {
+      await page.setViewportSize({width,height});
       for (const route of ['/', '/404.html']) {
         await visit(route); await images(); await geometry(`${route} ${width}`);
         for (const section of await page.locator('main section,footer').all()) {
@@ -70,14 +70,12 @@ fs.mkdirSync(output, {recursive:true});
         assert.equal(await page.evaluate(()=>document.activeElement.id), 'projects');
       }
       await visit('/');
-      const database = page.getByRole('link', {name:'Datenbank öffnen', exact:true});
+      const database = page.getByRole('link', {name:'Explore Nythara Database', exact:true});
       assert.equal(await database.getAttribute('href'), '/Nythara/database/');
       assert(await database.locator('svg[aria-hidden="true"]').isVisible());
       const buttonBox = await database.boundingBox();
       assert(buttonBox.height >= 44);
-      assert.equal(await database.locator('span').first().evaluate(el=>{
-        const range = document.createRange(); range.selectNodeContents(el); return range.getClientRects().length;
-      }), 1, `Database label wraps ${width}`);
+      assert(await database.evaluate(el=>el.scrollWidth<=el.clientWidth), `Database label overflows ${width}`);
       const github = page.locator('#nav-links a[href="https://github.com/Agutroil"]');
       assert.equal(await github.locator('[aria-hidden="true"]').textContent(), '↗');
 
@@ -95,7 +93,7 @@ fs.mkdirSync(output, {recursive:true});
         assert.equal(await page.getByRole('dialog', {name:'Aktuelle Nythara-Spielaufnahme'}).count(), 1);
         assert.equal(await page.locator('#lightbox-close').getAttribute('aria-label'), 'Bild schließen');
         const box = await dialog.boundingBox();
-        assert(box.x >= 0 && box.x + box.width <= width && box.y >= 0 && box.y + box.height <= 1000);
+        assert(box.x >= 0 && box.x + box.width <= width && box.y >= 0 && box.y + box.height <= height);
         assert(await dialog.evaluate(el=>el.scrollHeight<=el.clientHeight&&el.scrollWidth<=el.clientWidth));
         const closeBox = await page.locator('#lightbox-close').boundingBox();
         assert(closeBox.width >= 44 && closeBox.height >= 44);
@@ -128,6 +126,33 @@ fs.mkdirSync(output, {recursive:true});
     assert(projectTop >= await page.locator('header').evaluate(el=>el.getBoundingClientRect().bottom), 'Sticky header covers project anchor');
     assert.equal(await page.locator('html').evaluate(el=>getComputedStyle(el).scrollBehavior), 'auto');
     report.keyboard.push('Skip link, CTA anchors, visible focus, menu Enter/Escape/Tab, closed-menu focus, reduced motion');
+
+    for (const width of [390,1600]) {
+      await page.setViewportSize({width,height:width===390?844:900});
+      await visit('/');
+      for (const name of ['Nythara','MedCore','Blog Pulse','Aura','Auto-Abenteuer']) {
+        assert.equal(await page.getByRole('heading',{name,exact:true}).count(),1);
+      }
+      const thumbnails=page.locator('.project-gallery a[data-lightbox]');
+      assert.equal(await thumbnails.count(),3);
+      const galleryOpener=thumbnails.first();
+      await galleryOpener.focus(); await page.keyboard.press('Enter');
+      assert.equal(await page.locator('#lightbox-position').textContent(),'2 / 4');
+      await page.keyboard.press('ArrowRight');
+      assert((await page.locator('#lightbox-image').getAttribute('src')).endsWith('current-dungeon-hollow-ruins.webp'));
+      await page.locator('#lightbox-image').evaluate(img=>img.decode());
+      assert.equal(await page.locator('#lightbox-image').evaluate(img=>img.naturalWidth),1600);
+      await page.getByRole('button',{name:'Nächstes Bild',exact:true}).click();
+      assert.equal(await page.locator('#lightbox-position').textContent(),'4 / 4');
+      await page.keyboard.press('ArrowRight');
+      assert.equal(await page.locator('#lightbox-position').textContent(),'1 / 4');
+      await page.getByRole('button',{name:'Vorheriges Bild',exact:true}).click();
+      assert.equal(await page.locator('#lightbox-position').textContent(),'4 / 4');
+      await page.keyboard.press('Escape');
+      await page.waitForFunction(el=>document.activeElement===el,await galleryOpener.elementHandle());
+      await geometry(`Gallery and restored focus ${width}`);
+    }
+    report.keyboard.push('All five projects; gallery buttons, arrow keys, wraparound, image changes and original opener focus');
 
     const staticPages = JSON.parse(fs.readFileSync(path.join(root,'Nythara/database/data/static-pages.json')));
     for (const width of [390,1440]) {

@@ -1,0 +1,32 @@
+name: Website checks
+
+on:
+  pull_request:
+  push:
+    branches: [main, website-nythara-refresh]
+
+permissions:
+  contents: read
+
+jobs:
+  static-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check generated pages
+        run: python3 tools/build_site.py --check
+      - name: Test the existing page and preview generators
+        run: python3 -m unittest discover -s tools -p 'test_*.py'
+      - name: Check approved previews
+        run: python3 tools/nythara_previews.py
+      - name: Check links, metadata, privacy and size budgets
+        run: python3 tools/check_website.py
+      - name: Check whitespace
+        run: git diff --check

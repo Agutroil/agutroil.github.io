@@ -23,6 +23,8 @@ def screenshot_dialog(language: str = 'en') -> str:
     markup = match[0]
     if language == 'de':
         markup = markup.replace('Nythara · in-game image', 'Nythara · Spielaufnahme').replace('aria-label="Close image"', 'aria-label="Bild schließen"')
+        for english, german in [('Screenshot navigation', 'Bildnavigation'), ('Previous image', 'Vorheriges Bild'), ('Next image', 'Nächstes Bild')]:
+            markup = markup.replace(f'aria-label="{english}"', f'aria-label="{german}"')
     return markup
 
 

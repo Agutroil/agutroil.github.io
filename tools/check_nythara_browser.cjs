@@ -175,7 +175,16 @@ fs.mkdirSync(output,{recursive:true});
   assert(await page.evaluate(()=>document.getElementById('lightbox').contains(document.activeElement)));
   for(let i=0;i<4;i++)await page.keyboard.press('Tab');
   assert(!await page.evaluate(()=>document.activeElement.closest('header.topbar')));
+  const uniqueImages=await page.locator('a[data-lightbox]').evaluateAll(links=>new Set(links.map(link=>link.href)).size);
+  const initialImage=await page.locator('#lightbox-image').getAttribute('src');
+  assert((await page.locator('#lightbox-position').textContent()).endsWith(' / '+uniqueImages));
+  await page.keyboard.press('ArrowRight');
+  assert.notEqual(await page.locator('#lightbox-image').getAttribute('src'),initialImage);
+  await page.getByRole('button',{name:'Previous image',exact:true}).click();
+  assert.equal(await page.locator('#lightbox-image').getAttribute('src'),initialImage);
+  assert.equal(await page.locator('#lightbox-caption').textContent(),await opener.getAttribute('data-caption'));
   await closeImage(opener);
+  report.functional.push('Screenshot navigation: deduplicated images, arrow keys, localized buttons and opener caption');
   for(const width of [390,1440]){
    await page.setViewportSize({width,height:1000});
    for(const guildOpener of await page.locator('a[data-lightbox][href*="current-social-guild-"]').all()){

@@ -23,7 +23,7 @@ dialog.lightbox::backdrop { background: rgba(2, 5, 10, 0.88); }
   font: 0.75rem/1.5 var(--mono);
   color: var(--muted, var(--agt-muted));
 }
-.lightbox-close {
+.lightbox-close, .lightbox-step {
   width: 44px;
   height: 44px;
   flex: 0 0 44px;
@@ -37,16 +37,20 @@ dialog.lightbox::backdrop { background: rgba(2, 5, 10, 0.88); }
   font-size: 1.25rem;
   cursor: pointer;
 }
-.lightbox-close:hover { border-color: var(--cyan, var(--agt-accent)); background: #111e30; }
-.lightbox-close:focus-visible { outline: 3px solid var(--gold, var(--agt-gold)); outline-offset: 3px; }
+.lightbox-close:hover, .lightbox-step:hover { border-color: var(--cyan, var(--agt-accent)); background: #111e30; }
+.lightbox-close:focus-visible, .lightbox-step:focus-visible { outline: 3px solid var(--gold, var(--agt-gold)); outline-offset: 3px; }
 .lightbox-inner img {
   display: block;
   width: 100%;
   height: auto;
-  max-height: calc(var(--lightbox-limit) - 160px);
+  max-height: calc(var(--lightbox-limit) - 200px);
   min-height: 0;
   object-fit: contain;
   background: #03070d;
 }
 .lightbox-inner p { margin: 0; padding: 10px 14px 14px; color: var(--muted, var(--agt-muted)); font-size: 0.8rem; line-height: 1.5; }
+.lightbox-foot { min-height: 0; overflow-y: auto; }
+.lightbox-navigation { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 10px 14px 0; }
+.lightbox-navigation[hidden] { display: none; }
+#lightbox-position { min-width: 7ch; text-align: center; color: var(--muted, var(--agt-muted)); font: 0.8rem/1.5 var(--mono); }
 @media (max-width: 640px) { dialog.lightbox { --lightbox-limit: 84dvh; } }

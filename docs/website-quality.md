@@ -1,6 +1,8 @@
 # Agutroil website quality
 
-The portfolio showcases Nythara only, following the owner's current direction.
+The portfolio features Nythara alongside MedCore, Blog Pulse, Aura and
+Auto-Abenteuer. Secondary project summaries reuse previously published copy;
+they expose no private repository links or unverified download promises.
 The game snapshot remains `b2bac4d`. Website work uses the published snapshot;
 it never opens the private game checkout. No gameplay, account system, tracking
 or data collection is added.
@@ -25,6 +27,12 @@ assets, duplicate IDs, heading levels, image dimensions and alt attributes,
 canonical and social metadata, JSON-LD syntax, sitemap coverage, JavaScript
 syntax, privacy patterns and size budgets. It uses Python's standard library and
 Node's syntax checker; it makes no network requests.
+
+The `Website checks` workflow runs these static checks and the existing Python
+tests on GitHub-hosted Ubuntu runners for pull requests and main updates. It has
+read-only repository permissions and does not use the game project's runner.
+The publication guard covers Sprint 27 through Sprint 31 across the entire
+published website; changing that ceiling requires a fresh merge/publication review.
 
 For browser checks:
 
