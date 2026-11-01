@@ -163,6 +163,8 @@ def audit() -> tuple[dict, list[str]]:
                 'secret': r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|\bgh[pousr]_[A-Za-z0-9]{20,}|\bgithub_pat_[A-Za-z0-9_]{20,}|\bsk-[A-Za-z0-9_-]{24,}|(?:password|access_token|credential)\s*[=:]\s*[\"\'][^\"\']{8,}',
                 'tracking': r'googletagmanager|google-analytics|connect\.facebook\.net|hotjar|plausible\.io/js',
             }
+            if relative == 'index.html':
+                patterns['additional project presentation'] = r'\bmedcore\b|blog[ -]pulse|\baura\b|auto[ -]abenteuer|weitere projekte|more projects|other-projects|work-card'
             if relative.startswith('Nythara/'):
                 patterns.update({'unsupported guild claim': r'guild bank|shared guild storage|guild progression|cooperative guild tasks|guild levels?|guild xp|guild perks?|guild wars?|guild housing|alliance system|guild raids?|sprint[ -]?(?:27|28)',
                     'obsolete runtime image': r'screenshots/sprint-\d+|assets/(?:world-hero|whispering-grove|hollow-warden|rootbound-seer|briar-thicket|new-monsters|warp-portal|skills-loadout|resurrection-altar|world-loot)\.(?:jpg|webp)|assets/(?:npcs|creatures)/',

@@ -1,5 +1,9 @@
 # Agutroil website and Nythara refresh
 
+Historical report for PR #7. The subsequent publication policy supersedes its
+multi-project presentation: Nythara is now the only presented project. See
+`website-quality.md` for the current policy.
+
 ## Presentation
 
 The homepage keeps the dark navigation, fantasy/Linux artwork, portrait, shared

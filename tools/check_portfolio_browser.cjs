@@ -130,9 +130,9 @@ fs.mkdirSync(output, {recursive:true});
     for (const width of [390,1600]) {
       await page.setViewportSize({width,height:width===390?844:900});
       await visit('/');
-      for (const name of ['Nythara','MedCore','Blog Pulse','Aura','Auto-Abenteuer']) {
-        assert.equal(await page.getByRole('heading',{name,exact:true}).count(),1);
-      }
+      assert.deepEqual(await page.locator('#projects article h3').allTextContents(),['Nythara']);
+      assert.equal(await page.locator('#projects article').count(),1);
+      assert.equal(await page.getByText(/MedCore|Blog Pulse|\bAura\b|Auto-Abenteuer|Weitere Projekte|More Projects/i).count(),0);
       const thumbnails=page.locator('.project-gallery a[data-lightbox]');
       assert.equal(await thumbnails.count(),3);
       const galleryOpener=thumbnails.first();
@@ -152,7 +152,7 @@ fs.mkdirSync(output, {recursive:true});
       await page.waitForFunction(el=>document.activeElement===el,await galleryOpener.elementHandle());
       await geometry(`Gallery and restored focus ${width}`);
     }
-    report.keyboard.push('All five projects; gallery buttons, arrow keys, wraparound, image changes and original opener focus');
+    report.keyboard.push('Nythara is the sole presented project; gallery buttons, arrow keys, wraparound, image changes and original opener focus');
 
     const staticPages = JSON.parse(fs.readFileSync(path.join(root,'Nythara/database/data/static-pages.json')));
     for (const width of [390,1440]) {
