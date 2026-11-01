@@ -1,8 +1,11 @@
 # Agutroil website quality
 
-The portfolio features Nythara alongside MedCore, Blog Pulse, Aura and
-Auto-Abenteuer. Secondary project summaries reuse previously published copy;
-they expose no private repository links or unverified download promises.
+Nythara is the only concrete project presented on the public website. Do not
+add other project cards, sliders, archived or experimental project lists, or
+automatic GitHub repository listings. Anton Deister / Agutroil, Linux,
+development, general skills and the GitHub profile remain part of the portfolio.
+Preserve existing assets that may be used elsewhere. Static and browser checks
+guard this publication policy.
 The game snapshot remains `b2bac4d`. Website work uses the published snapshot;
 it never opens the private game checkout. No gameplay, account system, tracking
 or data collection is added.
