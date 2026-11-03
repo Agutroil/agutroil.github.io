@@ -30,16 +30,28 @@ def preview(image: str, kind: str, alt: str, note: str = "", crop: list[int] | N
 # the private game checkout. Each stable ID has exactly one current hero.
 CAPTURE_LIBRARY = json.loads(Path(__file__).with_name("nythara-current-captures.json").read_text())
 CAPTURES = {entry["stable_id"]: entry for entry in CAPTURE_LIBRARY["entries"]}
+# Characters are previewed from the authored eight-direction sprite sets instead
+# of gameplay captures, so only world and settlement subjects keep a capture.
+CHARACTER_CATEGORIES = ("monster", "boss", "npc")
 CURRENT_PREVIEWS = {
     key: preview(entry["image"], "capture", entry["image_alt"])
-    for key, entry in CAPTURES.items() if entry["database_ready"]
+    for key, entry in CAPTURES.items()
+    if entry["database_ready"] and entry["category"] not in CHARACTER_CATEGORIES
 }
 CAPTURE_TYPES = {
     "monster": ("monster",), "boss": ("monster", "boss"),
     "npc": ("npc",), "city": ("city",), "region": ("region",), "dungeon": ("dungeon",),
 }
-CREATURES = {key: CURRENT_PREVIEWS[key] for key, entry in CAPTURES.items() if entry["category"] in ("monster", "boss")}
-NPCS = {key: CURRENT_PREVIEWS[key] for key, entry in CAPTURES.items() if entry["category"] == "npc"}
+# The sprite registry is curated from the game's SpriteFrames resources once and
+# committed, so validation stays independent of the private game checkout.
+SPRITE_LIBRARY = json.loads(Path(__file__).with_name("nythara-sprite-previews.json").read_text())
+SPRITES = {entry["stable_id"]: entry for entry in SPRITE_LIBRARY["entries"]}
+SPRITE_PREVIEWS = {
+    key: preview(entry["image"], "sprite", entry["image_alt"])
+    for key, entry in SPRITES.items() if entry["category"] in CHARACTER_CATEGORIES
+}
+CREATURES = {key: SPRITE_PREVIEWS[key] for key, entry in SPRITES.items() if entry["category"] in ("monster", "boss")}
+NPCS = {key: SPRITE_PREVIEWS[key] for key, entry in SPRITES.items() if entry["category"] == "npc"}
 
 # Regions without an approved capture keep clearly labelled public world artwork.
 WORLDS = {
@@ -92,14 +104,8 @@ def assign_preview(entry: dict, database: Path = DATABASE) -> None:
     if kind not in FALLBACKS:
         raise ValueError(f"No preview policy for category {kind}")
     original_image = entry.get("image")
-    if kind in ("monster", "boss"):
-        visual = CREATURES.get(entry_id)
-        if visual is None:
-            visual = FALLBACKS[kind]
-    elif kind == "npc":
-        visual = NPCS.get(entry_id)
-        if visual is None:
-            visual = FALLBACKS[kind]
+    if kind in CHARACTER_CATEGORIES:
+        visual = SPRITE_PREVIEWS.get(entry_id) or FALLBACKS[kind]
     elif kind in ("region", "city", "dungeon"):
         visual = WORLDS.get(entry_id, FALLBACKS[kind])
     elif kind == "skill":
@@ -168,6 +174,13 @@ def validate_previews(categories: dict[str, list[dict]], database: Path = DATABA
                     raise ValueError(f"Unverified capture asset: {entry['id']}")
             elif entry["type"] in ("monster", "boss", "npc") and kind not in ("sprite", "portrait", "icon"):
                 raise ValueError(f"Character scene must be an approved current capture: {entry['id']}")
+            sprite = SPRITES.get(entry["id"])
+            if sprite and entry["type"] in CHARACTER_CATEGORIES:
+                if kind != "sprite" or entry["image"] != sprite["image"] or entry.get("image_crop"):
+                    raise ValueError(f"Sprite preview does not match its registered asset: {entry['id']}")
+                asset = local_asset(entry["image"], database)
+                if image_size(asset) != (SPRITE_LIBRARY["canvas"], SPRITE_LIBRARY["canvas"]) or sha256(asset.read_bytes()).hexdigest() != sprite["sha256"]:
+                    raise ValueError(f"Unverified sprite preview: {entry['id']}")
             if crop := entry.get("image_crop"):
                 if len(crop) != 6 or not all(isinstance(value, int) for value in crop):
                     raise ValueError(f"Invalid preview crop for {entry['id']}")
