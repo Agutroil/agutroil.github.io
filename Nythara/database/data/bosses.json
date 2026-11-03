@@ -215,9 +215,9 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "../assets/screenshots/current/current-hollow-warden.webp",
-      "image_kind": "capture",
-      "image_alt": "Hollow Warden boss encounter in The Hollow Ruins."
+      "image": "assets/previews/creatures/hollow-warden.png",
+      "image_kind": "sprite",
+      "image_alt": "The Hollow Warden boss sprite preview, front-facing idle frame from the eight-direction boss sheet."
     },
     {
       "id": "enemy_rootbound_seer",
@@ -411,9 +411,9 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "../assets/screenshots/current/current-rootbound-seer.webp",
-      "image_kind": "capture",
-      "image_alt": "Rootbound Seer boss encounter in Moonroot Sanctum."
+      "image": "assets/previews/creatures/rootbound-seer.png",
+      "image_kind": "sprite",
+      "image_alt": "The Rootbound Seer boss sprite preview, front-facing idle frame from the eight-direction boss sheet."
     }
   ]
 }

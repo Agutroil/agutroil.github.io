@@ -76,9 +76,9 @@
         "rarity": 0,
         "category": "quest giver"
       },
-      "image": "../assets/screenshots/current/current-npc-elara.webp",
-      "image_kind": "capture",
-      "image_alt": "Elara at the Prototype Valley clearing."
+      "image": "assets/previews/npcs/elara.png",
+      "image_kind": "sprite",
+      "image_alt": "Elara sprite preview, front-facing idle frame from the NPC character sheet."
     },
     {
       "id": "npc_elyra",
@@ -124,9 +124,9 @@
         "rarity": 0,
         "category": "healer"
       },
-      "image": "../assets/screenshots/current/current-npc-elyra.webp",
-      "image_kind": "capture",
-      "image_alt": "Elyra in Dawnwatch."
+      "image": "assets/previews/npcs/elyra.png",
+      "image_kind": "sprite",
+      "image_alt": "Elyra sprite preview, front-facing idle frame from the NPC character sheet."
     },
     {
       "id": "npc_mira",
@@ -216,9 +216,9 @@
         "rarity": 0,
         "category": "vendor"
       },
-      "image": "../assets/screenshots/current/current-npc-mira.webp",
-      "image_kind": "capture",
-      "image_alt": "Mira near the Prototype Valley workbench and bench."
+      "image": "assets/previews/npcs/mira.png",
+      "image_kind": "sprite",
+      "image_alt": "Mira sprite preview, front-facing idle frame from the NPC character sheet."
     },
     {
       "id": "npc_rowan",
@@ -295,9 +295,9 @@
         "rarity": 0,
         "category": "quest giver"
       },
-      "image": "../assets/screenshots/current/current-npc-rowan.webp",
-      "image_kind": "capture",
-      "image_alt": "Rowan at the Whispering Grove path."
+      "image": "assets/previews/npcs/rowan.png",
+      "image_kind": "sprite",
+      "image_alt": "Rowan sprite preview, front-facing idle frame from the NPC character sheet."
     },
     {
       "id": "npc_silverwood_keeper",
@@ -375,9 +375,9 @@
         "rarity": 0,
         "category": "quest giver"
       },
-      "image": "../assets/screenshots/current/current-npc-silverwood-keeper.webp",
-      "image_kind": "capture",
-      "image_alt": "Silverwood Keeper on the Silverwood trail."
+      "image": "assets/previews/npcs/silverwood-keeper.png",
+      "image_kind": "sprite",
+      "image_alt": "Silverwood Keeper sprite preview, front-facing idle frame from the NPC character sheet."
     }
   ]
 }

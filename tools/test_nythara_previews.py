@@ -5,7 +5,7 @@ import unittest
 from copy import deepcopy
 from hashlib import sha256
 
-from nythara_previews import CAPTURE_LIBRARY, CURRENT_PREVIEWS, DATABASE, FALLBACKS, VISUAL_FIELDS, apply_previews, assign_preview, local_asset, validate_previews
+from nythara_previews import CAPTURE_LIBRARY, CURRENT_PREVIEWS, DATABASE, FALLBACKS, SPRITE_LIBRARY, SPRITE_PREVIEWS, SPRITES, VISUAL_FIELDS, apply_previews, assign_preview, local_asset, validate_previews
 from site_assets import image_size
 
 
@@ -50,7 +50,7 @@ class PreviewTests(unittest.TestCase):
         for kind, stable_id in (("monster", "enemy_briarling"), ("boss", "enemy_hollow_warden"), ("npc", "npc_elara")):
             entry = {"id": stable_id, "type": kind, "name": "Character", "image": CURRENT_PREVIEWS['world_hollow_ruins']['image']}
             assign_preview(entry)
-            self.assertEqual(entry, {"id": stable_id, "type": kind, "name": "Character", **CURRENT_PREVIEWS[stable_id]})
+            self.assertEqual(entry, {"id": stable_id, "type": kind, "name": "Character", **SPRITE_PREVIEWS[stable_id]})
             self.assertEqual(validate_previews({kind: [entry]}), 1)
 
     def test_character_scene_is_rejected(self):
@@ -81,6 +81,7 @@ class PreviewTests(unittest.TestCase):
             self.assertIn(stable_id, records)
             self.assertEqual(records[stable_id]['image'], expected['image'])
             self.assertEqual(records[stable_id]['image_kind'], 'capture')
+        self.assertFalse(set(SPRITE_PREVIEWS) & set(CURRENT_PREVIEWS), 'Characters must not keep a gameplay capture')
         self.assertNotEqual(records['world_hollow_ruins']['image'], records['enemy_hollow_warden']['image'])
         self.assertNotEqual(records['world_moonroot_sanctum']['image'], records['enemy_rootbound_seer']['image'])
 
@@ -93,6 +94,23 @@ class PreviewTests(unittest.TestCase):
         cropped = {**records['npc_elara'], 'image_crop': [0, 0, 800, 450, 1600, 900]}
         with self.assertRaises(ValueError):
             validate_previews({'entries': [cropped]})
+
+    def test_character_sprite_previews_are_registered_and_verified(self):
+        # Loot tables reuse creature ids, so characters are selected by type.
+        characters = [entry for entries in snapshot().values() for entry in entries if entry['type'] in ('monster', 'boss', 'npc')]
+        self.assertEqual(len(SPRITE_PREVIEWS), 13)
+        self.assertEqual(SPRITE_LIBRARY['canvas'], 256)
+        self.assertEqual({entry['id'] for entry in characters}, set(SPRITE_PREVIEWS), 'Every character needs a preview')
+        for entry in characters:
+            with self.subTest(stable_id=entry['id'], kind=entry['type']):
+                expected = SPRITE_PREVIEWS[entry['id']]
+                self.assertEqual((entry['image'], entry['image_kind'], entry['image_alt']), (expected['image'], 'sprite', expected['image_alt']))
+                self.assertTrue(entry['image_alt'].strip())
+                self.assertNotIn('image_crop', entry)
+                asset = local_asset(entry['image'], DATABASE)
+                self.assertEqual(image_size(asset), (256, 256))
+                self.assertEqual(sha256(asset.read_bytes()).hexdigest(), SPRITES[entry['id']]['sha256'])
+        self.assertEqual({entry['image'] for entry in characters}, {entry['image'] for entry in SPRITES.values()}, 'Every character needs its own preview')
 
     def test_full_capture_library_is_verified_and_game_revision_is_preserved(self):
         self.assertEqual(len(CAPTURE_LIBRARY['entries']), 35)

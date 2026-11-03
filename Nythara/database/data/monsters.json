@@ -132,9 +132,9 @@
         "rarity": 0,
         "category": "melee"
       },
-      "image": "../assets/screenshots/current/current-monster-briarling.webp",
-      "image_kind": "capture",
-      "image_alt": "Current Briarling in Silverwood."
+      "image": "assets/previews/creatures/briarling.png",
+      "image_kind": "sprite",
+      "image_alt": "Briarling sprite preview, front-facing idle frame from the eight-direction creature sheet."
     },
     {
       "id": "enemy_gloom_moth",
@@ -271,9 +271,9 @@
         "rarity": 0,
         "category": "ranged"
       },
-      "image": "../assets/screenshots/current/current-monster-gloom-moth.webp",
-      "image_kind": "capture",
-      "image_alt": "Current Gloom Moth on the Silverwood trail."
+      "image": "assets/previews/creatures/gloom-moth.png",
+      "image_kind": "sprite",
+      "image_alt": "Gloom Moth sprite preview, front-facing idle frame from the eight-direction creature sheet."
     },
     {
       "id": "mossling",
@@ -517,9 +517,9 @@
         "rarity": 0,
         "category": "melee"
       },
-      "image": "../assets/screenshots/current/current-monster-mossling.webp",
-      "image_kind": "capture",
-      "image_alt": "Current Mossling in the Whispering Grove."
+      "image": "assets/previews/creatures/mossling.png",
+      "image_kind": "sprite",
+      "image_alt": "Mossling sprite preview, front-facing idle frame from the eight-direction creature sheet."
     },
     {
       "id": "enemy_root_sentinel",
@@ -658,9 +658,9 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "../assets/screenshots/current/current-monster-root-sentinel.webp",
-      "image_kind": "capture",
-      "image_alt": "Current Root Sentinel in the Silverwood thicket."
+      "image": "assets/previews/creatures/root-sentinel.png",
+      "image_kind": "sprite",
+      "image_alt": "Root Sentinel sprite preview, front-facing idle frame from the eight-direction creature sheet."
     },
     {
       "id": "enemy_stoneback",
@@ -838,9 +838,9 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "../assets/screenshots/current/current-monster-stoneback.webp",
-      "image_kind": "capture",
-      "image_alt": "Current Stoneback in the Whispering Grove."
+      "image": "assets/previews/creatures/stoneback.png",
+      "image_kind": "sprite",
+      "image_alt": "Stoneback sprite preview, front-facing idle frame from the eight-direction creature sheet."
     },
     {
       "id": "enemy_hollow_warden",
@@ -1039,9 +1039,9 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "../assets/screenshots/current/current-hollow-warden.webp",
-      "image_kind": "capture",
-      "image_alt": "Hollow Warden boss encounter in The Hollow Ruins."
+      "image": "assets/previews/creatures/hollow-warden.png",
+      "image_kind": "sprite",
+      "image_alt": "The Hollow Warden boss sprite preview, front-facing idle frame from the eight-direction boss sheet."
     },
     {
       "id": "enemy_rootbound_seer",
@@ -1218,9 +1218,9 @@
         "rarity": 0,
         "category": "heavy"
       },
-      "image": "../assets/screenshots/current/current-rootbound-seer.webp",
-      "image_kind": "capture",
-      "image_alt": "Rootbound Seer boss encounter in Moonroot Sanctum."
+      "image": "assets/previews/creatures/rootbound-seer.png",
+      "image_kind": "sprite",
+      "image_alt": "The Rootbound Seer boss sprite preview, front-facing idle frame from the eight-direction boss sheet."
     },
     {
       "id": "enemy_thornspitter",
@@ -1404,9 +1404,9 @@
         "rarity": 0,
         "category": "ranged"
       },
-      "image": "../assets/screenshots/current/current-monster-thornspitter.webp",
-      "image_kind": "capture",
-      "image_alt": "Current Thornspitter in the Whispering Grove."
+      "image": "assets/previews/creatures/thornspitter.png",
+      "image_kind": "sprite",
+      "image_alt": "Thornspitter sprite preview, front-facing idle frame from the eight-direction creature sheet."
     }
   ]
 }
